@@ -1,14 +1,22 @@
 <!DOCTYPE html>
+<!--[if lt IE 7]><html lang="en" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="en" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="en" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
 <html lang="en">
+<!--<![endif]-->
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <link rel="shortcut icon" href="favicon.png" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "Cyber craft" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
-    <%= javascript_include_tag "application" %>
+
     <%= csrf_meta_tags %>
   </head>
 
@@ -16,5 +24,11 @@
 
     <%= yield %>
 
+    <!--And Sidebar Navigation  Main page -->
+    <!--[if lt IE 9]>
+    <%= javascript_include_tag "ie" %>
+    <![endif]-->
+
+    <%= javascript_include_tag "application" %>
   </body>
 </html>

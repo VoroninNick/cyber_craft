@@ -1,19 +1,25 @@
-// This is a manifest file that'll be compiled into application.js, which will include all the files
-// listed below.
-//
-// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
-// or any plugin's vendor/assets/javascripts directory can be referenced here using a relative path.
-//
-// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-// compiled file.
-//
-// Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
-// about supported directives.
-//
-//= require jquery
-//= require jquery_ujs
-// require foundation
-// require turbolinks
-// require_tree .
+// Sidebar Navigation  Main page
+//= require libs/jquery/jquery-1.11.3.min.js
 
-//$(function(){ $(document).foundation(); });
+
+//= require jquery.easing.1.3.js
+//= require owl.carousel.min.js
+//= require jquery.onepage-scroll-0.0.1.min.js
+
+// js To align height units
+//= require jquery.matchHeight-min.js
+
+// js main heder superslides
+//= require jquery.animate-enhanced.min.js
+//= require jquery.hammer.min.js
+//= require jquery.superslides.min.js
+
+
+//= require jquery.bxslider.min.js
+
+
+//= require wow.min.js
+//= require pushy.min.js
+
+// General js
+//= require app.js

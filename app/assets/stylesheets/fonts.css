@@ -1,0 +1,66 @@
+
+@font-face {
+  font-family: 'Orbitron-Medium';
+  src: 
+  url('../fonts/Orbitron-Medium/Orbitron-Medium.eot?#iefix') format('embedded-opentype'),  
+  url('../fonts/Orbitron-Medium/Orbitron-Medium.woff') format('woff'), 
+  url('../fonts/Orbitron-Medium/Orbitron-Medium.ttf')  format('truetype'), 
+  url('../fonts/Orbitron-Medium/Orbitron-Medium.svg#Orbitron-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: 
+  url('../fonts/Ubuntu-Regular/Ubuntu.eot?#iefix') format('embedded-opentype'),  
+  url('../fonts/Ubuntu-Regular/Ubuntu.woff') format('woff'), 
+  url('../fonts/Ubuntu-Regular/Ubuntu.ttf')  format('truetype'), 
+  url('../fonts/Ubuntu-Regular/Ubuntu.svg#Ubuntu') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu-LightItalic';
+  src: 
+  url('../fonts/Ubuntu-LightItalic/Ubuntu-LightItalic.eot?#iefix') format('embedded-opentype'),  
+  url('../fonts/Ubuntu-LightItalic/Ubuntu-LightItalic.woff') format('woff'), 
+  url('../fonts/Ubuntu-LightItalic/Ubuntu-LightItalic.ttf')  format('truetype'), 
+  url('../fonts/Ubuntu-LightItalic/Ubuntu-LightItalic.svg#Ubuntu-LightItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Ubuntu-Medium';
+  src: 
+  url('../fonts/Ubuntu-Medium/Ubuntu-Medium.eot?#iefix') format('embedded-opentype'),  
+  url('../fonts/Ubuntu-Medium/Ubuntu-Medium.woff') format('woff'), 
+  url('../fonts/Ubuntu-Medium/Ubuntu-Medium.ttf')  format('truetype'), 
+  url('../fonts/Ubuntu-Medium/Ubuntu-Medium.svg#Ubuntu-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu-Italic';
+  src: 
+  url('../fonts/Ubuntu-Italic/Ubuntu-Italic.eot?#iefix') format('embedded-opentype'),  
+  url('../fonts/Ubuntu-Italic/Ubuntu-Italic.woff') format('woff'), 
+  url('../fonts/Ubuntu-Italic/Ubuntu-Italic.ttf')  format('truetype'), 
+  url('../fonts/Ubuntu-Italic/Ubuntu-Italic.svg#Ubuntu-Italic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Orbitron-Regular';
+  src: 
+  url('../fonts/Orbitron-Regular/Orbitron-Regular.eot?#iefix') format('embedded-opentype'),  
+  url('../fonts/Orbitron-Regular/Orbitron-Regular.woff') format('woff'), 
+  url('../fonts/Orbitron-Regular/Orbitron-Regular.ttf')  format('truetype'), 
+  url('../fonts/Orbitron-Regular/Orbitron-Regular.svg#Orbitron-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+

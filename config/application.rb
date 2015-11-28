@@ -23,6 +23,6 @@ module CyberCraft
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
-    config.assets.precompile += %w(under_construction.css under_construction.js)
+    config.assets.precompile += %w(under_construction.css under_construction.js ie.js)
   end
 end
