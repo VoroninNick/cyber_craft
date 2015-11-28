@@ -1,0 +1,100 @@
+#wrap
+  #header
+    .logo.left
+      /= stub_image(110, 50, "logo", { bg: "transparent" })
+      img src="/assets/cc-logo.svg"
+
+    .header-social-links.right
+      /a
+        img src="/assets/icons/cc-social-yellow-facebook.svg"
+
+      a href="https://www.linkedin.com/company/2936889?trk=tyah"
+        img src="/assets/icons/cc-social-yellow-linkedin.svg"
+
+  main#content
+    .row
+      .title
+        span.arrow
+          |<
+        |UNDER CONSTRUCTION
+        span.arrow
+          |>
+      .subtitle.italic
+        |We are working on our new website and will launch it soon
+      .countdown
+        time datetime="2015-10-24T16:47:00+0000"
+      .right.right-indent.italic
+        |...until opening
+
+
+    .vertical-indent-30
+      button open-popup="send-message"
+        |SEND US A MESSAGE
+    .small-vertical-indent.italic
+      |or
+    .small-vertical-indent.italic
+      |visit the old version of our site &nbsp;
+      a href="http://cybercraftinc.com"
+        |cybercraftinc.com
+
+  .popup popup-name="send-message" data-title="Don't hesitate to get in touch with us"
+    .content
+      form resource="message" show-preloader="" action="/message" method="post"
+        .content
+          .inputs
+            .input.string required=""
+              input id="message__name" name="message[name]"
+              label.input-label for="message__name"
+                |First and last name
+            .input.string.phone
+              input id="message__phone" name="message[phone]"
+              label.input-label for="message__phone"
+                |Phone number
+            .input.string.email required=""
+              input id="message__email" name="message[email]"
+              label.input-label for="message__email"
+                |Email
+            .input.text
+              textarea id="message__msg" name="message[message_text]"
+              label.input-label for="message__msg"
+                |Your message
+          .actions
+            button.dark type="submit" show-preloader=""
+              |SEND
+        .success
+          div
+            |thanks for your message
+
+
+#footer
+  .row
+    .columns.small-12.small-centered.large-uncentered.medium-12.large-3.footer-column
+      .icon
+        img src="/assets/icons/cc-phone.svg"
+      .text
+        a.phone href="tel:+380639911633"
+          |+38 063 99 11 633
+          sup
+            |EU
+        a.phone href="tel:+18886797138"
+          |+1 888 67 97 138
+          sup
+            |US
+    .columns.small-12.small-centered.large-uncentered.medium-12.large-3.footer-column
+      .icon
+        img src="/assets/icons/cc-mail.svg"
+      .text
+        a href="mailto:info@cybercraftinc.com"
+          |info@cybercraftinc.com
+    .columns.small-12.small-centered.large-uncentered.medium-12.large-3.footer-column
+      .icon
+        img src="/assets/icons/cc-location.svg"
+      .text
+        |7 Slipoho Str.
+        br
+        |Lviv, Ukraine, 79017
+    .columns.small-12.small-centered.large-uncentered.medium-12.large-3.footer-column
+      .icon
+        img src="/assets/icons/cc-skype.svg"
+      .text
+        |ask.CyberCraft

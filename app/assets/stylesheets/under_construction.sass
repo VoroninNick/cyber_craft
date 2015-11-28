@@ -1,0 +1,169 @@
+@import "config"
+@import "sass-css3-mixins/css3-mixins.sass"
+@import "css3_mixins"
+@import "foundation_settings"
+@import "foundation"
+@import "countdown"
+@import "sticky_footer"
+@import "popup"
+@import "forms"
+
+//.header
+//
+//$height: 26px
+//$width: 32px
+//
+//a
+//  margin: 50px 0
+//  display: block
+//
+//.hexagon
+//  width: $width
+//  height: $height
+//  background: $orange-color
+//  position: relative
+//  display: inline-block
+//
+//  &:before
+//    content: ""
+//    position: absolute
+//    top: -#{$width / 4}
+//    left: 0
+//    width: 0
+//    height: 0
+//    border-left: #{$width / 2} solid transparent
+//    border-right: #{$width / 2} solid transparent
+//    border-bottom: #{$width / 4} solid $orange-color
+//
+//  &:after
+//    content: ""
+//    position: absolute
+//    bottom: -#{$width / 4}
+//    left: 0
+//    width: 0
+//    height: 0
+//    border-left: #{$width / 2} solid transparent
+//    border-right: #{$width / 2} solid transparent
+//    border-top: #{$width / 4} solid $orange-color
+//
+
+
+body
+  background: url(/assets/icons/cc-pattern.jpg)
+  font-family: $ubuntu-font-family
+  +light
+
+.invisible
+  visibility: visible
+  opacity: 0
+
+button
+  font-family: $orbitron-font-family
+  background-color: $orange-color
+  outline: none
+  border: none
+  height: 40px
+  padding: 0 25px
+  display: inline-block
+  font-weight: 500
+  letter-spacing: 1px
+
+  font-size: 16px
+  line-height: 45px
+  cursor: pointer
+
+  &.dark
+    background: $black-color
+    color: white
+.small-vertical-indent
+  margin-top: 24px
+.vertical-indent-30
+  margin-top: 30px
+.right-indent
+  margin-right: 30px
+
+a
+  text-decoration: none
+  color: $orange-color
+.italic
+  font-style: italic
+
+#header
+  padding: 30px 30px 0 30px
+
+
+.header-social-links
+  padding: 5px 0
+  img
+    width: 30px
+    margin-right: 8px
+
+#content
+  padding-top: 10%
+  text-align: center
+  .title
+    color: $orange-color
+    font-family: $orbitron-font-family
+    font-size: 24px
+    font-weight: 500
+    letter-spacing: 2px
+  .arrow
+    color: $gray-color
+
+  .subtitle
+    color: $gray-color
+
+#footer
+  +bold
+
+  &, & a
+    color: $gray-color
+
+  .row
+    //max-width: 1200px
+  .icon
+    float: left
+    img
+      width: 30px
+  .text
+    padding-left: 45px
+
+  .phone
+    display: block
+    sup
+      margin-left: 5px
+
+  .footer-column
+    height: 52px
+
+  @media #{$small-only}, #{$medium-only}
+    .footer-column
+      text-align: center
+
+
+@media #{$screen} and (max-width: 480px), #{$medium-only}, #{$small-only}
+  #content
+    padding-top: 15%
+
+  #footer
+    .icon
+      float: none
+      margin-bottom: 0.5rem
+
+    .footer-column
+      height: auto
+      margin-bottom: 2rem
+    .text
+      padding-left: 0
+
+@media #{$large-up} and (max-height: 850px)
+  #content
+    padding-top: 5%
+
+@media #{$large-up} and (max-height: 720px)
+  #content
+    padding-top: 0
+
+@media #{$large-up} and (max-height: 700px)
+  #content
+    padding-bottom: $footer-height + 30px

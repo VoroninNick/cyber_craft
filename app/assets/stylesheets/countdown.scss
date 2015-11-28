@@ -1,0 +1,97 @@
+.countdown {
+  //display: table-cell;
+  //font-weight: normal;
+
+  .separator {
+    display: none;
+  }
+
+  .item {
+    width: calc(25% - 38px);
+    display: inline-block;
+    vertical-align: bottom;
+    position: relative;
+    //@include light;
+    @include font-80;
+    line-height: 180px;
+    text-align: center;
+    color: $black-color;
+    margin: 50px 30px 10px 0;
+    padding: 0 10px;
+    background: white;
+    overflow: hidden;
+    height: 150px;
+
+    //&:after {
+    //  content: '';
+    //  display: block;
+    //  height: 1px;
+    //  border-top: 3px solid #111;
+    //  width: 100%;
+    //  position: absolute;
+    //  top: 50%;
+    //  left: 0;
+    //}
+
+    .number {
+      font-weight: 500;
+      position: absolute;
+      top: -20px;
+      width: 100%;
+      left: 0;
+      font-family: $orbitron-font-family;
+    }
+
+    &:first-child {
+      margin-left: 30px;
+    }
+  }
+  .item-ss {
+    color: $orange-color;
+    //font-size: 50px;
+    //line-height: 70px;
+  }
+
+  .label {
+    @include light;
+    font-style: italic;
+    text-transform: lowercase;
+    display: block;
+    //line-height: normal;
+    //right: 6px;
+    //bottom: 4px;
+    font-size: 21px;
+    color: $black-color;
+    position: absolute;
+    top: 105px;
+    //bottom: 0;
+    line-height: 1;
+    width: 100%;
+    left: 0;
+  }
+  .item-hh .label,
+  .item-mm .label,
+  .item-ss .label {
+    //display: none;
+  }
+
+  @media #{$screen} and (max-width: 850px) {
+
+    .item {
+      .number {
+        font-size: 50px;
+      }
+    }
+  }
+
+  @media #{$screen} and (max-width: 550px) {
+    .item{
+      .number {
+        font-size: 30px;
+      }
+    }
+    .label{
+      font-size: 17px;
+    }
+  }
+}
