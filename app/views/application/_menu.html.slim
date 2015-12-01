@@ -1,0 +1,38 @@
+/! Pushy Menu
+nav.pushy.pushy-left
+  .logo_menu
+    - if controller_name == "pages" && action_name == "index"
+      span.logo_menua
+        img alt="" src=asset_path("menulogo.png")
+    - else
+      a.logo_menua href=root_path
+        img alt="" src=asset_path("menulogo.png")
+  ul.pushymenu
+    - menu.each do |k, v|
+      li
+        a class=("active" if v[:active]) href=v[:url]
+          span
+            |<
+          = v[:name]
+          span
+            |>
+
+  .cont_micon
+    .push_icon
+      a href="#"
+        img alt="" src=asset_path("footerfacebook.png")
+      a href="#"
+        img alt="" src=asset_path("footerin.png")
+
+
+
+/! Site Overlay
+.site-overlay
+/! Your Content
+.navigationleft
+  /! Menu Button
+  a.menu-btn.containere
+    .menuicon.top-menuicon.top-animate
+    .menuicon.mid-menuicon.mid-animate
+    .menuicon.bottom-menuicon.bottom-animate
+    /! Sidebar Navigation  Main page

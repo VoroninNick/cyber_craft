@@ -12,7 +12,7 @@
 
     <link rel="shortcut icon" href="favicon.png" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "Cyber craft" %></title>
+    <%= seo_tags %>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -21,8 +21,14 @@
   </head>
 
   <body>
-
+    <%= render "menu" %>
     <%= yield %>
+
+    <% if @footer == false %>
+        <%# content_for(:footer)  %>
+    <% else %>
+        <%= render "footer" %>
+    <% end %>
 
     <!--And Sidebar Navigation  Main page -->
     <!--[if lt IE 9]>

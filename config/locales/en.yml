@@ -21,3 +21,17 @@
 
 en:
   hello: "Hello world"
+
+  menu:
+    about_us: "About us"
+    services: "Services"
+    process: "Process"
+    teams: "Teams"
+    industries: "Industries"
+    blog: "Blog"
+    contacts: "Contacts"
+
+  additional_links:
+    terms_of_use: "Terms of use"
+    privacy_policy: "Privacy policy"
+    career: "Career"

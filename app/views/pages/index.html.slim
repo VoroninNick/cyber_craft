@@ -1,39 +1,4 @@
-/! Pushy Menu
-nav.pushy.pushy-left
-  .logo_menu
-    a.logo_menua href="#"
-      img alt="" src=asset_path("menulogo.png")
-  ul.pushymenu
-    li
-      a href="#"  About US
-    li
-      a href="#"  Services
-    li
-      a href="#"  Process
-    li
-      a href="#"  Teams
-    li
-      a href="#"  Industries
-    li
-      a href="#"  Blog
-    li
-      a href="#"  Contacts
-  .cont_micon
-    .push_icon
-      a href="#"
-        img alt="" src=asset_path("footerfacebook.png")
-      a href="#"
-        img alt="" src=asset_path("footerin.png")
-/! Site Overlay
-.site-overlay
-/! Your Content
-.navigationleft
-  /! Menu Button
-  a.menu-btn.containere
-    .menuicon.top-menuicon.top-animate
-    .menuicon.mid-menuicon.mid-animate
-    .menuicon.bottom-menuicon.bottom-animate
-/! Sidebar Navigation  Main page
+
 .scroll-container
   /! header of the page
   header#id0.top_header.content-part data-title="Slider"
@@ -480,71 +445,7 @@ nav.pushy.pushy-left
               img.company_logo alt="alt" src=asset_path("optnet.png")
   /! End Slider
   /! End Good people say
-  /! Read our blog
-  section#read.read_blog.content-part data-title=("Read our blog")
-    .container
-      .row
-        h3.section_h3
-          a href="#"
-            span.sh3_bg>
-            | Read
-            span.chos_sbg our blog
-            span.sh3_bg
-        p.sect_clogan.choos_bgp Please provide subtitle text
-        .read_blog_stul
-          .col-md-4.col-sm-4.col-xs-12.tt_bot
-            .test_bc.wow.fadeInDownBig
-              .tes_1
-                img alt="alt" src=asset_path("blog_03.jpg")
-                .fildr_bgimg
-                .test_title
-                  a href="work_one.html"  Ruby
-                a.teg_new href="#"  New
-              h3.test_i1
-                a href="work_one.html"
-                  span>
-                  | Comparison of different outsourcing models — pros and cons
-                  span
-              .title_teg
-                p
-                  | by &thinsp;
-                  a.tt_a href="#"  Tomas Elbow
-                  |, 23 march 2015
-          .col-md-4.col-sm-4.col-xs-12.tt_bot
-            .test_bc.wow.fadeInUpBig
-              .tes_1
-                img alt="alt" src=asset_path("blog_05.jpg")
-                .fildr_bgimg
-                .test_title
-                  a href="work_one.html"  C++
-              h3.test_i1
-                a href="work_one.html"
-                  span>
-                  | Overview of the most popular outsourcing destinations in the world
-                  span
-              .title_teg
-                p
-                  | by
-                  a.tt_a href="#"  Jack Bale
-                  |, 23 march 2015
-          .col-md-4.col-sm-4.col-xs-12.tt_bot
-            .test_bc.wow.fadeInDownBig
-              .tes_1
-                img alt="alt" src=asset_path("blog_07.jpg")
-                .fildr_bgimg
-                .test_title
-                  a href="work_one.html"  JavaScript
-              h3.test_i1
-                a href="work_one.html"
-                  span>
-                  | Most recent positive changes on the Ukrainian IT market — reforms and government support
-                  span
-              .title_teg
-                p
-                  | by
-                  a.tt_a href="#"  Christopher Lambert
-                  |, 23 march 2015
-  /! End Read our blog
+  = render "home_blog_articles"
   /! End Map
   section#map.map_message.content-part data-title=("Send us a message")
     .g_map
@@ -606,23 +507,7 @@ nav.pushy.pushy-left
                         label for="youmessageanimate"  Email
                       input type="submit" value="Send" 
   /! End Map
-  /! Footer
-  footer
-    .container
-      .row
-        .col-md-4.col-sm-4.col-xs-7
-          a.f_compani href="#"  Handcrafted in Voronin Design Studio 2015
-        .col-md-3.col-sm-3.col-xs-5
-          p © 2015 CyberCraft - all rights reserved
-        .col-md-3.col-sm-3.col-xs-8
-          div
-            a href="#"  Terms of use
-            | \
-            a href="#"  Privacy policy
-            | \
-            a href="#"  Careers
-        .col-md-2.col-sm-2.col-xs-4
-          a.f_icon.fi_f href="#"
-          a.f_icon.fi_i href="#"
-            /! End Footer
+  = render "home_footer"
           /! And Sidebar Navigation  Main page
+
+

@@ -1,4 +1,6 @@
 module ApplicationHelper
+
+
   def stub_image_link(width = 420, height = 350, text = 'item 1', options = {})
 
     image_url = "http://placehold.it/#{width}x#{height}&text=#{text}&#{options.map{|k, v| "#{k}=#{v}" }.join("&")}"

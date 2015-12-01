@@ -1,3 +1,5 @@
+require_relative "require_libs"
+
 RailsAdmin.config do |config|
 
   ### Popular gems integration
@@ -33,7 +35,39 @@ RailsAdmin.config do |config|
   end
 
 
-  config.included_models += [FormConfig, FormConfigs::Message, Message, User]
 
+
+  config.included_models += [FormConfig, FormConfigs::Message, Message, User, Pages::Home]
+
+  config.included_models += [Cms::MetaTags]
+
+  config.included_models += [BlogArticle, Service, Team, Industry]
+
+  config.included_models += [FileEditor]
+
+
+
+  config.model Pages::Home do
+    field :seo_tags
+  end
+
+  config.model Cms::MetaTags do
+    field :title
+    field :keywords
+    field :description
+  end
+
+  config.model BlogArticle do
+    field :published
+    field :name
+    field :url_fragment
+    field :content
+    field :avatar
+    field :tag_list do
+     # partial 'tag_list_with_suggestions'
+
+
+    end
+  end
 
 end

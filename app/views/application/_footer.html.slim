@@ -1,0 +1,10 @@
+footer
+  ul.menu
+    - footer_menu.each do |k, v|
+      li class=("active" if v[:active])
+        = link_to_if !v[:active], v[:name], v[:url]
+
+  ul.addition_links
+    - additional_links.each do |k, v|
+      li class=("active" if v[:active])
+        = link_to_if !v[:active], v[:name], v[:url]

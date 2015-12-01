@@ -56,3 +56,12 @@ gem "protected_attributes"
 gem 'rails_admin'
 
 gem 'devise'
+
+gem 'enumerize'
+
+gem 'ckeditor'
+
+gem 'paperclip'
+
+gem 'acts-as-taggable-on'
+#gem 'rails_admin_tag_list'
