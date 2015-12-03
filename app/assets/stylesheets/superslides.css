@@ -45,24 +45,25 @@
   width: 100%;
 }
 .slides-pagination a {
-    width: 26px;
-    height: 24px;
-    display: -moz-inline-stack;
-    display: inline-block;
-    vertical-align: middle;
-    zoom: 1;
-    margin: 2px 7px;
-    padding: 0 9px 5px 7px;
-    overflow: hidden;
-    text-indent: -100%;
-    font-family: 'Orbitron-Medium';
-    font-size: 14px;
-    color: #FFF;
-    border-bottom: 2px solid #fff;
-    text-shadow: 1px 1px 1px rgba(5, 5, 5, 1);
-    -webkit-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.70);
-    -moz-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.70);
-    box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.70);
+  width: 26px;
+  height: 24px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  zoom: 1;
+  margin: 2px 7px;
+  padding: 0 9px 5px 7px;
+  overflow: hidden;
+  text-indent: -100%;
+  font-family: 'Orbitron-Medium';
+  font-size: 14px;
+  color: #FFF;
+  text-decoration: none;
+  border-bottom: 2px solid #fff;
+  text-shadow: 1px 1px 1px rgba(5, 5, 5, 1);
+  -webkit-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.70);
+  -moz-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.70);
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.70);
 
 }
 .slides-pagination a:hover{
@@ -72,16 +73,17 @@
 }
 .slides-pagination a.current {
   color: #ff9900;
+  text-decoration: none;
   border-bottom: 2px solid #ff9900;
 }
 
 
 
 nav.slides-pagination {
-    width: 100%;
-    margin: 0 auto;
-    float: none;
-    position: relative;
-    bottom: 11%;
-    padding: 0 15px;
+  width: 100%;
+  margin: 0 auto;
+  float: none;
+  position: relative;
+  bottom: 11%;
+  padding: 0 15px;
 }
