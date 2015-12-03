@@ -1,9 +1,13 @@
+<% home_page = (controller_name == 'pages' && action_name == 'index') %>
+<% sticky_footer = !home_page %>
+<% html_class = sticky_footer ? "keep-sticky-footer" : '' %>
+
 <!DOCTYPE html>
-<!--[if lt IE 7]><html lang="en" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
-<!--[if IE 7]><html lang="en" class="lt-ie9 lt-ie8"><![endif]-->
-<!--[if IE 8]><html lang="en" class="lt-ie9"><![endif]-->
+<!--[if lt IE 7]><html lang="en" class="lt-ie9 lt-ie8 lt-ie7 <%= html_class %>"><![endif]-->
+<!--[if IE 7]><html lang="en" class="lt-ie9 lt-ie8 <%= html_class %>"><![endif]-->
+<!--[if IE 8]><html lang="en" class="lt-ie9 <%= html_class %>"><![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="en">
+<html lang="en" class="<%= html_class %>">
 <!--<![endif]-->
   <head>
     <meta charset="utf-8" />
@@ -21,8 +25,19 @@
   </head>
 
   <body>
+
     <%= render "menu" %>
-    <%= yield %>
+    <%= render "logo", url: !home_page %>
+
+    <% if !sticky_footer %>
+        <%= yield %>
+    <% else %>
+      <div id="wrap">
+        <div id="main">
+            <%= yield %>
+        </div>
+      </div>
+    <% end %>
 
     <% if @footer == false %>
         <%# content_for(:footer)  %>

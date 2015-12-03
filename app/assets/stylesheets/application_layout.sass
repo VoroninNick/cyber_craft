@@ -1,0 +1,14 @@
+// Styles related to layouts/application for inner pages
+// 1. Sticky footer
+//
+
+
+$standard-footer-height: 420px
+
+
+html.keep-sticky-footer
+	@include sticky-footer($standard-footer-height, $at-root: false, $footer-selector: #standard-footer, $html-selector: "&")
+
+//#standard-footer
+	@include sticky-footer(450px)
+

@@ -148,3 +148,9 @@ $(document).ready(function() {
 });
 //And Form animated Main page
 
+
+
+$("body").on("click", ".scroll-down-arrow", function(){
+    var top = $("#pagi2").offset().top
+    $("body").animate({scrollTop: top})
+})

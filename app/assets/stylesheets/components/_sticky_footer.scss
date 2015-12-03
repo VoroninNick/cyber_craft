@@ -1,0 +1,60 @@
+@mixin at-root-if($condition){
+  @if $condition{
+    @at-root {
+      @content
+    }
+  }
+  @else {
+    @content
+  }
+}
+
+@mixin sticky-footer($footer-height, $wrap-selector: #wrap, $content-selector: #content, $at-root: true, $footer-selector: &, $html-selector: html) {
+  @include at-root-if($at-root) {
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #{$html-selector}, body {
+      height: 100%;
+    }
+
+    /*Opera Fix*/
+    body:before {
+      /* thanks to Maleika (Kohoutec)*/
+      content: "";
+      height: 100%;
+      float: left;
+      width: 0;
+      margin-top: -32767px; /* thank you Erik J - negate effect of float*/
+    }
+
+    #{$wrap-selector} {
+      min-height: 100%;
+    }
+
+    #{$content-selector} {
+      overflow: auto;
+      padding-bottom: $footer-height;
+    }
+
+  }
+
+  /* must declare 0 margins on everything, also for main layout components use padding, not
+  vertical margins (top and bottom) to add spacing, else those margins get added to total height
+  and your footer gets pushed down a bit more, creating vertical scroll bars in the browser */
+
+
+  /* must be same height as the footer */
+
+  #{$footer-selector} {
+    position: relative;
+    margin-top: -#{$footer-height}; /* negative value of footer height */
+    height: $footer-height;
+    clear: both;
+  }
+
+
+
+}
