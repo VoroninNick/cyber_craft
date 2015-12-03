@@ -1,7 +1,7 @@
 
 .scroll-container
   /! header of the page
-  header#id0.top_header.content-part data-title="Slider"
+  header#pagi1.top_header.content-part data-title="Home"
     /! Logo
     a.logo href="#"
       img alt="" src=asset_path("logo.png")
@@ -15,40 +15,49 @@
             img alt="" src=asset_path("slide_01.jpg")
             .slid_filtr
             .container
-              .heading_slide
+              .heading_slide.wow.fadeInRight
                 h1
                   a href="#"
-                    span.arrow_slider
+                    b.arrow_slider
+                      |<
                     span.header_lines Connecting the best
                     span.header_lines IT minds with international
                     span.header_lines businesses
-                    span.arrow_slider
+                    b.arrow_slider
+                      |>
           /! End One Slide
           /! One Slide
           li
             img alt="" src=asset_path("slider3.jpg")
             .slid_filtr
             .container
-              .heading_slide
+              .heading_slide.wow.fadeInRight
                 h1
                   a href="#"
-                    span.arrow_slider
+                    b.arrow_slider
+                      |<
                     span.header_lines Your remote Dedicated
                     span.header_lines Development Team with an
                     span.header_lines in-house look and feel
-                    span.arrow_slider
+                    b.arrow_slider
+                      |>
           /! End One Slide
           /! One Slide
           li
             img alt="" src=asset_path("slide_03.jpg")
             .slid_filtr
             .container
-              .heading_slide
+              .heading_slide.wow.fadeInRight
                 h1
                   a href="#"
-                    span.arrow_slider
-                    span.header_lines Developing teams
-                    span.arrow_slider
+                    b.arrow_slider
+                      |<
+                    span class="header_lines"
+                      |Developing teams,
+                    span class="header_lines"
+                      |delivering success.
+                    b.arrow_slider
+                      |>
     /! End One Slide
     /! End Slider
     /! learn more
@@ -57,19 +66,19 @@
   /! learn more
   /! and header of the page
   /! What we offer
-  section#empty.we_offer.content-part data-title="Video"
+  section#pagi2.we_offer.content-part data-title="What we offer"
     .container
       .row
         .col-md-8.col-sm-8.mdno_pading.we_height
-          iframe.wow.fadeInUpBig height="100%" src="https://www.youtube.com/embed/e0ECQUTPx0k" width="100%"
+          iframe height="100%" src="https://www.youtube.com/embed/e0ECQUTPx0k" width="100%"
         .col-md-4.col-sm-4.mdbg_fon.we_height
-          .content_offer.wow.fadeInRightBig
+          .content_offer
             h3 What we offer
             p We hire and build your own remote Dedicated Development Teams tailored to your specific needs. You get your professional fulltime developers that work exclusively for you as part of your company. We handle all practical things related to hiring and housing your team at our premises in Ukraine, thus saving you half a cost and a lot of efforts of in-house expansion
             a href="#"  Learn more
   /! End What we offer
   /! Teams we build
-  section#we_build.teams_we.content-part data-title=("Teams we build")
+  section#pagi3.teams_we.content-part data-title=("Teams we build")
     .container
       .row
         h3.section_h3
@@ -206,73 +215,9 @@
                   | management
   /! End Teams we build
   /! Industries we help
-  section#wehelp.industries.content-part data-title=("Industries we help")
-    /! Slider
-    ul.industrieswehelp
-      /! Slide
-      li
-        .container
-          .row
-            .ghi
-              .col-md-6.col-sm-6.col-xs-12.p_tex.ter_im.wow.fadeInUpBig
-                img alt="alt" src=asset_path("healthca.jpg")
-                h3.section_h3.ins_h3
-                  span.sh3_bg>
-                  | Industries
-                  span.chos_sbg we help
-                  span.sh3_bg
-              .col-md-6.col-sm-6.col-xs-12.p_ot.wow.fadeInRightBig
-                h3.et_zah
-                  a href="ebaut.html"  Healthcare & insurance
-                p
-                  | Fluent in a range of major technologies, our highly-skilled software engineers have significant experience of successfully bringing different products from concept to production, of catering to different business requirements by providing flexible, innovative and customer-focused solutions, by ensuring the integration of business needs and customers’ expectations with project outcomes.
-                a.uz href=""  Learn more
-      /! Slide
-      li
-        .container
-          .row
-            .ghi
-              .col-md-6.col-sm-6.col-xs-12.p_tex.ter_im
-                img alt="alt" src=asset_path("healthca.jpg")
-                h3.section_h3.ins_h3
-                  span.sh3_bg>
-                  | Industries
-                  span.chos_sbg we help
-                  span.sh3_bg
-              .col-md-6.col-sm-6.col-xs-12.p_ot
-                h3.et_zah
-                  a href="ebaut.html"  Healthcare & insurance
-                p
-                  | Fluent in a range of major technologies, our highly-skilled software engineers have significant experience of successfully bringing different products from concept to production, of catering to different business requirements by providing flexible, innovative and customer-focused solutions, by ensuring the integration of business needs and customers’ expectations with project outcomes.
-                a.uz href=""  Learn more
-      /! Slide
-      li
-        .container
-          .row
-            .ghi
-              .col-md-6.col-sm-6.col-xs-12.p_tex.ter_im
-                img alt="alt" src=asset_path("healthca.jpg")
-                h3.section_h3.ins_h3
-                  span.sh3_bg>
-                  | Industries
-                  span.chos_sbg we help
-                  span.sh3_bg
-              .col-md-6.col-sm-6.col-xs-12.p_ot
-                h3.et_zah
-                  a href="ebaut.html"  Healthcare & insurance
-                p
-                  | Fluent in a range of major technologies, our highly-skilled software engineers have significant experience of successfully bringing different products from concept to production, of catering to different business requirements by providing flexible, innovative and customer-focused solutions, by ensuring the integration of business needs and customers’ expectations with project outcomes.
-                a.uz href=""  Learn more
-    /! End Slider
-    /! Pagination on slider
-    .row.ind_cent
-      .col-md-6.col-sm-6.col-xs-12
-        div
-          .industriewwepager
-  /! End Pagination on slider
-  /! End Industries we help
+  = render "home_industies"
   /! Experts we provide
-  section#empt.experts.content-part data-title="Experts"
+  section#pagi5.experts.content-part data-title="Experts we provide"
     .container
       .row
         h3.section_h3
@@ -302,211 +247,11 @@
           .col-md-2.col-sm-2.col-xs-3.wow.zoomIn
             img alt="" src=asset_path("php.png")
   /! And Experts we provide
-  /! How it worksAnd Experts we provide
-  section#works.it_works.content-part data-title=("How it works")
-    .container
-      .row
-        h3.section_h3
-          span.sh3_bg>
-          | How
-          span.chos_sbg it works
-          span.sh3_bg
-        p.sect_clogan.choos_bgp Set up your remote Dedicated Development Team in 4 simple steps
-        .it_works_stul
-          .col-md-3.col-sm-3.col-xs-12.wow.fadeInLeftBig data-wow-delay="0.2s"
-            .work_icon.wi_1
-              h3
-                | You provide
-                br>
-                | requirements
-          .col-md-3.col-sm-3.col-xs-12.wow.fadeInLeftBig data-wow-delay="0.6s"
-            .work_icon.wi_2
-              h3
-                | We select and provide
-                br>
-                | candidates
-          .col-md-3.col-sm-3.col-xs-12.wow.fadeInLeftBig data-wow-delay="0.8s"
-            .work_icon.wi_3
-              h3
-                | You approve and hire the
-                br>
-                | best remote developers
-          .col-md-3.col-sm-3.col-xs-12.wow.fadeInLeftBig data-wow-delay="1.0s"
-            .work_icon.wi_4
-              h3
-                | You start working and we
-                br>
-                | handle all other aspects
-  /! And How it works
-  /! Why choose us
-  section#choos.choose_us.content-part data-title=("Why choose us")
-    .container
-      .row
-        h3.section_h3
-          span.sh3_bg>
-          | Why
-          span.chos_sbg choose us
-          span.sh3_bg
-        p.sect_clogan.choos_bgp Top 10 reasons to build your remote Dedicated Development Team with CyberCraft
-        .choose_stul
-          .col-md-6.col-sm-6.wow.fadeInLeftBig data-wow-delay="0.2s"
-            .choos_content.ch_1
-              h3 Lack of needed IT professionals in your area
-              p Compared to the extension of your in-house team (no startup, hiring, housing, administration, taxation costs)
-          .col-md-6.col-sm-6.wow.fadeInRightBig data-wow-delay="0.2s"
-            .choos_content.ch_2
-              h3 Cost saving up to 60%
-              p Compared to the extension of your in-house team (no startup, hiring, housing, administration, taxation costs)
-          .col-md-6.col-sm-6.wow.fadeInLeftBig data-wow-delay="0.4s"
-            .choos_content.ch_3
-              h3 Quick launch of your remote Dedicated Team
-              p Compared to the extension of your in-house team (no startup, hiring, housing, administration, taxation costs)
-          .col-md-6.col-sm-6.wow.fadeInRightBig data-wow-delay="0.4s"
-            .choos_content.ch_4
-              h3 Minimum efforts from your side to set up your full-time team
-              p Compared to the extension of your in-house team (no startup, hiring, housing, administration, taxation costs)
-          .col-md-6.col-sm-6.wow.fadeInLeftBig data-wow-delay="0.6s"
-            .choos_content.ch_5
-              h3 Full integration of your remote developers with your company
-              p Compared to the extension of your in-house team (no startup, hiring, housing, administration, taxation costs)
-          .col-md-6.col-sm-6.wow.fadeInRightBig data-wow-delay="0.6s"
-            .choos_content.ch_6
-              h3 No financial risks. Transparent and fixed monthly fee
-              p Compared to the extension of your in-house team (no startup, hiring, housing, administration, taxation costs)
-          .col-md-6.col-sm-6.wow.fadeInLeftBig data-wow-delay="0.8s"
-            .choos_content.ch_7
-              h3 Highest quality IT professionals
-              p Compared to the extension of your in-house team (no startup, hiring, housing, administration, taxation costs)
-          .col-md-6.col-sm-6.wow.fadeInRightBig data-wow-delay="0.8s"
-            .choos_content.ch_8
-              h3 Highest level of IP rights protection and confidentiality
-              p Compared to the extension of your in-house team (no startup, hiring, housing, administration, taxation costs)
-          .col-md-6.col-sm-6.wow.fadeInLeftBig data-wow-delay="1.0s"
-            .choos_content.ch_9
-              h3 Project Management support and Agile consulting
-              p Compared to the extension of your in-house team (no startup, hiring, housing, administration, taxation costs)
-          .col-md-6.col-sm-6.wow.fadeInRightBig data-wow-delay="1.0s"
-            .choos_content.ch_10
-              h3 Geographical proximity and cultural similarity to European countries
-              p Compared to the extension of your in-house team (no startup, hiring, housing, administration, taxation costs)
-  /! And Why choose us
-  /! Good people say
-  section#people.people_say.content-part data-title=("Good people say")
-    .container
-      .row
-        h3.section_h3
-          span.sh3_bg>
-          | Good people say
-          span.sh3_bg
-        p.sect_clogan
-          | And we like to hear it
-          span.slogan_people
-        /! Slider
-        #reviews.owl-carousel.owl_people
-          /! Slide
-          div
-            .col-md-8.col-sm-8.col-xs-12.y_posit.wow.fadeInRightBig
-              p Opt/Net needed to build a team of engineers to work on network management startup. We had to start almost from the scratch and strong software developers were the key to success of the project. CyberCraft was able to address our needs in a short period of time and on the budget. They selected and hired for us developers that exceeded our expectations. We are very satisfied with the code quality and dedication of Cyber Craft employees to our project. Communication with the team was easy and level of cooperation was second to none.
-            .col-md-4.col-sm-4.col-xs-12.x_posit.wow.fadeInUpBig
-              img.author_img alt="alt" src=asset_path("peoplesaysphoto.jpg")
-              h3.author Taras Matselyukh, CTO
-              img.company_logo alt="alt" src=asset_path("optnet.png")
-          /! Slide
-          div
-            .col-md-8.col-sm-8.col-xs-12.y_posit
-              p Opt/Net needed to build a team of engineers to work on network management startup. We had to start almost from the scratch and strong software developers were the key to success of the project. CyberCraft was able to address our needs in a short period of time and on the budget. They selected and hired for us developers that exceeded our expectations. We are very satisfied with the code quality and dedication of Cyber Craft employees to our project. Communication with the team was easy and level of cooperation was second to none.
-            .col-md-4.col-sm-4.col-xs-12.x_posit
-              img.author_img alt="alt" src=asset_path("peoplesaysphoto.jpg")
-              h3.author Taras Matselyukh, CTO
-              img.company_logo alt="alt" src=asset_path("optnet.png")
-          /! Slide
-          div
-            .col-md-8.col-sm-8.col-xs-12.y_posit
-              p Opt/Net needed to build a team of engineers to work on network management startup. We had to start almost from the scratch and strong software developers were the key to success of the project. CyberCraft was able to address our needs in a short period of time and on the budget. They selected and hired for us developers that exceeded our expectations. We are very satisfied with the code quality and dedication of Cyber Craft employees to our project. Communication with the team was easy and level of cooperation was second to none.
-            .col-md-4.col-sm-4.col-xs-12.x_posit
-              img.author_img alt="alt" src=asset_path("peoplesaysphoto.jpg" )
-              h3.author Taras Matselyukh, CTO
-              img.company_logo alt="alt" src=asset_path("optnet.png")
-          /! Slide
-          div
-            .col-md-8.col-sm-8.col-xs-12.y_posit
-              p Opt/Net needed to build a team of engineers to work on network management startup. We had to start almost from the scratch and strong software developers were the key to success of the project. CyberCraft was able to address our needs in a short period of time and on the budget. They selected and hired for us developers that exceeded our expectations. We are very satisfied with the code quality and dedication of Cyber Craft employees to our project. Communication with the team was easy and level of cooperation was second to none.
-            .col-md-4.col-sm-4.col-xs-12.x_posit
-              img.author_img alt="alt" src=asset_path("peoplesaysphoto.jpg")
-              h3.author Taras Matselyukh, CTO
-              img.company_logo alt="alt" src=asset_path("optnet.png")
-          /! Slide
-          div
-            .col-md-8.col-sm-8.col-xs-12.y_posit
-              p Opt/Net needed to build a team of engineers to work on network management startup. We had to start almost from the scratch and strong software developers were the key to success of the project. CyberCraft was able to address our needs in a short period of time and on the budget. They selected and hired for us developers that exceeded our expectations. We are very satisfied with the code quality and dedication of Cyber Craft employees to our project. Communication with the team was easy and level of cooperation was second to none.
-            .col-md-4.col-sm-4.col-xs-12.x_posit
-              img.author_img alt="alt" src=asset_path("peoplesaysphoto.jpg")
-              h3.author Taras Matselyukh, CTO
-              img.company_logo alt="alt" src=asset_path("optnet.png")
-  /! End Slider
-  /! End Good people say
+  = render "home_how_it_works"
+  = render "home_why_choose_us"
+  = render "home_good_people_say"
   = render "home_blog_articles"
-  /! End Map
-  section#map.map_message.content-part data-title=("Send us a message")
-    .g_map
-      img alt="alt" src=asset_path("map_02.jpg")
-    .container
-      .row
-        .map_boxshadow
-          .footer_message
-            .col-md-12.col-sm-12.col-xs-12.foot_title
-              .row
-                .col-md-4.col-sm-4.col-xs-7
-                  h3.section_h3.section_h3map
-                    span.sh3_bg>
-                    | Be
-                    span.chos_sbg in touch
-                    span.sh3_bg
-                .col-md-8.col-sm-8.col-xs-5
-                  p.slogan_map Ready to take it a step further?
-          .wow.fadeInDownBig.yellowformcontacts data-wow-duration="1.5s"
-            .col-md-4.col-sm-4.col-xs-12.cont_information.footr_form
-              ul.cont_inf
-                li
-                  a.cont_tel href="tel:+18886797138"
-                    span
-                      | +1 888 67 97 138
-                      sup Us
-                    span
-                      | +380 63 99 11 633
-                      sup Eu
-                li
-                  a.cont_mail href="mailto:info@cybercraftinc.com"  info@cybercraftinc.com
-                li
-                  a.cont_map href="#"
-                    span 7 Slipoho Str.
-                    span Lviv, Ukraine, 79017
-                li
-                  a.cont_skype href="skype:ask.CyberCraft"  ask.CyberCraft
-            .col-md-8.col-sm-8.col-xs-12.send_message.footr_form
-              h3.section_h3.h3_messag
-                span.sh3_bg>
-                | Send us a message
-                span.sh3_bg
-              .foot_f
-                form
-                  .row
-                    .col-md-6.col-sm-6.col-xs-12
-                      .css
-                        input#firstnameanimate name="name" type="text" 
-                        label for="firstnameanimate"  First and last name
-                      .css
-                        input#phonenamberanimate name="tel" type="text" 
-                        label for="phonenamberanimate"  Phone number
-                      .css
-                        input#emailanimate name="email" type="text" 
-                        label for="emailanimate"  Email
-                    .col-md-6.col-sm-6.col-xs-12
-                      .css.messagetext
-                        textarea#youmessageanimate name="text"
-                        label for="youmessageanimate"  Email
-                      input type="submit" value="Send" 
-  /! End Map
+  = render "home_map_and_form"
   = render "home_footer"
           /! And Sidebar Navigation  Main page
 

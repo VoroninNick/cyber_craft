@@ -21,5 +21,7 @@
 //= require wow.min.js
 //= require pushy.min.js
 
+//= require waypoints/lib/noframework.waypoints.min
+
 // General js
 //= require app.js
