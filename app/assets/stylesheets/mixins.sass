@@ -1,0 +1,30 @@
+@function font-url($url)
+	@return "/assets/fonts/#{$url}"
+
+
+= orbitron-medium
+	font-family: 'Orbitron', sans-serif
+	font-weight: 500
+	font-style: normal
+
+= orbitron-regular
+	font-family: 'Orbitron', sans-serif
+	font-weight: 400
+	font-style: normal
+
+= ubuntu
+	font-family: 'Ubuntu', sans-serif
+
+= ubuntu-medium
+	+ubuntu
+	font-weight: 500
+
+
+= ubuntu-light-italic
+	+ubuntu
+	font-weight: 300
+	font-style: italic
+
+= ubuntu-italic
+	+ubuntu
+	font-style: italic

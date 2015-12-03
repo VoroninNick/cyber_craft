@@ -78,6 +78,6 @@
   z-index: 999;
 }
 .navi-tooltip {
-  font-family: 'Ubuntu';
+  @include ubuntu;
   font-size: 11px;
 }
