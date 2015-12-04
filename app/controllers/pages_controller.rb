@@ -9,6 +9,7 @@ class PagesController < ApplicationController
     set_page_metadata("home")
     @footer = false
     @blog_articles = BlogArticle.home_articles
+    @industries = Industry.published
   end
 
   def about_us

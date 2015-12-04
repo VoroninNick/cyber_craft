@@ -31,6 +31,8 @@ module Cms
             end
           end
 
+          has_seo_tags
+
           scope :published, -> { where(published: true) }
 
           if options[:tags]
@@ -42,7 +44,6 @@ module Cms
 
         def acts_as_article_options
           opts = class_variable_get(:@@acts_as_article_options) || {}
-
         end
 
         def paperclip_suffixes
@@ -79,6 +80,7 @@ module Cms
           connection.create_table self.table_name do |t|
             t.boolean :published
             t.string :name
+            t.text :short_description
             t.text :content
             t.string :url_fragment
             t.has_attached_file :avatar

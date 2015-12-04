@@ -70,4 +70,19 @@ RailsAdmin.config do |config|
     end
   end
 
+
+  config.model Industry do
+    field :published
+    field :name
+    field :short_description
+    field :content, :ck_editor
+    #field :avatar
+    field :index_logo do
+      label "image"
+      help ""
+    end
+    field :seo_tags
+
+  end
+
 end
