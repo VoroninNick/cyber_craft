@@ -1161,6 +1161,7 @@ Main page Logo
   @include ubuntu-medium;
   display: block;
 
+
 }
 .cont_inf li a span{
   display: block;
@@ -1168,6 +1169,7 @@ Main page Logo
 
 .cont_tel, .cont_mail, .cont_map, .cont_skype{
   display: block;
+  min-height: 26px;
 }
 
 .cont_tel { background: url(phone.png) no-repeat top left;}

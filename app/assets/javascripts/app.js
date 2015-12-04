@@ -40,13 +40,17 @@ $(document).ready(function () {
 
 
     $('.scroll-container').onePageScroll({
+        buttonColor: "transparent",
+        tooltipBackground: "#F90",
+        tooltipColor: "black",
         //topElement: $('header'),
 //            position: 'left',
 //            background: 'rgba(50,255,100, 0.9)',
 //            tooltip: false,
 //            tooltipSelector: $('h3'),
 //            emptyContent: true,
-        sectionSelector: $('.content-part')
+        sectionSelector: $('.content-part'),
+        scrollIncrement: false
     });
 
     $('.setOff').click(function () {
