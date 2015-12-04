@@ -41,7 +41,7 @@ RailsAdmin.config do |config|
 
   config.included_models += [Cms::MetaTags]
 
-  config.included_models += [BlogArticle, Service, Team, Industry]
+  config.included_models += [BlogArticle, Service, Team, Industry, Feedback]
 
   config.included_models += [FileEditor]
 
@@ -83,6 +83,13 @@ RailsAdmin.config do |config|
     end
     field :seo_tags
 
+  end
+
+  config.model Feedback do
+    field :name
+    field :company_image
+    field :user_image
+    field :comment
   end
 
 end

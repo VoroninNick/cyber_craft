@@ -10,6 +10,7 @@ class PagesController < ApplicationController
     @footer = false
     @blog_articles = BlogArticle.home_articles
     @industries = Industry.published
+    @feedbacks = Feedback.all
   end
 
   def about_us
