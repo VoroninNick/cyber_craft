@@ -8,8 +8,13 @@ class Industry < ActiveRecord::Base
   end
 
   def self.reprocess_images!
-    self.all.each do |item|
 
+    attachment_names = Industry.attachment_definitions.keys
+    self.all.each do |item|
+      attachment_names.each do |attachment_name|
+        attachment = item.send(attachment_name)
+        attachment.reprocess!
+      end
     end
   end
 end
