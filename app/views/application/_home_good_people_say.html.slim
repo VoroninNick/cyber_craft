@@ -1,31 +1,32 @@
-/! Good people say
-section#pagi8.people_say.content-part data-title=("Good people say")
-  .container
-    .row
-      h3.section_h3
-        span.sh3_bg>
-        | Good people say
-        span.sh3_bg
-      p.sect_clogan
-        | And we like to hear it
-        span.slogan_people
-      /! Slider
-      #reviews.owl-carousel.owl_people
-        - items.each do |item|
-          /! Slide
-          div
-            .col-md-8.col-sm-8.col-xs-12.y_posit.wow.fadeInRightBig
-              p
-                = item.comment
-            .col-md-4.col-sm-4.col-xs-12.x_posit.wow.fadeInUpBig
-              img.author_img alt="alt" src=item.user_image.url(:home)
-              h3.author
-                = item.name
-              img.company_logo alt="alt" src=item.company_image.url(:home)
+- if defined?(items) && items.try(&:any?)
+  /! Good people say
+  section#pagi8.people_say.content-part data-title=("Good people say")
+    .container
+      .row
+        h3.section_h3
+          span.sh3_bg>
+          | Good people say
+          span.sh3_bg
+        p.sect_clogan
+          | And we like to hear it
+          span.slogan_people
+        /! Slider
+        #reviews.owl-carousel.owl_people
+          - items.each do |item|
+            /! Slide
+            div
+              .col-md-8.col-sm-8.col-xs-12.y_posit.wow.fadeInRightBig
+                p
+                  = item.comment
+              .col-md-4.col-sm-4.col-xs-12.x_posit.wow.fadeInUpBig
+                img.author_img alt="alt" src=item.user_image.url(:home)
+                h3.author
+                  = item.name
+                img.company_logo alt="alt" src=item.company_image.url(:home)
 
 
 
 
 
-/! End Slider
-/! End Good people say
+  /! End Slider
+  /! End Good people say
