@@ -211,6 +211,7 @@ body {
   transition-timing-function: cubic-bezier(0.75, 0, 0.29, 1.01);
   margin-top: 10px;
   position: absolute;
+  box-shadow: $light-box-shadow;
 }
 
 
@@ -328,15 +329,42 @@ Main page Logo
   color: #fff;
   text-transform: uppercase;
 }
-.heading_slide h1 a{
+.heading_slide h1 .slide-name{
   @include orbitron-medium;
   color: #fff;
   background: rgba(56, 64, 70, 0.8);
   margin-bottom: 2px;
   line-height: 59px;
   font-size: 30px;
-  padding: 10px 20px;
+  padding: 10px 0px;
   letter-spacing: 2.9px;
+
+  &:before, &:after{
+    color: $orange-color;
+  }
+
+  span{
+    padding: 0 10px;
+    //background: black;
+    display: inline;
+
+    &:first-child:before, &:last-child:after{
+      color: $orange-color;
+    }
+
+    &:first-child{
+      &:before{
+        content: "<";
+      }
+
+    }
+
+    &:last-child{
+      &:after{
+        content: ">";
+      }
+    }
+  }
 }
 .heading_slide h1 a:hover{
   text-decoration: none;}
@@ -572,8 +600,10 @@ Main page Logo
   margin-top: 13px;
   line-height: 21px;
 }
-.et_zah a{
-  color: #fff;
+.et_zah{
+  a, span {
+    color: #fff;
+  }
 }
 .p_ot .et_zah:first-letter {
   float: left;

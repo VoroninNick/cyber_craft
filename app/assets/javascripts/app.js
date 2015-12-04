@@ -13,7 +13,7 @@ $(document).ready(function() {
         pagination: true,
         animation: 'fade',
         hashchange: false,
-        play: 5000,
+        play: 5000 * 100,
         scrollable: true
     });
 
