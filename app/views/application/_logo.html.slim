@@ -1,9 +1,10 @@
+- logo_class ||= 'logo'
 /! Logo
 - if !defined?(url) || url
   - url = root_path
-  a.logo href=url
+  a class=logo_class href=url
     img alt="" src=asset_path("logo.png")
 - else
-  span.logo
+  span class=logo_class
     img  alt="" src=asset_path("logo.png")
 /! End Logo

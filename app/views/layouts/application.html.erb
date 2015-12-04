@@ -27,7 +27,7 @@
   <body>
 
     <%= render "menu" %>
-    <%= render "logo", url: !home_page %>
+    <%= render "logo", url: !home_page, logo_class: "header-logo" %>
 
     <% if !sticky_footer %>
         <%= yield %>

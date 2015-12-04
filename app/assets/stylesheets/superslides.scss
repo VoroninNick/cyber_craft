@@ -68,13 +68,13 @@
 }
 .slides-pagination a:hover{
   text-decoration: none;
-  color: #ff9900;
-  border-bottom: 2px solid #ff9900;
+  color: $orange-color;
+  border-bottom: 2px solid $orange-color;
 }
 .slides-pagination a.current {
-  color: #ff9900;
+  color: $orange-color;
   text-decoration: none;
-  border-bottom: 2px solid #ff9900;
+  border-bottom: 2px solid $orange-color;
 }
 
 

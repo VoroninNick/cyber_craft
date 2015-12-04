@@ -33,7 +33,7 @@ initializeGMaps = function() {
     var contentString = '<div id="content">'+
         '<div id="siteNotice">'+
         '</div>'+
-        '<h1 id="firstHeading" class="firstHeading" style="text-align: center;">CyberCraft</h1>'+
+        //'<h1 id="firstHeading" class="firstHeading" style="text-align: center;">CyberCraft</h1>'+
         '<div id="bodyContent" style="text-align: center;">'+
         '<img src="/assets/logo.png" style="width: 100px">'+
         '<p>' +

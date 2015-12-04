@@ -13,7 +13,7 @@
   width: 0;
   position: absolute;
   pointer-events: none;
-  border-left-color: #ff9900;
+  border-left-color: $orange-color;
   border-width: 9px;
   margin-top: -9px;
 
@@ -47,7 +47,7 @@
   box-shadow: 0px 0px 1px 0px rgb(0, 0, 0);
 }
 .button-circle:hover:after{
-  background: #ff9900;
+  background: $orange-color;
 }
 .button-circle.buttonAktiv {
   width: 30px!important;
@@ -64,7 +64,7 @@
   position: absolute;
   top: 0px;
   left: 0px;
-  background: #ff9900;
+  background: $orange-color;
   -webkit-box-shadow: 0px 0px 1px 0px rgb(0, 0, 0);
   -moz-box-shadow: 0px 0px 1px 0px rgb(0, 0, 0);
   box-shadow: 0px 0px 1px 0px rgb(0, 0, 0);

@@ -30,8 +30,10 @@ en:
     industries: "Industries"
     blog: "Blog"
     contacts: "Contacts"
+    benefits: "Benefits"
 
   additional_links:
     terms_of_use: "Terms of use"
     privacy_policy: "Privacy policy"
     career: "Career"
+    sitemap: "Sitemap"

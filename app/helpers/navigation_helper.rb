@@ -1,7 +1,7 @@
 module NavigationHelper
   def menu(menu_keys = nil, i18n_root = "menu")
     h = {}
-    menu_keys ||= %w(about_us services process teams industries blog contacts)
+    menu_keys ||= %w(about_us services process benefits teams industries blog contacts)
     menu_keys.each do |key|
       name = I18n.t("#{i18n_root}.#{key}")
       url = send("#{key}_path")
@@ -19,6 +19,6 @@ module NavigationHelper
   end
 
   def additional_links
-    menu(%w(terms_of_use privacy_policy career), "additional_links")
+    menu(%w(terms_of_use privacy_policy career sitemap), "additional_links")
   end
 end

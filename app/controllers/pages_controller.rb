@@ -37,4 +37,8 @@ class PagesController < ApplicationController
   def career
 
   end
+
+  def sitemap
+
+  end
 end

@@ -11,10 +11,10 @@
 
 @mixin sticky-footer($footer-height, $wrap-selector: #wrap, $content-selector: #content, $at-root: true, $footer-selector: &, $html-selector: html) {
   @include at-root-if($at-root) {
-    * {
-      margin: 0;
-      padding: 0;
-    }
+    //* {
+    //  margin: 0;
+    //  padding: 0;
+    //}
 
     #{$html-selector}, body {
       height: 100%;

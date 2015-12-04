@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   end
 
 
+
   controller :pages do
     get "about_us"
     get "contacts"
@@ -20,11 +21,13 @@ Rails.application.routes.draw do
     get "terms_of_use"
     get "privacy_policy"
     get "career"
+    get "sitemap"
   end
 
   resources "teams", only: [:index, :show]
   resources "services", only: [:index, :show]
   resources "industries", only: [:index, :show]
+  resources "benefits", only: [:index, :show]
 
   scope "blog", controller: "blog" do
     get "", action: "index", as: :blog

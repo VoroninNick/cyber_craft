@@ -1,10 +1,41 @@
 footer#standard-footer
-  ul.menu
-    - footer_menu.each do |k, v|
-      li class=("active" if v[:active])
-        = link_to_if !v[:active], v[:name], v[:url]
+  #footer-data
+    .container
+      .row
+        .col-md-6
+          = render "logo"
+          .footer-about-us-description
+            p
+              |We hire and build your own remote Dedicated Development Teams tailored to your specific requirements. You get professional full time developers that work exclusively for you as part of your company. We handle all practical needs related to hiring and housing the team at our premises in Ukraine, thus saving you half the cost and a lot of effort of in‐house expansion.
 
-  ul.addition_links
-    - additional_links.each do |k, v|
-      li class=("active" if v[:active])
-        = link_to_if !v[:active], v[:name], v[:url]
+        .col-md-6
+          .footer-contacts-header
+            a.with_arrows href=contacts_path
+              |Contact us
+          .row
+            .col-sm-6
+              .phones-icon
+                img src=asset_path("icons/cc-phone.svg")
+              .phones
+                .phone
+                  |+38 032 240
+
+        .col-sm-12
+          hr
+
+        .col-sm-12
+          ul.footer-menu
+            - footer_menu.each do |k, v|
+              li.footer-menu-li class=("active" if v[:active])
+                - if !v[:active]
+                  = link_to v[:name], v[:url]
+                - else
+                  span
+                    = v[:name]
+
+      /ul.addition_links
+        - additional_links.each do |k, v|
+          li class=("active" if v[:active])
+            = link_to_if !v[:active], v[:name], v[:url]
+
+  = render "footer_links"

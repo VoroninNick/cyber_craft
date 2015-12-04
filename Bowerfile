@@ -1,4 +1,5 @@
 asset "sass-css3-mixins"
+asset "sass-flex-mixin"
 asset "jquery-serialize-object"
 asset "respond"
 asset "waypoints"

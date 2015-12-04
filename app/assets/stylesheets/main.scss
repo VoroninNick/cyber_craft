@@ -89,10 +89,10 @@ body {
 }
 .pushymenu li a span{
   display: none;
-  color: #ff9900;
+  color: $orange-color;
 }
 .pushymenu li a:hover{
-  color: #ff9900;
+  color: $orange-color;
 }
 .pushymenu li a:hover span{
   display: inline-block;
@@ -304,7 +304,7 @@ body {
 /* ---------------------------------------------------------
 Main page Logo
 ---------------------------------------------------------*/
-.logo {
+.header-logo {
   position: absolute;
   top: 30px;
   right: 32px;
@@ -353,7 +353,7 @@ Main page Logo
 }
 
 .heading_slide h1 a .arrow_slider {
-  color: #ff9900;
+  color: $orange-color;
 }
 .slides-container li img {
 
@@ -408,7 +408,7 @@ Main page Logo
   padding: .1em .2em;
   font-size: 280%;
   color:#3B3F4A;
-  background: #ff9900;}
+  background: $orange-color;}
 .content_offer h3:first-line {
 }
 .content_offer p {
@@ -422,7 +422,7 @@ Main page Logo
 }
 .content_offer a {
   @include orbitron-medium;
-  color: #ff9900;
+  color: $orange-color;
   margin-left: 16px;
   font-size: 15px;
   text-transform: uppercase;
@@ -434,7 +434,7 @@ Main page Logo
   text-align: center;
 }
 .content_offer a:hover{
-  background: #ff9900;
+  background: $orange-color;
   color: #fff;
   text-decoration: none;
 }
@@ -582,7 +582,7 @@ Main page Logo
   @include ubuntu-medium;
   font-size: 270%;
   color: #374045;
-  background: #ff9900;}
+  background: $orange-color;}
 .p_ot .et_zah:first-line {
 }
 .ter_im img {
@@ -605,7 +605,7 @@ Main page Logo
 .section_h3.ins_h3 .sh3_bg{color: #fff;}
 .uz {
   @include orbitron-medium;
-  color: #ff9900;
+  color: $orange-color;
   font-size: 15px;
   text-transform: uppercase;
   margin: 38px 0 140px 63px;
@@ -615,7 +615,7 @@ Main page Logo
 }
 .uz:hover {
   color: #fff;
-  background: #ff9900;
+  background: $orange-color;
   text-decoration: none;
 }
 
@@ -651,8 +651,8 @@ Main page Logo
 }
 .industriewwepager .bx-pager-link{text-decoration: none;}
 .industriewwepager .bx-pager-link.active{
-  color: #ff9900;
-  border-bottom: 2px solid #ff9900;
+  color: $orange-color;
+  border-bottom: 2px solid $orange-color;
   text-decoration: none;
 }
 .industries .bx-wrapper .bx-controls-direction a {
@@ -734,7 +734,7 @@ Main page Logo
   padding-top: 3px;
   text-align: center;
   font-size: 14px;
-  color: #ff9900;
+  color: $orange-color;
 }
 .wi_2:after{
   @include orbitron-medium;
@@ -748,7 +748,7 @@ Main page Logo
   padding-top: 3px;
   text-align: center;
   font-size: 14px;
-  color: #ff9900;
+  color: $orange-color;
 }
 .wi_3:after{
   @include orbitron-medium;
@@ -762,7 +762,7 @@ Main page Logo
   padding-top: 3px;
   text-align: center;
   font-size: 14px;
-  color: #ff9900;
+  color: $orange-color;
 }
 .wi_4:after{
   @include orbitron-medium;
@@ -776,7 +776,7 @@ Main page Logo
   padding-top: 3px;
   text-align: center;
   font-size: 14px;
-  color: #ff9900;
+  color: $orange-color;
 }
 .wi_1 h3{
   position: relative;
@@ -795,7 +795,7 @@ Main page Logo
   text-align: center;
 
   font-size: 14px;
-  color: #ff9900;
+  color: $orange-color;
 }
 .wi_1:before{
   @include orbitron-medium;
@@ -811,7 +811,7 @@ Main page Logo
   padding-top: 3px;
   text-align: center;
   font-size: 14px;
-  color: #ff9900;
+  color: $orange-color;
 }
 .wi_2:before{
   @include orbitron-medium;
@@ -826,7 +826,7 @@ Main page Logo
   padding-top: 3px;
   text-align: center;
   font-size: 14px;
-  color: #ff9900;
+  color: $orange-color;
 }
 .wi_3:before{
   @include orbitron-medium;
@@ -841,7 +841,7 @@ Main page Logo
   padding-top: 3px;
   text-align: center;
   font-size: 14px;
-  color: #ff9900;
+  color: $orange-color;
 }
 .wi_4:before{
   @include orbitron-medium;
@@ -856,7 +856,7 @@ Main page Logo
   padding-top: 3px;
   text-align: center;
   font-size: 14px;
-  color: #ff9900;
+  color: $orange-color;
 }
 .wi_1{    background: url(requirements.png) no-repeat top center;}
 .wi_2{    background: url(candidates.png) no-repeat top center;}
@@ -881,7 +881,7 @@ Main page Logo
   color: #78909c;
 }
 .chos_sbg {
-  color: #ff9900;
+  color: $orange-color;
 }
 .choos_content p {
   color: #78909c;
@@ -1037,7 +1037,7 @@ Main page Logo
   color: #fff;
 }
 .test_i1 a span  {
-  color: #ff9900;
+  color: $orange-color;
 }
 .test_i2 {
   padding: 0 30px;
@@ -1096,7 +1096,7 @@ Main page Logo
 .map_message{
   position: relative;
   padding-bottom: 60px;
-  overflow: hidden;
+  overflow: visible;
 }
 .g_map {
   position: absolute;
@@ -1160,19 +1160,24 @@ Main page Logo
   padding-left: 47px;
   @include ubuntu-medium;
   display: block;
-  padding-bottom: 10px;
+
 }
 .cont_inf li a span{
   display: block;
 }
+
+.cont_tel, .cont_mail, .cont_map, .cont_skype{
+  display: block;
+}
+
 .cont_tel { background: url(phone.png) no-repeat top left;}
 .cont_mail { background: url(email.png) no-repeat top left;     margin-bottom: 35px;}
 .cont_map { background: url(map.png) no-repeat top left;}
 .cont_skype { background: url(skype.png) no-repeat top left;}
 
-.cont_inf li a span sup {
+.cont_inf li a sup {
   color: #fff;
-  color: #ff9900;
+  color: $orange-color;
   text-transform: uppercase;
   padding-left: 3px;
 }
@@ -1301,7 +1306,7 @@ footer p, footer a {
   margin-bottom: 0px;
 }
 footer a:hover{
-  color: #ff9900;
+  color: $orange-color;
   text-decoration: none;
 }
 
