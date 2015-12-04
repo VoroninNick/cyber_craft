@@ -93,4 +93,28 @@ RailsAdmin.config do |config|
     field :comment
   end
 
+  config.model FormConfig do
+    visible false
+  end
+
+  config.model FormConfigs::Message do
+    visible false
+  end
+
+  config.model Message do
+    visible false
+  end
+
+  config.model Service do
+    visible false
+  end
+
+  config.model Team do
+    visible false
+  end
+
+  config.model Cms::MetaTags do
+    visible false
+  end
+
 end
