@@ -16,7 +16,8 @@ module Cms
           attr_accessible :author
 
           self.attr_accessible *attribute_names
-          initialize_all_attachments = false
+          initialize_all_attachments = options[:initialize_all_attachments]
+          initialize_all_attachments ||= false
           attachment_names = [:avatar]
 
           if initialize_all_attachments
