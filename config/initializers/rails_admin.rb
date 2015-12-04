@@ -1,5 +1,11 @@
 require_relative "require_libs"
 
+def future_navigation_label
+  navigation_label do
+    "Future"
+  end
+end
+
 RailsAdmin.config do |config|
 
   ### Popular gems integration
@@ -94,27 +100,27 @@ RailsAdmin.config do |config|
   end
 
   config.model FormConfig do
-    visible false
+    future_navigation_label
   end
 
   config.model FormConfigs::Message do
-    visible false
+    future_navigation_label
   end
 
   config.model Message do
-    visible false
+    future_navigation_label
   end
 
   config.model Service do
-    visible false
+    future_navigation_label
   end
 
   config.model Team do
-    visible false
+    future_navigation_label
   end
 
   config.model Cms::MetaTags do
-    visible false
+    future_navigation_label
   end
 
 end
