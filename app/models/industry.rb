@@ -1,8 +1,12 @@
 class Industry < ActiveRecord::Base
   acts_as_article(base_articles: BaseArticles)
 
+  def self.home_logo_height
+    550
+  end
+
   [:index_logo].each do |attachment_name|
-    has_attached_file attachment_name, styles: {home_logo: "1000x600#" }
+    has_attached_file attachment_name, styles: {home_logo: "1000x#{home_logo_height}#" }
     do_not_validate_attachment_file_type attachment_name
     attr_accessible attachment_name
   end

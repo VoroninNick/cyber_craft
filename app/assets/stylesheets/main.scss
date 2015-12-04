@@ -572,12 +572,14 @@ Main page Logo
 /* ---------------------------------------------------------
     Main page 1.4 Industries we help
 ---------------------------------------------------------*/
+$industries-home-image-height: 550px;
+
 .industries {
   background: #383F45;
   overflow: hidden;
 
   .bx-wrapper .bx-viewport{
-    height: 600px !important;
+    height: $industries-home-image-height !important;
   }
 }
 .p_tex.ter_im {
@@ -714,7 +716,7 @@ Main page Logo
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 600px !important;
+  height: $industries-home-image-height !important;
   min-height: 100%;
 
   img{
