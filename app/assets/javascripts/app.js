@@ -40,7 +40,7 @@ $(document).ready(function () {
 
 
     $('.scroll-container').onePageScroll({
-        topElement: $('header'),
+        //topElement: $('header'),
 //            position: 'left',
 //            background: 'rgba(50,255,100, 0.9)',
 //            tooltip: false,

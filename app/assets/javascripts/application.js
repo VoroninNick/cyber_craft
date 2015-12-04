@@ -4,7 +4,10 @@
 
 //= require jquery.easing.1.3.js
 //= require owl.carousel.min.js
+
+// scroll for main page
 //= require jquery.onepage-scroll-0.0.1.min.js
+// require fullpage.js/jquery.fullPage.min
 
 // js To align height units
 //= require jquery.matchHeight-min.js
