@@ -68,6 +68,7 @@ RailsAdmin.config do |config|
 
 
     end
+    field :author_name
   end
 
 
