@@ -25,3 +25,5 @@
 
 // General js
 //= require app.js
+
+//= require google_map
