@@ -576,7 +576,9 @@ Main page Logo
   background: #383F45;
   overflow: hidden;
 
-
+  .bx-wrapper .bx-viewport{
+    height: 600px !important;
+  }
 }
 .p_tex.ter_im {
   position: absolute;
