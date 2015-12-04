@@ -4,4 +4,6 @@ class BlogArticle < ActiveRecord::Base
   scope :home_articles, -> { last(3) }
 
 
+
+
 end

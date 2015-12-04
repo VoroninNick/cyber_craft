@@ -18,12 +18,31 @@ html.keep-sticky-footer
 
 .with_arrows
 	&:before, &:after
-		color: $orange-color
-
+		//width: 6px
+		//display: inline-block
 	&:before
 		content: "<"
 	&:after
 		content: ">"
+
+.with_orange_arrows
+	@extend .with_arrows
+
+	&:before, &:after
+		color: $orange-color
+
+.with_black_arrows
+	@extend .with_arrows
+
+	&:before, &:after
+		color: #384046
+
+.with_white_arrows
+	@extend .with_arrows
+
+	&:before, &:after
+		color: white
+
 
 #standard-footer
 	+flexbox
