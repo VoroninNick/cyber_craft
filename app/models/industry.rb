@@ -6,4 +6,10 @@ class Industry < ActiveRecord::Base
     do_not_validate_attachment_file_type attachment_name
     attr_accessible attachment_name
   end
+
+  def self.reprocess_images!
+    self.all.each do |item|
+
+    end
+  end
 end
