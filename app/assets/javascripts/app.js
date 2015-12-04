@@ -27,12 +27,7 @@ $(document).ready(function() {
     });
 
 });
-//And js main heder superslides
-//Alignment unit .we_height Main page
-$(function() {
-    $('.we_height').matchHeight();
-});
-//And Alignment unit  .we_height Main page
+
 
 
 // Sidebar Navigation  Main page
@@ -65,23 +60,8 @@ $(document).ready(function () {
 //And Sidebar Navigation  Main page
 
 
-//Alignment unit .choos_content Main page
-$(function() {
-    $('.choos_content').matchHeight();
-});
-//And Alignment unit  .we_height Main page
 
-//Alignment unit .choos_content Main page
-$(function() {
-    $('.tt_bot').matchHeight();
-});
-//And Alignment unit  .if_height Main page
 
-//Alignment unit .choos_content Map Main page
-$(function() {
-    $('.footr_form').matchHeight();
-});
-//And Alignment unit  .if_height Map Main page
 
 // Slider Main page
 $(document).ready(function() {
@@ -158,3 +138,13 @@ $("body").on("click", ".scroll-down-arrow", function(){
     var top = $("#pagi2").offset().top
     $("body").animate({scrollTop: top})
 })
+
+
+//And js main heder superslides
+//Alignment unit .we_height Main page
+$(function() {
+    var selector = ".choos_content, .we_height, .tt_bot, .footr_form"
+    $(selector).matchHeight();
+
+});
+//And Alignment unit  .we_height Main page

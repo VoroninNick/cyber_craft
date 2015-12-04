@@ -581,9 +581,10 @@ Main page Logo
 .p_tex.ter_im {
   position: absolute;
   left: 0px;
-  height: 100%;
+
   overflow: hidden;
   padding: 0;
+  height: auto;
 }
 .p_ot {
   padding-left: 0px;
@@ -622,11 +623,6 @@ Main page Logo
 }
 .ter_im img {
   min-width: 100%;
-  -webkit-filter: brightness(1) contrast(1) grayscale(45%);
-  -moz-filter: brightness(1) contrast(1) grayscale(100%);
-  -o-filter: brightness(1) contrast(1) grayscale(100%);
-  -ms-filter: brightness(1) contrast(1) grayscale(100%);
-  filter: brightness(1) contrast(1) grayscale(100%);
 }
 .section_h3.ins_h3 {
   position: absolute;
