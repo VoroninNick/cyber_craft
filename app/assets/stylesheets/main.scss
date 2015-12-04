@@ -707,6 +707,28 @@ Main page Logo
   right: 10px;
   background: url(slideserviseright.png) no-repeat 0px 0px;
 }
+
+.home-industries-banner-image-div{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 500px !important;
+  min-height: 100%;
+
+  img{
+    opacity: 0;
+  }
+}
+
+.home-industries-description-column{
+
+}
+
+.home-industries-learn-more{
+  margin-bottom: 0;
+}
+
+
 /* ---------------------------------------------------------
     Main page 1.5 Experts we provide
 ---------------------------------------------------------*/

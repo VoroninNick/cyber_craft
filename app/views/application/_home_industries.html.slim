@@ -6,26 +6,25 @@ section#wehelp.industries.content-part data-title=("Industries we help")
       li
         .container
           .row
-            .ghi
-              .col-md-6.col-sm-6.col-xs-12.p_tex.ter_im
-                img.full-height alt="alt" src=item.index_logo.url(:home_logo)
-                h3.section_h3.ins_h3
+            .col-md-6.col-sm-6.col-xs-12.p_tex.ter_im.home-industries-banner-image-div style="background-image: url('#{item.index_logo.url(:home_logo)}');"
+              img.full-height alt="alt" src=item.index_logo.url(:home_logo)
+              h3.section_h3.ins_h3
 
-                  span.sh3_bg
-                  | Industries
+                span.sh3_bg
+                | Industries
+                |&nbsp;
+                span.chos_sbg
+                  |we help
                   |&nbsp;
-                  span.chos_sbg
-                    |we help
-                    |&nbsp;
-                  span.sh3_bg
-              .col-md-6.col-sm-6.col-xs-12.p_ot
-                h3.et_zah
-                  span
-                    = item.name
-                p
-                  = item.short_description
-                a.uz href=industry_path(item)
-                  | Learn more
+                span.sh3_bg
+            .col-md-6.col-sm-6.col-xs-12.p_ot.home-industries-description-column
+              h3.et_zah
+                span
+                  = item.name
+              p
+                = item.short_description
+              a.uz.home-industries-learn-more href=industry_path(item)
+                | Learn more
 
 
   /! End Slider
