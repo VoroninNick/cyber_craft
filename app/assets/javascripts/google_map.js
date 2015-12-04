@@ -72,7 +72,13 @@ initializeGMaps = function() {
 
         }
         else{
-            $info_window.show()
+            if ($info_window.filter(":visible").length){
+                $info_window.hide()
+            }
+            else{
+                $info_window.show()
+            }
+
         }
 
         //var left;
