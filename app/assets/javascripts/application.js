@@ -27,6 +27,10 @@
 
 //= require waypoints/lib/noframework.waypoints.min
 
+
+// my custom js for forms
+//= require jquery.forms
+
 // General js
 //= require app.js
 

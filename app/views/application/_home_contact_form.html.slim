@@ -1,0 +1,27 @@
+form action=message_path method="post" show-preloader=""
+  .content
+    .row
+      .col-md-6.col-sm-6.col-xs-12
+        .input.string.css required=""
+          input#firstnameanimate name="message[name]" type="text"
+          label.input-label for="firstnameanimate"  First and last name*
+        .input.string.css
+          input#phonenamberanimate name="message[phone]" type="text"
+          label.input-label for="phonenamberanimate"
+            |Phone number
+            | &nbsp;
+            sup
+              |(optional)
+        .input.string.css required=""
+          input#emailanimate name="message[email]" type="text"
+          label.input-label for="emailanimate"  Email*
+      .col-md-6.col-sm-6.col-xs-12
+        .input.text.css.messagetext required=""
+          textarea#youmessageanimate name="message[message_text]"
+          label.input-label for="youmessageanimate"  Your message*
+        input type="submit" value="Send"
+  .success-message
+    h3
+      |You have successfully sent message
+    p
+      |Our managar will contact you as soon as possible.

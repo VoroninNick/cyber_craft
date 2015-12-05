@@ -6,6 +6,12 @@ def future_navigation_label
   end
 end
 
+def settings_navigation_label
+  navigation_label do
+    "Settings"
+  end
+end
+
 RailsAdmin.config do |config|
 
   ### Popular gems integration
@@ -24,15 +30,23 @@ RailsAdmin.config do |config|
 
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
 
+  only_configurable_models = [FormConfigs::Message]
+
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
-    new
+    new do
+      except only_configurable_models
+    end
     export
     bulk_delete
-    show
+    show do
+      except only_configurable_models
+    end
     edit
-    delete
+    delete do
+      except only_configurable_models
+    end
     show_in_app
 
     ## With an audit adapter, you can add:
@@ -100,15 +114,26 @@ RailsAdmin.config do |config|
   end
 
   config.model FormConfig do
-    future_navigation_label
+    visible false
   end
 
   config.model FormConfigs::Message do
-    future_navigation_label
+    settings_navigation_label
+    show do
+      field :email_receivers, :text
+    end
+
+    edit do
+      field :email_receivers do
+        help do
+          "Please type each email in new line"
+        end
+      end
+    end
   end
 
   config.model Message do
-    future_navigation_label
+
   end
 
   config.model Service do

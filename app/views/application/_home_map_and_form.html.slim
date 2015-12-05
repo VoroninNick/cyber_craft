@@ -27,25 +27,5 @@ section#pagi10.map_message.content-part data-title=("Send us a message")
               span.with_white_arrows
                 | Send us a message
             .foot_f
-              form
-                .row
-                  .col-md-6.col-sm-6.col-xs-12
-                    .css
-                      input#firstnameanimate name="name" type="text"
-                      label for="firstnameanimate"  First and last name*
-                    .css
-                      input#phonenamberanimate name="tel" type="text"
-                      label for="phonenamberanimate"
-                        |Phone number
-                        | &nbsp;
-                        sup
-                          |(optional)
-                    .css
-                      input#emailanimate name="email" type="text"
-                      label for="emailanimate"  Email*
-                  .col-md-6.col-sm-6.col-xs-12
-                    .css.messagetext
-                      textarea#youmessageanimate name="text"
-                      label for="youmessageanimate"  Your message*
-                    input type="submit" value="Send"
+              = render "home_contact_form"
 /! End Map
