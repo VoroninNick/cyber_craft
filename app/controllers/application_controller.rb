@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   #protect_from_forgery with: :exception
 
   before_action do
-    SHOW_ALL = !request.host.scan(/cybercraft/).any?
+    ::SHOW_ALL = !request.host.scan(/cybercraft/).any?
   end
 
 

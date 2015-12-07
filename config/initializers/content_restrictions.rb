@@ -1,1 +1,1 @@
-SHOW_ALL = false
+SHOW_ALL = true
