@@ -64,4 +64,5 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :render_breadcrumbs
+  helper_method :render_page_banner
 end
