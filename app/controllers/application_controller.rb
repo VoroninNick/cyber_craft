@@ -5,6 +5,9 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   #protect_from_forgery with: :exception
 
+  before_action do
+    SHOW_ALL = !request.host.scan(/cybercraft/).any?
+  end
 
 
   include ActionView::Helpers::OutputSafetyHelper
@@ -20,6 +23,8 @@ class ApplicationController < ActionController::Base
     @_response.headers['Access-Control-Request-Method'] = '*'
     @_response.headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
   end
+
+
 
   before_action :initialize_breadcrumbs
 
