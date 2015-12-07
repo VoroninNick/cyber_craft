@@ -28,7 +28,7 @@ footer#standard-footer
             - footer_menu.each do |k, v|
               li.footer-menu-li class=("active" if v[:active])
                 - if !v[:active]
-                  = link_to v[:name], v[:url]
+                  = link_to v[:name], SHOW_ALL ? v[:url] : "#"
                 - else
                   span
                     = v[:name]

@@ -85,7 +85,9 @@ RailsAdmin.config do |config|
     pages_navigation_label
 
     edit do
+      field :banner
       field :intro, :ck_editor
+
     end
   end
 
@@ -93,6 +95,7 @@ RailsAdmin.config do |config|
     pages_navigation_label
 
     edit do
+      field :banner
       field :intro, :ck_editor
     end
   end

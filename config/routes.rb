@@ -14,27 +14,31 @@ Rails.application.routes.draw do
 
 
 
-  controller :pages do
-    get "about_us"
-    get "contacts"
-    get "process", action: "process_page"
-    get "terms_of_use"
-    get "privacy_policy"
-    get "career"
-    get "sitemap"
+  if SHOW_ALL
+    controller :pages do
+      get "about_us"
+      get "contacts"
+      get "process", action: "process_page"
+      get "terms_of_use"
+      get "privacy_policy"
+      get "career"
+      get "sitemap"
+    end
+
+    resources "teams", only: [:index, :show]
+    resources "services", only: [:index, :show]
+    resources "industries", only: [:index, :show]
+    resources "benefits", only: [:index, :show]
+
+    scope "blog", controller: "blog" do
+      get "", action: "index", as: :blog
+      get ":id", action: "show"
+    end
+
   end
-
-  resources "teams", only: [:index, :show]
-  resources "services", only: [:index, :show]
-  resources "industries", only: [:index, :show]
-  resources "benefits", only: [:index, :show]
-
-  scope "blog", controller: "blog" do
-    get "", action: "index", as: :blog
-    get ":id", action: "show"
-  end
-
 
 
   post "message", to: "messages#create"
+
+  match "*url", to: "application#render_not_found", via: [:get, :post, :path, :put, :update, :delete]
 end

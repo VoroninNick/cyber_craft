@@ -34,6 +34,10 @@ module PagesHelper
     end
 
     @page_instance = page_instance
+
+    if @page_instance && @page_instance.respond_to?(:banner) && @page_instance.banner.exists?
+      set_page_banner_image(@page_instance.banner.url)
+    end
   end
 
   def html_block_with_fallback(key, from_page_instance = false, &block)
@@ -69,5 +73,14 @@ module PagesHelper
 
     nil
 
+  end
+
+  def set_page_banner_image image
+    @page_banner_image = image
+  end
+
+
+  def set_page_banner_title title
+    @page_banner_image = title
   end
 end

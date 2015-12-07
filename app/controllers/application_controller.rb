@@ -43,17 +43,7 @@ class ApplicationController < ActionController::Base
     add_breadcrumb("Home", root_path)
   end
 
-  def set_page_banner_image image
 
-  end
-
-  def set_page_banner(title)
-
-  end
-
-  def set_page_benner_title title
-    @page_banner_image = title
-  end
 
   def render_breadcrumbs
     raw(render_to_string partial: "breadcrumbs")
@@ -65,4 +55,6 @@ class ApplicationController < ActionController::Base
 
   helper_method :render_breadcrumbs
   helper_method :render_page_banner
+
+
 end
