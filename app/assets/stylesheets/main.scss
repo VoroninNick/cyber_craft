@@ -485,6 +485,10 @@ Main page Logo
   position: relative;
   z-index: 10;
   margin-bottom: 45px;
+
+
+  background: no-repeat center center;
+  background-size: 100%;
 }
 .team_con:hover .team_cont{
   display: block;
@@ -520,54 +524,7 @@ Main page Logo
   position: relative;
   overflow: hidden;
 }
-.team1 {
-  background: url(teams1.png) no-repeat center center, url(yellow_12.png) no-repeat center center;
-  background-size: 100%;
-}
-.team2 {
-  background: url(teams2.png) no-repeat center center, url(yellow_12.png) no-repeat center center;
-  background-size: 100%;
-}
-.team3 {
-  background: url(teams3.png) no-repeat center center, url(yellow_12.png) no-repeat center center;
-  background-size: 100%;
-}
-.team4 {
-  background: url(teams4.png) no-repeat center center, url(yellow_12.png) no-repeat center center;
-  background-size: 100%;
-}
-.team5 {
-  background: url(teams5.png) no-repeat center center, url(yellow_12.png) no-repeat center center;
-  background-size: 100%;
-}
-.team6 {
-  background: url(teams6.png) no-repeat center center, url(yellow_12.png) no-repeat center center;
-  background-size: 100%;
-}
-.team7 {
-  background: url(teams7.png) no-repeat center center, url(yellow_12.png) no-repeat center center;
-  background-size: 100%;
-}
-.team8 {
-  background: url(teams8.png) no-repeat center center, url(yellow_12.png) no-repeat center center;
-  background-size: 100%;
-}
-.team9 {
-  background: url(teams9.png) no-repeat center center, url(yellow_12.png) no-repeat center center;
-  background-size: 100%;
-}
-.team10 {
-  background: url(teams10.png) no-repeat center center, url(yellow_12.png) no-repeat center center;
-  background-size: 100%;
-}
-.team11 {
-  background: url(teams11.png) no-repeat center center, url(yellow_12.png) no-repeat center center;
-  background-size: 100%;
-}
-.team12 {
-  background: url(teams12.png) no-repeat center center, url(yellow_12.png) no-repeat center center;
-  background-size: 100%;
-}
+
 
 /* ---------------------------------------------------------
     Main page 1.4 Industries we help
