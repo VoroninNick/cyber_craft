@@ -1,11 +1,13 @@
-/! header of the page
-header.header_style
-  /! title_page
-  .title_page
-    .container
-      .row
-        h1
-          span Services
-  /! End title_page
-  .fon_header.fon_services
-  /! and header of the page
+- if @page_banner_image
+  /! header of the page
+  header.header_style
+    /! title_page
+    .title_page
+      .container
+        .row
+          h1
+            span
+              = @page_banner_title
+    /! End title_page
+    .fon_header.fon_services style="background-image: url(#{@page_banner_image})"
+    /! and header of the page

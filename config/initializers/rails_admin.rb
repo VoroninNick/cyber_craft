@@ -36,7 +36,9 @@ RailsAdmin.config do |config|
 
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
 
-  only_configurable_models = [FormConfigs::Message]
+  page_model_names = %w(AboutUs Blog Career Contacts Home Industries PrivacyPolicy Process Services Teams TermsOfUse).map{|s| "Pages::#{s}" }
+
+  only_configurable_models = [FormConfigs::Message, *page_model_names]
 
   config.actions do
     dashboard                     # mandatory
@@ -65,7 +67,7 @@ RailsAdmin.config do |config|
 
   config.included_models += [FormConfig, FormConfigs::Message, Message, User]
 
-  config.included_models += %w(Home Industries Teams).map{|s| "Pages::#{s}" }
+  config.included_models += page_model_names
 
   config.included_models += [Cms::MetaTags]
 
@@ -87,9 +89,20 @@ RailsAdmin.config do |config|
     edit do
       field :banner
       field :intro, :ck_editor
-
+      field :seo_tags
     end
   end
+
+  config.model Pages::AboutUs do
+    pages_navigation_label
+
+    edit do
+      field :banner
+      field :seo_tags
+    end
+  end
+
+
 
   config.model Pages::Teams do
     pages_navigation_label
@@ -97,6 +110,76 @@ RailsAdmin.config do |config|
     edit do
       field :banner
       field :intro, :ck_editor
+      field :seo_tags
+    end
+  end
+
+  config.model Pages::Career do
+    pages_navigation_label
+
+    edit do
+      field :banner
+      field :intro, :ck_editor
+      field :seo_tags
+    end
+  end
+
+  config.model Pages::Blog do
+    pages_navigation_label
+
+    edit do
+      field :banner
+      field :intro, :ck_editor
+      field :seo_tags
+    end
+  end
+
+  config.model Pages::Contacts do
+    pages_navigation_label
+
+    edit do
+      field :banner
+      field :intro, :ck_editor
+      field :seo_tags
+    end
+  end
+
+  config.model Pages::PrivacyPolicy do
+    pages_navigation_label
+
+    edit do
+      field :banner
+      field :intro, :ck_editor
+      field :seo_tags
+    end
+  end
+
+  config.model Pages::Process do
+    pages_navigation_label
+
+    edit do
+      field :banner
+      field :intro, :ck_editor
+      field :seo_tags
+    end
+  end
+
+  config.model Pages::Services do
+    pages_navigation_label
+
+    edit do
+      field :banner
+      field :intro, :ck_editor
+      field :seo_tags
+    end
+  end
+
+  config.model Pages::TermsOfUse do
+    pages_navigation_label
+
+    edit do
+      field :banner
+      field :seo_tags
     end
   end
 

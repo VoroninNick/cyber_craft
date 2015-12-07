@@ -37,6 +37,7 @@ module PagesHelper
 
     if @page_instance && @page_instance.respond_to?(:banner) && @page_instance.banner.exists?
       set_page_banner_image(@page_instance.banner.url)
+      set_page_banner_title(page_class.name.demodulize.underscore)
     end
   end
 
@@ -81,6 +82,6 @@ module PagesHelper
 
 
   def set_page_banner_title title
-    @page_banner_image = title
+    @page_banner_title = (I18n.t("page_titles.#{title}", raise: true) rescue title)
   end
 end
