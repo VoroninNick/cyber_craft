@@ -11,6 +11,13 @@ module Cms
     end
 
 
+    if self.column_names.include?('banner_file_name')
+      self.has_attached_file :banner
+      attr_accessible :banner
+      do_not_validate_attachment_file_type :banner
+    end
+
+
     if respond_to?(:translates)
       translates :url
       accepts_nested_attributes_for :translations

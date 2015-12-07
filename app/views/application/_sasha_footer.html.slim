@@ -1,0 +1,50 @@
+/! Footer
+footer#standard-footer
+  #footer-data
+    .container
+      .row
+        .col-md-6
+          /! Logo
+          a.logo_foot_inpage href="/"
+            img alt="" src="img/fotter_logo_inpage.png"
+          /! End Logo
+          .footer-about-us-description
+            p
+              | We hire and build your own remote Dedicated Development Teams tailored to your specific requirements. You get professional full time developers that work exclusively for you as part of your company. We handle all practical needs related to hiring and housing the team at our premises in Ukraine, thus saving you half the cost and a lot of effort of in‐house expansion.
+        .col-md-6
+          .footer-contacts-header
+            a.with_orange_arrows href="/contacts"  Contacts us
+          .row
+            ul.cont_inf.cont_inf_services
+            .col-sm-6
+  li
+    a.cont_tel href="tel:+18886797138"
+      span
+        | +1 888 67 97 138
+        sup Us
+      span
+        | +380 63 99 11 633
+        sup Eu
+  .col-sm-6
+  li
+    a.cont_map href="#"
+      span 7 Slipoho Str.
+      span Lviv, Ukraine, 79017
+  .col-sm-6
+  li
+    a.cont_mail href="mailto:info@cybercraftinc.com"  info@cybercraftinc.com
+  .col-sm-6
+  li
+    a.cont_skype href="skype:ask.CyberCraft"  ask.CyberCraft
+  .col-sm-12
+    hr
+  .col-sm-12
+    ul.footer-menu
+      - footer_menu.each do |k, v|
+        li.footer-menu-li class=("active" if v[:active])
+          - if !v[:active]
+            = link_to v[:name], v[:url]
+          - else
+            span
+              = v[:name]
+  = render "footer_links"

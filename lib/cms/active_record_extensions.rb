@@ -117,6 +117,10 @@ module Cms
         end
       end
 
+      def has_banner
+
+      end
+
       def html_block_field_names
         return [] if !class_variable_defined?(:@@html_field_names)
         class_variable_get(:@@html_field_names) || []

@@ -1,6 +1,9 @@
 class Cms::Banner < ActiveRecord::Base
   attr_accessible *attribute_names
 
+  belongs_to :attachable, polymorphic: true
+
+
   [:image].each do |attachment_name|
     has_attached_file attachment_name
     attr_accessible attachment_name

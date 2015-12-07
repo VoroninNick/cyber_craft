@@ -3,7 +3,7 @@ class CreateBanners < ActiveRecord::Migration
     create_table :banners do |t|
       t.string :attachable_type
       t.integer :attachable_id
-      t.string :image
+      t.has_attached_file :image
       t.text :description
       t.string :link
     end

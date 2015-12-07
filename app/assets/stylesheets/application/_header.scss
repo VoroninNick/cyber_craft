@@ -1,0 +1,50 @@
+.header_style {
+  position: relative;
+  height: 400px;
+}
+.fon_header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.fon_services {
+  background: url(../img/servicesbanner.jpg) no-repeat center center;
+  background-size: cover;
+}
+.title_page {
+  position: absolute;
+  width: 100%;
+  top: 42%;
+  text-align: center;
+}
+.title_page h1 {
+  font-family: 'Orbitron-Regular';
+  font-weight: 500;
+  font-style: normal;
+  color: #fff;
+  background: rgba(56, 64, 70, 0.8);
+  margin-bottom: 0px;
+  line-height: 59px;
+  font-size: 30px;
+  padding: 10px 0px;
+  display: inline;
+  margin: 0;
+  letter-spacing: 2.9px;
+  text-transform: uppercase;
+}
+.title_page h1 span{
+  padding: 0 60px;
+}
+
+.title_page h1 span:first-child:before, .title_page h1 span:last-child:after{
+  color: #f90;
+}
+.title_page h1 span:first-child:before{
+  content: "<";
+}
+.title_page h1 span:last-child:after{
+  content: ">";
+}

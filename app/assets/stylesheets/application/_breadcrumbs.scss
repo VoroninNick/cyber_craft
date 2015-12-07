@@ -1,0 +1,27 @@
+.breadcrumbs {
+  background: #383F45;
+}
+.breadcrumbs_cont a, .breadcrumbs_cont p{
+  font-size: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin: 0;
+  font-family: 'Orbitron-Regular';
+  letter-spacing: 1px;
+}
+.breadcrumbs_cont a {
+  display: inline-block;
+  color: #51636D;
+}
+.breadcrumbs_cont a:hover{
+  color: #CC8312;
+  text-decoration: none;
+}
+.breadcrumbs_cont p {
+  display: inline-block;
+  color: #CC8312;
+}
+.breadcrumbs_cont span {
+  padding: 0 3px;
+  color: #51636D;
+}
