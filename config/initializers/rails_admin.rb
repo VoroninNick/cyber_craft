@@ -119,7 +119,6 @@ RailsAdmin.config do |config|
 
     edit do
       field :banner
-      field :intro, :ck_editor
       field :seo_tags
     end
   end
@@ -129,7 +128,6 @@ RailsAdmin.config do |config|
 
     edit do
       field :banner
-      field :intro, :ck_editor
       field :seo_tags
     end
   end
@@ -139,7 +137,6 @@ RailsAdmin.config do |config|
 
     edit do
       field :banner
-      field :intro, :ck_editor
       field :seo_tags
     end
   end
@@ -149,7 +146,6 @@ RailsAdmin.config do |config|
 
     edit do
       field :banner
-      field :intro, :ck_editor
       field :seo_tags
     end
   end
@@ -159,7 +155,7 @@ RailsAdmin.config do |config|
 
     edit do
       field :banner
-      field :intro, :ck_editor
+      #field :intro, :ck_editor
       field :seo_tags
     end
   end
@@ -169,7 +165,7 @@ RailsAdmin.config do |config|
 
     edit do
       field :banner
-      field :intro, :ck_editor
+      #field :intro, :ck_editor
       field :seo_tags
     end
   end
