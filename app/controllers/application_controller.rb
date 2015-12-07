@@ -6,6 +6,9 @@ class ApplicationController < ActionController::Base
   #protect_from_forgery with: :exception
 
 
+
+  include ActionView::Helpers::OutputSafetyHelper
+  include ActionView::Helpers::AssetUrlHelper
   include PagesHelper
   #include SeoTagsHelper
   include MetaDataHelper
@@ -18,7 +21,47 @@ class ApplicationController < ActionController::Base
     @_response.headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
   end
 
+  before_action :initialize_breadcrumbs
+
   def render_not_found
     render template: "errors/not_found"
   end
+
+
+  def initialize_breadcrumbs
+    @_breadcrumbs = []
+  end
+
+  def add_breadcrumb(name, url = nil)
+    b = { }
+    b[:name] = (I18n.t("breadcrumbs.#{name}", raise: true) rescue name)
+    b[:url] = url || send("#{name}_path")
+    @_breadcrumbs << b
+  end
+
+  def add_home_breadcrumb
+    add_breadcrumb("Home", root_path)
+  end
+
+  def set_page_banner_image image
+
+  end
+
+  def set_page_banner(title)
+
+  end
+
+  def set_page_benner_title title
+    @page_banner_image = title
+  end
+
+  def render_breadcrumbs
+    raw(render_to_string partial: "breadcrumbs")
+  end
+
+  def render_page_banner
+    raw(render_to_string(partial: "page_banner"))
+  end
+
+  helper_method :render_breadcrumbs
 end

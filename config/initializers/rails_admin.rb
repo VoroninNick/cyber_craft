@@ -93,7 +93,7 @@ RailsAdmin.config do |config|
     pages_navigation_label
 
     edit do
-      field :intro, :text
+      field :intro, :ck_editor
     end
   end
 

@@ -148,3 +148,14 @@ $(function() {
 
 });
 //And Alignment unit  .we_height Main page
+
+
+$(".custom-first-letter").each(function(){
+    var $block = $(this)
+    var block_text = $block.text()
+    var first_letter = block_text[0]
+    var rest_text = block_text.substr(1)
+    $block.text(rest_text)
+    var $first_letter = $("<span class='first-letter'>" + first_letter + "</span>")
+    $block.prepend($first_letter)
+})

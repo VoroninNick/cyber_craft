@@ -1,0 +1,9 @@
+.teams_stul
+  - items.each do |item|
+    .col-md-2.col-sm-3.col-xs-3.wow.zoomIn
+      a href=url_for(item)
+        .team_con
+          .team1.team_bg style="background-image: url(#{item.avatar.url}), url(#{asset_path('yellow_12.png')})"
+          .team_cont
+            p
+              = item.name

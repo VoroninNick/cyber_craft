@@ -10,14 +10,7 @@
             span.chos_sbg we build
 
         p.sect_clogan.choos_bgp.teams_wed Having access to the pool of 50.000+ highly skilled and experienced IT minds throughout Eastern Europe, CyberCraft can help you build a Dedicated Team tailored to your specific needs in various areas of software development, testing and support
-        .teams_stul
-          - items.each do |item|
-            .col-md-2.col-sm-3.col-xs-3.wow.zoomIn
-              a href=url_for(item)
-                .team_con
-                  .team1.team_bg style="background-image: url(#{item.avatar.url}), url(#{asset_path('yellow_12.png')})"
-                  .team_cont
-                    p
-                      = item.name
+
+        = render "icons", items: @teams
 
   /! End Teams we build

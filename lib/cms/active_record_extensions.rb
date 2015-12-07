@@ -69,7 +69,7 @@ module Cms
       #
       # end
 
-      def has_html_block(*names)
+      def has_html_block(*names, **options)
         names = [:content] if names.empty?
         if self._reflections[:html_blocks].nil?
           has_many :html_blocks, class_name: "Cms::HtmlBlock", as: :attachable
@@ -85,16 +85,22 @@ module Cms
 
             html_field_names << name.to_s
             class_variable_set(:@@html_field_names, html_field_names)
-            define_setter = true
+            define_getter = options[:getter] ||= true
+            define_setter = options[:setter] ||= true
 
             has_one name, -> { where(attachable_field_name: name) }, class_name: "Cms::HtmlBlock", as: :attachable, autosave: true
             accepts_nested_attributes_for name
             attr_accessible name, "#{name}_attributes".to_sym
-            # define_method "#{name}" do |locale = I18n.locale|
-            #   owner = self.association(name).owner
-            #   owner_class = owner.class
-            #   HtmlBlock.all.where(attachable_type: owner_class.name, attachable_id: owner.id, attachable_field_name: name).first.try(&:content)
-            # end
+
+
+            if define_getter
+
+              define_method "#{name}" do |locale = I18n.locale|
+                owner = self.association(name).owner
+                owner_class = owner.class
+                HtmlBlock.all.where(attachable_type: owner_class.name, attachable_id: owner.id, attachable_field_name: name).first.try(&:content)
+              end
+            end
 
             if define_setter
               define_method "#{name}=" do |value|
@@ -102,9 +108,11 @@ module Cms
                 owner_class = owner.class
                 html_block = HtmlBlock.all.where(attachable_type: owner_class.name, attachable_id: owner.id, attachable_field_name: name).first_or_initialize
                 html_block.content = value
-
+                html_block.save
               end
             end
+
+
           end
         end
       end

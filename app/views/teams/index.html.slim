@@ -1,2 +1,9 @@
-h1
-  |Teams
+.white-bg
+  .container
+    .row
+      .col-sm-12
+        = html_block_with_fallback(:intro, true) do
+          p
+            |Having access to the pool of over 50,000 highly skilled and experienced IT minds throughout Eastern Europe, CyberCraft can help you build a Dedicated Team tailored to your specific needs in various areas of software development, testing and support:
+
+      = render "icons", items: @teams

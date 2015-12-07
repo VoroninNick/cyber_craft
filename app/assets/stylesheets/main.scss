@@ -568,14 +568,18 @@ $industries-home-image-height: 550px;
     color: #fff;
   }
 }
-.p_ot .et_zah:first-letter {
+.p_ot .et_zah .first-letter {
   float: left;
   margin: -.3em .2em .1em 0;
-  padding: .2em .4em;
+  padding: .2em 0;
   @include ubuntu-medium;
   font-size: 270%;
   color: #374045;
-  background: $orange-color;}
+  background: $orange-color;
+  width: 70px;
+  text-align: center;
+  display: block;
+}
 .p_ot .et_zah:first-line {
 }
 .ter_im img {

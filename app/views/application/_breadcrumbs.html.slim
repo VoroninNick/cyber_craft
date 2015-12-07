@@ -1,0 +1,20 @@
+- if @_breadcrumbs.try(&:any?)
+  section.breadcrumbs
+    .container
+      .row
+        .col-md-8
+          .breadcrumbs_cont
+            - @_breadcrumbs.each_with_index do |b, i|
+              - last = i == @_breadcrumbs.length - 1
+
+              - if last
+                a href=b[:url]
+                  = b[:name]
+              - else
+                p
+                  = b[:name]
+
+              - if !last
+                span
+                  |&gt;
+

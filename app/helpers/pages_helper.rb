@@ -46,17 +46,25 @@ module PagesHelper
     end
 
     page_instance.try do |p|
-      html_block = p.html_blocks.by_field(key).first
+      if p.respond_to?(key)
+        html_block = p.send(key)
+      end
+      html_block ||= p.html_blocks.by_field(key).first
     end
 
-    if  (html_block || (html_block = Cms::KeyedHtmlBlock.by_key(key).first)) && html_block.content.present?
-      return raw html_block.content
+    if html_block.is_a?(String)
+      if html_block.present?
+        return raw html_block
+      end
+    else
+      if  (html_block || (html_block = Cms::KeyedHtmlBlock.by_key(key).first))  && html_block.content.present?
+        return raw html_block.content
+      end
     end
 
     if block_given?
       yield
       #self.instance_eval(&block)
-
     end
 
     nil
