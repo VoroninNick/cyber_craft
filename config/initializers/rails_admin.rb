@@ -183,13 +183,7 @@ RailsAdmin.config do |config|
     end
   end
 
-  config.model Cms::MetaTags do
-    visible false
 
-    field :title
-    field :keywords
-    field :description
-  end
 
   config.model BlogArticle do
     field :published
@@ -261,7 +255,11 @@ RailsAdmin.config do |config|
   end
 
   config.model Cms::MetaTags do
-    future_navigation_label
+    visible false
+
+    field :title
+    field :keywords
+    field :description
   end
 
 
