@@ -12,6 +12,12 @@ def settings_navigation_label
   end
 end
 
+def pages_navigation_label
+  navigation_label do
+    "Pages"
+  end
+end
+
 RailsAdmin.config do |config|
 
   ### Popular gems integration
@@ -57,7 +63,9 @@ RailsAdmin.config do |config|
 
 
 
-  config.included_models += [FormConfig, FormConfigs::Message, Message, User, Pages::Home]
+  config.included_models += [FormConfig, FormConfigs::Message, Message, User]
+
+  config.included_models += %w(Home Industries Teams).map{|s| "Pages::#{s}" }
 
   config.included_models += [Cms::MetaTags]
 
@@ -68,10 +76,30 @@ RailsAdmin.config do |config|
 
 
   config.model Pages::Home do
+    pages_navigation_label
+
     field :seo_tags
   end
 
+  config.model Pages::Industries do
+    pages_navigation_label
+
+    edit do
+      field :intro, :ck_editor
+    end
+  end
+
+  config.model Pages::Teams do
+    pages_navigation_label
+
+    edit do
+      field :intro, :text
+    end
+  end
+
   config.model Cms::MetaTags do
+    visible false
+
     field :title
     field :keywords
     field :description
@@ -97,7 +125,7 @@ RailsAdmin.config do |config|
     field :name
     field :short_description
     field :content, :ck_editor
-    #field :avatar
+    field :avatar
     field :index_logo do
       label "image"
       help ""
@@ -141,11 +169,17 @@ RailsAdmin.config do |config|
   end
 
   config.model Team do
-    future_navigation_label
+    field :published
+    field :name
+    field :avatar
   end
 
   config.model Cms::MetaTags do
     future_navigation_label
   end
+
+
+
+
 
 end

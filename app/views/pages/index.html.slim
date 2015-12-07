@@ -2,7 +2,7 @@
 .scroll-container
   = render "home_slider"
   = render "home_what_we_offer"
-  = render "home_teams"
+  = render "home_teams", items: @teams
   /! Industries we help
   = render "home_industries", items: @industries
   = render "home_experts"

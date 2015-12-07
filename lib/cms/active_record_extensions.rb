@@ -85,7 +85,7 @@ module Cms
 
             html_field_names << name.to_s
             class_variable_set(:@@html_field_names, html_field_names)
-
+            define_setter = true
 
             has_one name, -> { where(attachable_field_name: name) }, class_name: "Cms::HtmlBlock", as: :attachable, autosave: true
             accepts_nested_attributes_for name
@@ -95,6 +95,16 @@ module Cms
             #   owner_class = owner.class
             #   HtmlBlock.all.where(attachable_type: owner_class.name, attachable_id: owner.id, attachable_field_name: name).first.try(&:content)
             # end
+
+            if define_setter
+              define_method "#{name}=" do |value|
+                owner = self.association(name).owner
+                owner_class = owner.class
+                html_block = HtmlBlock.all.where(attachable_type: owner_class.name, attachable_id: owner.id, attachable_field_name: name).first_or_initialize
+                html_block.content = value
+
+              end
+            end
           end
         end
       end

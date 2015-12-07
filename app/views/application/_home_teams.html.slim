@@ -1,137 +1,23 @@
-/! Teams we build
-section#pagi3.teams_we.content-part data-title=("Teams we build")
-  .container
-    .row
-      h3.section_h3
-        a.with_black_arrows href="#"
-          | Teams
-          |&nbsp;
-          span.chos_sbg we build
+- if defined?(items) && items.try(&:any?)
+  /! Teams we build
+  section#pagi3.teams_we.content-part data-title=("Teams we build")
+    .container
+      .row
+        h3.section_h3
+          a.with_black_arrows href="#"
+            | Teams
+            |&nbsp;
+            span.chos_sbg we build
 
-      p.sect_clogan.choos_bgp.teams_wed Having access to the pool of 50.000+ highly skilled and experienced IT minds throughout Eastern Europe, CyberCraft can help you build a Dedicated Team tailored to your specific needs in various areas of software development, testing and support
-      .teams_stul
-        .col-md-2.col-sm-3.col-xs-3.wow.zoomIn
-          a href="#"
-          .team_con
-            .team1.team_bg
-            .team_cont
-              p
-                | Web
-                br>
-                | application
-                br>
-                | development
-        .col-md-2.col-sm-3.col-xs-3.wow.zoomIn
-          a href="#"
-          .team_con
-            .team2.team_bg
-            .team_cont
-              p
-                | Mobile
-                br>
-                | application
-                br>
-                | development
-        .col-md-2.col-sm-3.col-xs-3.wow.zoomIn
-          a href="#"
-          .team_con
-            .team3.team_bg
-            .team_cont
-              p
-                | Cloud
-                br>
-                | application
-                br>
-                | development
-        .col-md-2.col-sm-3.col-xs-3.wow.zoomIn
-          a href="#"
-          .team_con
-            .team4.team_bg
-            .team_cont
-              p
-                | Desktop
-                br>
-                | application
-                br>
-                | development
-        .col-md-2.col-sm-3.col-xs-3.wow.zoomIn
-          a href="#"
-          .team_con
-            .team5.team_bg
-            .team_cont
-              p
-                | Game
-                br>
-                | development
-        .col-md-2.col-sm-3.col-xs-3.wow.zoomIn
-          a href="#"
-          .team_con
-            .team6.team_bg
-            .team_cont
-              p
-                | E-commerce
-                br>
-                | application
-                br>
-                | development
-        .col-md-2.col-sm-3.col-xs-3.wow.zoomIn
-          a href="#"
-          .team_con
-            .team7.team_bg
-            .team_cont
-              p
-                | Embedded
-                br>
-                | software
-                br>
-                | development
-        .col-md-2.col-sm-3.col-xs-3.wow.zoomIn
-          a href="#"
-          .team_con
-            .team8.team_bg
-            .team_cont
-              p
-                | Manual
-                br>
-                | testing
-        .col-md-2.col-sm-3.col-xs-3.wow.zoomIn
-          a href="#"
-          .team_con
-            .team9.team_bg
-            .team_cont
-              p
-                | Automated
-                br>
-                | testing
-        .col-md-2.col-sm-3.col-xs-3.wow.zoomIn
-          a href="#"
-          .team_con
-            .team10.team_bg
-            .team_cont
-              p
-                | 24/7
-                br>
-                | technical
-                br>
-                | support
-        .col-md-2.col-sm-3.col-xs-3.wow.zoomIn
-          a href="#"
-          .team_con
-            .team11.team_bg
-            .team_cont
-              p
-                | Software
-                br>
-                | maintenance
-                br>
-                | and support
-        .col-md-2.col-sm-3.col-xs-3.wow.zoomIn
-          a href="#"
-          .team_con
-            .team12.team_bg
-            .team_cont
-              p
-                | Project
-                br>
-                | management
-/! End Teams we build
+        p.sect_clogan.choos_bgp.teams_wed Having access to the pool of 50.000+ highly skilled and experienced IT minds throughout Eastern Europe, CyberCraft can help you build a Dedicated Team tailored to your specific needs in various areas of software development, testing and support
+        .teams_stul
+          - items.each do |item|
+            .col-md-2.col-sm-3.col-xs-3.wow.zoomIn
+              a href=url_for(item)
+                .team_con
+                  .team1.team_bg style="background-image: url(#{item.avatar.url}), url(#{asset_path('yellow_12.png')})"
+                  .team_cont
+                    p
+                      = item.name
+
+  /! End Teams we build

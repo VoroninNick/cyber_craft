@@ -11,6 +11,7 @@ class PagesController < ApplicationController
     @blog_articles = BlogArticle.home_articles
     @industries = Industry.published
     @feedbacks = Feedback.all
+    @teams = Team.published
   end
 
   def about_us
