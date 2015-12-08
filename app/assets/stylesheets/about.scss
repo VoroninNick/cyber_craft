@@ -1,0 +1,98 @@
+/* ---------------------------------------------------------
+	1. About us
+		1.1 Header
+		1.2 What we offer
+        1.3 Our services include
+---------------------------------------------------------*/
+
+/* ---------------------------------------------------------
+   location
+---------------------------------------------------------*/
+.location {
+  background: #fff;
+
+}
+.loc_bg {
+  background: url(aboutusdotted.png) repeat, url(aboutuscop.png) no-repeat top right;
+  padding: 30px 0 95px 0;
+}
+.loc_namber {
+  text-align: center;
+  display: inline-block;
+  background: url(bgaboutus.png) no-repeat top center;
+  font-size: 65px;
+  color: #ff9800;
+  font-family: 'Orbitron-Medium';
+  padding: 24px 56px;
+  position: relative;
+  margin-bottom: 40px;
+}
+.loc_nam_1 span{
+  position: absolute;
+  bottom: -37px;
+  left: 100px;
+  font-size: 30px;
+  text-align: left;
+  text-transform: uppercase;
+}
+.location p {
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 24px;
+}
+
+
+
+
+
+
+/* ---------------------------------------------------------
+   Meet the team
+---------------------------------------------------------*/
+.meet {
+  margin-bottom: 30px;
+}
+.style_namb.manb2 {
+  text-align: center;
+  margin-top: -45px;
+}
+.loc_nam_2 span{
+  position: absolute;
+  bottom: -37px;
+  left: 100px;
+  font-size: 30px;
+  text-align: left;
+  width: 200px;
+  text-transform: uppercase;
+}
+.team_boot {
+  margin-bottom: 46px;
+}
+.team>div {
+  padding: 0px;
+}
+.team_img {
+  overflow: hidden;
+  height: 300px;
+}
+.team_img img {
+  width: 100%;
+}
+
+/* ---------------------------------------------------------
+   OUR LOCATION
+---------------------------------------------------------*/
+.ourlocation{background: #fff url(aboutusmap.png) no-repeat top center;}
+.style_namb.manb3 {
+  text-align: right;
+  margin-top: -45px;
+}
+.loc_nam_3 span{
+  position: absolute;
+  bottom: -37px;
+  left: 100px;
+  font-size: 30px;
+  text-align: left;
+  width: 189px;
+  text-transform: uppercase;
+}

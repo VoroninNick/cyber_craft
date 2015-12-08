@@ -1,12 +1,62 @@
 = html_block_with_fallback(:content, true) do
-  h1
-    |About us
-  p
-    |тут щост пишеш
-  p |текст
-  .class
-  	#idid
-  	 |текст
-  	.classtest
-  		a.search href="mailto:info@cybercraftinc.com"
-  			|E-mail
+
+  /! OUR LOCATION
+  section.location
+    .loc_bg
+      .container
+        .row
+          .col-md-3.col-sm-3.col-xs-12
+            .style_namb
+              h3.loc_namber.loc_nam_1
+                | 1
+                span We are...
+          .col-md-9.col-sm-9.col-xs-12
+            p CyberCraft is an innovative and dynamic software development, outsourcing and consulting company. We have proven success and experience in building Dedicated Development Teams of di?erent sizes for our international customers. Our main mission at CyberCraft is to create productive nearshore and o?shore IT teams adjusted to the client’s needs.
+            p The founders of CyberCraft have over 30 years of combined experience with information technology, project management, and human resources sta?ng. We are a stable and reliable company with a well-established reputation and a number of successfully implemented projects for our customers in various industry verticals like ?nancial services, information services and data technology.
+            p CyberCraft is your trusted partner that will bring your business to another level by taking care of all your IT sta?ng needs, while you stay focused on your strategic goals.
+            p Expand your business in a simple, quick and cost-e?ective way with CyberCraft!
+  /! Meet the team
+  section.meet
+    .container
+      .row
+        .col-md-12.team_boot
+          .style_namb.manb2
+            h3.loc_namber.loc_nam_2
+              | 2
+              span
+                | Meet
+                br
+                | the team
+        .team
+          .col-md-4.col-sm-4.col-xs-12
+            .a_careers
+              .team_img
+                img src=asset_path("team1.jpg")
+              .team_initials
+                | fffffffff
+          .col-md-4.col-sm-4.col-xs-12
+            .a_careers
+              .team_img
+                img src=asset_path("team2.jpg")
+              .team_initials
+                | fffffffff
+          .col-md-4.col-sm-4.col-xs-12
+            .a_careers
+              .team_img
+                img src=asset_path("team3.jpg")
+              .team_initials
+                | fffffffff
+  /! OUR LOCATION
+  section.ourlocation
+    .container
+      .row
+        .col-md-12.team_boot
+          .style_namb.manb3
+            h3.loc_namber.loc_nam_3
+              | 3
+              span
+                | OUR
+                br
+                |LOCATION
+        .col-md-8.col-sm-9.col-xs-12.col-md-offset-2
+          | ffff
