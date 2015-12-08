@@ -10,7 +10,7 @@ $footer-text-color: #eceff1ff
 $extra-dark-gray-color: #384046
 
 html.keep-sticky-footer
-	@include sticky-footer($standard-footer-height, $at-root: false, $footer-selector: #standard-footer, $html-selector: "&")
+	@include sticky-footer($standard-footer-height, $at-root: false, $footer-selector: #standard-footer, $html-selector: "&", $content-selector: #main)
 
 //#standard-footer
 	@include sticky-footer(450px)
