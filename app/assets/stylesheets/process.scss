@@ -1,0 +1,95 @@
+/* ---------------------------------------------------------
+  Step
+---------------------------------------------------------*/
+.step {
+  background: #fff;
+  padding: 50px 0;
+}
+.step_slogan {
+  text-align: center;
+  font-size: 16px;
+  color: #384046;
+  font-family: 'Orbitron-Medium';
+  letter-spacing: 0.2px;
+  margin-bottom: 42px;
+}
+.step_d_bg {
+  overflow: hidden;
+  background: #383F45;
+  text-align: center;
+  width: 100%;
+  padding: 15px 0 15px;
+}
+.step_inf_blok {
+  background: #EBEFF2;
+  padding: 27px;
+  padding-bottom: 40px;
+  margin-bottom: 80px;
+}
+.step_h3 {
+  color: #fff;
+  font-size: 24px;
+  font-family: 'Orbitron-Regular';
+  letter-spacing: 2.6px;
+  margin: 5px 0;
+  text-transform: uppercase;
+}
+.step_h3 span{
+  color: #ff9800;
+  letter-spacing: 1.9px;}
+.st_img {
+  position: relative;
+  text-align: center;
+}
+.st_img:after{
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 100px;
+  bottom: -102px;
+  left: 55px;
+  background: #000;
+  background: url(../img/step_arrow.png) no-repeat center bottom;
+}
+.st_img_4:after{display: none;}
+.st_cont h3 {
+  color: #384046;
+  margin: 1px 0;
+  font-family: 'Ubuntu-Medium';
+  font-size: 21px;
+  margin-bottom: 14px;
+}
+.st_cont p {
+  color: #384046;
+  margin: 1px 0;
+  font-family: 'Ubuntu';
+  font-size: 17px;
+  line-height: 21px;
+}
+.cont_st_step {
+  float: none!important;
+}
+
+.step_blokinfic {
+  padding: 0;
+  margin-top: 25px;
+  margin-bottom: 55px;
+}
+
+.step_blokinfic li{
+  list-style-type: none;
+  padding-left: 54px;
+  margin-bottom: 23px;
+  padding-bottom: 20px;
+}
+.bloc_iconbor1{background: url(../img/iconprocess.png) no-repeat top left;}
+.bloc_iconbor2{background: url(../img/iconprocess_02.png) no-repeat top left;}
+.bloc_iconbor3{background: url(../img/iconprocess_03.png) no-repeat top left;}
+.bloc_iconbor4{background: url(../img/iconprocess_04.png) no-repeat top left;}
+.bloc_iconbor5{background: url(../img/iconprocess_05.png) no-repeat top left;}
+.step_blokinfic li p{
+  font-size: 16px;
+}
+.step_blokinfic li p span{
+  font-family: 'Ubuntu-Medium';
+}

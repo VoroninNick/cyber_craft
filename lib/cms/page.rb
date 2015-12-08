@@ -17,6 +17,10 @@ module Cms
       do_not_validate_attachment_file_type :banner
     #end
 
+    self.has_attached_file :bottom_banner
+    attr_accessible :bottom_banner
+    do_not_validate_attachment_file_type :bottom_banner
+
 
     if respond_to?(:translates)
       translates :url
