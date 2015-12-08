@@ -99,8 +99,8 @@ module PagesHelper
     @page_banner_title = (I18n.t("page_titles.#{title}", raise: true) rescue title)
   end
 
-  def set_page_bottom_banner image = nil, title = nil
+  def set_page_bottom_banner image = nil, description = nil
     @page_bottom_banner_image = image
-    @page_bottom_banner_title = title
+    @page_bottom_banner_description = description
   end
 end
