@@ -1,0 +1,20 @@
+- if defined?(items) && items.try(&:any?)
+  section.servicesslider
+    .container
+      .row
+        h3.section_h3
+          span.sh3_bg> &lt;
+          | Our services include
+          span.sh3_bg &gt;
+        #example5.slider-pro
+          .sp-slides
+            - items.each do |item|
+            .sp-slide
+              img.sp-image src=item.avatar.url
+              p.sp-layer.sp-black.sp-padding.hide-small-screen data-hide-delay="200" data-hide-transition="right" data-position="centerCenter" data-show-delay="700" data-show-transition="left" data-vertical="300"
+                = item.short_description
+          .sp-thumbnails
+            - items.each do |item|
+              .sp-thumbnail
+                .sp-thumbnail-title
+                  = item.name

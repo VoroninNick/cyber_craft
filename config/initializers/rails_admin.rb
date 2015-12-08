@@ -241,7 +241,12 @@ RailsAdmin.config do |config|
   end
 
   config.model Service do
-    future_navigation_label
+    edit do
+      field :published
+      field :name
+      field :short_description
+      field :avatar
+    end
   end
 
   config.model Team do
