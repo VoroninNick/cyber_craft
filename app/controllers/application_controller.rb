@@ -58,8 +58,13 @@ class ApplicationController < ActionController::Base
     raw(render_to_string(partial: "page_banner"))
   end
 
+  def render_page_bottom_banner
+    raw(render_to_string(partial: "bottom_banner"))
+  end
+
   helper_method :render_breadcrumbs
   helper_method :render_page_banner
+  helper_method :render_page_bottom_banner
 
 
 end
