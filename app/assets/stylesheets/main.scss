@@ -537,7 +537,7 @@ $industries-home-image-height: 550px;
 
   .bx-wrapper .bx-viewport{
     @media (min-width: 769px) {
-      height: $industries-home-image-height;
+      height: $industries-home-image-height !important;
     }
   }
 }
