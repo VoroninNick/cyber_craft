@@ -6,8 +6,8 @@
 
       a href=(SHOW_ALL ? url_for(item) : "#")
         .team_con
-          .team1.team_bg style=("background-image: url(#{item.avatar.url}), url(#{asset_path('yellow_12.png')})" if false)
-          = inline_svg(item.avatar.url)
+          .team1.team_bg style=("background-image: url(#{item.avatar.url}), url(#{asset_path('yellow_12.png')})" if true)
+            /= inline_svg(item.avatar.url)
           .team_cont
             p
               = item.name
