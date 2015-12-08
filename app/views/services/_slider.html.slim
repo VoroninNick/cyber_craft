@@ -9,10 +9,10 @@
         #example5.slider-pro
           .sp-slides
             - items.each do |item|
-            .sp-slide
-              img.sp-image src=item.avatar.url
-              p.sp-layer.sp-black.sp-padding.hide-small-screen data-hide-delay="200" data-hide-transition="right" data-position="centerCenter" data-show-delay="700" data-show-transition="left" data-vertical="300"
-                = item.short_description
+              .sp-slide
+                img.sp-image src=item.avatar.url
+                p.sp-layer.sp-black.sp-padding.hide-small-screen data-hide-delay="200" data-hide-transition="right" data-position="centerCenter" data-show-delay="700" data-show-transition="left" data-vertical="300"
+                  = item.short_description
           .sp-thumbnails
             - items.each do |item|
               .sp-thumbnail
