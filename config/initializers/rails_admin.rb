@@ -219,6 +219,7 @@ RailsAdmin.config do |config|
   config.model Industry do
     field :published
     field :name
+    field :url_fragment
     field :short_description
     field :content, :ck_editor
     field :avatar
@@ -226,8 +227,18 @@ RailsAdmin.config do |config|
       label "image"
       help ""
     end
+    field :banner
     field :seo_tags
 
+  end
+
+  config.model Team do
+    field :published
+    field :name
+    field :url_fragment
+    field :avatar
+    field :banner
+    field :seo_tags
   end
 
   config.model Feedback do
@@ -267,12 +278,6 @@ RailsAdmin.config do |config|
       field :short_description
       field :avatar
     end
-  end
-
-  config.model Team do
-    field :published
-    field :name
-    field :avatar
   end
 
   config.model Cms::MetaTags do

@@ -8,7 +8,7 @@ class PagesController < ApplicationController
   def index
     set_page_metadata("home")
     @footer = false
-    @blog_articles = BlogArticle.home_articles
+    @blog_articles = BlogArticle.published.home_articles
     @industries = Industry.published
     @feedbacks = Feedback.all
     @teams = Team.published

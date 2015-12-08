@@ -11,6 +11,11 @@ class Industry < ActiveRecord::Base
     attr_accessible attachment_name
   end
 
+  has_attached_file :banner
+  do_not_validate_attachment_file_type :banner
+  attr_accessible :banner
+
+
   def self.reprocess_images!
 
     attachment_names = Industry.attachment_definitions.keys

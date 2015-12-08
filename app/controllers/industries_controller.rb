@@ -10,6 +10,6 @@ class IndustriesController < ApplicationController
   end
 
   def show
-
+    @industry = Industry.published.where
   end
 end
