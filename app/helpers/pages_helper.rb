@@ -42,16 +42,21 @@ module PagesHelper
       banner_title = nil
       if @page_instance.respond_to?(:banner_title)
         banner_title = @page_instance.banner_title
-      elsif @page_instance.respond_to?(:name)
-        banner_title = @page_instance.name
-      else
-        banner_title = page_class.name.demodulize.underscore
       end
 
+      if @page_instance.respond_to?(:name)
+        banner_title ||= @page_instance.name
+      end
+
+      banner_title ||= page_class.name.demodulize.underscore
+
+
+
+
       set_page_banner_title(banner_title)
-
-
     end
+
+
 
     if @page_instance
       url = nil
