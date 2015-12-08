@@ -38,6 +38,20 @@ module PagesHelper
     if @page_instance && @page_instance.respond_to?(:banner) && @page_instance.banner.exists?
       set_page_banner_image(@page_instance.banner.url)
       set_page_banner_title(page_class.name.demodulize.underscore)
+
+
+    end
+
+    if @page_instance
+      url = nil, description = nil
+      if @page_instance.respond_to?(:bottom_banner) && @page_instance.bottom_banner.exists?
+        url = @page_instance.bottom_banner.url
+      end
+
+      if @page_instance.respond_to?(:bottom_banner_description) && @page_instance.bottom_banner_description.present?
+        description = @page_instance.bottom_banner_description
+      end
+      set_page_bottom_banner(url, description )
     end
   end
 
@@ -83,5 +97,10 @@ module PagesHelper
 
   def set_page_banner_title title
     @page_banner_title = (I18n.t("page_titles.#{title}", raise: true) rescue title)
+  end
+
+  def set_page_bottom_banner image = nil, title = nil
+    @page_bottom_banner_image = image
+    @page_bottom_banner_title = title
   end
 end

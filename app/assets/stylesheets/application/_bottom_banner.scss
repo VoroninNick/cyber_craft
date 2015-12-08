@@ -2,7 +2,7 @@
   Baner bottom
 ---------------------------------------------------------*/
 .bt_baner {
-  background: url(../img/servicesbanner.jpg) no-repeat top center;
+  background: url(servicesbanner.jpg) no-repeat top center;
   background-size:cover;
   padding: 135px 0;
 }
@@ -15,7 +15,7 @@
 }
 .bot_foot_baner:after{
   content: '';
-  background: url(../img/brackets.png) no-repeat top center;
+  background: url(brackets.png) no-repeat top center;
   position: absolute;
   top: -19px;
   left: 8px;
