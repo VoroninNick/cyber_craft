@@ -89,6 +89,7 @@ RailsAdmin.config do |config|
     edit do
       field :banner
       field :bottom_banner
+      field :bottom_banner_description
       field :intro, :ck_editor
       field :seo_tags
     end
@@ -100,6 +101,7 @@ RailsAdmin.config do |config|
     edit do
       field :banner
       field :bottom_banner
+      field :bottom_banner_description
       field :seo_tags
     end
   end
@@ -112,6 +114,7 @@ RailsAdmin.config do |config|
     edit do
       field :banner
       field :bottom_banner
+      field :bottom_banner_description
       field :intro, :ck_editor
       field :seo_tags
     end
@@ -123,6 +126,7 @@ RailsAdmin.config do |config|
     edit do
       field :banner
       field :bottom_banner
+      field :bottom_banner_description
       field :seo_tags
     end
   end
@@ -133,6 +137,7 @@ RailsAdmin.config do |config|
     edit do
       field :banner
       field :bottom_banner
+      field :bottom_banner_description
       field :seo_tags
     end
   end
@@ -143,6 +148,7 @@ RailsAdmin.config do |config|
     edit do
       field :banner
       field :bottom_banner
+      field :bottom_banner_description
       field :seo_tags
     end
   end
@@ -153,6 +159,7 @@ RailsAdmin.config do |config|
     edit do
       field :banner
       field :bottom_banner
+      field :bottom_banner_description
       field :seo_tags
     end
   end
@@ -163,6 +170,7 @@ RailsAdmin.config do |config|
     edit do
       field :banner
       field :bottom_banner
+      field :bottom_banner_description
       #field :intro, :ck_editor
       field :seo_tags
     end
@@ -174,6 +182,7 @@ RailsAdmin.config do |config|
     edit do
       field :banner
       field :bottom_banner
+      field :bottom_banner_description
       #field :intro, :ck_editor
       field :seo_tags
     end
@@ -185,6 +194,7 @@ RailsAdmin.config do |config|
     edit do
       field :banner
       field :bottom_banner
+      field :bottom_banner_description
       field :seo_tags
     end
   end
