@@ -1,5 +1,6 @@
 .breadcrumbs {
   background: #383F45;
+  margin-bottom: 70px;
 }
 .breadcrumbs_cont a, .breadcrumbs_cont p{
   @include orbitron-regular;
@@ -11,7 +12,8 @@
 }
 .breadcrumbs_cont a {
   display: inline-block;
-  color: #51636D;
+  //color: #51636D;
+  color: #536D79;
 }
 .breadcrumbs_cont a:hover{
   color: #CC8312;

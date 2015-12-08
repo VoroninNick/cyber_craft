@@ -37,3 +37,12 @@ en:
     privacy_policy: "Privacy policy"
     career: "Career"
     sitemap: "Sitemap"
+
+  breadcrumbs:
+    services: "Services"
+    process: Process
+    about_us: About us
+    teams: Teams
+    industries: Industries
+    blog: Blog
+    contacts: Contacts

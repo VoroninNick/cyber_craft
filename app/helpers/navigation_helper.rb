@@ -6,7 +6,7 @@ module NavigationHelper
       name = I18n.t("#{i18n_root}.#{key}")
       url = send("#{key}_path")
       #active = params[:route_name].to_s == key
-      active = controller_name == key || (action_name == key && controller_name == "pages")
+      active = controller_name == key || (action_name == key && controller_name == "pages") || params[:route_name].to_s == key
       h[key.to_sym] = { name: name, url: url, active: active }
 
     end

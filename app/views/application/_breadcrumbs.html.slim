@@ -7,7 +7,7 @@
             - @_breadcrumbs.each_with_index do |b, i|
               - last = i == @_breadcrumbs.length - 1
 
-              - if last
+              - if !last
                 a href=b[:url]
                   = b[:name]
               - else

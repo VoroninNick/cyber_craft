@@ -18,7 +18,7 @@ Rails.application.routes.draw do
     controller :pages do
       get "about_us"
       get "contacts"
-      get "process", action: "process_page"
+      get "process", action: "process_page", defaults: { route_name: :process }
       get "terms_of_use"
       get "privacy_policy"
       get "career"
