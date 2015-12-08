@@ -10,6 +10,12 @@ class IndustriesController < ApplicationController
   end
 
   def show
-    @industry = Industry.published.where
+    @industry = Industry.published.where(url_fragment: params[:id]).first
+    if @industry
+      set_page_metadata(@industry)
+      @icons = Industry.published.map{|icon| {icon: icon, active: icon.id == @industry.id} }
+    else
+      render_not_found
+    end
   end
 end

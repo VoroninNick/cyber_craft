@@ -3,9 +3,9 @@
 //
 
 .cont_inf.cont_inf_services li a {
+  @include ubuntu;
   color: #ECF0F3;
   padding-left: 47px;
-  font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   display: block;
   font-size: 16px;
@@ -29,7 +29,7 @@
 }
 
 .footer-contacts-header a, .footer-contacts-header span {
-  font-family: "Orbitron", sans-serif;
+  @include orbitron;
   font-size: 20px;
   color: white;
   text-transform: uppercase;

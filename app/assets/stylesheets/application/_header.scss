@@ -21,7 +21,7 @@
   text-align: center;
 }
 .title_page h1 {
-  font-family: 'Orbitron-Regular';
+  @include orbitron-regular;
   font-weight: 500;
   font-style: normal;
   color: #fff;

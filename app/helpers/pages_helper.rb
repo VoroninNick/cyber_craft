@@ -11,8 +11,10 @@ module PagesHelper
 
       if page.is_a?(ActiveRecord::Base)
         page_instance = page
+        page_class = page.class
         if page_instance.respond_to?(:has_seo_tags?) && page_instance.has_seo_tags?
           @page_metadata = page_instance.seo_tags
+
         end
       end
     else
@@ -37,7 +39,16 @@ module PagesHelper
 
     if @page_instance && @page_instance.respond_to?(:banner) && @page_instance.banner.exists?
       set_page_banner_image(@page_instance.banner.url)
-      set_page_banner_title(page_class.name.demodulize.underscore)
+      banner_title = nil
+      if @page_instance.respond_to?(:banner_title)
+        banner_title = @page_instance.banner_title
+      elsif @page_instance.respond_to?(:name)
+        banner_title = @page_instance.name
+      else
+        banner_title = page_class.name.demodulize.underscore
+      end
+
+      set_page_banner_title(banner_title)
 
 
     end

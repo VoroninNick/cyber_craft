@@ -1,0 +1,6 @@
+.icons-in-show
+  .container
+    .row
+      - items.each do |item|
+        .col-lg-1.icon style="#{100.0 / items.count}%" title=item[:icon].name
+          img src=item[:icon].avatar.url

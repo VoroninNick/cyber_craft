@@ -2,11 +2,11 @@
   background: #383F45;
 }
 .breadcrumbs_cont a, .breadcrumbs_cont p{
+  @include orbitron-regular;
   font-size: 12px;
   padding-top: 6px;
   padding-bottom: 6px;
   margin: 0;
-  font-family: 'Orbitron-Regular';
   letter-spacing: 1px;
 }
 .breadcrumbs_cont a {
