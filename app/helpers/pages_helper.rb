@@ -43,7 +43,8 @@ module PagesHelper
     end
 
     if @page_instance
-      url = nil, description = nil
+      url = nil
+      description = nil
       if @page_instance.respond_to?(:bottom_banner) && @page_instance.bottom_banner.exists?
         url = @page_instance.bottom_banner.url
       end
