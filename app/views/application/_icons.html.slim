@@ -1,5 +1,5 @@
 .teams_stul
-  - items.each do |item|
+  - items.each_with_index do |item, index|
     .col-md-2.col-sm-3.col-xs-3.wow.zoomIn
 
       a href=(SHOW_ALL ? url_for(item) : "#")

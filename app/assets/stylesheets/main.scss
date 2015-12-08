@@ -536,6 +536,9 @@ $industries-home-image-height: 550px;
   overflow: hidden;
 
   .bx-wrapper .bx-viewport{
+    @media (min-width: 769px) {
+      height: $industries-home-image-height;
+    }
   }
 }
 .p_tex.ter_im {
