@@ -10,7 +10,7 @@ class PagesController < ApplicationController
     @footer = false
     @blog_articles = BlogArticle.published.home_articles
     @industries = Industry.published
-    @feedbacks = Feedback.all
+    @feedbacks = Feedback.all.order("id desc")
     @teams = Team.published
   end
 

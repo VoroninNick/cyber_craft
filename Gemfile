@@ -65,3 +65,7 @@ gem 'paperclip'
 
 gem 'acts-as-taggable-on'
 #gem 'rails_admin_tag_list'
+
+gem 'pluck_to_hash'
+
+gem 'inline_svg'
