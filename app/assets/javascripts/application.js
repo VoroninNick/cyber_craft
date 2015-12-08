@@ -28,6 +28,10 @@
 //= require waypoints/lib/noframework.waypoints.min
 
 
+// for services
+//= require jquery.sliderPro.min
+
+
 // my custom js for forms
 //= require jquery.forms
 
@@ -35,3 +39,5 @@
 //= require app.js
 
 //= require google_map
+
+//= require services
