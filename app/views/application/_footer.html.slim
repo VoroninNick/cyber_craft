@@ -8,12 +8,13 @@ footer#standard-footer
             p
               |We hire and build your own remote Dedicated Development Teams tailored to your specific requirements. You get professional full time developers that work exclusively for you as part of your company. We handle all practical needs related to hiring and housing the team at our premises in Ukraine, thus saving you half the cost and a lot of effort of in‐house expansion.
 
-        .col-md-6
+        .col-md-6.footer-contacts
           .footer-contacts-header
             a.with_orange_arrows href=contacts_path
               |Contact us
           .row
-            .col-sm-6
+            = render "contact_items", list_items: false
+            /.col-sm-6
               .phones-icon
                 img src=asset_path("icons/cc-phone.svg")
               .phones

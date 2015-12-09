@@ -94,7 +94,7 @@ $.fn.validate = ()->
   return true
 
 
-$("body").on "submit", "form", (event)->
+$("body").on "submit", "form.ajax-submit", (event)->
   event.preventDefault()
   $form = $(this)
 

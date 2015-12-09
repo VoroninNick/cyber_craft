@@ -5,7 +5,7 @@
 .cont_inf.cont_inf_services li a {
   @include ubuntu;
   color: #ECF0F3;
-  padding-left: 47px;
+
   font-weight: 500;
   display: block;
   font-size: 16px;
@@ -25,16 +25,11 @@
   padding: 0!important;
 }
 #footer-data {
-  padding-top: 50px;
+  padding-top: 40px;
 }
 
-.footer-contacts-header a, .footer-contacts-header span {
-  @include orbitron;
-  font-size: 20px;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
-}
+
+
 
 .cont_inf_services .cont_tel {
   background: url(icon_10.png) no-repeat top left;
@@ -85,3 +80,75 @@
   font-size: 11px!important;
   letter-spacing: 1px!important;
 }
+
+
+#footer-data{
+  .logo{
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.footer-contacts {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+
+  .footer-contacts-header {
+    line-height: 40px;
+    margin-bottom: 20px;
+    a, span {
+      @include orbitron;
+      font-size: 18px;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+  }
+
+  a {
+    color: inherit;
+    font: inherit;
+    line-height: 20px;
+  }
+
+  .cont_tel, .cont_skype, .cont_mail, .cont_map {
+    padding-top: 2px;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+    min-height: 46px;
+  }
+
+  .cont_mail{
+    background-image: url(icon_17.png);
+  }
+
+  .cont_map {
+    background-image: url(icon_07.png);
+    span {
+      display: block;
+    }
+  }
+
+  .cont_skype{
+    background-image: url(icon_15.png);
+  }
+
+  .cont_tel {
+    background-image: url(icon_10.png);
+    a {
+
+    }
+
+    sup {
+      color: $orange-text-color;
+      text-transform: uppercase;
+    }
+  }
+}
+
+#standard-footer{
+  overflow: hidden;
+}
+
+

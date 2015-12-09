@@ -9,8 +9,23 @@ $standard-footer-height: 420px
 $footer-text-color: #eceff1ff
 $extra-dark-gray-color: #384046
 
+$sticky-footer-with-flex: true
+
 html.keep-sticky-footer
-	@include sticky-footer($standard-footer-height, $at-root: false, $footer-selector: #standard-footer, $html-selector: "&", $content-selector: #main)
+
+	//@include sticky-footer($standard-footer-height, $at-root: false, $footer-selector: #standard-footer, $html-selector: "&", $content-selector: #main)
+
+	// flexbox sticky footer
+	body
+		@include flexbox
+		min-height: 100vh
+		@include flex-direction(column)
+
+
+	#wrap
+		@include flex(1)
+
+
 
 //#standard-footer
 	@include sticky-footer(450px)

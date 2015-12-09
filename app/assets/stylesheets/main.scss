@@ -79,7 +79,7 @@ body {
   text-transform: uppercase;
   color: #fff;
   font-size: 20px;
-  @include orbitron-regular;
+  @include orbitron-bold;
   letter-spacing: 3px;
   padding: 9.5px 0;
 }
@@ -488,7 +488,7 @@ Main page Logo
 
 
   background: no-repeat center center;
-  background-size: 50px, 100%;
+  background-size: 65px, 100%;
 }
 .team_con:hover .team_cont{
   display: block;
@@ -1174,7 +1174,6 @@ $industries-home-image-height: 550px;
 }
 .cont_inf li a {
   color: #374046;
-  padding-left: 47px;
   @include ubuntu-medium;
   display: block;
 
@@ -1184,9 +1183,16 @@ $industries-home-image-height: 550px;
   display: block;
 }
 
+.cont_tel{
+  a{
+    display: block;
+  }
+}
+
 .cont_tel, .cont_mail, .cont_map, .cont_skype{
   display: block;
   min-height: 26px;
+  padding-left: 47px;
 }
 
 .cont_tel { background: url(phone.png) no-repeat top left;}
