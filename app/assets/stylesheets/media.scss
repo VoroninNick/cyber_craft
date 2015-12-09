@@ -160,6 +160,15 @@
     letter-spacing: 2.5px;
   }
   .header_lines:nth-child(3) {padding: 0 10px;}
+
+
+  .navigationleft{
+    .menu-btn{
+      @include transform(none);
+    }
+  }
+
+
 }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
