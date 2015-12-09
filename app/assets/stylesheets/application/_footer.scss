@@ -160,7 +160,7 @@
   padding-top: 12px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px), (max-width: 1152px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1152px) and (min-resolution: 144dpi) {
   .footer-additional-links{
     text-align: center;
     a, span{
