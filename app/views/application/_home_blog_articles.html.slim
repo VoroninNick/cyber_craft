@@ -29,7 +29,8 @@
                 .title_teg
                   p
                     | by &thinsp;
-                    a.tt_a href="#"
-                      = item.author_name
-                    |,&nbsp;
+                    - if item.author_name.present?
+                      a.tt_a href="#"
+                        = item.author_name
+                      |,&nbsp;
                     = item.article_date

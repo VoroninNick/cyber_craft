@@ -11,9 +11,7 @@ class BlogArticle < ActiveRecord::Base
 
   scope :home_articles, -> { last(3) }
 
-  def author_name
-    "Tomas Elbow"
-  end
+
 
 
   def article_date
