@@ -41,3 +41,4 @@
 //= require google_map
 
 //= require services
+//= require about

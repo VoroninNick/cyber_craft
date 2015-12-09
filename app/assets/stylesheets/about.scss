@@ -17,12 +17,13 @@
   padding: 30px 0 95px 0;
 }
 .loc_namber {
+  @include orbitron-medium;
   text-align: center;
   display: inline-block;
   background: url(bgaboutus.png) no-repeat top center;
   font-size: 65px;
   color: #ff9800;
-  font-family: 'Orbitron-Medium';
+
   padding: 24px 56px;
   position: relative;
   margin-bottom: 40px;
@@ -49,8 +50,11 @@
 /* ---------------------------------------------------------
    Meet the team
 ---------------------------------------------------------*/
+.a_careers {
+  margin-bottom: 40px;
+}
 .meet {
-  margin-bottom: 30px;
+  margin-bottom: 115px;
 }
 .style_namb.manb2 {
   text-align: center;
@@ -73,16 +77,88 @@
 }
 .team_img {
   overflow: hidden;
-  height: 300px;
+  position: relative;
+  height: auto!important;
 }
 .team_img img {
   width: 100%;
+  -webkit-filter: brightness(1) contrast(1) grayscale(90%) hue-rotate(330deg);
+  -moz-filter: brightness(1) contrast(1) grayscale(100%);
+  -o-filter: brightness(1) contrast(1) grayscale(100%);
+  -ms-filter: brightness(1) contrast(1) grayscale(100%);
+  filter: brightness(1) contrast(1) grayscale(100%);
+
+}
+.team_img_hover {
+  display: none;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 7px 0;
+  z-index: 2;
+}
+.team_img_hover p{
+  color: #fff;
+  text-align: center;
+  margin: 0px;
+}
+.a_careers:hover .fildr_bgimg{
+  display: none;
+
+}
+.a_careers:hover .team_img img {
+  width: 100%;
+  -webkit-filter: none;
+  -moz-filter: none;
+  -o-filter: none;
+  -ms-filter: none;
+  filter: none;
+
+}
+.a_careers:hover .team_img_hover{
+  display: block;
+}
+.team_initials {
+  position: relative;
+  background: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+.tem_name {
+  @include orbitron-regular;
+  font-size: 16px;
+  color: #384046;
+  margin-bottom: 1px;
+}
+.team_work {
+  @include ubuntu-italic;
+  color: #78909c;
+  font-size: 14px;
+}
+.team_initials_hover {
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background:#ff9800;
+  top: 0px;
+  padding: 17px 0px;
+}
+.team_initials_hover a{
+  padding: 0 5px;
+}
+.team_initials_hover a:hover{
+  opacity: 0.8;
+}
+.a_careers:hover .team_initials_hover{
+  display: block;
 }
 
 /* ---------------------------------------------------------
    OUR LOCATION
 ---------------------------------------------------------*/
-.ourlocation{background: #fff url(aboutusmap.png) no-repeat top center;}
+.ourlocation{background: #fff url(aboutusmap.png) no-repeat top center;    padding-bottom: 41px;}
 .style_namb.manb3 {
   text-align: right;
   margin-top: -45px;
@@ -96,3 +172,13 @@
   width: 189px;
   text-transform: uppercase;
 }
+.our_loc {
+  margin-top: 285px;
+}
+.ourlocation p {
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 24px;
+}
+
+.loc_namber.loc_nam_3 {margin-right: 113px;}
