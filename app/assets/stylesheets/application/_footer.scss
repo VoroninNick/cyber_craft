@@ -66,6 +66,11 @@
   height: 13px;
   background: #6C7A83;
 }
+
+@media (min-width: 1200px) {
+
+}
+
 .footer-menu-li:first-child {
   padding-left: 0%;
 }
@@ -151,4 +156,86 @@
   overflow: hidden;
 }
 
+.footer-additional-links{
+  padding-top: 12px;
+}
+
+@media (max-width: 768px) {
+  .footer-additional-links{
+    text-align: center;
+    a, span{
+      display: inline-block;
+      font-size: 14px;
+
+
+    }
+  }
+
+  .footer-additional-link{
+    &:before{
+      padding: 0 8px;
+    }
+  }
+
+  #footer-links-wrap{
+    .social-icons{
+      text-align: center;
+
+      a{
+        display: inline-block;
+        float: none;
+      }
+    }
+  }
+
+  .social-icons{
+    margin-bottom: 10px;
+  }
+
+  .footer-additional-links{
+    margin-bottom: 20px;
+  }
+}
+
+.footer-additional-links a, .f_compani, .copyright p{
+  line-height: 14px;
+}
+
+.f_compani, .copyright p{
+
+  display: block;
+}
+
+.copyright p{
+  padding-top: 14px;
+}
+
+
+$breakpoints: (480);
+
+@each $breakpoint in $breakpoints {
+  @media (min-width: #{$breakpoint}px) {
+    @for $i from 1 through 12 {
+      .col-from-#{$breakpoint}-#{$i} {
+        width: percentage($i / 12);
+      }
+
+      .col-from-#{$breakpoint}-push-#{$i - 1} {
+        left: percentage(($i - 1) / 12);
+      }
+    }
+  }
+
+  @media (max-width: #{$breakpoint}px) {
+    @for $i from 1 through 12{
+      .col-to-#{$breakpoint}-#{$i}{
+        width: percentage($i / 12);
+      }
+
+      .col-to-#{$breakpoint}-push-#{$i - 1}{
+        left: percentage(($i - 1) / 12);
+      }
+    }
+  }
+}
 
