@@ -1,5 +1,5 @@
 class AddAuthorNameToBlogArticles < ActiveRecord::Migration
   def change
-    add_column :blog_articles, :article_name, :string
+    add_column :blog_articles, :author_name, :string
   end
 end
