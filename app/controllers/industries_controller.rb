@@ -19,6 +19,7 @@ class IndustriesController < ApplicationController
       add_breadcrumb(@industry.name, false)
 
       init_icons
+      init_articles_navigation
     else
       render_not_found
     end
@@ -36,5 +37,29 @@ class IndustriesController < ApplicationController
 
       h
     }
+  end
+
+  def init_articles_navigation
+    articles = Industry.published.sort_by_position.pluck_to_hash(:id, :url_fragment, :name)
+    current_index = nil
+    articles.each_with_index do |a, i|
+      if a[:id] == @industry.id
+        current_index = i
+        break
+      end
+    end
+
+    min_index = 0
+    max_index = articles.count - 1
+
+    if current_index
+      if current_index > min_index
+        @prev_article = articles[current_index - 1]
+      end
+
+      if current_index < max_index
+        @next_article = articles[current_index + 1]
+      end
+    end
   end
 end

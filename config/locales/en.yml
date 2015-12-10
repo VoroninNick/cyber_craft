@@ -46,3 +46,7 @@ en:
     industries: Industries
     blog: Blog
     contacts: Contacts
+
+  articles_navigation:
+    prev: "Previous"
+    next: "Next"

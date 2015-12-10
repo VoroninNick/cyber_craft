@@ -8,3 +8,17 @@
     /= render "article1", article: @industry
     = render "article_template", article: @industry
 
+
+  - nav_articles = {prev: @prev_article, next: @next_article}.keep_if{|k, v| !v.nil? }
+  - if nav_articles.any?
+    .industry-articles-navigation
+      .container
+        .row
+          nav
+            - nav_articles.each do |k, a|
+              a class=k href=industry_path(a[:url_fragment])
+                .title
+                  = t("articles_navigation.#{k}")
+
+                .name
+                  = a[:name]
