@@ -6,8 +6,8 @@
     .col-md-9
       h1.industry-article-h1
         = a.h1_text
-      p
-        = a.section_1_text
+
+      = raw a.section_1_text
 
 .row
   .col-md-6.left-image style="background-image: url(#{a.section_2_image.url})"
@@ -15,15 +15,16 @@
   .col-md-3.col-md-push-5.image-description-wrap
     .image-description
       .image-description-content
-        = a.section_2_description
+        = raw a.section_2_description
 
 .row.relative
   .with-gray-bg.padding-top
     .container
       .row.padding-bottom
         .col-md-8
-          h2.industry-article-h2
-            = a.h2_text
+          - if h2_text.present?
+            h2.industry-article-h2
+              = raw a.h2_text
           p
             = a.section_3_text
 
