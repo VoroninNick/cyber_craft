@@ -2,7 +2,7 @@ class IndustriesController < ApplicationController
   def index
     set_page_metadata("industries")
 
-    @industries = Industry.published
+    @industries = Industry.published.sort_by_position
 
 
     add_home_breadcrumb
@@ -25,7 +25,7 @@ class IndustriesController < ApplicationController
   end
 
   def init_icons
-    @icons = Industry.published.map.map{|item|
+    @icons = Industry.published.sort_by_position.map.map{|item|
       h = {};
       h[:name] = item[:name];
       h[:avatar_file_name] = item[:avatar_file_name];

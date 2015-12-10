@@ -1,6 +1,9 @@
 class Industry < ActiveRecord::Base
   acts_as_article(base_articles: BaseArticles)
 
+
+  scope :sort_by_position, -> { order("position asc") }
+
   def self.home_logo_height
     550
   end

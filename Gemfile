@@ -54,6 +54,7 @@ gem 'bower-rails'
 gem "protected_attributes"
 
 gem 'rails_admin'
+gem 'rails_admin_nestable'
 
 gem 'devise'
 

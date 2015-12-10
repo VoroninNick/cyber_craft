@@ -64,6 +64,10 @@ RailsAdmin.config do |config|
     ## With an audit adapter, you can add:
     # history_index
     # history_show
+
+    nestable do
+      only [Industry, Team]
+    end
   end
 
 
@@ -221,6 +225,8 @@ RailsAdmin.config do |config|
 
 
   config.model Industry do
+    nestable_list true
+
     group :main do
       field :published
       field :name
@@ -274,6 +280,9 @@ RailsAdmin.config do |config|
   end
 
   config.model Team do
+    nestable_list true
+
+
     field :published
     field :name
     field :url_fragment
