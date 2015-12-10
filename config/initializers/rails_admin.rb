@@ -217,19 +217,46 @@ RailsAdmin.config do |config|
 
 
   config.model Industry do
-    field :published
-    field :name
-    field :url_fragment
-    field :short_description
-    field :content, :ck_editor
-    field :avatar
-    field :index_logo do
-      label "image"
-      help ""
+    group :main do
+      field :published
+      field :name
+      field :url_fragment
+      field :short_description
+      #field :content, :ck_editor
+      field :avatar
+      field :index_logo do
+        label "image"
+        help ""
+      end
+      field :banner
     end
-    field :banner
-    field :seo_tags
 
+    group :content do
+      field :background_image
+
+      field :section_1_image
+      field :h1_text
+      field :section_1_text
+
+      field :section_2_image
+      field :section_2_description
+
+      field :h2_text
+      field :section_3_text
+      field :section_3_quote
+
+      field :section_4_image
+      field :section_4_description_html
+
+      field :section_5_image
+      field :section_5_image_description
+      field :h3_text
+      field :section_5_text_html
+    end
+
+    group :seo do
+      field :seo_tags
+    end
   end
 
   config.model Team do

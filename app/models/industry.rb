@@ -16,6 +16,22 @@ class Industry < ActiveRecord::Base
   attr_accessible :banner
 
 
+  # content builder
+  has_attached_file :background_image
+  has_attached_file :section_1_image
+
+  has_attached_file :section_2_image
+
+  has_attached_file :section_4_image
+
+  has_attached_file :section_5_image
+
+  %w(background_image section_1_image section_2_image section_4_image section_5_image).each do |k|
+    do_not_validate_attachment_file_type k
+    attr_accessible k
+  end
+
+
   def self.reprocess_images!
 
     attachment_names = Industry.attachment_definitions.keys
@@ -25,5 +41,9 @@ class Industry < ActiveRecord::Base
         attachment.reprocess!
       end
     end
+  end
+
+  def background_image_url
+    background_image_url.url
   end
 end

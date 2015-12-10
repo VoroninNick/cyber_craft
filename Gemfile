@@ -69,3 +69,5 @@ gem 'acts-as-taggable-on'
 gem 'pluck_to_hash'
 
 gem 'inline_svg'
+
+gem 'placeholdit'

@@ -27,3 +27,11 @@
   padding: 0 3px;
   color: #51636D;
 }
+
+html{
+  &[data-controller=industries]{
+    body{
+      background: white;
+    }
+  }
+}

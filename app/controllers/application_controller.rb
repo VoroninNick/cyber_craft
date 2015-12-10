@@ -40,7 +40,7 @@ class ApplicationController < ActionController::Base
   def add_breadcrumb(name, url = nil)
     b = { }
     b[:name] = (I18n.t("breadcrumbs.#{name}", raise: true) rescue name)
-    b[:url] = url || send("#{name}_path")
+    b[:url] = url.nil? ? send("#{name}_path") : url
     @_breadcrumbs << b
   end
 

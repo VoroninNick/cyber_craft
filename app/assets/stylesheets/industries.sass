@@ -6,9 +6,192 @@
 	margin-bottom: 15px
 
 
+
+
 .icons-in-show
+	margin-bottom: 4rem
 	.icon
+		position: relative
 		float: left
+		height: 50px
 		background-color: $light-gray-bg-color
+		padding: 0
+		border-left: 1px solid white
+		text-align: center
+
+		&:after
+			content: ""
+			position: absolute
+			height: 2px
+			background: $orange-color
+			bottom: 0
+			width: 100%
+			left: 0
+			+transition-property(width)
+			+transition-duration($transition-duration)
+
+		svg
+			width: 30px
+			height: 30px
+
+			*
+				fill: $blue-color
+				stroke: $blue-color
 		img
 			max-width: 100%
+
+		a, span
+			display: block
+			padding-top: 10px
+			height: 100%
+		&.active, &:hover
+			background-color: $blue-color
+
+
+			svg
+				*
+					fill: white
+					stroke: white
+
+			&, & + .icon
+				border-left: none
+
+			&:after
+				width: 0
+
+
+// industry article content
+
+.industry-bg
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	background-repeat: no-repeat
+	background-size: 450px
+	background-position: top right
+	opacity: 0.1
+
+.industry-article-content
+	//color: $blue-text-color
+
+	.industry-large-icon
+		text-align: center
+		svg
+			width: 175px
+			height: auto
+			max-width: 100%
+
+	.industry-article-h1
+		text-transform: uppercase
+		font-size: 22px
+		font-weight: 500
+
+	.industry-article-h2
+		font-size: 18px
+		margin-bottom: 20px
+
+	.industry-article-h3
+		font-size: 16px
+		margin-bottom: 45px
+		margin-top: 50px
+
+
+
+$left-image-height: 350px
+
+.left-image, .right-image
+	height: $left-image-height
+	position: absolute
+	background-size: cover
+	background-position: center
+
+	& + .image-description-wrap
+		height: auto
+		min-height: $left-image-height
+		display: table
+		.image-description
+			display: table-cell
+		.image-description-content
+			//top: 50%
+			//+transform(translateY(50%))
+			background: rgba(0, 0, 0, 0.6 )
+			padding: 10px 25px
+			color: white
+			font-size: 16px
+		.image-description
+			vertical-align: middle
+
+.left-image
+
+
+.right-image
+	right: 0
+
+
+.with-gray-bg
+	&:before
+		display: block
+		content: ""
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-color: $light-gray-bg-color
+
+.relative
+	position: relative
+
+
+.padding-top
+	padding-top: 50px
+
+.padding-bottom
+	padding-bottom: 50px
+
+.orange-quote
+	color: $orange-text-color
+	font-size: 24px
+	font-weight: 500
+	padding-left: 20px
+	border-left: 3px solid
+
+
+.image-description-content
+	ul
+		list-style: none
+		position: relative
+		padding-left: 10px
+	li
+		margin-bottom: 10px
+		line-height: 20px
+
+		&:before
+			left: 0
+			content: "●"
+			color: $orange-text-color
+			position: absolute
+			display: inline-block
+			font-weight: 400
+			font-size: 10px
+			line-height: inherit
+
+
+.italic
+	font-style: italic
+
+.text-center
+	text-align: center
+
+.small-image
+	img
+		max-width: 150px
+		width: 100%
+
+img
+	max-width: 100%
+
+.icon-subtext
+	font-size: 20px

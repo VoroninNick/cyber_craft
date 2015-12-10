@@ -120,4 +120,30 @@ module PagesHelper
     @page_bottom_banner_image = image
     @page_bottom_banner_description = description
   end
+
+  def placeholdit_url(size, opts={})
+    size = "#{size}" unless size.is_a?(String)
+    src = "https://placehold.it/#{size}"
+
+    config = {
+        :alt => (opts[:text] || "A placeholder image"),
+        :class => "placeholder",
+        :height => (size.split('x')[1] || size.split('x')[0]),
+        :width => size.split('x')[0],
+        :title => opts[:title]
+    }.merge!(opts)
+
+    # Placehold.it preferences
+    if config[:background_color]
+      src += "/#{remove_hex_pound(config[:background_color])}"
+    end
+    if config[:text_color]
+      src += "/#{remove_hex_pound(config[:text_color])}"
+    end
+    if config[:text]
+      src += "&text=#{config[:text]}"
+    end
+
+    src
+  end
 end

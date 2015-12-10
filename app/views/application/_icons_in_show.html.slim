@@ -2,5 +2,10 @@
   .container
     .row
       - items.each do |item|
-        .col-lg-1.icon style="#{100.0 / items.count}%" title=item[:name]
-          img src=item[:icon]
+        .col-lg-1.icon style="width: #{100.0 / items.count}%" title=item[:name] class=("active" if item[:active])
+          - if !item[:active]
+            a href=item[:url]
+              = inline_svg item[:icon_path]
+          - else
+            span
+              = inline_svg item[:icon_path]
