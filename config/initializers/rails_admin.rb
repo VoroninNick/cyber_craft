@@ -18,6 +18,10 @@ def pages_navigation_label
   end
 end
 
+def help_html_code
+  help "html code"
+end
+
 RailsAdmin.config do |config|
 
   ### Popular gems integration
@@ -236,22 +240,32 @@ RailsAdmin.config do |config|
 
       field :section_1_image
       field :h1_text
-      field :section_1_text
+      field :section_1_text do
+        help_html_code
+      end
 
       field :section_2_image
-      field :section_2_description
+      field :section_2_description do
+        help_html_code
+      end
 
       field :h2_text
-      field :section_3_text
+      field :section_3_text do
+        help_html_code
+      end
       field :section_3_quote
 
       field :section_4_image
-      field :section_4_description_html
+      field :section_4_description_html do
+        help_html_code
+      end
 
       field :section_5_image
       field :section_5_image_description
       field :h3_text
-      field :section_5_text_html
+      field :section_5_text_html do
+        help_html_code
+      end
     end
 
     group :seo do
