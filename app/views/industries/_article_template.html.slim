@@ -44,8 +44,8 @@
 .container.relative
   .row
     .col-xs-12
-      h3.industry-article-h3
-        = a.h3_text
+      = content_tag a.h3_tag, a.h3_text, class: "industry-article-h3"
+
     .col-md-3.text-center.small-image
       img src=a.section_5_image.url
 

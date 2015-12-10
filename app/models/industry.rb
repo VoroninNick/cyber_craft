@@ -46,4 +46,12 @@ class Industry < ActiveRecord::Base
   def background_image_url
     background_image_url.url
   end
+
+  def h3_tag
+    if h2_text.present?
+      :h3
+    else
+      :h2
+    end
+  end
 end
