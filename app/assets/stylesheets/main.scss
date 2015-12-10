@@ -401,8 +401,9 @@ Main page Logo
         Main page Header Learn more
 ---------------------------------------------------------*/
 .learnmore {
-  position: relative;
-  bottom: 30px;
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
   z-index: 30;
   text-align: center;
 }
