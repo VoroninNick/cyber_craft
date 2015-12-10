@@ -245,7 +245,9 @@ RailsAdmin.config do |config|
       field :background_image
 
       field :section_1_image
-      field :h1_text
+      field :h1_text do
+        label "section 1 header"
+      end
       field :section_1_text do
         help_html_code
       end
@@ -255,7 +257,9 @@ RailsAdmin.config do |config|
         help_html_code
       end
 
-      field :h2_text
+      field :h2_text do
+        label "section 3 header"
+      end
       field :section_3_text do
         help_html_code
       end
@@ -266,9 +270,12 @@ RailsAdmin.config do |config|
         help_html_code
       end
 
+      field :h3_text do
+        label "section 5 header"
+      end
       field :section_5_image
       field :section_5_image_description
-      field :h3_text
+
       field :section_5_text_html do
         help_html_code
       end
