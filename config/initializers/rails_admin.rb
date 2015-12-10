@@ -289,13 +289,40 @@ RailsAdmin.config do |config|
   config.model Team do
     nestable_list true
 
+    group :main do
+      field :published
+      field :name
+      field :url_fragment
+      field :avatar
+      field :banner
 
-    field :published
-    field :name
-    field :url_fragment
-    field :avatar
-    field :banner
-    field :seo_tags
+    end
+
+    group :content do
+      field :background_image
+
+      field :section_1_image
+      field :section_1_header
+      field :section_1_description
+
+      field :section_2_image
+      field :section_2_image_description
+
+      field :section_3_background
+      field :section_3_description
+      field :section_3_image
+
+      field :section_4_image
+      field :section_4_image_description
+
+      field :section_5_description
+      field :section_5_quote
+    end
+
+    group :seo do
+      field :seo_tags
+    end
+
   end
 
   config.model Feedback do
