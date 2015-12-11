@@ -10,8 +10,12 @@
         = member.name
       span.team_work
         = member.position
-      .team_initials_hover
-        a href=member.facebook
-          img alt="" src=asset_path("facebook_abaut.png")
-        a href=member.linkedin
-          img alt="" src=asset_path("in_abaut.png")
+      - if member.facebook.present? || member.linkedin.present?
+        .team_initials_hover
+          - if member.facebook.present?
+            a href=member.facebook
+              img alt="" src=asset_path("facebook_abaut.png")
+
+          - member.linkedin.present?
+            a href=member.linkedin
+              img alt="" src=asset_path("in_abaut.png")

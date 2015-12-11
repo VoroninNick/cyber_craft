@@ -382,7 +382,7 @@ RailsAdmin.config do |config|
   config.model Member do
     nestable_list true, position_field: :sorting_position
 
-
+    field :published
     field :image
     field :hover_image
 
