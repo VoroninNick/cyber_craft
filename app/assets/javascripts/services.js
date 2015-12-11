@@ -3,7 +3,7 @@ $( document ).ready(function( $ ) {
     $( '#example5' ).sliderPro({
         width: 830,
         height: 500,
-        autoplay: true,
+        autoplay: false,
         orientation: 'horizontal',
         slideDistance: 0,
         loop: false,
