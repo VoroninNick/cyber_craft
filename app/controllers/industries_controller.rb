@@ -1,4 +1,4 @@
-class IndustriesController < ApplicationController
+class IndustriesController < BaseIndustriesController
   def index
     set_page_metadata("industries")
 
@@ -25,41 +25,15 @@ class IndustriesController < ApplicationController
     end
   end
 
-  def init_icons
-    @icons = Industry.published.sort_by_position.map.map{|item|
-      h = {};
-      h[:name] = item[:name];
-      h[:avatar_file_name] = item[:avatar_file_name];
-      h[:icon_url] = item.avatar.url();
-      h[:icon_path] = item.avatar.path;
-      h[:active] = (item.id == @industry.id);
-      h[:url] = url_for(item)
-
-      h
-    }
+  def resource_class
+    Industry
   end
 
-  def init_articles_navigation
-    articles = Industry.published.sort_by_position.pluck_to_hash(:id, :url_fragment, :name)
-    current_index = nil
-    articles.each_with_index do |a, i|
-      if a[:id] == @industry.id
-        current_index = i
-        break
-      end
-    end
+  def resource
+    @industry
+  end
 
-    min_index = 0
-    max_index = articles.count - 1
-
-    if current_index
-      if current_index > min_index
-        @prev_article = articles[current_index - 1]
-      end
-
-      if current_index < max_index
-        @next_article = articles[current_index + 1]
-      end
-    end
+  def resources
+    @industries
   end
 end

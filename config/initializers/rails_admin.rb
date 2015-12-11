@@ -308,9 +308,13 @@ RailsAdmin.config do |config|
       field :section_2_image
       field :section_2_image_description
 
-      field :section_3_background
-      field :section_3_description
-      field :section_3_image
+      field :section_3a_background
+      field :section_3a_description
+      field :section_3a_image
+
+      field :section_3b_background
+      field :section_3b_description
+      field :section_3b_image
 
       field :section_4_image
       field :section_4_image_description

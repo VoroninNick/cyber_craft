@@ -1,12 +1,12 @@
 .white-bg.relative
-  .industry-bg style=("background-image: url(#{@industry.avatar.url})")
+  .industry-bg style=("background-image: url(#{resource.avatar.url})")
   .container
     .row
       = render "icons_in_show", items: @icons
 
   .industry-article-content
     /= render "article1", article: @industry
-    = render "article_template", article: @industry
+    = render "article_template", article: resource
 
 
   - nav_articles = {prev: @prev_article, next: @next_article}.keep_if{|k, v| !v.nil? }

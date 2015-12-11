@@ -1,0 +1,10 @@
+.container
+  .row
+    .col-md-3.industry-large-icon
+      - if opts[:svg]
+        = inline_svg opts[:image]
+    .col-md-9
+      h1.industry-article-h1
+        = opts[:header]
+
+      = raw opts[:description]

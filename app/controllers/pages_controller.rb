@@ -19,6 +19,10 @@ class PagesController < ApplicationController
   end
 
   def contacts
+    set_page_metadata("contacts")
+
+    add_home_breadcrumb
+    add_breadcrumb("contacts")
   end
 
   def process_page

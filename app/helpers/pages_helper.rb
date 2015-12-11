@@ -27,7 +27,7 @@ module PagesHelper
     page_instance ||= page_class.try(&:first)
     @page_metadata ||= page_instance.try(&:seo_tags)
 
-    @page_metadata ||= { title: page_class.try(&:default_head_title) }
+    @page_metadata ||= { title: page_class.try{|pc| pc.respond_to?(:default_head_title) ? pc.default_head_title : nil } }
 
     if @page_metadata[:title].blank?
       if page_instance.respond_to?(:name)

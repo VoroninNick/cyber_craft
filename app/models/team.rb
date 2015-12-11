@@ -1,7 +1,10 @@
 class Team < ActiveRecord::Base
   extend Enumerize
 
-  enumerize :section_3_background, in: [:none, :white, :gray_pattern], default: :none
+  %w(section_3a_background section_3b_background).each do |c|
+    enumerize c.to_sym, in: [:none, :gray_pattern], default: :none
+  end
+
 
   acts_as_article
 
@@ -13,12 +16,14 @@ class Team < ActiveRecord::Base
 
 
   has_attached_file :background_image
+  has_attached_file :section_1_image
   has_attached_file :section_2_image
-  has_attached_file :section_3_image
+  has_attached_file :section_3a_image
+  has_attached_file :section_3b_image
   has_attached_file :section_4_image
 
 
-  %w(background_image section_2_image section_3_image section_4_image).each do |k|
+  %w(background_image section_1_image section_2_image section_3a_image section_3b_image section_4_image).each do |k|
     do_not_validate_attachment_file_type k
     attr_accessible k
   end
