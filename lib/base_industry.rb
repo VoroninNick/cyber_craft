@@ -1,6 +1,6 @@
 module BaseIndustry
   module InstanceMethods
-    def background_image?
+    def background_image_exists?
       background_image.exists? || avatar.exists?
     end
 

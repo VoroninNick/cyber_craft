@@ -29,9 +29,11 @@
 }
 
 html{
-  &[data-controller=industries]{
-    body{
-      background: white;
+  @each $k in ('industries', 'teams') {
+    &[data-controller=industries] {
+      body {
+        background: white;
+      }
     }
   }
 }

@@ -1,5 +1,5 @@
 .white-bg.relative
-  .industry-bg style=("background-image: url(#{resource.background_image_url})" if resource.background_image?)
+  .industry-bg style=("background-image: url(#{resource.background_image_url})" if resource.background_image_exists?)
   .container
     .row
       = render "icons_in_show", items: @icons
