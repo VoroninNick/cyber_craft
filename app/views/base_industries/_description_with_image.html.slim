@@ -1,14 +1,13 @@
+= with_dotted_bg_if opts[:gray_pattern].present?
+  .container
+    .row
+      .col-md-3.industry-large-icon class="image-align-#{opts[:image_alignment]}"
+        - if opts[:svg]
+          = inline_svg opts[:image]
+        - else
+          = image_tag opts[:image]
+      .col-md-9
+        h1.industry-article-h1
+          = opts[:header]
 
-
-.container
-  .row
-    .col-md-3.industry-large-icon class="image-align-#{opts[:image_alignment]}"
-      - if opts[:svg]
-        = inline_svg opts[:image]
-      - else
-        = image_tag opts[:image]
-    .col-md-9
-      h1.industry-article-h1
-        = opts[:header]
-
-      = raw opts[:description]
+        = raw opts[:description]

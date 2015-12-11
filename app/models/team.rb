@@ -58,5 +58,11 @@ class Team < ActiveRecord::Base
     section_5_description.present?
   end
 
+  def section_3a_background_gray_pattern?
+    section_3a_background == "gray_pattern"
+  end
 
+  def section_3b_background_gray_pattern?
+    section_3b_background == "gray_pattern"
+  end
 end

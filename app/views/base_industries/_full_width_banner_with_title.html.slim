@@ -1,5 +1,6 @@
-.row
-  .full-width-image-with-title
-    .full-width-image style="background-image: url(#{opts[:image]})"
-    .image-title
-      = opts[:title]
+- with_dotted_bg_if opts[:gray_pattern]
+  .row
+    .full-width-image-with-title
+      .full-width-image style="background-image: url(#{opts[:image]})"
+      .image-title
+        = opts[:title]
