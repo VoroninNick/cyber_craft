@@ -16,7 +16,7 @@ $( document ).ready(function( $ ) {
         thumbnailHeight: 71.8,
         fadeArrows: false,
         breakpoints: {
-            992: {
+            1000: {
                 thumbnailsPosition: 'top',
                 thumbnailHeight: 71.8,
 
