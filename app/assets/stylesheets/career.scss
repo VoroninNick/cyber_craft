@@ -1,0 +1,260 @@
+/* ---------------------------------------------------------
+	1. Career
+		1.1 Header
+		1.2 About The New Site
+        1.3 Our services include
+---------------------------------------------------------*/
+
+/* ---------------------------------------------------------
+   Header
+---------------------------------------------------------*/
+.header_style_career{
+  position: relative;
+}
+.title_page.title_page_career{
+  z-index: 3;
+  top: 15%;
+}
+.career_header {
+  background: #32393F url(career_bg_dotted.png) repeat;
+}
+.sect_clogan.choos_bgp_carer {
+  color: #B2BDC3;
+}
+.title_page.title_page_career h1 {line-height: 52px; background: transparent;}
+
+.career_send_message {
+  text-transform: uppercase;
+  color: #334144;
+  background: #FF9801;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: 500;
+  font-family: "Orbitron", sans-serif;
+  font-size: 16px;
+}
+.career_send_message:hover{
+  text-decoration: none;
+  background: #fff;
+  color: #FF9801;
+}
+.career_tagline {
+  width: 50%;
+  margin: 0 auto;
+  color: #AAB5BB;
+  font-style: italic;
+  font-weight: 200;
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+/* ---------------------------------------------------------
+   Header Beautiful jQuery Countdown Timer
+---------------------------------------------------------*/
+
+
+/* ---------- TIMER ---------- */
+ul#countdown {
+  padding: 0;
+}
+ul#countdown li {
+  display: inline-block;
+  background: #fff;
+  text-align: center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  height: 170px;
+  width: 170px;
+  padding-top: 14px;
+  margin-right: 75px
+}
+ul#countdown li:last-child {
+  margin-right: 0px;
+}
+ul#countdown li span {
+  font-size: 72px;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 500;
+  color: #374047;
+  line-height: 108px;
+  position: relative;
+  letter-spacing: 4px;
+  padding-top: 27px;
+}
+ul#countdown li span.seconds_bg{color: #f90;}
+/*
+ul#countdown li span::before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid white;
+  position: absolute;
+  top: 31px;
+}*/
+ul#countdown li p.timeRefDays, ul#countdown li p.timeRefHours, ul#countdown li p.timeRefMinutes, ul#countdown li p.timeRefSeconds {
+  color: #909091;
+  font-size: 21px;
+  font-weight: 200;
+  font-style: italic;
+  line-height: 7px;
+}
+.career_until_opening {
+  text-align: right;
+  color: #AAB5BB;
+  font-style: italic;
+  font-weight: 200;
+  font-size: 16px;
+}
+.timer_until_opening {
+  display: inline-block;
+}
+/* ---------------------------------------------------------
+   End Header Beautiful jQuery Countdown Timer
+---------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------
+   About The New Site
+---------------------------------------------------------*/
+
+.career {
+  padding: 50px 0 100px 0;
+  background: #fff;
+}
+.row_career_infb {
+  margin-top: 37px;
+}
+.intro_career {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  color: #78909c;
+}
+.career_info_block {
+  text-align: center;
+  font-weight: 500;
+  color: #597582;
+  font-size: 16px;
+  padding-top: 104px;
+  margin-bottom: 30px;
+}
+.cib_1{background: url(careersvacancies.png) no-repeat top center;}
+.cib_2{background: url(careersbeneﬁts.png) no-repeat top center;}
+.cib_3{background: url(careerscybercraft.png) no-repeat top center;}
+/* ---------------------------------------------------------
+   Footer form
+---------------------------------------------------------*/
+.career_footer_form {
+  background: #32393F url(career_bg_dotted.png) repeat;
+  border-bottom: 1px solid #29343A;
+  padding: 30px 0 125px 0;
+}
+.section_h3.sect_career_foot {
+  color: #fff;
+}
+.with_black_arrows.with_black_arrows_carerr_foot:before, .with_black_arrows.with_black_arrows_carerr_foot:after {
+  color: #f90;
+}
+footer .intro_career_foot p {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  color: #B4BDC4;
+  line-height: 19px;
+}
+.intro_career_foot {
+  margin-bottom: 50px;
+}
+.foot_required {
+  color: #384146;
+  font-size: 14px;
+  transition: .3s all linear;
+  cursor: text;
+  font-weight: normal;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: -0.2px;
+  margin-top: 10px;
+}
+.foot_f.career_foot_f [type="submit"] {
+  margin-top: 0px;
+}
+.section_h3.h3_messag.career_black_arrows {
+  text-align: center;
+
+}
+.section_h3.h3_messag.career_black_arrows span{
+  color: #383F45;
+}
+.career_form_a_canter {
+  text-align: center;
+}
+.career_form_a {
+  display: block;
+  width: 100%;
+  border: 1px solid #374047;
+  text-transform: uppercase;
+  color: #384146;
+  font-weight: 500;
+  font-size: 15px;
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 0px;
+  margin-bottom: 10px;
+}
+.career_form_a:hover{
+  background: #fff;
+  border:1px solid #fff;
+  color: #374047;
+}
+.foot_title_career {
+  background: #fff;
+  padding: 10px 15px;
+  position: relative;
+  z-index: 888;
+}
+.foot_title_career {
+  text-align: center;
+  padding: 20px 0;
+}
+.foot_title_career span{
+  padding-right: 12px;
+}
+.foot_title_career a, .foot_title_career p{
+  font-size: 15px;
+  font-weight: 500;
+  color: #373E44;
+  line-height: 10px;
+  display: block;
+  letter-spacing: -0.5px;
+}

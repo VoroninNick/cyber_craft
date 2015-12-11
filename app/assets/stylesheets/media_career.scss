@@ -1,0 +1,84 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+
+}
+@media only screen and (max-width : 1100px) {
+
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  ul#countdown li {height: 140px;width: 140px;margin-right: 35px;}
+  ul#countdown li span {font-size: 50px;line-height: 80px;}
+  ul#countdown li p.timeRefDays, ul#countdown li p.timeRefHours, ul#countdown li p.timeRefMinutes, ul#countdown li p.timeRefSeconds {
+    font-size: 19px;}
+}
+@media only screen and (max-width : 850px) {
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  .row_career_infb {margin-top: 10px;}
+  .career_info_block {    background-size: 70px;font-size: 13px; padding-top: 70px; margin-bottom: 20px;}
+  .career {padding: 30px 0 50px 0;}
+  .row.captcha_career { margin-top: 20px;}
+  .foot_title_career a, .foot_title_career p {font-size: 13px;text-align: left;margin-bottom: 10px;}
+  ul#countdown li {height: 110px;width: 110px;margin-right: 20px;}
+  ul#countdown li span {font-size: 35px;line-height: 55px;display: inline-block;padding: 0; padding-top: 7px;}
+}
+@media only screen and (max-width : 650px) {
+
+}
+@media only screen and (max-width : 600px) {
+  .career_tagline {width: 95%;}
+  ul#countdown li {height: 80px;width: 80px;margin-right: 20px;}
+  ul#countdown li span {font-size: 25px;line-height: 46px;padding: 0;padding-top: 0px;}
+  ul#countdown li p.timeRefDays, ul#countdown li p.timeRefHours, ul#countdown li p.timeRefMinutes, ul#countdown li p.timeRefSeconds { font-size: 13px;}
+}
+@media only screen and (max-width : 550px) {
+
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+  ul#countdown li {height: 65px;width: 65px;margin-right: 5px;    padding-top: 12px;}
+  ul#countdown li span {font-size: 25px;line-height: 31px;}
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1400px) {
+
+}

@@ -31,6 +31,8 @@
 // for services
 //= require jquery.sliderPro.min
 
+// for career
+//= require countdown
 
 // my custom js for forms
 //= require jquery.forms
@@ -42,3 +44,7 @@
 
 //= require services
 //= require about
+
+
+
+//= require career

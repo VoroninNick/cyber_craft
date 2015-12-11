@@ -1,2 +1,141 @@
-h1
-  |Career
+/! header of the page
+header.header_style_career
+  /! Logo
+  a.header-logo href="#" 
+    img alt="" src=asset_path("logo.png") 
+  /! End Logo
+  /! title_page
+  .title_page.title_page_career
+    .container
+      .row
+        h1
+          span Career
+        p.sect_clogan.choos_bgp_carer We’re coming soon
+        /! TIMER
+        .timer-area
+          .timer_until_opening
+            ul#countdown
+              li
+                span.days 00
+                p.timeRefDays days
+              li
+                span.hours 00
+                p.timeRefHours hours
+              li
+                span.minutes 00
+                p.timeRefMinutes minutes
+              li
+                span.seconds.seconds_bg 00
+                p.timeRefSeconds seconds
+            p.career_until_opening ...until opening
+        /! end timer-area
+        a.career_send_message href="#career_footer_scrol1"  Send Us A Message
+        p.career_tagline We are working very hard on the new version of our career site. It will bring a lot of new features. Stay tuned!
+  /! End title_page
+  /! career_header
+  .career_header
+    .slides-container
+      div
+  /! End career_header
+  .learnmore.scroll-down-arrow_career
+    a href="#career_axperts_2"  learn more
+/! and header of the page
+section#career_axperts_2.career
+  .container
+    .row
+      h3.section_h3
+        span.with_black_arrows About The New Site
+      .col-sm-10.col-md-8.col-xs-12.col-lg-push-2.col-md-push-2.col-sm-push-1.intro_career
+        p We are excited to introduce you to our upcoming career website. This is where we plan to share our hottest opportunities, strategies and big ideas that will shape and disrupt your vision of a dream job. We also plan to give you updates on CyberCraft’s activities, including the latest news on our events and achievements.
+    .row.row_career_infb
+      .col-md-2.col-sm-4.col-xs-4.col-md-offset-3.col-sm-offset-0
+        .career_info_block.cib_1 Vacancies
+      .col-md-2.col-sm-4.col-xs-4
+        .career_info_block.cib_2 Benefits
+      .col-md-2.col-sm-4.col-xs-4
+        .career_info_block.cib_3 CyberCraft Life
+/! Footer
+footer#standard-footer
+  /! career_footer_form
+  #career_footer_scrol1.career_footer_form
+    .container
+      .row
+        h3.section_h3.sect_career_foot
+          span.with_black_arrows.with_black_arrows_carerr_foot
+            span.sect_career_foot_s How To Contact Us
+        .col-sm-10.col-md-6.col-xs-12.col-lg-push-3.col-md-push-3.col-sm-push-1.intro_career_foot
+          p Interested in working with CyberCraft? Send us a message and we’ll  get back to you as soon as possible
+        .footer_message
+          .col-md-12.col-sm-12.col-xs-12.foot_title_career
+            .row
+              .col-md-4.col-sm-4.col-xs-12
+                a href="tel:+380322755757" 
+                  span
+                    img alt="" src=asset_path("phone.png")
+                  | +38 032 275 57 57
+              .col-md-4.col-sm-4.col-xs-12
+                a href="mailto:hr@cybercraft.com.ua" 
+                  span
+                    img alt="" src=asset_path("email.png")
+                  | hr@cybercraft.com.ua
+              .col-md-4.col-sm-4.col-xs-12
+                p
+                  span
+                    img alt="" src=asset_path("map.png")
+                  | 7 Slipoho Str. Lviv, Ukraine, 79017
+        .yellowformcontacts style=("visibility: visible;") 
+          .col-md-12.col-sm-12.col-xs-12.send_message
+            h3.section_h3.h3_messag.career_black_arrows
+              span.with_white_arrows Send us a message
+            .foot_f.career_foot_f
+              form.ajax-submit action="/message" method="post" show-preloader="" 
+                .content
+                  .row
+                    .col-md-6.col-sm-6.col-xs-12
+                      .input.string.css required="" 
+                        input#firstnameanimate name="message[name]" type="text" 
+                        label.input-label for="firstnameanimate"  Name*
+                      .input.string.css required="" 
+                        input#emailanimate name="message[email]" type="text" 
+                        label.input-label for="emailanimate"  Email*
+                      .input.string.css
+                        input#phonenamberanimate name="message[phone]" type="text" 
+                        label.input-label for="phonenamberanimate"  Desired position
+                    .col-md-6.col-sm-6.col-xs-12
+                      .input.text.css.messagetext required="" 
+                        textarea#youmessageanimate name="message[message_text]" 
+                        label.input-label for="youmessageanimate"  Your message*
+                  .row
+                    .col-md-12
+                      .row
+                        .col-md-6.col-sm-6.col-xs-12
+                          .row.captcha_career
+                            .col-md-6.col-sm-6.col-xs-6
+                              div
+                                img alt="" src=asset_path("careers_file.png")
+                            .col-md-6.col-sm-6.col-xs-6
+                              .input.string.css required="" 
+                                input#antibotprotection name="message[phone]" type="text" 
+                                label.input-label for="antibotprotection"  Antibot protection*
+                        .col-md-6.col-sm-6.col-xs-12
+                          .row.career_form_a_canter
+                            .col-md-6.col-sm-6.col-xs-12
+                              a.career_form_a href="#" 
+                                span
+                                  img src=asset_path("careerscapcha.png")
+                                | Attach cv
+                            .col-md-6.col-sm-6.col-xs-12
+                              a.career_form_a href="#"  Apply With linkedin
+                      .row
+                        .col-md-6.col-sm-6.col-xs-6
+                          p.foot_required * required fields
+                        .col-md-6.col-sm-6.col-xs-6
+                          input type="submit" value="Send" 
+                .success-message
+                  h3
+                    | You have successfully sent message
+                  p
+                    | Our managar will contact you as soon as possible.
+  /! career_footer_form
+  = render "footer_links"
+  /! End Footer
