@@ -29,8 +29,10 @@ module BaseIndustriesHelper
     nil
   end
 
-  def description_with_quote(description, quote, header = nil)
-    opts = {description: description, quote: quote, header: header}
+  def description_with_quote(description, quote, header = nil, **options)
+
+    defaults = {description: description, quote: quote, header: header, background_color_class: nil}
+    opts = defaults.merge(options)
     render partial: "base_industries/description_with_quote", locals: {opts: opts }
   end
 end
