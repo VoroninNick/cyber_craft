@@ -18,51 +18,20 @@ $( document ).ready(function( $ ) {
         breakpoints: {
             992: {
                 thumbnailsPosition: 'top',
-                thumbnailWidth: 830,
-                arrows: true,
-                thumbnailHeight: 71.8
-            },
-            800: {
-                thumbnailsPosition: 'top',
-                thumbnailWidth: 800,
-                arrows: true,
-                thumbnailHeight: 71.8
-            },
-            700: {
-                thumbnailsPosition: 'top',
-                thumbnailWidth: 700,
-                arrows: true,
-                thumbnailHeight: 71.8
-            },
-            600: {
-                thumbnailsPosition: 'top',
-                thumbnailWidth: 600,
-                arrows: true,
-                thumbnailHeight: 71.8
-            },
-            500: {
-                thumbnailsPosition: 'top',
-                thumbnailWidth: 500,
-                arrows: true,
-                thumbnailHeight: 50
-            },
-            400: {
-                thumbnailsPosition: 'top',
-                arrows: true,
                 thumbnailHeight: 71.8,
-                thumbnailWidth: 400
-            },
-            300: {
-                thumbnailsPosition: 'top',
-                arrows: true,
-                thumbnailHeight: 71.8,
-                thumbnailWidth: 300
-            },
-            200: {
-                thumbnailsPosition: 'top',
-                arrows: true,
-                thumbnailHeight: 71.8,
-                thumbnailWidth: 200
+
+
+
+            thumbnailWidth: '100%',
+            touchSwipeThreshold: 2,
+            arrows: true,
+            fadeThumbnailArrows: false,
+            fadeArrows: false,
+            loop: true,
+            thumbnailTouchSwipe: true,
+            touchSwipeThreshold: false,
+            fadeCaption: false,
+            thumbnailHeight: 71.8
             }
         }
     });
