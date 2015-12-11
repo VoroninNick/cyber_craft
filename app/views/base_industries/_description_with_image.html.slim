@@ -1,5 +1,5 @@
 /= with_dotted_bg_if opts[:gray_pattern].present?, class: "article-section"
-.article-section class=("with_dotted_bg" if opts[:gray_pattern].present?)
+.article-section class="#{'with_dotted_bg' if opts[:gray_pattern].present?} #{'decorate-first-letter' if opts[:decorate_first_letter]}"
   .container
     .row
       .col-md-3.industry-large-icon class="image-align-#{opts[:image_alignment]}"

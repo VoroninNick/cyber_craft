@@ -1,6 +1,6 @@
 module BaseIndustriesHelper
   def description_with_image(image, description, **options)
-    defaults = {svg: false, image_columns: 3, image_alignment: :left, image: image, description: description, header: nil}
+    defaults = {svg: false, image_columns: 3, image_alignment: :left, image: image, description: description, header: nil, decorate_first_letter: false}
     opts = defaults.merge(options)
     render partial: "base_industries/description_with_image", locals: {opts: opts}
   end
@@ -34,7 +34,7 @@ module BaseIndustriesHelper
 
   def description_with_quote(description, quote, header = nil, **options)
 
-    defaults = {description: description, quote: quote, header: header, background_color_class: nil}
+    defaults = {description: description, quote: quote, header: header, background_color_class: nil, decorate_first_letter: false}
     opts = defaults.merge(options)
     render partial: "base_industries/description_with_quote", locals: {opts: opts }
   end

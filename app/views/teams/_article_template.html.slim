@@ -10,16 +10,16 @@
 
 
 - if a.section_3a?
-  = description_with_image(a.section_3a_image.url, a.section_3a_description, image_alignment: :right, gray_pattern: a.section_3a_background_gray_pattern?)
+  = description_with_image(a.section_3a_image.url, a.section_3a_description, image_alignment: :right, gray_pattern: a.section_3a_background_gray_pattern?, decorate_first_letter: true)
 - if a.section_3b?
-  = description_with_image(a.section_3b_image.url, a.section_3b_description, gray_pattern: a.section_3b_background_gray_pattern?)
+  = description_with_image(a.section_3b_image.url, a.section_3b_description, gray_pattern: a.section_3b_background_gray_pattern?, decorate_first_letter: true)
 
 - if a.section_4?
   = full_width_banner_with_title(a.section_4_image.url, a.section_4_image_description)
 
 
 - if a.section_5?
-  = description_with_quote(a.section_5_description, a.section_5_quote)
+  = description_with_quote(a.section_5_description, a.section_5_quote, decorate_first_letter: true)
 
 /.row.relative
   .with-gray-bg.padding-top

@@ -1,5 +1,5 @@
 .row.relative.article-section
-  .padding-top class=( opts[:background_color_class] if opts[:background_color_class].present? )
+  .padding-top class="#{ opts[:background_color_class] if opts[:background_color_class].present?} #{'decorate-first-letter' if opts[:decorate_first_letter]}"
     .container
       .row.padding-bottom
         .col-md-8

@@ -30,7 +30,7 @@
 
 html{
   @each $k in ('industries', 'teams') {
-    &[data-controller=industries] {
+    &[data-controller=#{$k}] {
       body {
         background: white;
       }
