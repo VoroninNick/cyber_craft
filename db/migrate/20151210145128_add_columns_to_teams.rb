@@ -3,7 +3,7 @@ class AddColumnsToTeams < ActiveRecord::Migration
     change_table :teams do |t|
       t.attachment :background_image
 
-      t.text :section_1_image
+      t.attachment :section_1_image
       t.text :section_1_header
       t.text :section_1_description
 
