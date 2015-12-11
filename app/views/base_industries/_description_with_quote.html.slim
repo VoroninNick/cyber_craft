@@ -1,0 +1,16 @@
+.row.relative
+  .with-gray-bg.padding-top
+    .container
+      .row.padding-bottom
+        .col-md-8
+          - if opts[:header].present?
+            h2.industry-article-h2
+              = opts[:header]
+
+          = raw opts[:description]
+
+        .col-md-4
+          .orange-quote
+            = opts[:quote]
+
+

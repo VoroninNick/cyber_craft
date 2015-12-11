@@ -17,6 +17,10 @@
 - if a.section_4?
   = full_width_banner_with_title(a.section_4_image.url, a.section_4_image_description)
 
+
+- if a.section_5?
+  = description_with_quote(a.section_5_description, a.section_5_quote)
+
 /.row.relative
   .with-gray-bg.padding-top
     .container

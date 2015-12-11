@@ -28,4 +28,9 @@ module BaseIndustriesHelper
 
     nil
   end
+
+  def description_with_quote(description, quote, header = nil)
+    opts = {description: description, quote: quote, header: header}
+    render partial: "base_industries/description_with_quote", locals: {opts: opts }
+  end
 end

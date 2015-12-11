@@ -9,21 +9,11 @@
       .image-description-content
         = raw a.section_2_description
 
+
+= description_with_quote(a.section_3_text, a.section_3_quote, a.h2_text)
+
 .row.relative
-  .with-gray-bg.padding-top
-    .container
-      .row.padding-bottom
-        .col-md-8
-          - if a.h2_text.present?
-            h2.industry-article-h2
-              = a.h2_text
-
-          = raw a.section_3_text
-
-        .col-md-4
-          .orange-quote
-            = a.section_3_quote
-
+  .with-gray-bg
     .row
       .col-md-9.right-image style="background-image: url(#{a.section_4_image.url})"
 
@@ -31,7 +21,15 @@
         .image-description
           .image-description-content
             = raw a.section_4_description_html
-    .clearfix
+      .clearfix
+.row
+  .col-md-9.right-image style="background-image: url(#{a.section_4_image.url})"
+
+  .col-md-3.col-lg-push-1.image-description-wrap
+    .image-description
+      .image-description-content
+        = raw a.section_4_description_html
+  .clearfix
 
 .container.relative
   .row
