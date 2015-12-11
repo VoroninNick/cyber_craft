@@ -16,6 +16,37 @@ class PagesController < ApplicationController
 
   def about_us
 
+    @members = [
+        {
+            image: "/assets/team1.jpg",
+            hover_image: "/assets/team1-hover.jpg",
+            description: "<p>Inspirational leader</p><p>People management guru</p><p>Business idea generator</p>",
+            name: "Eugene Safronov",
+            position: "СЕО, Founder",
+            facebook: "",
+            linkedin: ""
+        },
+        {
+            image: "/assets/team2.jpg",
+            hover_image: "/assets/team2-hover.jpg",
+            description: "<p>Strategic thinker</p><p>Business advisor</p><p>Client-employee relations mediator</p>",
+            name: "Vlada Piddubna",
+            position: "HR Business Partner",
+            facebook: "",
+            linkedin: ""
+        },
+        {
+            image: "/assets/team3.jpg",
+            hover_image: "/assets/team3-hover.jpg",
+            description: "<p>Talent acquisition expert</p><p>People-lover</p><p>Happiness-maker</p>",
+            name: "Violetta Yehorova",
+            position: "HR Generalist",
+            facebook: "",
+            linkedin: ""
+        }
+    ]
+
+    @members = Member.published.sort_by_sorting_position
   end
 
   def contacts

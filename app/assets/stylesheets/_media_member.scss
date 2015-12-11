@@ -1,0 +1,79 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+
+}
+@media only screen and (max-width : 1100px) {
+
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+@media only screen and (max-width : 850px) {
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  .style_namb {text-align: center;margin-bottom: 35px;}
+  .style_namb.manb3 {text-align: center;}
+  .team>div {width: 80%;float: none;margin: 0 auto;}
+  .loc_namber {font-size: 50px;padding: 24px 37px;background-size: 100%;}
+  .loc_nam_2 span {bottom: -20px;font-size: 20px;width: 130px;left: 67px;}
+  .loc_namber.loc_nam_3 {margin-right: 0px;}
+  .loc_nam_3 span {bottom: -20px;left: 70px;font-size: 20px; width: 127px;}
+  .loc_nam_1 span {bottom: -20px;left: 67px;font-size: 20px;}
+  .loc_namber.loc_nam_1 {line-height: 35px;}
+  .loc_namber.loc_nam_1 span {line-height: 1.1;}
+}
+@media only screen and (max-width : 650px) {
+
+}
+@media only screen and (max-width : 600px) {
+  .team>div {width: 90%;}
+}
+@media only screen and (max-width : 550px) {
+
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1400px) {
+  .loc_namber.loc_nam_3 {margin-right: 0px;}
+}

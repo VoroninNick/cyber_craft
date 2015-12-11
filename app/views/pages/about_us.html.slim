@@ -25,26 +25,7 @@ section.meet
               | Meet
               br
               | the team
-      .team
-        .col-md-4.col-sm-4.col-xs-12
-          .a_careers.member
-            .team_img
-              img.team_i_heig src=asset_path("team1.jpg")
-
-              .fildr_bgimg
-            .team_initials
-              p.tem_name Eugene Safronov
-              span.team_work СЕО, Founder
-            .member-hover
-              .member-description
-                p Talent acquisition expert
-                p People-lover
-                p Happiness-maker
-              .member-social-links
-                a href="#"
-                  img alt="" src=asset_path("facebook_abaut.png")
-                a href="#"
-                  img alt="" src=asset_path("in_abaut.png")
+      = render "members", members: @members
 
 /! OUR LOCATION
 section.ourlocation
