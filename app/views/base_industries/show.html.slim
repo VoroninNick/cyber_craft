@@ -16,7 +16,7 @@
         .row
           nav
             - nav_articles.each do |k, a|
-              a class=k href=industry_path(a[:url_fragment])
+              a class=k href=a[:url]
                 .title
                   = t("articles_navigation.#{k}")
 

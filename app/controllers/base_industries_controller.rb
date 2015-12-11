@@ -51,5 +51,9 @@ class BaseIndustriesController < ApplicationController
     raise NotImplementedError
   end
 
+  def route_resource_name
+    resource_class.name.underscore
+  end
+
   helper_method :resource_class, :resource, :resources
 end

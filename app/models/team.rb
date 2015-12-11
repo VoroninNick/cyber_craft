@@ -13,6 +13,7 @@ class Team < ActiveRecord::Base
   has_attached_file :banner
   do_not_validate_attachment_file_type :banner
   attr_accessible :banner
+  allow_delete_attachment :banner
 
 
   has_attached_file :background_image
@@ -25,6 +26,8 @@ class Team < ActiveRecord::Base
 
   %w(background_image section_1_image section_2_image section_3a_image section_3b_image section_4_image).each do |k|
     do_not_validate_attachment_file_type k
-    attr_accessible k
+    attr_accessible k, "#{k}_delete"
+
+    allow_delete_attachment(k)
   end
 end

@@ -32,6 +32,7 @@ class Industry < ActiveRecord::Base
   %w(background_image section_1_image section_2_image section_4_image section_5_image).each do |k|
     do_not_validate_attachment_file_type k
     attr_accessible k
+    allow_delete_attachment
   end
 
 

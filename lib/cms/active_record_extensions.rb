@@ -29,6 +29,15 @@ module Cms
         DynamicRouter.reload
       end
 
+      def allow_delete_attachment(*names)
+        names.each do |k|
+          attr_accessor "delete_#{k}".to_sym
+          attr_accessible "delete_#{k}".to_sym
+
+          before_validation { send(k).clear if send("delete_#{k}") == '1' }
+        end
+      end
+
       def has_attachment(name, options = {})
         name = name.to_sym
         has_one name, -> { where(assetable_field_name: name) }, class_name: "Asset", as: :assetable, dependent: :destroy, autosave: true

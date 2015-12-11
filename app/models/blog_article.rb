@@ -7,6 +7,8 @@ class BlogArticle < ActiveRecord::Base
 
     do_not_validate_attachment_file_type attachment_name
     attr_accessible attachment_name
+
+    allow_delete_attachment attachment_name
   end
 
   scope :home_articles, -> { last(3) }
