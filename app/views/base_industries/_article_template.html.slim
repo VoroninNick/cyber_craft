@@ -1,7 +1,7 @@
 - a = article
 = description_with_image(a.section_1_image.path, a.section_1_text, header: a.h1_text, svg: true)
 
-.row
+.row.article-section
   .col-md-6.left-image style="background-image: url(#{a.section_2_image.url})"
 
   .col-md-3.col-md-push-5.image-description-wrap
@@ -22,7 +22,7 @@
           .image-description-content
             = raw a.section_4_description_html
       .clearfix
-.row
+.row.article-section
   .col-md-9.right-image style="background-image: url(#{a.section_4_image.url})"
 
   .col-md-3.col-lg-push-1.image-description-wrap
@@ -31,16 +31,17 @@
         = raw a.section_4_description_html
   .clearfix
 
-.container.relative
-  .row
-    .col-xs-12
-      = content_tag a.h3_tag, a.h3_text, class: "industry-article-h3"
+.article-section
+  .container.relative
+    .row
+      .col-xs-12
+        = content_tag a.h3_tag, a.h3_text, class: "industry-article-h3"
 
-    .col-md-3.text-center.small-image
-      img src=a.section_5_image.url
+      .col-md-3.text-center.small-image
+        img src=a.section_5_image.url
 
-      .icon-subtext
-        = a.section_5_image_description
+        .icon-subtext
+          = a.section_5_image_description
 
-    .col-md-9
-      = raw a.section_5_text_html
+      .col-md-9
+        = raw a.section_5_text_html
