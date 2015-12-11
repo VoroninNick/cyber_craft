@@ -216,14 +216,52 @@ img
 	.prev, .next
 		position: absolute
 		display: block
+		text-decoration: none
+
+		&:before
+			position: absolute
+			display: block
+			height: 100%
+			line-height: 80px
+			font-size: 30px
+			color: $blue-text-color
+
+
+
 
 	.prev
 		left: 0
 		text-align: left
+		padding-left: 35px
+
+
+		&:before
+			content: "<"
+			left: 0
 
 	.next
 		right: 0
 		text-align: right
+		padding-right: 35px
+
+		&:before
+			content: ">"
+			right: 0
+
+
+
+	.title, .name
+		text-decoration: none
+		color: $blue-text-color
+	.title
+		margin-top: 27px
+		text-transform: uppercase
+		+orbitron-medium
+		font-size: 18px
+		line-height: 1
+
+	.name
+
 
 
 

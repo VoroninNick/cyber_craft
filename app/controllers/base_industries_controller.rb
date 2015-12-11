@@ -25,6 +25,10 @@ class BaseIndustriesController < ApplicationController
       end
     end
 
+    articles.map{|a|
+      a[:url] = send("#{route_resource_name}_path", a[:url_fragment])
+    }
+
     min_index = 0
     max_index = articles.count - 1
 
