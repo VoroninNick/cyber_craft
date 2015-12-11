@@ -42,7 +42,7 @@ class PagesController < ApplicationController
   end
 
   def career
-
+    @footer = false
   end
 
   def sitemap
