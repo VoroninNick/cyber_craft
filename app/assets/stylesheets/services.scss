@@ -139,3 +139,16 @@ p.sp-black{
     padding-top: 70px;
   }
 }
+
+
+
+/* Slider on page services */
+@media only screen and (max-width : 992px) {
+
+.sp-thumbnail-container {display: none !important;}
+
+.sp-thumbnails {width: 100% !important;}
+.sp-thumbnails-container {width: 100% !important;}
+
+.sp-selected-thumbnail {display: block !important;}
+}
