@@ -1,6 +1,8 @@
 class Team < ActiveRecord::Base
   extend Enumerize
 
+  include BaseIndustry::InstanceMethods
+
   %w(section_3a_background section_3b_background).each do |c|
     enumerize c.to_sym, in: [:none, :gray_pattern], default: :none
   end
@@ -30,4 +32,31 @@ class Team < ActiveRecord::Base
 
     allow_delete_attachment(k)
   end
+
+
+  def section_1?
+    section_1_image.exists? && section_1_description.present?
+  end
+
+  def section_2?
+    section_2_image.exists?
+  end
+
+  def section_3a?
+    section_3a_image.exists? && section_3a_description.present?
+  end
+
+  def section_3b?
+    section_3b_image.exists? && section_3b_description.present?
+  end
+
+  def section_4?
+    section_4_image.exists?
+  end
+
+  def section_5?
+    section_5_description.present?
+  end
+
+
 end

@@ -1,6 +1,8 @@
 class Industry < ActiveRecord::Base
   acts_as_article(base_articles: BaseArticles)
 
+  include BaseIndustry::InstanceMethods
+
 
   scope :sort_by_position, -> { order("position asc") }
 

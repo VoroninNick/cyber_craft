@@ -1,15 +1,21 @@
 - a = article
 
-= description_with_image(a.section_1_image.path, a.section_1_description, header: a.section_1_header, svg: true)
 
-= full_width_banner_with_title(a.section_2_image.url, a.section_2_image_description)
+- if section_1?
+  = description_with_image(a.section_1_image.path, a.section_1_description, header: a.section_1_header, svg: true)
+
+- if a.section_2?
+  = full_width_banner_with_title(a.section_2_image.url, a.section_2_image_description)
 
 
 
-= description_with_image(a.section_3a_image.url, a.section_3a_description, image_alignment: :right)
-= description_with_image(a.section_3b_image.url, a.section_3b_description)
+- if a.section_3a?
+  = description_with_image(a.section_3a_image.url, a.section_3a_description, image_alignment: :right)
+- if a.section_3b?
+  = description_with_image(a.section_3b_image.url, a.section_3b_description)
 
-= full_width_banner_with_title(a.section_4_image.url, a.section_4_image_description)
+- if a.section_4?
+  = full_width_banner_with_title(a.section_4_image.url, a.section_4_image_description)
 
 /.row.relative
   .with-gray-bg.padding-top
