@@ -3,7 +3,7 @@ $( document ).ready(function( $ ) {
     $( '#example5' ).sliderPro({
         width: 830,
         height: 500,
-        autoplay: false,
+        autoplay: true,
         orientation: 'horizontal',
         slideDistance: 0,
         loop: false,
@@ -19,7 +19,7 @@ $( document ).ready(function( $ ) {
             1000: {
                 thumbnailsPosition: 'top',
                 thumbnailHeight: 71.8,
-
+                autoplay: false,
 
 
             thumbnailWidth: '100%',
