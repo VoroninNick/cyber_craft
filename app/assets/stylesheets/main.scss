@@ -691,7 +691,7 @@ $industries-home-image-height: 550px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: $industries-home-image-height !important;
+  height: $industries-home-image-height;
   min-height: 100%;
 
   img{
