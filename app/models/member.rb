@@ -1,4 +1,6 @@
 class Member < ActiveRecord::Base
+  attr_accessible *attribute_names
+
   has_attached_file :image
   has_attached_file :hover_image
 
