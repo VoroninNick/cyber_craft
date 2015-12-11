@@ -9,7 +9,7 @@ module BaseIndustriesHelper
     render partial: "base_industries/full_width_banner_with_title", locals: { opts: { image: image, title: title } }
   end
 
-  def with_dotted_bg_if condition, &block
+  def with_dotted_bg_if condition, html_options = {}, &block
     if !block_given?
       return
     end
@@ -17,7 +17,10 @@ module BaseIndustriesHelper
     if condition
       #return content_tag(:div, class: "with_dotted_bg", &block)
 
-      return content_tag(:div, capture(&block), class: "with_dotted_bg")
+      default_html_options = { class: "with_dotted_bg #{html_options.delete(:class)}" }
+      html_options = default_html_options.merge(html_options)
+
+      return content_tag(:div, capture(&block), html_options)
 
 
 
