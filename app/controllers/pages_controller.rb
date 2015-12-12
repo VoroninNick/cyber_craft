@@ -29,9 +29,7 @@ class PagesController < ApplicationController
     set_page_metadata("process")
   end
 
-  def set_page_instance
-    set_page_metadata(action_name)
-  end
+
 
   def terms_of_use
 
@@ -47,6 +45,12 @@ class PagesController < ApplicationController
   end
 
   def sitemap
+    add_home_breadcrumb
+    add_breadcrumb("sitemap")
+  end
 
+
+  def set_page_instance
+    set_page_metadata(action_name)
   end
 end

@@ -1,2 +1,14 @@
-h1
-  |Sitemap.html
+.container
+  .row
+    ul
+      - sitemap_entries.each do |entry_key, entry|
+        li
+          a href=entry[:url]
+            = entry[:name]
+
+          - if ( children = entry[:children]).try(:any?)
+            ul
+              - children.each do |c|
+                li
+                  a href=url_for(c)
+                    = c.name

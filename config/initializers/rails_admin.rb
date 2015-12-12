@@ -40,7 +40,7 @@ RailsAdmin.config do |config|
 
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
 
-  page_model_names = %w(AboutUs Blog Career Contacts Home Industries PrivacyPolicy Process Services Teams TermsOfUse).map{|s| "Pages::#{s}" }
+  page_model_names = %w(AboutUs Blog Career Contacts Home Industries PrivacyPolicy Process Services Sitemap Teams TermsOfUse).map{|s| "Pages::#{s}" }
 
   only_configurable_models = [FormConfigs::Message, *page_model_names]
 
@@ -188,6 +188,18 @@ RailsAdmin.config do |config|
   end
 
   config.model Pages::Services do
+    pages_navigation_label
+
+    edit do
+      field :banner
+      field :bottom_banner
+      field :bottom_banner_description
+      #field :intro, :ck_editor
+      field :seo_tags
+    end
+  end
+
+  config.model Pages::Sitemap do
     pages_navigation_label
 
     edit do
