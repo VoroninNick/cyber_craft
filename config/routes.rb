@@ -32,7 +32,8 @@ Rails.application.routes.draw do
 
     scope "blog", controller: "blog" do
       get "", action: "index", as: :blog
-      get ":id", action: "show"
+      get ":id", action: "show", as: "blog_article"
+      get "/tags/:tags", action: "index", as: :article_tags
     end
 
   end

@@ -17,6 +17,12 @@ class BlogArticle < ActiveRecord::Base
 
 
   def article_date
-    updated_at
+    d = updated_at
+
+    "#{d.day} #{Date::MONTHNAMES[d.month].downcase} #{d.year}"
+  end
+
+  def self.sorting_properties
+    [:popularity, :date, :name, :author]
   end
 end

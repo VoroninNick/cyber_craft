@@ -1,2 +1,44 @@
-h1
-  |Blog
+.container
+  - if @total_articles > 1 || true
+    .row
+      .col-lg-6.filter
+        - if @tags.try(&:many?)
+          .tags
+            span.tags-title
+              |Tags
+            ul
+              li
+                a href=blog_path
+                  |All
+              - @tags.each do |t|
+                li
+                  a href=article_tags_path(t.name.parameterize)
+                    = t.name
+
+
+        - if @author_names.try(&:many?)
+          .authors
+            span.authors-title
+              |Authors
+            ul
+              li
+                a href=blog_path
+                  |All
+              - @author_names.each do |t|
+                li
+                  a href=article_tags_path(t.parameterize)
+                    = t
+
+      .col-lg-6.sorting
+        .sorting-properties
+          = select_tag(:sorting_property, raw(BlogArticle.sorting_properties.map{|prop| content_tag(:option, prop.to_s.humanize, value: prop) }))
+        .sorting-directions
+          .asc
+            |&#65516;
+          .desc
+            |&#65514;
+
+
+  - if @total_articles > 0
+    - @articles.each do |article|
+      = render "article_item", item: article

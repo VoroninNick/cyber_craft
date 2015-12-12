@@ -12,25 +12,4 @@
           |Check out recent news and views below
         .read_blog_stul
           - @blog_articles.each_with_index do |item, index|
-            .col-md-4.col-sm-4.col-xs-12.tt_bot
-              .test_bc.wow class=(index % 2 == 0 ? "fadeInDownBig" : "fadeInUpBig" )
-                .tes_1
-                  img alt="alt" src=item.avatar.url(:home)
-                  .fildr_bgimg
-                  - if item.tag_list.any?
-                    .test_title
-                      - item.tag_list.each do |tag|
-                        a href="#"
-                          = tag
-                  a.teg_new href="#"  New
-                h3.test_i1
-                  a href="#"
-                    = item.name
-                .title_teg
-                  p
-                    | by &thinsp;
-                    - if item.author_name.present?
-                      a.tt_a href="#"
-                        = item.author_name
-                      |,&nbsp;
-                    = item.article_date
+            = render "article_item", item: item, index: index, animation: true, css_filter: true

@@ -1,2 +1,19 @@
-h1
-  |Blog article
+.container
+  .row
+    .col-lg-2.right
+      .article-info
+        .article-info__author
+          = @article.author_name
+        .article-info__date
+          = @article.article_date
+        a.share_button href="#"
+          |Share
+    .col-lg-10
+      = raw @article.content
+
+- if @related_articles.try(&:any?)
+  .read-also-section
+    .container
+      .row
+        - @related_articles.each do |article|
+          = render "article_item", item: article

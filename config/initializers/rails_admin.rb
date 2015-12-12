@@ -238,17 +238,26 @@ RailsAdmin.config do |config|
 
 
   config.model BlogArticle do
-    field :published
-    field :name
-    field :url_fragment
-    field :content
-    field :avatar
-    field :tag_list do
-     # partial 'tag_list_with_suggestions'
-
-
+    edit do
+      field :published
+      field :name
+      field :url_fragment
+      field :content, :ck_editor
+      field :avatar
+      field :tag_list do
+      #  partial 'tag_list_with_suggestions'
+        def value
+          bindings[:object].send(name).to_s
+        end
+      end
+      field :author_name
     end
-    field :author_name
+
+    list do
+      field :published
+      field :name
+      field :avatar
+    end
   end
 
 
