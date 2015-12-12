@@ -36,4 +36,12 @@ html{
       }
     }
   }
+
+  @each $k in ('contacts') {
+    &[data-action=#{$k}] {
+      body {
+        background: white;
+      }
+    }
+  }
 }

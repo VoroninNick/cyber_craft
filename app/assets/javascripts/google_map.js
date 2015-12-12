@@ -1,12 +1,39 @@
-initializeGMaps = function() {
+get_lat_lng_by_string = function(str){
+    var lat_lng = null
+    var arr = null
+    if (str && str.length){
+        arr = str.split(",").map(function(a){return parseInt(a)})
+        if (arr && arr.length){
+            lat_lng = new google.maps.LatLng(arr[0], arr[1])
+        }
+    }
+
+    return lat_lng
+}
+initializeGMaps = function(selector, info_window_parent_selector) {
+    var $map = $(selector)
+    var map_html_element = $map.get(0)
     var lat, latlng, lng, map, mapOptions, marker, styledMap, styles;
-    lat = 49.830312;
-    lng = 24.042679; // 49.810126, 23.971897
-    latlng = new google.maps.LatLng(lat, lng);
+
+    var marker_lat_lng = get_lat_lng_by_string($map.attr("data-marker"))
+    if (!marker_lat_lng) {
+        lat = 49.830312;
+        lng = 24.042679; // 49.810126, 23.971897
+        marker_lat_lng = new google.maps.LatLng(lat, lng);
+    }
 
 
     // 49.827724, 24.04284
-    var center_lat_lng = new google.maps.LatLng(49.82778, 24.042797)
+    var center_lat_lng = null
+    if ($map.hasAttribute("center-map-by-marker")){
+        center_lat_lng = marker_lat_lng
+    }
+    else {
+        center_lat_lng = get_lat_lng_by_string($map.attr("data-center"))
+        if (!center_lat_lng) {
+            center_lat_lng = new google.maps.LatLng(49.82778, 24.042797)
+        }
+    }
 
     styles = [
         {
@@ -51,21 +78,22 @@ initializeGMaps = function() {
     });
 
 
-    var map_html_element = $(".g_map").get(0)
+
     map = new google.maps.Map(map_html_element, mapOptions);
     map.mapTypes.set("map_style", styledMap);
     map.setMapTypeId("map_style");
     marker = new google.maps.Marker({
-        position: latlng,
+        position: marker_lat_lng,
         map: map,
-        title: "Наутика",
+        title: "CyberCraft",
         icon: '/assets/cc-map-icon-1.png'
     });
 
     google.maps.event.addListener(marker, 'click', function(e) {
         //infowindow.open(map,marker);
-        var $info_window_parent = $(".map_message")
+        var $info_window_parent = $(info_window_parent_selector)
         var $info_window = $info_window_parent.find("#my-info-window")
+        alert($info_window.length)
         if (!$info_window.length) {
             $info_window = $("<div id='my-info-window'>" + contentString + "</div>")
             $info_window_parent.append($info_window)
@@ -89,5 +117,16 @@ initializeGMaps = function() {
 };
 
 
-initializeGMaps()
+var google_map_selector = null
+var info_window_parent_selector = ".map_message"
+if($(".g_map").length) {
+    google_map_selector = ".g_map"
+}
+else if($(".contacts-map").length){
+    google_map_selector = ".contacts-map"
+    info_window_parent_selector = ".contacts-map-wrap"
+}
 
+if(google_map_selector) {
+    initializeGMaps(google_map_selector, info_window_parent_selector)
+}
