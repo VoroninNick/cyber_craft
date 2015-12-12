@@ -52,6 +52,7 @@ class PagesController < ApplicationController
   def career
     @footer = false
     @members = Member.published.sort_by_sorting_position
+    @feedbacks = Feedback.all.order("id desc")
   end
 
   def sitemap
