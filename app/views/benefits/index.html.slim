@@ -1,2 +1,19 @@
-h1
-  |Benefits
+.container
+  .row
+    h1
+      |Benefits
+
+    - if @benefits.try(&:any?)
+      ul
+        - @benefits.each_with_index do |b, i|
+          - str_number = (i+1).to_s
+          - if str_number.length == 1
+            - str_number = "0#{str_number}"
+          li
+            .number
+              = str_number
+            .name
+              = b.name
+            .description
+              = b.description
+

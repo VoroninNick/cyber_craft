@@ -66,7 +66,7 @@ RailsAdmin.config do |config|
     # history_show
 
     nestable do
-      only [Industry, Team, Member]
+      only [Industry, Team, Member, Benefit]
     end
   end
 
@@ -83,7 +83,8 @@ RailsAdmin.config do |config|
 
   config.included_models += [FileEditor]
 
-  config.included_models += [Member]
+  config.included_models += [Member, Benefit]
+
 
 
 
@@ -380,7 +381,7 @@ RailsAdmin.config do |config|
 
 
   config.model Member do
-    nestable_list true, position_field: :sorting_position
+    nestable_list position_field: :sorting_position
 
     field :published
     field :image
@@ -393,7 +394,15 @@ RailsAdmin.config do |config|
     field :linkedin
   end
 
+  config.model Benefit do
+    nestable_list position_field: :sorting_position
 
+    edit do
+      field :published
+      field :name
+      field :description
+    end
+  end
 
 
 end
