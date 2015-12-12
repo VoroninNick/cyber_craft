@@ -1,0 +1,9 @@
+- content_for :text_page_layout do
+  .container
+    .row
+      .col-md-10.article-content
+        = html_block_with_fallback(:content, true)
+      = render "read_also_nav"
+
+
+= render template: "layouts/application"

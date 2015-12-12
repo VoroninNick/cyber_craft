@@ -1,1 +1,6 @@
-= html_block_with_fallback(:content, true)
+.container
+  .row
+    .col-md-10.article-content
+      = html_block_with_fallback(:content, true)
+    = render "read_also_nav"
+

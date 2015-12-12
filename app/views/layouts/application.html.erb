@@ -38,7 +38,12 @@
             <%= render_page_banner %>
             <%= render_breadcrumbs %>
 
-            <%= yield %>
+
+            <% if content_for?(:text_page_layout) %>
+                <%= content_for :text_page_layout %>
+            <% else %>
+                <%= yield %>
+            <% end %>
 
             <%= render_page_bottom_banner %>
         </div>

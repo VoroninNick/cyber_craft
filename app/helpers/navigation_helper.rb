@@ -11,6 +11,10 @@ module NavigationHelper
     compute_navigation_keys(keys, i18n_root, false)
   end
 
+  def read_also_entries
+    compute_navigation_keys(@read_also_entries, "read_also")
+  end
+
   def compute_navigation_keys(keys, i18n_root = "navigation", check_for_active = true)
 
     h = {}

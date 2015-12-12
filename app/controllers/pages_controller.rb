@@ -34,11 +34,19 @@ class PagesController < ApplicationController
   def terms_of_use
     add_home_breadcrumb
     add_breadcrumb("terms_of_use")
+
+    @read_also_entries = %w(privacy_policy)
+
+    render_text_page
   end
 
   def privacy_policy
     add_home_breadcrumb
     add_breadcrumb("privacy_policy")
+
+    @read_also_entries = %w(terms_of_use)
+
+    render_text_page
   end
 
   def career
@@ -54,5 +62,9 @@ class PagesController < ApplicationController
 
   def set_page_instance
     set_page_metadata(action_name)
+  end
+
+  def render_text_page
+    render template: "layouts/text_page", layout: false
   end
 end
