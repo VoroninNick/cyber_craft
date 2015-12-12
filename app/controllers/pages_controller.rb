@@ -32,11 +32,13 @@ class PagesController < ApplicationController
 
 
   def terms_of_use
-
+    add_home_breadcrumb
+    add_breadcrumb("terms_of_use")
   end
 
   def privacy_policy
-
+    add_home_breadcrumb
+    add_breadcrumb("privacy_policy")
   end
 
   def career

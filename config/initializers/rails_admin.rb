@@ -22,6 +22,14 @@ def help_html_code
   help "html code"
 end
 
+def ck_editor_field(name, &block)
+  field name, :ck_editor do
+    def value
+      bindings[:object].send(name)
+    end
+  end
+end
+
 RailsAdmin.config do |config|
 
   ### Popular gems integration
@@ -171,6 +179,9 @@ RailsAdmin.config do |config|
       field :banner
       field :bottom_banner
       field :bottom_banner_description
+
+      ck_editor_field(:content)
+
       field :seo_tags
     end
   end
@@ -218,6 +229,8 @@ RailsAdmin.config do |config|
       field :banner
       field :bottom_banner
       field :bottom_banner_description
+
+      ck_editor_field(:content)
       field :seo_tags
     end
   end

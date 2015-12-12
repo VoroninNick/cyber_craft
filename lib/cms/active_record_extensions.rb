@@ -104,15 +104,18 @@ module Cms
 
             if define_getter
 
-              define_method "#{name}" do |locale = I18n.locale|
+              self.send :define_method, "#{name}" do |locale = I18n.locale|
                 owner = self.association(name).owner
                 owner_class = owner.class
+                puts "owner_class: #{owner_class.name}"
+                puts "owner_id: #{owner.id}"
+                puts "owner_field_name: #{name}"
                 HtmlBlock.all.where(attachable_type: owner_class.name, attachable_id: owner.id, attachable_field_name: name).first.try(&:content)
               end
             end
 
             if define_setter
-              define_method "#{name}=" do |value|
+              self.send :define_method, "#{name}=" do |value|
                 owner = self.association(name).owner
                 owner_class = owner.class
                 html_block = HtmlBlock.all.where(attachable_type: owner_class.name, attachable_id: owner.id, attachable_field_name: name).first_or_initialize

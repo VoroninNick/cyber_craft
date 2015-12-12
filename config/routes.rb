@@ -16,11 +16,11 @@ Rails.application.routes.draw do
 
   if SHOW_ALL
     controller :pages do
-      get "about_us"
+      get "about-us", action: "about_us"
       get "contacts"
       get "process", action: "process_page", defaults: { route_name: :process }
-      get "terms_of_use"
-      get "privacy_policy"
+      get "terms-of-use", action: "terms_of_use"
+      get "privacy-policy", action: "privacy_policy"
       get "career"
       get "sitemap"
     end
