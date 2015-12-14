@@ -1,8 +1,9 @@
 .col-md-2.read-also-nav
   span.read-also-header
     |Read also
-  ul
-    - read_also_entries.each do |entry_key, entry|
-      li
-        a href=entry[:url]
-          = entry[:name]
+  .read-also-content
+    ul
+      - read_also_entries.each do |entry_key, entry|
+        li
+          a href=entry[:url]
+            = entry[:name]

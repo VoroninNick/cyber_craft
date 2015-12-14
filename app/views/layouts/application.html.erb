@@ -61,7 +61,9 @@
     <%= javascript_include_tag "ie" %>
     <![endif]-->
 
-    <%= javascript_include_tag 'https://maps.googleapis.com/maps/api/js?sensor=false' %>
+    <% if !defined?(::LOCAL_ONLY) || !::LOCAL_ONLY %>
+        <%= javascript_include_tag 'https://maps.googleapis.com/maps/api/js?sensor=false' %>
+    <% end %>
     <%= javascript_include_tag "application" %>
   </body>
 </html>

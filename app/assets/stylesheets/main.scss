@@ -1046,9 +1046,12 @@ $industries-home-image-height: 550px;
 .test_title a {
   color: #384046;
   padding: 5px 13px;
-  margin: 0;
+  margin: 0 0 2px 0;
   background-color: #FF9801;
   font-size: 14px;
+  display: block;
+  float: right;
+  clear: both;
 }
 .test_i1 {
   font-size: 18px;

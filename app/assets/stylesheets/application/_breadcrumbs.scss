@@ -13,7 +13,8 @@
 .breadcrumbs_cont a {
   display: inline-block;
   //color: #51636D;
-  color: #536D79;
+  //color: #536D79;
+  color: rgba(163, 186, 200, 0.85);
 }
 .breadcrumbs_cont a:hover{
   color: #CC8312;
@@ -29,7 +30,7 @@
 }
 
 html{
-  @each $k in ('industries', 'teams') {
+  @each $k in ('industries', 'teams', 'blog') {
     &[data-controller=#{$k}] {
       body {
         background: white;

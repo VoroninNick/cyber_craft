@@ -1,0 +1,80 @@
+.read-also-header
+	display: block
+	text-align: center
+	color: $light-gray-text-color
+	background: $blue-color
+	height: 50px
+	line-height: 50px
+	+orbitron
+
+.read-also-content
+	background: $light-gray-bg-color
+	padding: 16px
+	ul
+		list-style: none
+		position: relative
+		padding: 0 0 0 10px
+		margin: 0
+	li
+		line-height: 15px
+		font-size: 12px
+		padding-bottom: 8px
+
+		&:before
+			left: 0
+			content: "●"
+			color: $blue-text-color
+			position: absolute
+			display: inline-block
+			font-weight: 400
+			font-size: 10px
+			line-height: inherit
+
+		&:last-child
+			padding-bottom: 0
+	a
+		color: $blue-text-color
+		font-weight: 100
+
+.article-content
+	padding-bottom: 90px
+	ul
+		list-style: none
+		position: relative
+		padding-left: 10px
+	li
+		margin-bottom: 10px
+		line-height: 20px
+
+		&:before
+			left: 0
+			content: "●"
+			color: $orange-text-color
+			position: absolute
+			display: inline-block
+			font-weight: 400
+			font-size: 10px
+			line-height: inherit
+
+	.h3
+		font-size: 16px
+		font-weight: 500
+
+	.h2
+		font-size: 18px
+		font-weight: 500
+
+	a
+		color: $orange-text-color
+
+
+
+.read-also-section
+	background: $light-gray-bg-color
+
+.blog-read-also-header
+	+orbitron
+	font-weight: 500
+	font-size: 28px
+	text-transform: uppercase
+	margin: 40px 0 30px 0

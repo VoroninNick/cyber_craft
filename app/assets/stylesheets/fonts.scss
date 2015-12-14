@@ -1,6 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900);
-@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic&subset=latin,latin-ext);
-
+$local-only: false !default;
+@if($local-only == false) {
+  @import url(https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900);
+  @import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic&subset=latin,latin-ext);
+}
 
 //@font-face {
 //  font-family: 'Orbitron-Medium';
