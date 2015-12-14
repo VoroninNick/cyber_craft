@@ -58,9 +58,12 @@ section#career_axperts_2.career
 section#career-members
   .container
     .row
+      h3.section_h3
+        span.with_black_arrows
+          |Who's behind this
       = render "members", members: @members
 
-= render "home_good_people_say", items: @feedbacks
+= render "home_good_people_say", items: @feedbacks, header: "What our employees say"
 /! Footer
 footer#standard-footer
   /! career_footer_form

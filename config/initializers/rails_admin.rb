@@ -18,6 +18,12 @@ def pages_navigation_label
   end
 end
 
+def feedbacks_navigation_label
+  navigation_label do
+    "Feedbacks"
+  end
+end
+
 def help_html_code
   help "html code"
 end
@@ -29,6 +35,8 @@ def ck_editor_field(name, &block)
     end
   end
 end
+
+
 
 RailsAdmin.config do |config|
 
@@ -74,7 +82,7 @@ RailsAdmin.config do |config|
     # history_show
 
     nestable do
-      only [Industry, Team, Member, Benefit]
+      only [Industry, Team, Member, Benefit, UserFeedback, EmployeeFeedback]
     end
   end
 
@@ -87,7 +95,7 @@ RailsAdmin.config do |config|
 
   config.included_models += [Cms::MetaTags]
 
-  config.included_models += [BlogArticle, Service, Team, Industry, Feedback]
+  config.included_models += [BlogArticle, Service, Team, Industry, Feedback, UserFeedback, EmployeeFeedback]
 
   config.included_models += [FileEditor]
 
@@ -367,10 +375,31 @@ RailsAdmin.config do |config|
   end
 
   config.model Feedback do
+    visible false
+  end
+
+
+  config.model UserFeedback do
+    nestable_list position_field: :sorting_position
+    feedbacks_navigation_label
+
     field :name
     field :company_image
     field :user_image
     field :comment
+  end
+
+
+  config.model EmployeeFeedback do
+    nestable_list position_field: :sorting_position
+    feedbacks_navigation_label
+
+    field :name
+    field :user_image
+    field :position
+    field :comment
+
+
   end
 
   config.model FormConfig do

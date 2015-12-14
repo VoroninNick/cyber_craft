@@ -10,7 +10,7 @@ class PagesController < ApplicationController
     @footer = false
     @blog_articles = BlogArticle.published.home_articles
     @industries = Industry.published
-    @feedbacks = Feedback.all.order("id desc")
+    @feedbacks = UserFeedback.all.order("id desc")
     @teams = Team.published
   end
 
@@ -52,7 +52,7 @@ class PagesController < ApplicationController
   def career
     @footer = false
     @members = Member.published.sort_by_sorting_position
-    @feedbacks = Feedback.all.order("id desc")
+    @feedbacks = EmployeeFeedback.all.order("id desc")
   end
 
   def sitemap

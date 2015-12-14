@@ -1,14 +1,18 @@
 - if defined?(items) && items.try(&:any?)
+
+
+
   /! Good people say
-  section#pagi8.people_say.content-part data-title=("Good people say")
+  section#pagi8.people_say.content-part data-title=header
     .container
       .row
         h3.section_h3
           span.with_black_arrows
-            | Good people say
-        p.sect_clogan
-          | And we like to hear it
-          span.slogan_people
+            = header
+        - if defined?(subheader) && subheader.present?
+          p.sect_clogan
+            = subheader
+            span.slogan_people
         /! Slider
         #reviews.owl-carousel.owl_people
           - items.each do |item|
@@ -22,8 +26,11 @@
                 img.author_img alt="alt" src=item.user_image.url(:home)
                 h3.author
                   = item.name
-                img.company_logo alt="alt" src=item.company_image.url()
-
+                - if item.company_image.exists?
+                  img.company_logo alt="alt" src=item.company_image.url()
+                - elsif item.position.present?
+                  span.user-position
+                    = item.position
 
 
 

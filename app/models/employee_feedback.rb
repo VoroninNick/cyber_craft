@@ -1,0 +1,3 @@
+class EmployeeFeedback < Feedback
+
+end

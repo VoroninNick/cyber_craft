@@ -258,3 +258,11 @@ footer .intro_career_foot p {
   display: block;
   letter-spacing: -0.5px;
 }
+
+#career-members{
+  background: $light-gray-bg-color;
+
+  .section_h3{
+    margin: 50px 0 30px 0;
+  }
+}
