@@ -28,7 +28,8 @@
 
 
     <%= render "menu" if SHOW_ALL %>
-    <%= render "logo", url: !home_page, logo_class: "header-logo" %>
+    <%= render "top_nav", home_page: home_page  %>
+
 
     <% if !sticky_footer %>
         <%= yield %>

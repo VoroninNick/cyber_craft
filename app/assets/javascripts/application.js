@@ -26,6 +26,7 @@
 //= require pushy.min.js
 
 //= require waypoints/lib/noframework.waypoints.min
+//= require jquery.scrolldelta
 
 
 // for services
@@ -48,3 +49,5 @@
 
 
 //= require career
+
+//= require header
