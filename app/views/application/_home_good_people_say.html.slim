@@ -20,8 +20,7 @@
             /! Slide
             div
               .col-md-8.col-sm-8.col-xs-12.y_posit.wow.fadeInRightBig
-                p
-                  = item.comment
+                = raw item.comment
               .col-md-4.col-sm-4.col-xs-12.x_posit.wow.fadeInUpBig
                 img.author_img alt="alt" src=item.user_image.url(:home)
                 h3.author
