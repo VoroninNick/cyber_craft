@@ -46,3 +46,24 @@
 = ubuntu-italic
 	+ubuntu
 	font-style: italic
+
+
+
+= article-ul
+	list-style: none
+	position: relative
+	padding-left: 10px
+
+= article-li
+	margin-bottom: 10px
+	line-height: 20px
+
+	&:before
+		left: 0
+		content: "●"
+		color: $orange-text-color
+		position: absolute
+		display: inline-block
+		font-weight: 400
+		font-size: 10px
+		line-height: inherit
