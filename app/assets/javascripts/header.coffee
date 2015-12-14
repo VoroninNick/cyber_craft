@@ -24,7 +24,7 @@ $(window).on "scrolldelta", (e)->
   # top banner
   $banner = (".header_style")
   $banner_title = $(".title_page")
-  ratio = 0.3
+  ratio = 0.6
   current_translate = $banner_title.data("translateY") || 0
   future_translate = current_translate + delta * ratio
   console.log "banner.delta: ", delta
