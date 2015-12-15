@@ -1,4 +1,6 @@
-- if @page_banner_image
+/h1
+  |Page title: #{@page_banner_title.inspect}
+- if @page_banner != false && (@page_banner_image.present? || @page_banner_title.present?)
   /! header of the page
   header.header_style
     /! title_page
@@ -9,5 +11,5 @@
             span
               = @page_banner_title
     /! End title_page
-    .fon_header.fon_services style="background-image: url(#{@page_banner_image})"
+    .fon_header.fon_services style=("background-image: url(#{@page_banner_image})" if @page_banner_image.present?) class=("has-bg-image" if @page_banner_image.present? )
     /! and header of the page

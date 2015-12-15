@@ -1,14 +1,15 @@
 .container
   .row
-    ul
-      - sitemap_entries.each do |entry_key, entry|
-        li
-          a href=entry[:url]
-            = entry[:name]
+    .col-xs-12
+      ul.sitemap-entries
+        - sitemap_entries.each do |entry_key, entry|
+          li
+            a.industry-article-h1 href=entry[:url]
+              = entry[:name]
 
-          - if ( children = entry[:children]).try(:any?)
-            ul
-              - children.each do |c|
-                li
-                  a href=url_for(c)
-                    = c.name
+            - if ( children = entry[:children]).try(:any?)
+              ul
+                - children.each do |c|
+                  li
+                    a.industry-article-h2 href=url_for(c)
+                      = c.name

@@ -57,6 +57,11 @@ module PagesHelper
     end
 
 
+    if !@page_instance && @page_class
+      banner_title = @page_class.name.demodulize.underscore
+      set_page_banner_title(banner_title)
+    end
+
 
     if @page_instance
       url = nil
@@ -113,7 +118,7 @@ module PagesHelper
 
 
   def set_page_banner_title title
-    @page_banner_title = (I18n.t("page_titles.#{title}", raise: true) rescue title)
+    @page_banner_title = (I18n.t("page_titles.#{title}", raise: true) rescue title.humanize)
   end
 
   def set_page_bottom_banner image = nil, description = nil

@@ -38,7 +38,7 @@ html{
     }
   }
 
-  @each $k in ('contacts', "terms_of_use", "privacy_policy", "career") {
+  @each $k in ('contacts', "terms_of_use", "privacy_policy", "career", "sitemap") {
     &[data-action=#{$k}] {
       body {
         background: white;

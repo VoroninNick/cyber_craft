@@ -17,6 +17,21 @@
 .fon_services {
 
 }
+
+
+.fon_header{
+  &:not(.has-bg-image){
+    background: rgba(56, 64, 70, 1) url(career_bg_dotted.png) repeat;
+
+    .title_page {
+      h1{
+        background: transparent;
+      }
+    }
+  }
+}
+
+
 .title_page {
   position: absolute;
   width: 100%;

@@ -16,6 +16,7 @@ class PagesController < ApplicationController
 
   def about_us
     @members = Member.published.sort_by_sorting_position
+    #@page_banner_title ||= 'hi'
   end
 
   def contacts
@@ -53,6 +54,7 @@ class PagesController < ApplicationController
     @footer = false
     @members = Member.published.sort_by_sorting_position
     @feedbacks = EmployeeFeedback.all.order("id desc")
+    @page_banner = false
   end
 
   def sitemap
