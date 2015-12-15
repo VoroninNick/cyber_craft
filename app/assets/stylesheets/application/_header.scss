@@ -136,7 +136,12 @@
 }
 
 
-a.header-logo, a.logo
-  &:hover
-    svg
-      width: 100px
+a.header-logo, a.logo{
+  &:hover{
+    svg{
+      width: 100px;
+    }
+  }
+}
+
+
