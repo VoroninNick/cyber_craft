@@ -3,8 +3,10 @@
 - if !defined?(url) || url
   - url = root_path
   a class=logo_class href=url
-    img alt="" src=asset_path("logo.png")
+    /img alt="" src=asset_path("logo.png")
+    = inline_svg "CC-LOGO.svg"
 - else
   span class=logo_class
-    img  alt="" src=asset_path("logo.png")
+    /img  alt="" src=asset_path("logo.png")
+    = inline_svg "CC-LOGO.svg"
 /! End Logo
