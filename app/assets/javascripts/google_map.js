@@ -93,7 +93,7 @@ initializeGMaps = function(selector, info_window_parent_selector) {
         //infowindow.open(map,marker);
         var $info_window_parent = $(info_window_parent_selector)
         var $info_window = $info_window_parent.find("#my-info-window")
-        alert($info_window.length)
+
         if (!$info_window.length) {
             $info_window = $("<div id='my-info-window'>" + contentString + "</div>")
             $info_window_parent.append($info_window)
