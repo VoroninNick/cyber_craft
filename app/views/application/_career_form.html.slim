@@ -1,0 +1,51 @@
+form.ajax-submit action=vacancy_request_path method="post" show-preloader=""
+  .content
+    .row
+      .col-md-6.col-sm-6.col-xs-12
+        .input.string.css required=""
+          input#firstnameanimate name="vacancy_request[name]" type="text"
+          label.input-label for="firstnameanimate"  Name*
+        .input.string.css required=""
+          input#emailanimate name="vacancy_request[email]" type="text"
+          label.input-label for="emailanimate"  Email*
+        .input.string.css
+          input#phonenamberanimate name="vacancy_request[desired_position]" type="text"
+          label.input-label for="phonenamberanimate"  Desired position
+      .col-md-6.col-sm-6.col-xs-12
+        .input.text.css.messagetext required=""
+          textarea#youmessageanimate name="vacancy_request[message]"
+          label.input-label for="youmessageanimate"  Your message*
+    .row
+      .col-md-12
+        .row
+          /.col-md-6.col-sm-6.col-xs-12
+            .row.captcha_career
+              .col-md-6.col-sm-6.col-xs-6
+                div
+                  img alt="" src=asset_path("careers_file.png")
+              .col-md-6.col-sm-6.col-xs-6
+                .input.string.css required=""
+                  input#antibotprotection name="message[phone]" type="text"
+                  label.input-label for="antibotprotection"  Antibot protection*
+          .col-md-6.col-sm-6.col-xs-12
+            .row.career_form_a_canter
+              .col-md-6.col-sm-6.col-xs-12
+                input#attach-file-input.hidden type="file" name="vacancy_request[cv]"
+                label.career_form_a.attach-file-button for="attach-file-input"
+                  span.icon-wrap
+                    img src=asset_path("careerscapcha.png")
+                  span.btn-label
+                    | Attach cv
+                .filename
+              /.col-md-6.col-sm-6.col-xs-12
+                a.career_form_a href="#"  Apply With linkedin
+        .row
+          .col-md-6.col-sm-6.col-xs-6
+            p.foot_required * required fields
+          .col-md-6.col-sm-6.col-xs-6
+            input type="submit" value="Send"
+  .success-message
+    h3
+      | You have successfully sent message
+    p
+      | Our managar will contact you as soon as possible.

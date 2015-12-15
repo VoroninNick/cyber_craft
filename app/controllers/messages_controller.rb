@@ -7,4 +7,6 @@ class MessagesController < ApplicationController
     data = {}
     render json: data, status: 201
   end
+
+
 end

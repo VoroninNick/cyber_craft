@@ -98,54 +98,7 @@ footer#standard-footer
             h3.section_h3.h3_messag.career_black_arrows
               span.with_white_arrows Send us a message
             .foot_f.career_foot_f
-              form.ajax-submit action="/message" method="post" show-preloader="" 
-                .content
-                  .row
-                    .col-md-6.col-sm-6.col-xs-12
-                      .input.string.css required="" 
-                        input#firstnameanimate name="message[name]" type="text" 
-                        label.input-label for="firstnameanimate"  Name*
-                      .input.string.css required="" 
-                        input#emailanimate name="message[email]" type="text" 
-                        label.input-label for="emailanimate"  Email*
-                      .input.string.css
-                        input#phonenamberanimate name="message[phone]" type="text" 
-                        label.input-label for="phonenamberanimate"  Desired position
-                    .col-md-6.col-sm-6.col-xs-12
-                      .input.text.css.messagetext required="" 
-                        textarea#youmessageanimate name="message[message_text]" 
-                        label.input-label for="youmessageanimate"  Your message*
-                  .row
-                    .col-md-12
-                      .row
-                        .col-md-6.col-sm-6.col-xs-12
-                          .row.captcha_career
-                            .col-md-6.col-sm-6.col-xs-6
-                              div
-                                img alt="" src=asset_path("careers_file.png")
-                            .col-md-6.col-sm-6.col-xs-6
-                              .input.string.css required="" 
-                                input#antibotprotection name="message[phone]" type="text" 
-                                label.input-label for="antibotprotection"  Antibot protection*
-                        .col-md-6.col-sm-6.col-xs-12
-                          .row.career_form_a_canter
-                            .col-md-6.col-sm-6.col-xs-12
-                              a.career_form_a href="#" 
-                                span
-                                  img src=asset_path("careerscapcha.png")
-                                | Attach cv
-                            .col-md-6.col-sm-6.col-xs-12
-                              a.career_form_a href="#"  Apply With linkedin
-                      .row
-                        .col-md-6.col-sm-6.col-xs-6
-                          p.foot_required * required fields
-                        .col-md-6.col-sm-6.col-xs-6
-                          input type="submit" value="Send" 
-                .success-message
-                  h3
-                    | You have successfully sent message
-                  p
-                    | Our managar will contact you as soon as possible.
+              = render "career_form"
   /! career_footer_form
   = render "footer_links"
   /! End Footer

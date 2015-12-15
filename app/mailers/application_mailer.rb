@@ -17,4 +17,15 @@ class ApplicationMailer < ActionMailer::Base
         subject: "New message"
     )
   end
+
+  def new_vacancy_request(req)
+    @msg = req
+
+    mail(
+        template_name: "vacancy_request",
+        to: receivers("vacancy_request"),
+        from: "CyberCraft",
+        subject: "New Vacancy Request"
+    )
+  end
 end

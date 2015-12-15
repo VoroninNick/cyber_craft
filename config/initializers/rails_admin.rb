@@ -58,7 +58,7 @@ RailsAdmin.config do |config|
 
   page_model_names = %w(AboutUs Blog Career Contacts Home Industries PrivacyPolicy Process Services Sitemap Teams TermsOfUse).map{|s| "Pages::#{s}" }
 
-  only_configurable_models = [FormConfigs::Message, *page_model_names]
+  only_configurable_models = [FormConfigs::Message, FormConfigs::VacancyRequest, *page_model_names]
 
   config.actions do
     dashboard                     # mandatory
@@ -89,7 +89,7 @@ RailsAdmin.config do |config|
 
 
 
-  config.included_models += [FormConfig, FormConfigs::Message, Message, User]
+  config.included_models += [FormConfig, FormConfigs::Message, FormConfigs::VacancyRequest, Message, User]
 
   config.included_models += page_model_names
 
@@ -406,16 +406,18 @@ RailsAdmin.config do |config|
     visible false
   end
 
-  config.model FormConfigs::Message do
-    settings_navigation_label
-    show do
-      field :email_receivers, :text
-    end
+  [FormConfigs::Message, FormConfigs::VacancyRequest].each do |m|
+    config.model m do
+      settings_navigation_label
+      show do
+        field :email_receivers, :text
+      end
 
-    edit do
-      field :email_receivers do
-        help do
-          "Please type each email in new line"
+      edit do
+        field :email_receivers do
+          help do
+            "Please type each email in new line"
+          end
         end
       end
     end

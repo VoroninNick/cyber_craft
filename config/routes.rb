@@ -38,6 +38,7 @@ Rails.application.routes.draw do
 
   end
 
+  post "career", to: "vacancies#create", as: :vacancy_request
 
   post "message", to: "messages#create"
 
