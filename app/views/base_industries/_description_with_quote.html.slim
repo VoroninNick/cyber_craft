@@ -1,16 +1,17 @@
 .row.relative.article-section
   .padding-top class="#{ opts[:background_color_class] if opts[:background_color_class].present?} #{'decorate-first-letter' if opts[:decorate_first_letter]}"
-    .container
-      .row
-        .col-md-8
-          - if opts[:header].present?
-            h2.industry-article-h2
-              = opts[:header]
+    .col-xs-12
+      .container
+        .row
+          .col-md-8
+            - if opts[:header].present?
+              h2.industry-article-h2
+                = opts[:header]
 
-          = raw opts[:description]
+            = raw opts[:description]
 
-        .col-md-4
-          .orange-quote
-            = opts[:quote]
+          .col-md-4
+            .orange-quote
+              = opts[:quote]
 
 

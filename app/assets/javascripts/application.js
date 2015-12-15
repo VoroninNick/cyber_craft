@@ -28,6 +28,7 @@
 
 //= require waypoints/lib/noframework.waypoints.min
 //= require jquery.scrolldelta
+//= require jquery.scrollend
 
 
 // for services

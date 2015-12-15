@@ -83,6 +83,9 @@
 	background-position: top right
 	opacity: 0.1
 
+	@media (max-width: 768px)
+		background-image: none !important
+
 .industry-article-content
 	//color: $blue-text-color
 
@@ -135,21 +138,40 @@ $left-image-height: 350px
 	background-size: cover
 	background-position: center
 
-	& + .image-description-wrap
+	@media (max-width: 768px)
+		position: relative
+
+
+
+
+.article-section-left-image, .article-section-right-image
+	.image-description-wrap
 		height: auto
 		min-height: $left-image-height
 		display: table
+		z-index: 1
+	.image-description
+		display: table-cell
+		vertical-align: middle
+	.image-description-content
+		//top: 50%
+		//+transform(translateY(50%))
+		background: rgba(0, 0, 0, 0.6 )
+		padding: 10px 25px
+		color: white
+		font-size: 16px
+
+
+
+	@media (max-width: 768px)
+		.image-description-wrap
+			min-height: 0
+
 		.image-description
-			display: table-cell
+			display: block
+
 		.image-description-content
-			//top: 50%
-			//+transform(translateY(50%))
-			background: rgba(0, 0, 0, 0.6 )
-			padding: 10px 25px
-			color: white
-			font-size: 16px
-		.image-description
-			vertical-align: middle
+			margin: -40px 10px 40px 10px
 
 .left-image
 
@@ -158,18 +180,29 @@ $left-image-height: 350px
 	right: 0
 
 
-.with-gray-bg
+.with-gray-bg, .with-gray-bg-bottom-50-percent
 	&:before
 		display: block
 		content: ""
 		position: absolute
-		top: -175px
+		top: 0
 		bottom: 0
 		left: 0
 		right: 0
 		background-color: $light-gray-bg-color
 
+	> .container
+		position: relative
+		z-index: 1
 
+.with-gray-bg-bottom-50-percent
+	&:before
+		top: 50%
+
+@media (max-width: 768px)
+	.with-gray-bg-bottom-50-percent
+		&:before
+			display: none
 
 
 .padding-top
@@ -184,6 +217,10 @@ $left-image-height: 350px
 	font-weight: 500
 	padding-left: 20px
 	border-left: 3px solid
+
+	@media (max-width: 768px)
+		margin-top: 30px
+		margin-bottom: 55px
 
 
 .image-description-content
@@ -323,6 +360,7 @@ img
 
 .article-section
 	padding-bottom: 40px
+	position: relative
 
 .article-section-full-width-image-with-title, .article-section-right-image, .article-section-left-image
 	padding-bottom: 0

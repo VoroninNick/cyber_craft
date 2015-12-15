@@ -137,6 +137,13 @@ scroll_home_banner = function(top) {
     if (top == undefined) {
         top = $("#pagi2").offset().top
     }
+
+    var $body = $("body")
+    if(top < 0){
+        top = 0
+    }
+    $body.data("scroll_top", top)
+
     $("body").animate(
         {scrollTop: top},
         {
@@ -159,6 +166,7 @@ if($("html").filter("[data-controller='pages'][data-action='index'], [data-contr
         var scroll_top = $(window).scrollTop()
         if(scroll_top < slider_height && e.originalEvent.deltaY > 0){
             e.preventDefault()
+
             scroll_home_banner(slider_height)
         }
     })
@@ -185,3 +193,4 @@ $(".custom-first-letter").each(function(){
     var $first_letter = $("<span class='first-letter'>" + first_letter + "</span>")
     $block.prepend($first_letter)
 })
+

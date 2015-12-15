@@ -2,8 +2,8 @@
 = description_with_image(a.section_1_image.path, a.section_1_text, header: a.h1_text, svg: true)
 
 
-.row.article-section.article-section-left-image
-  .col-md-6.left-image style="background-image: url(#{a.section_2_image.url})"
+.row.article-section.article-section-left-image.with-gray-bg-bottom-50-percent
+  .col-xs-12.col-md-6.left-image style="background-image: url(#{a.section_2_image.url})"
 
   .col-md-3.col-md-push-5.image-description-wrap
     .image-description
@@ -23,13 +23,14 @@
           .image-description-content
             = raw a.section_4_description_html
       .clearfix
-.row.article-section.article-section-right-image
-  .col-md-9.right-image style="background-image: url(#{a.section_4_image.url})"
-
+.article-section.article-section-right-image.with-gray-bg
   .col-md-3.col-lg-push-1.image-description-wrap
     .image-description
       .image-description-content
         = raw a.section_4_description_html
+
+  .col-xs-12.col-md-9.right-image style="background-image: url(#{a.section_4_image.url})"
+
   .clearfix
 
 .article-section
