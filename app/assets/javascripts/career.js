@@ -19,10 +19,10 @@ $(document).ready(function(){
 
 
 // Scrol career block2
-$("body").on("click", ".scroll-down-arrow_career", function(){
-    var top = $("#career_axperts_2").offset().top
-    $("body").animate({scrollTop: top})
-})
+//$("body").on("click", ".scroll-down-arrow_career", function(){
+//    var top = $("#career_axperts_2").offset().top
+//    $("body").animate({scrollTop: top})
+//})
 
 
 // Scrol career Footer form

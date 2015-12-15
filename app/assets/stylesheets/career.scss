@@ -13,7 +13,9 @@
 }
 .title_page.title_page_career{
   z-index: 3;
-  top: 15%;
+  //top: 15%;
+  top: 50%;
+  @include transform(translateY(-50%))
 }
 .career_header {
   background: #32393F url(career_bg_dotted.png) repeat;

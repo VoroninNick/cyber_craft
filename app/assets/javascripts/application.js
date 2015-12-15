@@ -1,5 +1,6 @@
 // Sidebar Navigation  Main page
 //= require libs/jquery/jquery-1.11.3.min.js
+//= require jquery-ui/jquery-ui.min
 
 
 //= require jquery.easing.1.3.js

@@ -70,6 +70,7 @@
   &:hover{
     .menuicon{
       background-color: $orange-color !important;
+      box-shadow: none;
     }
   }
 }
@@ -113,12 +114,6 @@
   }
 
 
-  &:not(.scrolled){
-
-    .navigationleft, & ~ .header-logo{
-
-    }
-  }
 }
 
 
@@ -139,7 +134,9 @@
 a.header-logo, a.logo{
   &:hover{
     svg{
-      width: 100px;
+      *{
+        fill: $orange-color;
+      }
     }
   }
 }
