@@ -142,16 +142,25 @@ scroll_home_banner = function(top) {
     if(top < 0){
         top = 0
     }
-    $body.data("scroll_top", top)
 
-    $("body").animate(
-        {scrollTop: top},
-        {
-            duration: 1000,
-            easing: "easeInCubic"
-            //specialEasing: "easeInOutElastic"
-        }
-    )
+    if($body.scrollTop() != top) {
+        $body.stop()
+        $body.data("scroll_in_progress", true)
+
+        $body.data("scroll_top", top)
+
+        $("body").animate(
+            {scrollTop: top},
+            {
+                duration: 1000,
+                easing: "easeInCubic",
+                //specialEasing: "easeInOutElastic"
+                complete: function(){
+                    $body.data("scroll_in_progress", false)
+                }
+            }
+        )
+    }
 }
 
 $("body").on("click", ".scroll-down-arrow, .scroll-down-arrow_career", function(){
