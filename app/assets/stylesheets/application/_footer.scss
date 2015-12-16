@@ -240,3 +240,33 @@ $breakpoints: (480);
   }
 }
 
+#footer-links-wrap{
+  .copyright{
+    float: left;
+  }
+
+  .footer-additional-links-wrap{
+    float: right;
+    text-align: center;
+    //width: 25%;
+  }
+
+  .social-icons{
+    .f_icon{
+      float: none;
+      display: inline-block;
+
+      &:first-child{
+        margin-left: 0;
+      }
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .copyright{
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+

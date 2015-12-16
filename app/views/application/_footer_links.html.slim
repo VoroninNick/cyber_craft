@@ -2,18 +2,18 @@
 #footer-links-wrap
   .container
     .row
-      .col-md-2.col-sm-2.col-xs-12.social-icons style="float: right"
+      .col-md-3.col-sm-3.col-xs-12.social-icons style="float: right"
         a.f_icon.fi_f href="#"
         a.f_icon.fi_i href="#"
 
-      .col-md-3.col-sm-3.col-xs-12 style="float: right"
+      .col-md-6.col-sm-6.col-xs-12.footer-additional-links-wrap style="float: right"
         div.footer-additional-links
           - additional_links.each do |k, v|
             a.footer-additional-link href=v[:url]
               = v[:name]
-      .col-md-3.col-sm-3.col-xs-5.copyright style="float: right"
+      .col-md-3.col-sm-3.col-xs-5.copyright
         p © 2015 CyberCraft - all rights reserved
-      .col-md-4.col-sm-4.col-xs-7
+      /.col-md-4.col-sm-4.col-xs-7
         a.f_compani href="#"  Handcrafted in Voronin Design Studio 2015
 
 /! End Footer
