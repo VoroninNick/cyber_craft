@@ -75,10 +75,11 @@ $(window).on "wheel", (e)->
     #future_scroll_top = current_scroll_top + deltaY * 2.5
     scroll_direction_up = deltaY < 0
 
+    increment = 250
+
     if scroll_direction_up
-      increment = -125
-    else
-      increment = 125
+      increment = increment * -1
+
 
 
 
@@ -95,7 +96,7 @@ $(window).on "wheel", (e)->
 
       $html_body.stop()
       $html_body.animate({scrollTop: future_scroll_top}, {
-        duration: 1000,
+        duration: 600,
         easing: "easeOutExpo"
         #easing: "easeOutBack"
       })
