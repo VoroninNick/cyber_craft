@@ -3,22 +3,7 @@
 - columns ||= (list_items ? 1 : 2 )
 
 - if list_items
-  li
-    span.cont_tel
-      a href="tel:+18886797138"
-        | +1 888 67 97 138
-        sup Us
-      a href="tel:+380639911633"
-        | +380 63 99 11 633
-        sup Eu
-  li
-    a.cont_mail href="mailto:info@cybercraftinc.com"  info@cybercraftinc.com
-  li
-    a.cont_map href="#"
-      span 7 Slipoho Str.
-      span Lviv, Ukraine, 79017
-  li
-    a.cont_skype href="skype:ask.CyberCraft"  ask.CyberCraft
+  = render "standard_contact_items"
 
 - elsif columns == 2
   .col-xs-8.col-xs-push-0.col-from-480-6.col-from-480-push-0

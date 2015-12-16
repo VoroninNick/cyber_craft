@@ -1,0 +1,19 @@
+.yellowformcontacts
+  .col-md-4.col-sm-4.col-xs-12.cont_information.footr_form
+    h3.section_h4
+      span.with_orange_arrows
+        |Contact us
+    ul.cont_inf
+      = render "contact_items_with_social_links"
+    h3.section_h4
+      span.with_orange_arrows
+        |Follow us
+    p.social-icons-p
+      a.f_icon.fi_f href="#"
+      a.f_icon.fi_i href=""
+  .col-md-8.col-sm-8.col-xs-12.send_message.footr_form
+    h3.section_h3.h3_messag
+      span.with_white_arrows
+        | Send us a message
+    .foot_f
+      = render "home_contact_form"

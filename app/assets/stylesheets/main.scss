@@ -724,6 +724,12 @@ $industries-home-image-height: 550px;
   color: #384046;
   letter-spacing: 2px;
 }
+
+.section_h4{
+  @include orbitron-medium;
+  font-size: 20px;
+}
+
 .sect_clogan {
   @include ubuntu-light-italic;
   text-align: center;
