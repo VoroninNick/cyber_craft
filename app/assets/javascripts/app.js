@@ -143,7 +143,7 @@ scroll_home_banner = function(top) {
         top = 0
     }
 
-    if($body.scrollTop() != top) {
+    if($body.scrollTop() != top && !$body.data("scroll_in_progress")) {
         $body.stop()
         $body.data("scroll_in_progress", true)
 
