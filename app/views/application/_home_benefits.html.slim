@@ -1,0 +1,24 @@
+/! Why choose us
+section#pagi7.choose_us.content-part data-title=("Why choose us")
+  .container
+    .row
+      h3.section_h3
+        span.with_black_arrows
+          |Why
+          |&nbsp;
+          span.chos_sbg choose us
+      p.sect_clogan.choos_bgp Top 10 reasons to build your remote Dedicated Development Team with CyberCraft
+      .choose_stul
+        - items.each_with_index do |b, i|
+          .col-md-6.col-sm-6.wow data-wow-delay="0.2s" class=(i%2 == 0 ? 'fadeInLeft' : 'fadeInRight' )
+            .choos_content.ch_1
+              h3
+                = b.name
+              p
+                = b.description
+
+
+
+        ////
+
+/! And Why choose us

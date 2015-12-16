@@ -12,6 +12,7 @@ class PagesController < ApplicationController
     @industries = Industry.published
     @feedbacks = UserFeedback.all.order("id desc")
     @teams = Team.published
+    @benefits = Benefit.published.sort_by_sorting_position
   end
 
   def about_us
