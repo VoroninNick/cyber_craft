@@ -465,6 +465,9 @@ RailsAdmin.config do |config|
     edit do
       field :published
       field :name
+      field :short_description do
+        help "showed on home page"
+      end
       field :description
     end
   end
