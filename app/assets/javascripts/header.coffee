@@ -53,9 +53,12 @@ $(window).on "scrolldelta", (e)->
 
 $(window).on "wheel", (e)->
   $body = $('body')
+  $html_body = $('body, html')
   min_stroll_top = $("#pagi1, .career_header").height() || 0
+  max_scroll_top = $("body").height() - $(window).height()
+  $window = $(window)
 
-  current_scroll_top = $body.data("scroll_top") || $('body').scrollTop()
+  current_scroll_top = $body.data("scroll_top") || $window.scrollTop()
 
   deltaY = e.originalEvent.deltaY
 
@@ -65,20 +68,37 @@ $(window).on "wheel", (e)->
 
   if condition
 
+
     #console.log "wheel: ", e
     e.preventDefault()
 
-    future_scroll_top = current_scroll_top + deltaY * 2.5
+    #future_scroll_top = current_scroll_top + deltaY * 2.5
+    scroll_direction_up = deltaY < 0
+
+    if scroll_direction_up
+      increment = -125
+    else
+      increment = 125
+
+
+
+    future_scroll_top = current_scroll_top + increment
+    if future_scroll_top > max_scroll_top
+      future_scroll_top = max_scroll_top
     if future_scroll_top < 0
       future_scroll_top = 0
-    $body.data("scroll_top", future_scroll_top)
 
-    $body.stop()
-    $body.animate({scrollTop: future_scroll_top}, {
-      duration: 1000,
-      easing: "easeOutExpo"
-      #easing: "easeOutBack"
-    })
+    if current_scroll_top != future_scroll_top
+      $body.data("scroll_top", future_scroll_top)
+
+      console.log "future_scroll_top: ", future_scroll_top
+
+      $html_body.stop()
+      $html_body.animate({scrollTop: future_scroll_top}, {
+        duration: 1000,
+        easing: "easeOutExpo"
+        #easing: "easeOutBack"
+      })
 
 
 $(window).scroll ()->

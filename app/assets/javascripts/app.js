@@ -137,19 +137,21 @@ scroll_home_banner = function(top) {
     if (top == undefined) {
         top = $("#pagi2").offset().top
     }
-
+    var $html_body = $('body, html')
     var $body = $("body")
     if(top < 0){
         top = 0
     }
 
-    if($body.scrollTop() != top && !$body.data("scroll_in_progress")) {
-        $body.stop()
+    if($html_body.scrollTop() != top && !$body.data("scroll_in_progress")) {
+        $html_body.stop()
         $body.data("scroll_in_progress", true)
 
         $body.data("scroll_top", top)
 
-        $("body").animate(
+
+
+        $html_body.animate(
             {scrollTop: top},
             {
                 duration: 1000,
