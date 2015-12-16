@@ -12,9 +12,40 @@ html[data-action='contacts']
 .contacts-page-contact-data-and-form
 	margin-bottom: 80px
 
+	.section_h4
+		margin-top: 0
+
 	.cont_information
 		box-shadow: none
 
 	.social-icons-p
 		.f_icon
 			float: left
+	form
+		margin: 0
+
+		.content
+			padding: 40px 0 0 0
+
+	.form-header
+		color: $light-blue-gray-text-color
+		font-weight: 300
+		font-size: 15px
+		text-align: center
+
+		span
+			//color: $orange-text-color
+
+	@media (max-width: 767px)
+		.cont_information
+			width: 270px
+			margin: 0 auto
+			float: none
+			margin-bottom: 4rem
+
+		.form-header
+			span
+				display: block
+
+.orange
+	color: $orange-text-color
