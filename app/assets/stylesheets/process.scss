@@ -8,7 +8,7 @@
 .step_slogan {
   @include orbitron-medium;
   text-align: center;
-  font-size: 16px;
+  font-size: $body-font-size;
   color: #384046;
   letter-spacing: 0.2px;
   margin-bottom: 42px;
@@ -91,7 +91,7 @@
 .bloc_iconbor4{background: url(iconprocess_04.png) no-repeat top left;}
 .bloc_iconbor5{background: url(iconprocess_05.png) no-repeat top left;}
 .step_blokinfic li p{
-  font-size: 16px;
+  font-size: $body-font-size;
 }
 .step_blokinfic li p span{
   @include ubuntu-medium;

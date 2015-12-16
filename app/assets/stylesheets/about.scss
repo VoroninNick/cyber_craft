@@ -37,7 +37,7 @@
   text-transform: uppercase;
 }
 .location p {
-  font-size: 16px;
+  font-size: $body-font-size;
   line-height: 20px;
   margin-bottom: 24px;
 }
@@ -127,7 +127,7 @@
 }
 .tem_name {
   @include orbitron-regular;
-  font-size: 16px;
+  font-size: $body-font-size;
   color: #384046;
   margin-bottom: 1px;
 }
@@ -184,7 +184,7 @@
   margin-top: 285px;
 }
 .ourlocation p {
-  font-size: 16px;
+  font-size: $body-font-size;
   line-height: 20px;
   margin-bottom: 24px;
 }

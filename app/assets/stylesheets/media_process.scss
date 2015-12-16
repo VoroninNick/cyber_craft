@@ -11,7 +11,7 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
   .st_img:after {    left: 46%;}
-  .step_h3 {    font-size: 16px;}
+  .step_h3 {    font-size: $body-font-size;}
   .step_blokinfic li {    margin-bottom: 0px;}
   .step_blokinfic {margin-bottom: 0px;}
   .st_cont p {font-size: 14px;line-height: 20px;}

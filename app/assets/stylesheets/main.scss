@@ -727,7 +727,7 @@ $industries-home-image-height: 550px;
 .sect_clogan {
   @include ubuntu-light-italic;
   text-align: center;
-  font-size: 16px;
+  font-size: $body-font-size;
   color: #384046;
 }
 .experts_stul {
@@ -918,7 +918,7 @@ $industries-home-image-height: 550px;
   margin-bottom: 0px;
 }
 .choos_content h3 {
-  font-size: 16px;
+  font-size: $body-font-size;
   @include ubuntu-medium;
   margin-bottom: 2px;
 }

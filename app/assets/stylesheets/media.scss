@@ -118,7 +118,7 @@
   .team_bg {width: 100px;height: 100px;margin: 0 auto 15px auto; background-size: 35px, 100%;}
   .team_cont p {margin-top: 0px;}
   .team_con {height: 180px;}
-  .heading_slide h1 a {line-height: 46px;font-size: 16px;}
+  .heading_slide h1 a {line-height: 46px;font-size: $body-font-size;}
   .section_h3.section_h3map {margin: 12px 0 0px 0px;}
 }
 @media only screen and (max-width : 600px) {
