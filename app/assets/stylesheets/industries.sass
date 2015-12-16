@@ -378,3 +378,11 @@ img
 .article-section-left-image
 	z-index: 1
 	position: relative
+
+.industry-articles-navigation
+	.next, .prev
+		&:before, .title, .name
+			+transition(all 0.5s)
+		&:hover
+			&:before, .title, .name
+				color: $orange-text-color
