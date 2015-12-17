@@ -52,20 +52,22 @@ class BlogArticle < ActiveRecord::Base
     a
   end
 
-  def author_ids
-    ids = []
-    if author_id
-      ids << author_id
-    end
-
-    ids
-  end
+  # def author_ids
+  #   ids = []
+  #   if author_id
+  #     ids << author_id
+  #   end
+  #
+  #   ids
+  # end
 
   def author_names
-    if author
-      return author.pluck(:name)
-    else
-      return []
-    end
+    # if author
+    #   return author.pluck(:name)
+    # else
+    #   return []
+    # end
+
+    authors.pluck(:name)
   end
 end
