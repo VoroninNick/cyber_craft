@@ -18,6 +18,7 @@ class BlogController < ApplicationController
     @author_names = User.joins(:articles).where(blog_articles: { published: 't' } ).pluck(:name)
 
     @total_articles = BlogArticle.published.count
+    @total_pages_count = (@total_articles / per_page).ceil
 
 
     if params.has_key?(:ajax)

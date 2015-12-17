@@ -40,7 +40,7 @@
 
 
   - if @total_articles > 0
-    .articles
+    .articles data-total-count=@total_articles data-total-pages-count=@total_pages_count
       = render "articles_collection", items: @articles
     .articles-preloader.hide
       = image_tag "preloader.gif"

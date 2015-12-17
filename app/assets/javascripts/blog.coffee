@@ -2,6 +2,7 @@ $window = $(window)
 
 $("select#sorting_property").select2()
 $grid = $(".articles")
+total_pages_count = parseInt($grid.attr('data-total-pages-count'))
 
 disable_isotope = false
 
@@ -37,7 +38,7 @@ hide_preloader = ()->
   $articles_preloader.addClass("hide")
 
 window.load_next_page = ()->
-  if !load_in_progress
+  if !load_in_progress && last_loaded_page_number < total_pages_count
     load_in_progress = true
     show_preloader()
     page_number = last_loaded_page_number + 1
