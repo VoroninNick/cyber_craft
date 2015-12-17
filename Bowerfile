@@ -6,3 +6,7 @@ asset "waypoints"
 asset "fullpage.js"
 asset "jquery-ui"
 asset "jquery.scrollend"
+
+asset "select2"
+
+asset "isotope"

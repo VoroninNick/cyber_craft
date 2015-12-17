@@ -37,6 +37,10 @@
 // for career
 //= require countdown
 
+// for blog index
+//= require select2/dist/js/select2.min
+//= require isotope/dist/isotope.pkgd.min
+
 // my custom js for forms
 //= require jquery.forms
 
@@ -55,3 +59,5 @@
 //= require header
 
 //= require dev_tools
+
+//= require blog

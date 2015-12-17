@@ -8,11 +8,14 @@ class BlogController < ApplicationController
     add_home_breadcrumb
     add_breadcrumb("blog")
 
-    @articles = BlogArticle.published
+    per_page = 18
+
+    @articles = BlogArticle.published.limit(per_page)
 
     @tags = BlogArticle.published.tag_counts_on(:tags)
 
-    @author_names = BlogArticle.published.pluck(:author_name).uniq.select(&:present?)
+    #@author_names = BlogArticle.published.pluck(:author_name).uniq.select(&:present?)
+    @author_names = User.joins(:articles).where(blog_articles: { published: 't' } ).pluck(:name)
 
     @total_articles = BlogArticle.published.count
 

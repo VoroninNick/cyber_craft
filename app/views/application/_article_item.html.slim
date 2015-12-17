@@ -1,8 +1,8 @@
-.col-md-4.col-sm-4.col-xs-12.tt_bot
+.col-md-4.col-sm-4.col-xs-12.article-item data-tag-ids=item.tags.pluck(:id).join(",")  data-author-ids=item.author_ids.join(",")
   .test_bc.wow class=((index % 2 == 0 ? "fadeInDownBig" : "fadeInUpBig") if defined?(animation) && animation.present? )
     .tes_1
       a href=url_for(item)
-        img alt="alt" src=item.avatar.url(:home)
+        img alt="alt" src=( item.avatar.exists? ? item.avatar.url(:home) : placeholdit_url("720x450") )
       - if defined?(css_filter) && css_filter.present?
         .fildr_bgimg class=""
       - if item.tag_list.any?
@@ -11,14 +11,18 @@
             a href="#"
               = tag
       a.teg_new href="#"  New
-    h3.test_i1
+    h3.test_i1.article-name
       a href=url_for(item)
         = item.name
     .title_teg
       p
-        | by &thinsp;
-        - if item.author_name.present?
-          a.tt_a href="#"
-            = item.author_name
+
+        - if item.author_names.any?
+          | by &thinsp;
+          - item.author_names.each_with_index do |a, i|
+            a.tt_a href="#"
+              = a
+            - if i < item.author_names.length - 1
+              |,&nbsp;
           |,&nbsp;
         = item.article_date

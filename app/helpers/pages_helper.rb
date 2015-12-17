@@ -77,7 +77,7 @@ module PagesHelper
     end
   end
 
-  def html_block_with_fallback(key, from_page_instance = false, &block)
+  def html_block_with_fallback(key, from_page_instance = false, format = :html, context = nil, &block)
     page_instance = nil
     html_block = nil
     if from_page_instance == true
@@ -95,7 +95,13 @@ module PagesHelper
 
     if html_block.is_a?(String)
       if html_block.present?
-        return raw html_block
+        if format == :html
+          computed_html = html_block
+        elsif format == :slim
+          computed_html = slim(html_block)
+        end
+
+        return raw computed_html
       end
     else
       if  (html_block || (html_block = Cms::KeyedHtmlBlock.by_key(key).first))  && html_block.content.present?
@@ -110,6 +116,20 @@ module PagesHelper
 
     nil
 
+  end
+
+  def slim source, context = nil
+
+    #source = WizardText.first.try{|t| break nil if !t.respond_to?(name); t.send(name)}
+    if source.present?
+      context ||= self
+      tpl = Slim::Template.new() { source }
+      if context
+        tpl.render(context)
+      else
+        tpl.render
+      end
+    end
   end
 
   def set_page_banner_image image

@@ -72,3 +72,8 @@ gem 'pluck_to_hash'
 gem 'inline_svg'
 
 gem 'placeholdit'
+
+gem 'ffaker'
+gem 'faker'
+
+

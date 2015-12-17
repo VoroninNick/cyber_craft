@@ -12,8 +12,11 @@ module Cms
             self.send(:extend, mod)
           end
 
-          belongs_to :author, class_name: User
-          attr_accessible :author
+
+          if options[:author] != false
+            belongs_to :author, class_name: User
+            attr_accessible :author
+          end
 
           self.attr_accessible *attribute_names
           initialize_all_attachments = options[:initialize_all_attachments]
@@ -80,8 +83,10 @@ module Cms
           }.uniq
         end
 
-        def create_article_table
+        def create_article_table(options = {})
           return if self.table_exists?
+
+
 
           connection.create_table self.table_name do |t|
             t.boolean :published
@@ -91,7 +96,10 @@ module Cms
             t.string :url_fragment
             t.has_attached_file :avatar
 
-            t.belongs_to :author
+
+            if options[:author] != false
+              t.belongs_to :author
+            end
 
             t.timestamps null: false
           end

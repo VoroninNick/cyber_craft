@@ -1,0 +1,59 @@
+.tags
+	ul
+		display: inline-block
+
+	li
+		display: inline-block
+
+
+
+		a
+			display: block
+			padding: 0 12px
+			border: 1px solid $light-black-color
+			color: $light-black-color
+			+transition-duration(0.5s)
+			+transition-property(all)
+			text-decoration: none
+
+
+		&.checked
+			a
+				background: $light-black-color
+				color: $orange-text-color
+		&:hover
+			a
+				color: $orange-text-color
+
+
+.sorting-directions
+	.asc, .desc
+		height: 30px
+		width: 30px
+		display: inline-block
+		border: 1px solid $light-black-color
+		color: $light-black-color
+		+transition-duration(0.5s)
+		+transition-property(all)
+		text-align: center
+		line-height: 30px
+		cursor: pointer
+
+		&.checked
+			background: $light-black-color
+			color: $orange-text-color
+			cursor: default
+
+		&:hover
+			color: $orange-text-color
+
+
+.articles
+	.article-item
+		margin-bottom: 15px
+		margin-top: 15px
+
+
+.article-name
+	height: 60px
+	overflow: hidden

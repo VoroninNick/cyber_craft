@@ -36,6 +36,14 @@ def ck_editor_field(name, &block)
   end
 end
 
+def slim_editor_field(name)
+  field name, :text do
+    def value
+      bindings[:object].send(name)
+    end
+  end
+end
+
 
 
 RailsAdmin.config do |config|
@@ -202,6 +210,7 @@ RailsAdmin.config do |config|
       field :bottom_banner
       field :bottom_banner_description
       #field :intro, :ck_editor
+      slim_editor_field(:content)
       field :seo_tags
     end
   end
@@ -258,7 +267,14 @@ RailsAdmin.config do |config|
           bindings[:object].send(name).to_s
         end
       end
-      field :author_name
+      #field :author_name
+      field :authors do
+        associated_collection_scope do
+          proc do |scope|
+            scope.valid_authors
+          end
+        end
+      end
     end
 
     list do
@@ -471,6 +487,15 @@ RailsAdmin.config do |config|
       end
       field :description
     end
+  end
+
+  config.model User do
+    field :email
+    field :password
+    field :password_confirmation
+    field :name
+    field :avatar
+    field :articles
   end
 
 
