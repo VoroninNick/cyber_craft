@@ -68,6 +68,34 @@
 		font-weight: 400
 		font-size: 10px
 		line-height: inherit
+
+
+
+= article-ol
+	list-style: none
+	position: relative
+	padding-left: 15px
+	margin-left: 15px
+
+	list-style-type: none
+	list-style-type: decimal !ie
+
+	counter-reset: ol-li-counter
+
+= article-ol-li
+	margin-bottom: 10px
+	line-height: 20px
+
+	&:before
+		left: 0
+		content: counter(ol-li-counter)
+		counter-increment: ol-li-counter
+		color: $orange-text-color
+		position: absolute
+		display: inline-block
+		font-weight: 400
+		font-size: 10px
+		line-height: inherit
 		
 
 
