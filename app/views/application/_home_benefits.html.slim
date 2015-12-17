@@ -11,7 +11,7 @@ section#pagi7.choose_us.content-part data-title=("Why choose us")
       .choose_stul
         - items.each_with_index do |b, i|
           .col-md-6.col-sm-6.wow data-wow-delay="0.2s" class=(i%2 == 0 ? 'fadeInLeft' : 'fadeInRight' )
-            .choos_content.ch_1
+            .choos_content.ch_1 style=("background-image: url(#{b.icon.url});" if b.icon.exists?)
               h3
                 = b.name
               p
