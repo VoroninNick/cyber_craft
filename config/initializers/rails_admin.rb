@@ -210,7 +210,7 @@ RailsAdmin.config do |config|
       field :bottom_banner
       field :bottom_banner_description
       #field :intro, :ck_editor
-      slim_editor_field(:content)
+      #slim_editor_field(:content)
       field :seo_tags
     end
   end
