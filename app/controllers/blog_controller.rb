@@ -10,7 +10,7 @@ class BlogController < ApplicationController
 
     per_page = 18
 
-    @articles = BlogArticle.published.limit(per_page)
+    @articles = BlogArticle.published.page(params[:page] || 1).per(per_page)
 
     @tags = BlogArticle.published.tag_counts_on(:tags)
 
@@ -20,7 +20,11 @@ class BlogController < ApplicationController
     @total_articles = BlogArticle.published.count
 
 
-
+    if params.has_key?(:ajax)
+      res = {}
+      res[:html] = render_to_string( template: "application/_articles_collection" , layout: false, locals: { items: @articles })
+      render json: res
+    end
   end
 
   def show

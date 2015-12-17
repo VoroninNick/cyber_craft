@@ -1,4 +1,4 @@
-.container
+.container.blog-index-container
   - if @total_articles > 1 || true
     .row
       .col-lg-6.filter
@@ -12,7 +12,7 @@
                   |All
               - @tags.each do |t|
                 li
-                  a href=(false ? article_tags_path(t.name.parameterize) : '#')
+                  a href=(false ? article_tags_path(t.name.parameterize) : '#') data-tag-id=t.id
                     = t.name
 
 
@@ -41,5 +41,6 @@
 
   - if @total_articles > 0
     .articles
-      - @articles.each do |article|
-        = render "article_item", item: article
+      = render "articles_collection", items: @articles
+    .articles-preloader.hide
+      = image_tag "preloader.gif"

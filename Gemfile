@@ -77,3 +77,4 @@ gem 'ffaker'
 gem 'faker'
 
 
+gem 'kaminari'
