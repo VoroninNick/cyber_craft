@@ -39,9 +39,10 @@ initializeGMaps = function(selector, info_window_parent_selector) {
         {
             featureType: 'all',
             stylers: [
-                { "saturation": -95 },
-                { "lightness": 1 },
-                { "gamma": 0.95 }
+                { "saturation": -75 },
+                { "lightness": 25 },
+                { "gamma": 1 },
+                {hue: "#2c7daf"}
             ]
         }
     ];
