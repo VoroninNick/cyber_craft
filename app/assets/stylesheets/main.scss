@@ -1213,6 +1213,13 @@ $industries-home-image-height: 550px;
   display: block;
   min-height: 26px;
   padding-left: 47px;
+  background: none !important;
+  position: relative;
+
+  svg{
+    position: absolute;
+    left: 0;
+  }
 }
 
 .cont_tel { background: url(phone.png) no-repeat top left;}
@@ -1391,19 +1398,19 @@ footer a:hover{
 }
 
 .f_icon {
-  height: 30px;
-  width: 26px;
-  float: right;
-  display: block;
-  margin-left: 17px;
-  margin-top: 5px;
+  //height: 30px;
+  //width: 26px;
+  //float: right;
+  //display: block;
+  //margin-left: 17px;
+  //margin-top: 5px;
 }
 .f_compani {
   background: url(VoroninDesignStudio.png) no-repeat left center;
   padding: 15px 0 11px 50px;
 }
 .f_icon:hover{
-  opacity: 0.7;
+  //opacity: 0.7;
 }
 
 .fi_f{

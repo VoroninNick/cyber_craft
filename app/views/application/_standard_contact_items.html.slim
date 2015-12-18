@@ -1,5 +1,6 @@
 li
-  span.cont_tel
+  span.cont_tel.svg-icon
+    = inline_svg("tel.svg")
     a href="tel:+18886797138"
       | +1 888 67 97 138
       sup Us
@@ -7,10 +8,16 @@ li
       | +380 63 99 11 633
       sup Eu
 li
-  a.cont_mail href="mailto:info@cybercraftinc.com"  info@cybercraftinc.com
+  a.cont_mail.svg-icon href="mailto:info@cybercraftinc.com"
+    = inline_svg("mail.svg")
+    span
+      |info@cybercraftinc.com
 li
-  a.cont_map href="#"
+  a.cont_map.svg-icon href="#"
+    = inline_svg("loc.svg")
     span 7 Slipoho Str.
     span Lviv, Ukraine, 79017
 li
-  a.cont_skype href="skype:ask.CyberCraft"  ask.CyberCraft
+  a.cont_skype.svg-icon href="skype:ask.CyberCraft"
+    = inline_svg("skype.svg")
+    |ask.CyberCraft

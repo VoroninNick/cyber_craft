@@ -6,3 +6,20 @@
 
 .relative
 	position: relative
+
+
+.svg-icon
+	display: inline-block
+	svg
+		width: 30px
+
+	@at-root
+		a#{&}, a #{&}
+			opacity: 1 !important
+			.icon-svg-bg
+				+transition-duration(0.5s)
+				+transition-property(all)
+
+		a#{&}:hover, a:hover #{&}
+			.icon-svg-bg
+				fill: $orange-color

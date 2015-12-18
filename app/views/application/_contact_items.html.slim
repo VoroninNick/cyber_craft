@@ -7,7 +7,8 @@
 
 - elsif columns == 2
   .col-xs-8.col-xs-push-0.col-from-480-6.col-from-480-push-0
-    span.cont_tel
+    span.cont_tel.svg-icon
+      = inline_svg("tel.svg")
       a href="tel:+18886797138"
         | +1 888 67 97 138
         sup Us
@@ -15,11 +16,15 @@
         | +380 63 99 11 633
         sup Eu
 
-    a.cont_mail href="mailto:info@cybercraftinc.com"
+    a.cont_mail.svg-icon href="mailto:info@cybercraftinc.com"
+      = inline_svg("mail.svg")
       |info@cybercraftinc.com
   .col-xs-8.col-xs-push-0.col-from-480-6.col-from-480-push-0
-    a.cont_map href="#"
+    a.cont_map.svg-icon href="#"
+      = inline_svg("loc.svg")
       span 7 Slipoho Str.
       span Lviv, Ukraine, 79017
 
-    a.cont_skype href="skype:ask.CyberCraft"  ask.CyberCraft
+    a.cont_skype.svg-icon href="skype:ask.CyberCraft"
+      = inline_svg("skype.svg")
+      |ask.CyberCraft
