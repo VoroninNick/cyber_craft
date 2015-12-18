@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
 
   scope :authors_with_articles, proc { joins(:articles).where(blog_articles: { published: 't' } ).uniq }
 
-  has_attached_file :avatar
+  has_attached_file :avatar, styles: { small: "80x80#" }
   do_not_validate_attachment_file_type :avatar
   attr_accessible :avatar
   allow_delete_attachment :avatar

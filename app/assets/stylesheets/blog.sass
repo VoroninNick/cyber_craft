@@ -66,3 +66,51 @@
 .articles-preloader
 	padding: 15px 0
 	text-align: center
+
+
+.sorting-properties, .sorting-directions
+	display: inline-block
+
+.sorting-properties
+	vertical-align: top
+
+
+
+
+// blog article show
+
+.article-info
+	padding: 20px 15px
+	background: $light-gray-bg-color
+	text-align: center
+
+.article-info__author
+	margin-bottom: 20px
+
+	&:first-child:last-child
+		margin-bottom: 0
+
+.article-info__author__avatar
+	margin-bottom: #{rem(10)}
+
+	img
+		border-radius: 50%
+		border: 1px solid $light-black-color
+
+.article-info__author__name
+	+orbitron-light
+
+.article-info__date
+	+ubuntu-light-italic
+	color: $light-blue-gray-text-color
+	font-size: rem(14)
+
+
+.share_button
+	+button
+	float: none
+	display: inline-block
+	margin: rem(35) 0 0 0
+
+	&:hover
+		+button-hover

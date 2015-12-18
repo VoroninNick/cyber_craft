@@ -1,7 +1,7 @@
 .container.blog-index-container
   - if @total_articles > 1 || true
     .row
-      .col-lg-6.filter
+      .col-lg-8.filter
         - if @tags.try(&:many?)
           .tags.tag-list
             span.tags-title
@@ -29,7 +29,7 @@
                   a href=article_tags_path(a[:name].parameterize) data-author-id=a[:id]
                     = a[:name]
 
-      .col-lg-6.sorting
+      .col-lg-4.sorting
         .sorting-properties.author-names
           = select_tag(:sorting_property, raw(BlogArticle.sorting_properties.map{|prop| content_tag(:option, prop.to_s.humanize, value: prop.to_s) }.join))
         .sorting-directions

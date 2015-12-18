@@ -1322,22 +1322,9 @@ form{
 }
 
 .foot_f [type="submit"] {
-  @include orbitron-medium;
-  width: 150px;
-  background: #383F45;
-  border: 0;
-  cursor: pointer;
-  color: white;
-  font-size: 15px;
-  float: right;
-  text-transform: uppercase;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-bottom: 30px;
-  margin-top: 15px;
-  transition: all 0.3s;
+  @include button;
 }
-.foot_f [type="submit"]:hover { background:#fff; color: #FF9801; }
+.foot_f [type="submit"]:hover { @include button-hover; }
 
 .map_boxshadow {
   overflow: hidden;

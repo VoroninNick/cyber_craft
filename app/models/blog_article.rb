@@ -5,8 +5,10 @@ class BlogArticle < ActiveRecord::Base
   attr_accessible :authors, :author_ids
 
   has_attached_file :avatar, styles: { home: "720x450#" }
+  has_attached_file :banner
 
-  [:avatar].each do |attachment_name|
+
+  [:avatar, :banner].each do |attachment_name|
 
     do_not_validate_attachment_file_type attachment_name
     attr_accessible attachment_name
@@ -27,6 +29,12 @@ class BlogArticle < ActiveRecord::Base
 
   #scope :sort_by_author, proc {|direction = :asc| joins(:authors).order("authors.name #{direction}").uniq }
 
+
+
+
+  before_save do
+    self.released_at ||= created_at
+  end
 
   def article_date
     d = updated_at

@@ -261,6 +261,7 @@ RailsAdmin.config do |config|
       field :url_fragment
       field :content, :ck_editor
       field :avatar
+      field :banner
       field :tag_list do
       #  partial 'tag_list_with_suggestions'
         def value
@@ -274,6 +275,12 @@ RailsAdmin.config do |config|
             scope.valid_authors
           end
         end
+      end
+
+      field :released_at
+
+      field :views do
+        read_only true
       end
     end
 

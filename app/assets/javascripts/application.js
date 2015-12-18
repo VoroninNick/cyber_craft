@@ -38,7 +38,8 @@
 //= require countdown
 
 // for blog index
-//= require select2/dist/js/select2.min
+// require select2/dist/js/select2.min
+//= require jquery.simpleselect.min
 //= require isotope/dist/isotope.pkgd.min
 
 // my custom js for forms
