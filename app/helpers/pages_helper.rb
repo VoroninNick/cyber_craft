@@ -53,7 +53,6 @@ module PagesHelper
 
 
 
-      set_page_banner_title(banner_title)
     end
 
     banner_title = @page_instance.try do|p|
