@@ -56,11 +56,26 @@ module PagesHelper
       set_page_banner_title(banner_title)
     end
 
+    banner_title = @page_instance.try do|p|
+      if p.respond_to?(:banner_title) && (title = p.banner_title) && title.present?
+        break p.banner_title
+      end
 
-    if !@page_instance && @page_class
-      banner_title = @page_class.name.demodulize.underscore
-      set_page_banner_title(banner_title)
-    end
+      if p.respond_to?(:name) && p.name.present?
+        break p.name
+      end
+
+      break nil
+
+    end || @page_class.name.demodulize.underscore
+
+    set_page_banner_title(banner_title)
+
+
+    # if (!@page_instance || !@page_instance.respond_to?(:banner) || !@page_instance.banner.exists? )&& @page_class
+    #   banner_title = @page_class.name.demodulize.underscore
+    #   set_page_banner_title(banner_title)
+    # end
 
 
     if @page_instance
@@ -73,6 +88,7 @@ module PagesHelper
       if @page_instance.respond_to?(:bottom_banner_description) && @page_instance.bottom_banner_description.present?
         description = @page_instance.bottom_banner_description
       end
+
       set_page_bottom_banner(url, description )
     end
   end
