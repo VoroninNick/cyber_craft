@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  attr_accessible *attribute_names
+
   scope :valid_authors, proc { where("users.name is not null and users.name<>'' ") }
 
   scope :authors_with_articles, proc { joins(:articles).where(blog_articles: { published: 't' } ).uniq }
