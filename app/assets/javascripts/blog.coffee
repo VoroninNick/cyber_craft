@@ -16,7 +16,18 @@ load_in_progress = false
 if !disable_isotope
   $grid.isotope({
     itemSelector: ".article-item"
+    getSortData: {
+      date: (item)->
+        parseInt($(item).attr("data-date"))
+      popularity: (item)->
+        parseInt($(item).attr('data-views'))
+      name: (item)->
+        parseInt($(item).attr('data-name'))
+    }
   })
+
+
+
 
 check_if_has_tags = (tags)->
   $item = this
@@ -37,7 +48,7 @@ show_preloader = ()->
 hide_preloader = ()->
   $articles_preloader.addClass("hide")
 
-window.load_next_page = ()->
+window.load_next_pages = (count = 1)->
   if !load_in_progress && last_loaded_page_number < total_pages_count
     load_in_progress = true
     show_preloader()
@@ -49,6 +60,7 @@ window.load_next_page = ()->
       data: {
         ajax: true
         page: page_number
+        pages_count: count
       }
       success: (data)->
 
@@ -65,7 +77,25 @@ window.load_next_page = ()->
         load_in_progress = false
     })
 
-    last_loaded_page_number = last_loaded_page_number + 1
+    last_loaded_page_number = last_loaded_page_number + count
+
+window.load_all_pages = ()->
+  load_next_pages(total_pages_count - last_loaded_page_number)
+
+
+
+
+window.sort_grid = (options = {})->
+  if options.prop == undefined
+    options.prop = $("select#sorting_property").val()
+  if options.asc == undefined
+    direction = $(".sorting-directions .checked").hasClass("asc") ? 'asc' : 'desc'
+    options.asc = direction == 'asc'
+
+  $grid.isotope({
+    sortBy: options.prop
+    sortAscending: options.asc
+  })
 
 window.filter_grid = ()->
   selected_tag_ids = []
@@ -76,6 +106,9 @@ window.filter_grid = ()->
     ).toArray()
 
   console.log "selected_tags:", selected_tag_ids
+
+
+
 
 
   if !disable_isotope
@@ -91,7 +124,11 @@ window.filter_grid = ()->
 
         return valid
 
+
+
     )
+
+    sort_grid()
 
 
 $("body").on "click", ".tags a", (e)->
@@ -129,12 +166,21 @@ $("body").on "click", ".tags a", (e)->
 $("body").on "click", ".sorting-directions :not(.checked)", ()->
   $this = $(this)
   $parent = $this.parent()
-  if $this.hasClass("asc")
+  asc = $this.hasClass("asc")
+  if asc
     $parent.find('.desc').removeClass("checked")
   else
     $parent.find('.asc').removeClass('checked')
 
   $this.addClass('checked')
+
+
+  sort_grid({asc: asc})
+
+$("body").on "change", "select#sorting_property", ()->
+
+  prop = $(this).val()
+  sort_grid({prop: prop})
 
 
 
@@ -153,7 +199,7 @@ $window.on "scroll", ()->
   condition_to_load = rows_to_bottom <= 3
 
   if condition_to_load
-    load_next_page()
+    load_next_pages()
 
 
-
+load_all_pages()

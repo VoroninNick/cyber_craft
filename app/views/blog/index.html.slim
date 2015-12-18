@@ -16,7 +16,7 @@
                     = t.name
 
 
-        - if @author_names.try(&:many?)
+        - if @authors.try(&:many?)
           .tags.authors
             span.authors-title
               |Authors
@@ -24,14 +24,14 @@
               li.all.checked
                 a href=blog_path
                   |All
-              - @author_names.each do |t|
+              - @authors.each do |a|
                 li
-                  a href=article_tags_path(t.parameterize)
-                    = t
+                  a href=article_tags_path(a[:name].parameterize) data-author-id=a[:id]
+                    = a[:name]
 
       .col-lg-6.sorting
-        .sorting-properties
-          = select_tag(:sorting_property, raw(BlogArticle.sorting_properties.map{|prop| content_tag(:option, prop.to_s.humanize, value: prop) }))
+        .sorting-properties.author-names
+          = select_tag(:sorting_property, raw(BlogArticle.sorting_properties.map{|prop| content_tag(:option, prop.to_s.humanize, value: prop.to_s) }.join))
         .sorting-directions
           .asc.checked
             |&#65516;

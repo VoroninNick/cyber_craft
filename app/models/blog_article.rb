@@ -16,7 +16,16 @@ class BlogArticle < ActiveRecord::Base
 
   scope :home_articles, -> { last(3) }
 
+  scope :sort_by_popularity_asc, proc { order "views asc" }
+  scope :sort_by_popularity_desc, proc { order "views desc" }
 
+  scope :sort_by_date_asc, proc { order "released_at asc" }
+  scope :sort_by_date_desc, proc { order "released_at desc" }
+
+  scope :sort_by_name_asc, proc { order "name asc" }
+  scope :sort_by_name_desc, proc { order "name desc" }
+
+  #scope :sort_by_author, proc {|direction = :asc| joins(:authors).order("authors.name #{direction}").uniq }
 
 
   def article_date
@@ -26,15 +35,19 @@ class BlogArticle < ActiveRecord::Base
   end
 
   def self.sorting_properties
-    [:popularity, :date, :name, :author]
+    #[:popularity, :date, :name, :author]
+    [:popularity, :date, :name]
   end
 
   def self.generate_articles!(count = 100)
+
+
     tags = 20.times.map{Faker::Lorem.word}
-    author_names = 20.times.map{FFaker::Name.name}
+    author_ids = User.valid_authors.pluck(:id)
+
 
     count.times{
-      generate_article!(tags, author_names)
+      generate_article!(tags, author_ids)
     }
   end
 
@@ -42,12 +55,12 @@ class BlogArticle < ActiveRecord::Base
     generate_article(*args).save
   end
 
-  def self.generate_article(tags, author_names)
+  def self.generate_article(tags, author_ids)
     a = new
     a.name = FFaker::Name.name
     a.published = true
     a.tag_list = rand(1..5).times.map{ tags.sample }
-    a.author_name = author_names.sample
+    a.author_ids = rand(1..3).times.map{author_ids.sample}
 
     a
   end

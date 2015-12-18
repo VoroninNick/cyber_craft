@@ -92,7 +92,7 @@ $(window).on "wheel", (e)->
     if current_scroll_top != future_scroll_top
       $body.data("scroll_top", future_scroll_top)
 
-      console.log "future_scroll_top: ", future_scroll_top
+      #console.log "future_scroll_top: ", future_scroll_top
 
       $html_body.stop()
       $html_body.animate({scrollTop: future_scroll_top}, {

@@ -1,4 +1,4 @@
-.col-md-4.col-sm-4.col-xs-12.article-item data-tag-ids=item.tags.pluck(:id).join(",")  data-author-ids=item.author_ids.join(",")
+.col-md-4.col-sm-4.col-xs-12.article-item data-tag-ids=item.tags.pluck(:id).join(",")  data-author-ids=item.author_ids.join(",") data-date=(item.released_at || item.created_at) data-name=item.name data-views=(item.views || 0)
   .test_bc.wow class=((index % 2 == 0 ? "fadeInDownBig" : "fadeInUpBig") if defined?(animation) && animation.present? )
     .tes_1
       a href=url_for(item)
