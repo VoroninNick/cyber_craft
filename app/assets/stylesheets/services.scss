@@ -144,13 +144,24 @@ p.sp-black{
 /* Slider on page services */
 @media only screen and (max-width : 992px) {
 
-.sp-thumbnail-container {display: none !important;}
+  .sp-thumbnail-container {display: none !important;}
 
-.sp-thumbnails {width: 100% !important;}
-.sp-thumbnails-container {width: 100% !important;}
+  .sp-thumbnails {width: 100% !important;}
+  .sp-thumbnails-container {width: 100% !important;}
 
-.sp-selected-thumbnail {display: block !important;}
-.sp-slide {width: 80% !important;} 
-.sp-layer {width: 80% important;}
+  .sp-selected-thumbnail {display: block !important;}
+  .sp-slide {width: 80% !important;}
+  .sp-layer {width: 80% !important;}
+
+
+  .slider-pro, .sp-mask{
+    overflow: visible;
+  }
+
+  p.sp-layer{
+    @include transform(translateY(50%), true);
+    top: auto !important;
+  }
 
 }
+
