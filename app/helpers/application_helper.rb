@@ -17,4 +17,8 @@ module ApplicationHelper
     output += "/>"
     output.html_safe
   end
+
+  def sharing_popup
+    render "sharing_popup"
+  end
 end

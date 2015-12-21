@@ -1,6 +1,7 @@
 .tags
 	ul
 		display: inline-block
+		padding-left: 70px
 
 	li
 		display: inline-block
@@ -25,6 +26,14 @@
 		&:hover
 			a
 				color: $orange-text-color
+
+
+.tags-title, .authors-title
+	+orbitron-light
+	font-size: rem(15)
+
+.tags
+	+flexbox
 
 
 .sorting-directions
@@ -111,6 +120,50 @@
 	float: none
 	display: inline-block
 	margin: rem(35) 0 0 0
+	color: white
+
+	&:visited
+		+button-visited
 
 	&:hover
 		+button-hover
+
+	&:active
+		+button-active
+
+
+
+
+@media (max-width: 767px)
+	.article-item
+		width: 50%
+
+@media (max-width: 640px)
+	.article-item
+		position: relative !important
+		width: 450px
+		max-width: 100%
+		margin-left: auto
+		margin-right: auto
+		//margin-left: 10%
+		//margin-right: 10%
+		float: none !important
+		top: auto !important
+		left: auto !important
+
+	.sorting
+		width: 450px
+		max-width: 100%
+		margin: 0 auto
+		+flexbox
+
+		.sorting-properties
+			+flex-grow(1)
+			padding-right: 20px
+
+			.simpleselect
+				width: 100%
+
+				&.active
+					.options
+						width: 100%

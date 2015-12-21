@@ -48,6 +48,8 @@
 // General js
 //= require app.js
 
+//= require share_popup
+
 //= require google_map
 
 //= require services

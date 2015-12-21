@@ -1,5 +1,5 @@
 $html = $('html')
-if $html.filter("[data-controller=blog][data-action=show]").length
+if $html.filter("[data-controller=blog][data-action=index]").length
 
   $window = $(window)
 
