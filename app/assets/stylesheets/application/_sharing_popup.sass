@@ -4,10 +4,111 @@
 	height: 100vh
 	top: 0
 	left: 0
-	background: rgba(0, 0, 0, 0.6)
+	background: rgba($light-black-color, 0.9)
 	z-index: 10000
 	display: none
+
+	color: white
 
 	&.open
 		display: block
 
+
+.close-popup
+	position: absolute
+	right: 60px
+	top: 30px
+	cursor: pointer
+	width: rem(34)
+	height: rem(30)
+	&:before, &:after
+		content: ""
+		position: absolute
+		width: rem(36)
+		height: rem(4)
+		background: white
+		top: rem(13)
+		+transition(0.5s all)
+
+	&:before
+		+transform(rotate(45deg))
+	&:after
+		+transform(rotate(-225deg))
+
+	&:hover
+		&:before, &:after
+			background: $orange-color
+
+
+.popup-content-wrap
+	display: table
+	height: 100%
+	width: 100%
+
+
+
+.popup-content
+	display: table-cell
+
+	//position: absolute
+	//top: 50%
+	//+transform(translateY(-50%))
+	vertical-align: middle
+	text-align: center
+
+	.share-link
+		color: white
+
+.popup-row
+	position: relative
+	margin: 0 auto
+	width: 800px
+	max-width: 100%
+
+.sharing-popup__share_it
+	+ubuntu-italic
+	font-size: rem(18)
+
+.sharing-popup__title
+	+orbitron-medium
+	font-size: rem(28)
+	text-transform: uppercase
+	margin-bottom: rem(70)
+
+
+.share-links
+	+flexbox
+
+.share-link
+	+flex-grow(1)
+	cursor: pointer
+	span
+		display: block
+
+
+	span, .icon-svg-bg, .icon-svg-symbol
+		+transition(0.5s all)
+
+	svg
+		width: 90px
+		height: 90px
+
+
+		.icon-svg-bg
+			fill: white
+
+		.icon-svg-symbol
+			fill: $orange-color
+
+	&:hover
+		text-decoration: none
+
+		svg
+			.icon-svg-bg
+				fill: $orange-color
+
+			.icon-svg-symbol
+				fill: white
+
+		span
+			color: $orange-text-color
