@@ -32,7 +32,8 @@
 
 
 // for services
-//= require jquery.sliderPro.min
+// require jquery.sliderPro.min
+//= require bxslider-4/dist/jquery.bxslider.min.js
 
 // for career
 //= require countdown
@@ -54,6 +55,8 @@
 
 //= require services
 //= require about
+
+
 
 
 

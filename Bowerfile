@@ -10,3 +10,5 @@ asset "jquery.scrollend"
 asset "select2"
 
 asset "isotope"
+
+asset "bxslider-4"

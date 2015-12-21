@@ -1,20 +1,34 @@
 - if defined?(items) && items.try(&:any?)
   section.servicesslider
+
     .container
       .row
         h3.section_h3
           span.with_black_arrows
             | Our services include
 
-        #example5.slider-pro
-          .sp-slides
-            - items.each do |item|
-              .sp-slide
-                img.sp-image src=item.avatar.url
-                p.sp-layer.sp-black.sp-padding.hide-small-screen data-hide-delay="200" data-hide-transition="right" data-position="centerCenter" data-show-delay="700" data-show-transition="left" data-vertical="300"
-                  = item.short_description
+        .services-slider
           .sp-thumbnails
-            - items.each do |item|
-              .sp-thumbnail
+            - items.each_with_index do |item, index|
+              a.sp-thumbnail data-slide-index=index href="#"
                 .sp-thumbnail-title
                   = item.name
+                .arrow
+          .nav-arrows
+            .prev
+            .next
+
+
+
+          .services-slider-slides-wrap
+            .services-slider-slides
+              - items.each do |item|
+                .sp-slide style="background-image: url(#{item.avatar.url})"
+                  img.sp-image src=item.avatar.url
+                  /p.sp-layer.sp-black.sp-padding.hide-small-screen.slide-description data-hide-delay="200" data-hide-transition="right" data-position="centerCenter" data-show-delay="700" data-show-transition="left" data-vertical="300"
+                    = item.short_description
+                  .slide-description
+                    p
+                      = item.short_description
+
+

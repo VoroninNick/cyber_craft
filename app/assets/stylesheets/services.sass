@@ -1,0 +1,211 @@
+$thumbnails-width: rem(350)
+
+.services-slider
+	position: relative
+
+.services-slider-slides-wrap
+	height: 500px
+	width: 100%
+	padding-left: $thumbnails-width
+
+	.bx-wrapper, .bx-viewport
+		height: inherit
+
+.services-slider-slides
+	height: inherit
+
+.sp-thumbnails
+	position: absolute
+	top: 0
+	left: 0
+	width: $thumbnails-width
+	z-index: 1
+	height: 100%
+	background: #383f45
+
+.sp-thumbnail
+	position: relative
+	display: block
+	padding: 15px 20px
+	background: #383f45
+	color: white
+	border-bottom: 1px solid #283138
+	height: rem(71)
+	&:last-child
+		border: none
+
+
+	&.active
+		background: #273238
+		cursor: default
+
+
+		.arrow
+			width: 3px
+			height: 100%
+			position: absolute
+			left: 100%
+			top: 0
+			background: #273238
+
+			&:after
+				position: absolute
+				left: 100%
+				top: 0
+				content: ""
+				// css triangle 22x71
+				width: 0
+				height: 0
+				border-style: solid
+				border-width: 35.5px 0 35.5px 22px
+				border-color: transparent transparent transparent #273238
+
+
+
+	&:hover
+		color: white
+
+	&.active, &:hover
+		color: white
+		text-decoration: none
+		&:before
+			content: ""
+			height: 100%
+			position: absolute
+			display: block
+			width: 5px
+			background: $orange-color
+			left: 0
+			top: 0
+
+
+.slide-description
+	width: 88%
+	left: 6%
+	position: absolute
+	bottom: rem(15)
+	background: $orange-color
+	padding: rem(25)
+
+
+	p
+		+ubuntu-medium
+		line-height: percentage(21/16)
+
+
+.services-slider
+	.bx-wrapper
+		border: none
+		background: transparent
+		box-shadow: none
+
+
+.sp-slide
+	background-size: cover
+	background-position: 50%
+	background-repeat: no-repeat
+	height: inherit
+	//background: none !important
+
+	img
+		opacity: 0
+
+
+.nav-arrows
+	display: none
+
+	a
+		opacity: 0
+
+@media (max-width: 767px)
+	.services-slider
+		padding-bottom: rem(100)
+	.sp-thumbnails
+		width: 100%
+		height: 60px
+		position: relative
+		overflow: visible
+
+	.services-slider-slides-wrap
+		padding-left: 0
+
+
+	.services-slider-slides-wrap
+		.bx-viewport
+			overflow: visible !important
+
+	.sp-thumbnails
+
+
+	.sp-thumbnail
+		text-align: center
+		height: rem(60)
+
+		&:before
+			display: none !important
+
+		&:not(.active)
+			display: none
+		&.active
+			&:after
+				content: ""
+				width: 0
+				height: 0
+				border-style: solid
+				border-width: 10px 18px 0 18px
+				border-color: #273238 transparent transparent transparent
+				top: 60px
+				position: absolute
+
+
+			.arrow
+				display: none
+
+
+	.slide-description
+		+transform(translateY(50%))
+
+	.nav-arrows
+		display: block
+		top: 0
+		position: absolute
+		z-index: 100
+		left: 0
+		width: 100%
+		.prev, .next
+			position: absolute
+			top: rem(12)
+			width: 39px
+			height: 35px
+
+			background-size: cover
+			background-repeat: no-repeat
+
+			cursor: pointer
+
+		.prev
+			left: rem(10)
+			background-image: url(sliderservicesleft.png)
+
+
+		.next
+			right: 10px
+			background-image: url(sliderservicesright.png)
+
+
+		//.hexagon
+			+hexagon(35px, transparent, $orange-color 2px solid)
+			transform: rotate(90deg)
+
+		//.back-arrow
+			&:before
+				display: block
+				content: "<"
+				font-weight: 600
+				color: #F90
+				position: absolute
+				left: 9px
+				font-size: 24px
+				top: 0
+				line-height: 40px
+
