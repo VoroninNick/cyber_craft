@@ -1,9 +1,10 @@
-h1
+/h1
   |Page title: #{@page_banner_title.inspect}
-h1
+/h1
   |Page banner: #{@page_banner_image.inspect}
 - condition = @page_banner != false && (@page_banner_image.present? || @page_banner_title.present?)
-h1
+/h1
+/h1
   |Condition: #{condition.inspect}
 - if condition
   /! header of the page
