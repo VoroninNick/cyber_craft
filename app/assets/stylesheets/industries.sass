@@ -476,26 +476,27 @@ img
 
 @media (max-width: rem(960)) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: rem(767)) and (min-resolution: 144dpi)
 	.industry-articles-navigation
-		height: rem(160)
-
-		nav
+		&.many
 			height: rem(160)
 
-		.prev, .next
-			height: rem(80)
-			position: relative
+			nav
+				height: rem(160)
 
-			.title
-				margin-top: 0
-				padding-top: rem(27)
+			.prev, .next
+				height: rem(80)
+				position: relative
 
-		.prev + .next
-			&:after
-				content: ""
-				height: 1px
-				background: rgba(0, 0, 0, 0.1)
-				width: 100%
-				display: block
-				position: absolute
-				top: 0
-				right: -10px
+				.title
+					margin-top: 0
+					padding-top: rem(27)
+
+			.prev + .next
+				&:after
+					content: ""
+					height: 1px
+					background: rgba(0, 0, 0, 0.1)
+					width: 100%
+					display: block
+					position: absolute
+					top: 0
+					right: -10px
