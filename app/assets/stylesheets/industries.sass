@@ -65,7 +65,7 @@
 				width: 0
 
 
-@media (max-width: 768px)
+@media (max-width: rem(767))
 	.icons-in-show
 		.icon
 			width: 25% !important
@@ -83,7 +83,7 @@
 	background-position: top right
 	opacity: 0.1
 
-	@media (max-width: 768px)
+	@media (max-width: rem(767))
 		background-image: none !important
 
 .industry-article-content
@@ -144,7 +144,7 @@ $left-image-height: 350px
 	background-size: cover
 	background-position: center
 
-	@media (max-width: 768px)
+	@media (max-width: rem(767))
 		position: relative
 
 
@@ -169,7 +169,7 @@ $left-image-height: 350px
 
 
 
-	@media (max-width: 768px)
+	@media (max-width: rem(767))
 		.image-description-wrap
 			min-height: 0
 
@@ -205,7 +205,7 @@ $left-image-height: 350px
 	&:before
 		top: 50%
 
-@media (max-width: 768px)
+@media (max-width: rem(767))
 	.with-gray-bg-bottom-50-percent
 		&:before
 			display: none
@@ -224,7 +224,7 @@ $left-image-height: 350px
 	padding-left: 20px
 	border-left: 3px solid
 
-	@media (max-width: 768px)
+	@media (max-width: rem(767))
 		margin-top: 30px
 		margin-bottom: 55px
 
@@ -379,3 +379,85 @@ img
 		&:hover
 			&:before, .title, .name
 				color: $orange-text-color
+
+
+
+// flex images in industries
+.article-section-left-image
+	+flexbox
+	+align-content(center)
+	+align-items(center)
+	//+justify-content(center)
+
+	.left-image
+		position: relative
+		padding: 0
+		+flex(0 0 50%)
+
+	.image-description-wrap
+		display: table
+		left: 0
+		padding: 0
+		+flex(0 1 25%)
+		width: 25%
+
+	@media (min-width: rem(768)) and ( max-width: rem(960))
+		.image-description-wrap
+			+flex-basis(35%)
+			width: 35%
+
+	@media (max-width: rem(767))
+		display: block
+
+		.image-description-wrap
+			padding-left: rem(15)
+			padding-right: rem(15)
+			width: 100%
+
+
+
+
+.article-section-right-image
+	+flexbox
+	+align-content(center)
+	+align-items(center)
+
+	.right-image
+		position: relative
+		padding: 0
+		+flex(0 0 65%)
+		left: 10%
+
+	.image-description-wrap
+		display: table
+		left: 18%
+		padding: 0
+		+flex(0 1 25%)
+		width: 25%
+
+
+	@media (min-width: rem(768)) and ( max-width: rem(1200))
+		.right-image
+			left: 0
+		.image-description-wrap
+			+flex-basis(40%)
+			width: 40%
+			left: 8%
+
+	@media (max-width: rem(767))
+		display: block
+
+		.image-description-wrap
+			//padding-left: rem(15)
+			//padding-right: rem(15)
+			width: 100%
+			left: 0
+
+		.right-image
+			left: 0
+			margin-left: rem(10)
+			margin-right: rem(10)
+			width: calc(100% - #{rem(20)})
+
+		.image-description-content
+			margin-bottom: 0
