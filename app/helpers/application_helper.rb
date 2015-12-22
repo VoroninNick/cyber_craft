@@ -21,4 +21,12 @@ module ApplicationHelper
   def sharing_popup
     render "sharing_popup"
   end
+
+  def facebook_url
+    "https://www.facebook.com/CyberCraft.Lviv/"
+  end
+
+  def linkedin_url
+    "https://www.linkedin.com/company/cybercraft-inc"
+  end
 end
