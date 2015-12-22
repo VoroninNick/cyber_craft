@@ -205,3 +205,7 @@ $(".custom-first-letter").each(function(){
     $block.prepend($first_letter)
 })
 
+//$("ul.industrieswehelp li").each(function(){
+//    var $item = $(this)
+//    $item.find(".home-industries-banner-image-div, .home-industries-description-column").matchHeight()
+//})

@@ -625,6 +625,12 @@ $industries-home-image-height: 550px;
   text-decoration: none;
 }
 
+ul.industrieswehelp{
+  > li{
+    //background-color: #273238;
+  }
+}
+
 .industriewwepager {
   text-align: right;
   margin-top: -58px;

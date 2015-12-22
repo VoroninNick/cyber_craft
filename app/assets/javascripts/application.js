@@ -20,7 +20,11 @@
 //= require jquery.superslides.min.js
 
 
-//= require jquery.bxslider.min.js
+// require jquery.bxslider.min.js
+
+// for services
+// require jquery.sliderPro.min
+//= require bxslider-4/dist/jquery.bxslider.min.js
 
 
 //= require wow.min.js
@@ -31,9 +35,7 @@
 //= require jquery.scrollend
 
 
-// for services
-// require jquery.sliderPro.min
-//= require bxslider-4/dist/jquery.bxslider.min.js
+
 
 // for career
 //= require countdown
