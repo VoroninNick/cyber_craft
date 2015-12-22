@@ -67,23 +67,28 @@ RailsAdmin.config do |config|
   page_model_names = %w(AboutUs Blog Career Contacts Home Industries PrivacyPolicy Process Services Sitemap Teams TermsOfUse).map{|s| "Pages::#{s}" }
 
   only_configurable_models = [FormConfigs::Message, FormConfigs::VacancyRequest, *page_model_names]
+  read_only_models = [Message, VacancyRequest]
 
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
     new do
-      except only_configurable_models
+      except(only_configurable_models + read_only_models)
     end
     export
     bulk_delete
     show do
       except only_configurable_models
     end
-    edit
-    delete do
-      except only_configurable_models
+    edit do
+      except read_only_models
     end
-    show_in_app
+    delete do
+      except(only_configurable_models + read_only_models)
+    end
+    show_in_app do
+      except read_only_models
+    end
 
     ## With an audit adapter, you can add:
     # history_index
@@ -97,7 +102,7 @@ RailsAdmin.config do |config|
 
 
 
-  config.included_models += [FormConfig, FormConfigs::Message, FormConfigs::VacancyRequest, Message, User]
+  config.included_models += [FormConfig, FormConfigs::Message, FormConfigs::VacancyRequest, VacancyRequest, Message, User]
 
   config.included_models += page_model_names
 

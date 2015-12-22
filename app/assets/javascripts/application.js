@@ -46,6 +46,7 @@
 //= require isotope/dist/isotope.pkgd.min
 
 // my custom js for forms
+//= require jquery-form/jquery.form
 //= require jquery.forms
 
 // General js

@@ -120,14 +120,26 @@ $("body").on "submit", "form.ajax-submit", (event)->
     method = $form.attr("method") || 'post'
     #form_data = $form.serializeObject()
     form_data = $form.serialize()
-    $.ajax(
+#    $.ajax(
+#      url: form_url
+#      type: method
+#      data: form_data
+#      dataType: "json"
+#      success: ()->
+#        $form.removeClass("sending").addClass("sent-successfully")
+#        $preloader.addClass("hide")
+#
+#
+#    )
+
+    success_handler = ()->
+      $form.removeClass("sending").addClass("sent-successfully")
+      $preloader.addClass("hide")
+
+    $(this).ajaxSubmit({
       url: form_url
       type: method
-      data: form_data
       dataType: "json"
-      success: ()->
-        $form.removeClass("sending").addClass("sent-successfully")
-        $preloader.addClass("hide")
+      success: success_handler
+    })
 
-
-    )

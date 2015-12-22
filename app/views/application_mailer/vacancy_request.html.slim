@@ -32,7 +32,7 @@ table border="1"
       td
         |Attachment
       td
-        = link_to "cv", @msg.cv.url
+        = link_to "cv", "http://#{Rails.application.config.action_mailer.default_url_options[:host]}#{@msg.cv.url}"
 
 p
   a href="http://#{Rails.application.config.action_mailer.default_url_options[:host]}/admin/#{@msg.class.name.underscore}/#{@msg.id}"
