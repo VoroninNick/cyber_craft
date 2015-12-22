@@ -44,7 +44,12 @@
   background: url(icon_10.png) no-repeat top left;
 }
 .footer-menu {
-  margin: 0 0 20px 0;
+  margin: 0 0 20px -2px;
+  padding: 0;
+  @include flexbox;
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
+
 }
 .logo_foot_inpage {
   padding-bottom: 13px;
@@ -57,14 +62,15 @@
 .footer-menu-li {
   position: relative;
 }
-.footer-menu-li:after {
+.footer-menu-li:before {
   content: "";
   position: absolute;
-  top: 12px;
-  right: 20%;
+  top: 9px;
+  left: 0;
   width: 2px;
   height: 13px;
   background: #6C7A83;
+
 }
 
 @media (min-width: 1200px) {

@@ -25,14 +25,15 @@ footer#standard-footer
           hr
 
         .col-sm-12
-          ul.footer-menu
-            - footer_menu.each do |k, v|
-              li.footer-menu-li class=("active" if v[:active])
-                - if !v[:active]
-                  = link_to v[:name], SHOW_ALL ? v[:url] : "#"
-                - else
-                  span
-                    = v[:name]
+          .footer-menu-wrap
+            ul.footer-menu
+              - footer_menu.each do |k, v|
+                li.footer-menu-li class=("active" if v[:active])
+                  - if !v[:active]
+                    = link_to v[:name], SHOW_ALL ? v[:url] : "#"
+                  - else
+                    span
+                      = v[:name]
 
       /ul.addition_links
         - additional_links.each do |k, v|
