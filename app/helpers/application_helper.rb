@@ -27,6 +27,6 @@ module ApplicationHelper
   end
 
   def linkedin_url
-    "https://www.linkedin.com/company/cybercraft-inc"
+    "https://www.linkedin.com/company/cybercraft-inc-"
   end
 end
