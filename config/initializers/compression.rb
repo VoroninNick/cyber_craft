@@ -20,6 +20,8 @@ Rails.application.configure do
   config.assets.js_compressor = uglifier
   config.assets.css_compressor = :sass
 
+  config.action_controller.page_cache_directory = "#{Rails.root.to_s}/public"
+
   config.middleware.use Rack::Deflater
   config.middleware.insert_before ActionDispatch::Static, Rack::Deflater
 
