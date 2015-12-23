@@ -66,7 +66,7 @@ module PagesHelper
 
       break nil
 
-    end || @page_class.name.demodulize.underscore
+    end || page_class.try{|c| c.name.demodulize.underscore}
 
     set_page_banner_title(banner_title)
 
@@ -153,6 +153,7 @@ module PagesHelper
 
 
   def set_page_banner_title title
+    return if title.blank?
     @page_banner_title = (I18n.t("page_titles.#{title}", raise: true) rescue title.humanize)
   end
 
