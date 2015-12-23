@@ -70,7 +70,20 @@
     }
   }
 
-
+  &:not(.constant-breaks) {
+    span {
+      @media (max-width: rem(992)) {
+        & {
+          display: block;
+          background: rgba(56, 64, 70, 0.8);
+          margin: 0 32px;
+          line-height: 1.25;
+          padding: 25px 10px 25px 10px;
+          font-size: 21px;
+        }
+      }
+    }
+  }
 }
 
 
