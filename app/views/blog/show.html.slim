@@ -1,6 +1,6 @@
 .container
   .row
-    .col-xs-12.col-md-3.right
+    .col-xs-12.col-sm-3.right
       .article-info
         .article-info__authors
           - @article.authors.each do |a|
@@ -19,6 +19,18 @@
     .col-lg-9.article-content
       = raw @article.content
 
+    .col-xs-12.col-lg-9.sharing-panel
+      .row
+        .col-xs-12
+          .sharing-separator
+        .col-xs-6
+          a.share-popup-link
+            = inline_svg("sharing.svg")
+            span
+              |Share
+        .col-xs-6.share-panel-date
+          = @article.article_date
+
 - if @related_articles.try(&:any?)
   .read-also-section
     .container
@@ -30,4 +42,7 @@
           = render "article_item", item: article
 
 
+
+
 = sharing_popup
+

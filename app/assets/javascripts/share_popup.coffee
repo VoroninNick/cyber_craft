@@ -4,7 +4,7 @@ $.fn.open_popup = ()->
 $.fn.close_popup = ()->
   $(this).closest(".sharing-popup").removeClass("open")
 
-$(".share_button").on "click", (e)->
+$(".share_button, .share-popup-link").on "click", (e)->
   e.preventDefault()
   $(".sharing-popup").open_popup()
 

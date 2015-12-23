@@ -131,9 +131,52 @@
 	&:active
 		+button-active
 
+.sharing-panel
+	padding-bottom: rem(50)
+.sharing-separator
+	height: rem(4)
+	background: $blue-color
+	margin-bottom: rem(24)
 
+.share-popup-link
+	cursor: pointer
 
+	&, &:hover
+		text-decoration: none
 
+	svg, span
+		+transition(0.5s all)
+
+	svg
+		width: rem(18)
+		height: rem(18)
+		fill: $blue-color
+		display: inline-block
+	span
+		display: inline-block
+		color: $blue-color
+		text-transform: uppercase
+		+orbitron-medium
+		height: 18px
+		line-height: 18px
+		vertical-align: top
+
+	&:hover
+		svg
+			fill: $orange-color
+
+		span
+			color: $orange-text-color
+
+[data-controller="blog"][data-action="show"]
+	.article-content
+		padding-bottom: rem(30)
+
+.share-panel-date
+	+ubuntu-light-italic
+	color: $light-blue-gray-text-color
+	font-size: rem(14)
+	text-align: right
 @media (max-width: 767px)
 	.article-item
 		width: 50%
@@ -176,3 +219,7 @@
 	[data-controller="blog"][data-action="show"]
 		.breadcrumbs
 			margin-bottom: rem(10)
+
+.read-also-section
+	.article-item
+		margin-bottom: rem(30)
