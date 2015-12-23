@@ -2,8 +2,8 @@
 
 Rails.application.configure do
   # Use environment names or environment variables:
-  # break unless Rails.env.production?
-  break unless ENV['ENABLE_COMPRESSION'] == '1'
+  break if !Rails.env.production? && ENV['ENABLE_COMPRESSION'] != '1'
+
 
   # Strip all comments from JavaScript files, even copyright notices.
   # By doing so, you are legally required to acknowledge
@@ -16,8 +16,6 @@ Rails.application.configure do
 
   config.assets.compile = true
   config.assets.debug = false
-
-  MYCONST = true
 
   config.assets.js_compressor = uglifier
   config.assets.css_compressor = :sass
