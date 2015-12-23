@@ -61,11 +61,11 @@
       color: #f90;
     }
 
-    &:first-child{
+    &:first-child:before{
       content: "<";
     }
 
-    &:last-child{
+    &:last-child:after{
       content: ">";
     }
   }
