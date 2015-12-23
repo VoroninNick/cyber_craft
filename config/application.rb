@@ -24,6 +24,7 @@ module CyberCraft
     config.active_record.raise_in_transactional_callbacks = true
 
     config.assets.precompile += %w(under_construction.css under_construction.js ie.js)
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif *.svg)
 
     #Rails.application.config do |config|
       #config.assets.paths << "/"
