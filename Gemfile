@@ -76,5 +76,11 @@ gem 'placeholdit'
 gem 'ffaker'
 gem 'faker'
 
+gem 'quiet_assets'
+
 
 gem 'kaminari'
+
+gem "htmlcompressor"
+gem 'rack-page_caching'
+gem 'paperclip-optimizer'

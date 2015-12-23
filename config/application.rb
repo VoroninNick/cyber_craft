@@ -28,5 +28,8 @@ module CyberCraft
     #Rails.application.config do |config|
       config.assets.paths << "/"
     #end
+
+
+
   end
 end
