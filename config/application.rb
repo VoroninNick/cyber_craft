@@ -25,6 +25,10 @@ module CyberCraft
 
     config.assets.precompile += %w(under_construction.css under_construction.js ie.js)
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif *.svg)
+    assets_root = Rails.root.join("app/assets/images")
+    #paths = Dir[assets_root.join("/*.[gif|jpg|jpeg|png]")]
+    paths = Dir[Rails.root.join("app/assets/images/**/*")]
+    config.assets.precompile += paths
 
     #Rails.application.config do |config|
       #config.assets.paths << "/"
