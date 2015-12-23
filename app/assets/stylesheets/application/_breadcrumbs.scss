@@ -11,7 +11,7 @@
   letter-spacing: 1px;
 }
 .breadcrumbs_cont a {
-  display: inline-block;
+  display: inline;
   //color: #51636D;
   //color: #536D79;
   color: $light-blue-gray-text-color;
@@ -21,12 +21,14 @@
   text-decoration: none;
 }
 .breadcrumbs_cont p {
-  display: inline-block;
+  display: inline;
   color: #CC8312;
+
 }
 .breadcrumbs_cont span {
   padding: 0 3px;
   color: #51636D;
+  display: inline;
 }
 
 html{
