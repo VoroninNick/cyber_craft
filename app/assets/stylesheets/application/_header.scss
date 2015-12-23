@@ -170,3 +170,24 @@ html.scrollstart{
     background: $orange-color;
   }
 }
+
+
+// flex
+.pushy{
+  @include flexbox;
+  @include flex-direction(column);
+
+  .logo_menu{
+    @include flex(1 0 auto);
+  }
+
+  .pushymenu{
+    @include flex(1 0 auto);
+  }
+
+  .push_icon{
+     position: relative;
+  }
+
+
+}
