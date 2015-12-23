@@ -276,3 +276,11 @@ $breakpoints: (480);
   }
 }
 
+
+@media (max-width: rem(992)) {
+  .footer-contacts {
+    .footer-contacts-header{
+      margin-top: rem(40);
+    }
+  }
+}
