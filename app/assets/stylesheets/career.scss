@@ -184,10 +184,11 @@ ul#countdown li p.timeRefDays, ul#countdown li p.timeRefHours, ul#countdown li p
 .with_black_arrows.with_black_arrows_carerr_foot:before, .with_black_arrows.with_black_arrows_carerr_foot:after {
   color: #f90;
 }
-footer .intro_career_foot p {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 300;
-  font-style: italic;
+
+
+
+footer .intro_career_foot p,  .success-message p{
+  @include ubuntu-light-italic;
   font-size: $body-font-size;
   text-align: center;
   margin-top: 8px;

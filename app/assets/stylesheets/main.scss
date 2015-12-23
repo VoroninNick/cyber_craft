@@ -1261,15 +1261,54 @@ ul.industrieswehelp{
 form { margin:25px auto; }
 
 form{
+  .preloader{
+    img{
+      width: 40px;
+      height: 40px;
+      opacity: 0.8;
+    }
+
+    span{
+      @include ubuntu-light-italic;
+      font-size: $body-font-size;
+      text-align: center;
+      margin-top: 8px;
+      margin-bottom: 15px;
+      color: $light-black-color;
+      line-height: 19px;
+      display: block;
+    }
+  }
+
   .success-message{
     display: none;
+    width: 100%;
+
+    .title{
+      font-size: 19px;
+      @include orbitron-medium;
+      margin: 35px 0 0 0;
+      color: $light-black-color;
+      letter-spacing: 2px;
+    }
+
+    p{
+      @include ubuntu-light-italic;
+      font-size: $body-font-size;
+      text-align: center;
+      margin-top: 8px;
+      margin-bottom: 15px;
+      color: $light-black-color;
+      line-height: 19px;
+    }
   }
 
   .success-message, .preloader{
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
-    @include transform(translate(-50%, -50%));
+    @include transform(translate(-50%, -40%));
+    text-align: center;
   }
 
   &.sent-successfully{

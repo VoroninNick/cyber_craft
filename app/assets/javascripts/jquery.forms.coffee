@@ -110,7 +110,8 @@ $("body").on "submit", "form.ajax-submit", (event)->
     if $preloader.length
       $preloader.removeClass("hide")
     else
-      $preloader = $("<div class='preloader'><img src='/assets/gray-preloader.gif'></div>")
+      preloader_image_url = "/assets/loader_1.gif"
+      $preloader = $("<div class='preloader'><img src='#{preloader_image_url}'><span>Sending...</span></div>")
       $form.append($preloader)
 
 

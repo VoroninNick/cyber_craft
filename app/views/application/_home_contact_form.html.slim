@@ -1,5 +1,9 @@
 form.ajax-submit action=message_path method="post" show-preloader=""
   .content
+    - if defined?(title) && title.present?
+      h3.section_h3.h3_messag
+        span.with_white_arrows
+          = title
     .row
       .col-md-6.col-sm-6.col-xs-12
         .input.string.css required=""
@@ -21,7 +25,8 @@ form.ajax-submit action=message_path method="post" show-preloader=""
           label.input-label for="youmessageanimate"  Your message*
         input type="submit" value="Send"
   .success-message
-    h3
-      |You have successfully sent your message
+    .title
+      span.with_white_arrows
+        |You have successfully sent your message
     p
-      |Our manager will contact you as soon as possible.
+      |Our manager will contact you as soon as possible
