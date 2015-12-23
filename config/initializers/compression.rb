@@ -20,8 +20,6 @@ Rails.application.configure do
   config.assets.js_compressor = uglifier
   config.assets.css_compressor = :sass
 
-  config.action_controller.page_cache_directory = "#{Rails.root.to_s}/public"
-
   config.middleware.use Rack::Deflater
   config.middleware.insert_before ActionDispatch::Static, Rack::Deflater
 
@@ -46,4 +44,19 @@ Rails.application.configure do
                         remove_style_attributes: true,
                         simple_boolean_attributes: true,
                         simple_doctype: false
+
+
+
+
+  # caching
+  config.middleware.use Rack::PageCaching,
+    # Directory where the pages are stored. Defaults to the public folder in
+    # Rails, but you'll probably want to customize this
+    page_cache_directory: Rails.root.join('public'),
+    # Gzipped version of the files are generated with compression level
+    # specified. It accepts the symbol versions of the constants in Zlib,
+    # e.g. :best_speed and :best_compression. To turn off gzip, pass in false.
+    gzip: :best_speed,
+    # Hostnames can be included in the path of the page cache. Default is false.
+    include_hostname: false
 end
