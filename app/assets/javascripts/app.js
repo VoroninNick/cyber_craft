@@ -86,7 +86,9 @@ $(document).ready(function(){
 //End Slider Main page
 // Animated css scroll
 $(document).ready(function(){
-    new WOW().init();
+    if(!Modernizr.touch) {
+        new WOW().init();
+    }
 });
 // Animated css scroll
 // Form animated Main page
