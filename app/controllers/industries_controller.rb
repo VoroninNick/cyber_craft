@@ -1,4 +1,6 @@
 class IndustriesController < BaseIndustriesController
+  caches_page :index, :show
+
   def index
     set_page_metadata("industries")
 

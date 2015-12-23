@@ -1,4 +1,6 @@
 class BlogController < ApplicationController
+  caches_page :index, :show
+
   def index
     @available_tags = []
     @available_authors = []

@@ -1,4 +1,6 @@
 class ServicesController < ApplicationController
+  caches_page :index
+
   def index
     set_page_metadata("services")
 

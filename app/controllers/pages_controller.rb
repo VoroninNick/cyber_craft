@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   before_action :set_page_instance, except: [:under_construction, :index, :process_page]
+  caches_page :index, :about_us, :contacts, :process_page, :terms_of_use, :privacy_policy, :career, :sitemap
 
   def under_construction
     render layout: "under_construction"
@@ -56,6 +57,8 @@ class PagesController < ApplicationController
     @members = Member.published.sort_by_sorting_position
     @feedbacks = EmployeeFeedback.all.order("id desc")
     @page_banner = false
+
+
   end
 
   def sitemap

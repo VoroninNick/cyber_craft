@@ -26,7 +26,7 @@ module CyberCraft
     config.assets.precompile += %w(under_construction.css under_construction.js ie.js)
 
     #Rails.application.config do |config|
-      config.assets.paths << "/"
+      #config.assets.paths << "/"
     #end
 
 
