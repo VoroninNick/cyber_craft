@@ -33,4 +33,33 @@ module ApplicationHelper
   def linkedin_url
     "https://www.linkedin.com/company/cybercraft-inc-"
   end
+
+  def facebook_share_href
+    self_url = request.original_url
+    "http://www.facebook.com/sharer/sharer.php?u=#{self_url}"
+  end
+
+  def twitter_share_href
+    self_url = request.original_url
+    "https://twitter.com/home?status=#{self_url}"
+  end
+
+  def google_plus_share_href
+    self_url = request.original_url
+    "https://plus.google.com/share?url=#{self_url}"
+  end
+
+  def linkedin_share_href
+    self_url = request.original_url
+    title = ""
+    summary = ""
+    source = ""
+    "https://www.linkedin.com/shareArticle?mini=true&url=#{self_url}&title=#{title}&summary=#{summary}&source=#{source}"
+  end
+
+  def share_onclick(window_title)
+    "return !window.open(this.href, '#{window_title}', 'width=640,height=300')"
+  end
+
+
 end

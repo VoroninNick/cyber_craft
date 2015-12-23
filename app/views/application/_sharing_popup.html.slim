@@ -9,19 +9,20 @@
           span.with_orange_arrows
             |Thoughts from around the studio
         .share-links
-          a.share-link
+          a.share-link href=facebook_share_href target="_blank" onclick=share_onclick("Facebook")
             = inline_svg("facebook.svg")
             span
               |via Facebook
-          a.share-link
+          a.share-link href=twitter_share_href target="_blank" onclick=share_onclick("Twitter")
             = inline_svg("facebook.svg")
             span
               |via Twitter
-          a.share-link
+          a.share-link href=linkedin_share_href target="_blank" onclick=share_onclick("Linkedin")
             = inline_svg("in.svg")
             span
               |via Linkedin
-          a.share-link
+          a.share-link href=google_plus_share_href target="_blank" onclick=share_onclick("Google+")
             = inline_svg("facebook.svg")
             span
               |via Google+
+
