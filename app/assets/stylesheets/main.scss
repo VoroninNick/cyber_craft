@@ -340,7 +340,7 @@ Main page Logo
   color: #fff;
   text-transform: uppercase;
 }
-.heading_slide h1 .slide-name{
+.heading_slide .slide-name{
   @include orbitron-medium;
   color: #fff;
   background: rgba(56, 64, 70, 0.8);
@@ -355,7 +355,7 @@ Main page Logo
   }
 
   span{
-    //padding: 0 10px;
+    padding: 0 rem(20);
     //background: black;
     display: inline;
 
