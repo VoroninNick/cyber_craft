@@ -53,19 +53,27 @@
   letter-spacing: 2.9px;
   text-transform: uppercase;
 }
-.title_page h1 span{
-  padding: 0 60px;
+.title_page {
+  span {
+    padding: 0 20px;
+
+    &:first-child:before, &:last-child:after{
+      color: #f90;
+    }
+
+    &:first-child{
+      content: "<";
+    }
+
+    &:last-child{
+      content: ">";
+    }
+  }
+
+
 }
 
-.title_page h1 span:first-child:before, .title_page h1 span:last-child:after{
-  color: #f90;
-}
-.title_page h1 span:first-child:before{
-  content: "<";
-}
-.title_page h1 span:last-child:after{
-  content: ">";
-}
+
 
 
 
