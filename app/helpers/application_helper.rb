@@ -22,6 +22,10 @@ module ApplicationHelper
     render "sharing_popup"
   end
 
+  def sharing_panel(date = nil)
+    render "sharing_panel", date: date
+  end
+
   def facebook_url
     "https://www.facebook.com/CyberCraft.Lviv/"
   end

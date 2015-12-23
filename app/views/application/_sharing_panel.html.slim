@@ -1,0 +1,12 @@
+.col-xs-12.col-lg-9.sharing-panel
+  .row
+    .col-xs-12
+      .sharing-separator
+    .col-xs-6
+      a.share-popup-link
+        = inline_svg("sharing.svg")
+        span
+          |Share
+    - if defined?(date) && date.present?
+      .col-xs-6.share-panel-date
+        = date

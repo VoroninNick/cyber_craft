@@ -19,17 +19,7 @@
     .col-lg-9.article-content
       = raw @article.content
 
-    .col-xs-12.col-lg-9.sharing-panel
-      .row
-        .col-xs-12
-          .sharing-separator
-        .col-xs-6
-          a.share-popup-link
-            = inline_svg("sharing.svg")
-            span
-              |Share
-        .col-xs-6.share-panel-date
-          = @article.article_date
+    = sharing_panel(@article.article_date)
 
 - if @related_articles.try(&:any?)
   .read-also-section
