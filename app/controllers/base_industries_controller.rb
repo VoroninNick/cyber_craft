@@ -7,7 +7,7 @@ class BaseIndustriesController < ApplicationController
       h[:name] = item[:name];
       h[:avatar_file_name] = item[:avatar_file_name];
       h[:icon_url] = item.avatar.url();
-      h[:icon_path] = item.avatar.path;
+      h[:icon_path] = item.avatar.path.gsub(/#{Rails.root.join('public/')}/, '')
       h[:active] = (item.id == resource.id);
       h[:url] = url_for(item)
 
