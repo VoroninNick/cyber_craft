@@ -274,6 +274,9 @@ RailsAdmin.config do |config|
   config.model BlogArticle do
     edit do
       field :published
+      field :featured do
+        label "New?"
+      end
       field :name
       field :url_fragment
       field :content, :ck_editor

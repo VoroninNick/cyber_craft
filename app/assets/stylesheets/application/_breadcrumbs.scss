@@ -47,4 +47,20 @@ html{
       }
     }
   }
+
+  @each $k in ('process_page') {
+    &[data-action=#{$k}] {
+      .breadcrumbs{
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @each $k in ('benefits') {
+    &[data-controller=#{$k}] {
+      .breadcrumbs{
+        margin-bottom: 0;
+      }
+    }
+  }
 }

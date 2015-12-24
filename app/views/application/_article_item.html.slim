@@ -10,7 +10,8 @@
           - item.tag_list.each do |tag|
             a href="#"
               = tag
-      a.teg_new href="#"  New
+      - if item.featured?
+        a.teg_new href="#"  New
     h3.test_i1.article-name
       a href=url_for(item)
         = item.name
