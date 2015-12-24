@@ -6,7 +6,7 @@
 #   end
 # end
 
-#Rails.application.assets.paths << "/"
+#Rails.application.assets.paths << Rails.root.join("public")
 
 #
 # InlineSvg.configure do |config|

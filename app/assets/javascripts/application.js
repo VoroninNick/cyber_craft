@@ -1,4 +1,5 @@
 // Sidebar Navigation  Main page
+//= require image_paths
 //= require libs/jquery/jquery-1.11.3.min.js
 //= require jquery-ui/jquery-ui.min
 
