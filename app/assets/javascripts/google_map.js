@@ -87,7 +87,7 @@ initializeGMaps = function(selector, info_window_parent_selector) {
         position: marker_lat_lng,
         map: map,
         title: "CyberCraft",
-        icon: '/assets/cc-map-icon-1.png'
+        icon: images.map_marker
     });
 
     google.maps.event.addListener(marker, 'click', function(e) {
