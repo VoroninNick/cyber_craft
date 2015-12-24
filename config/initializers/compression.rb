@@ -8,7 +8,8 @@ if !defined?(PRODUCTION_CONFIG)
   PRODUCTION_CONFIG = {}
 end
 
-PRODUCTION_CONFIG[:enable_compression] ||= true
+
+PRODUCTION_CONFIG[:enable_compression] ||= Rails.env.production? || !!ENV['ENABLE_COMPRESSION']
 PRODUCTION_CONFIG[:caching] ||= true
 PRODUCTION_CONFIG[:compile] ||= true
 PRODUCTION_CONFIG[:precompile] ||= true
@@ -22,8 +23,8 @@ PRODUCTION_CONFIG[:html_compress] ||= true
 
 Rails.application.configure do
   # Use environment names or environment variables:
-  break if (!Rails.env.production? && ENV['ENABLE_COMPRESSION'] != '1') || !PRODUCTION_CONFIG[:enable_compression]
-
+  break if !PRODUCTION_CONFIG[:enable_compression]
+  PRODUCTION_CONFIG_APPLIED = true
 
   # Strip all comments from JavaScript files, even copyright notices.
   # By doing so, you are legally required to acknowledge
