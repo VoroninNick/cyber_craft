@@ -40,3 +40,4 @@ bower.json
 /.idea
 
 /config/settings
+/config/production_config
