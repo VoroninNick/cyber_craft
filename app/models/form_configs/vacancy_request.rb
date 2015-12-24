@@ -1,3 +1,3 @@
-class FormConfigs::VacancyRequest < FormConfig
+class FormConfigs::VacancyRequest < Cms::FormConfig
 
 end

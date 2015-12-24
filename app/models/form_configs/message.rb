@@ -1,3 +1,3 @@
-class FormConfigs::Message < FormConfig
+class FormConfigs::Message < Cms::FormConfig
 
 end
