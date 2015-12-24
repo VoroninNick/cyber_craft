@@ -1,8 +1,27 @@
 # config/initializers/compression.rb
+f = Rails.root.join("config/production_config.rb")
+if File.exists?(f)
+  require f
+end
+
+if defined?(PRODUCTION_CONFIG)
+  PRODUCTION_CONFIG = {}
+end
+
+PRODUCTION_CONFIG[:enable_compression] ||= true
+PRODUCTION_CONFIG[:caching] ||= true
+PRODUCTION_CONFIG[:precompile] ||= true
+PRODUCTION_CONFIG[:gzip] ||= true
+PRODUCTION_CONFIG[:deflate] ||= true
+PRODUCTION_CONFIG[:debug] ||= true
+PRODUCTION_CONFIG[:js_compress] ||= true
+PRODUCTION_CONFIG[:css_compress] ||= true
+PRODUCTION_CONFIG[:html_compress] ||= true
+
 
 Rails.application.configure do
   # Use environment names or environment variables:
-  break if !Rails.env.production? && ENV['ENABLE_COMPRESSION'] != '1'
+  break if (!Rails.env.production? && ENV['ENABLE_COMPRESSION'] != '1') || !PRODUCTION_CONFIG[:enable_compression]
 
 
   # Strip all comments from JavaScript files, even copyright notices.
@@ -17,46 +36,58 @@ Rails.application.configure do
   config.assets.compile = true
   config.assets.debug = false
 
-  config.assets.js_compressor = uglifier
-  config.assets.css_compressor = :sass
+  if PRODUCTION_CONFIG[:js_compress]
+    config.assets.js_compressor = uglifier
+  end
 
-  config.middleware.use Rack::Deflater
-  #config.middleware.insert Rack::Deflater
+  if PRODUCTION_CONFIG[:css_compress]
+    config.assets.css_compressor = :sass
+  end
 
-  config.middleware.use HtmlCompressor::Rack,
-                        compress_css: true,
-                        compress_javascript: true,
-                        css_compressor: Sass,
-                        enabled: true,
-                        javascript_compressor: uglifier,
-                        preserve_line_breaks: false,
-                        remove_comments: true,
-                        remove_form_attributes: false,
-                        remove_http_protocol: false,
-                        remove_https_protocol: false,
-                        remove_input_attributes: true,
-                        remove_intertag_spaces: false,
-                        remove_javascript_protocol: true,
-                        remove_link_attributes: true,
-                        remove_multi_spaces: true,
-                        remove_quotes: true,
-                        remove_script_attributes: true,
-                        remove_style_attributes: true,
-                        simple_boolean_attributes: true,
-                        simple_doctype: false
+  if PRODUCTION_CONFIG[:deflate]
+    config.middleware.use Rack::Deflater
+    #config.middleware.insert Rack::Deflater
+  end
 
+
+
+  if PRODUCTION_CONFIG[:html_compress]
+    config.middleware.use HtmlCompressor::Rack,
+      compress_css: true,
+      compress_javascript: true,
+      css_compressor: Sass,
+      enabled: true,
+      javascript_compressor: uglifier,
+      preserve_line_breaks: false,
+      remove_comments: true,
+      remove_form_attributes: false,
+      remove_http_protocol: false,
+      remove_https_protocol: false,
+      remove_input_attributes: true,
+      remove_intertag_spaces: false,
+      remove_javascript_protocol: true,
+      remove_link_attributes: true,
+      remove_multi_spaces: true,
+      remove_quotes: true,
+      remove_script_attributes: true,
+      remove_style_attributes: true,
+      simple_boolean_attributes: true,
+      simple_doctype: false
+  end
 
 
 
   # caching
-  config.middleware.use Rack::PageCaching,
-    # Directory where the pages are stored. Defaults to the public folder in
-    # Rails, but you'll probably want to customize this
-    page_cache_directory: Rails.root.join('public'),
-    # Gzipped version of the files are generated with compression level
-    # specified. It accepts the symbol versions of the constants in Zlib,
-    # e.g. :best_speed and :best_compression. To turn off gzip, pass in false.
-    gzip: :best_speed,
-    # Hostnames can be included in the path of the page cache. Default is false.
-    include_hostname: false
+  if PRODUCTION_CONFIG[:caching]
+    config.middleware.use Rack::PageCaching,
+      # Directory where the pages are stored. Defaults to the public folder in
+      # Rails, but you'll probably want to customize this
+      page_cache_directory: Rails.root.join('public'),
+      # Gzipped version of the files are generated with compression level
+      # specified. It accepts the symbol versions of the constants in Zlib,
+      # e.g. :best_speed and :best_compression. To turn off gzip, pass in false.
+      gzip: :best_speed,
+      # Hostnames can be included in the path of the page cache. Default is false.
+      include_hostname: false
+  end
 end
