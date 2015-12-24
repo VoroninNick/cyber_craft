@@ -1,10 +1,9 @@
 class CreateFormConfigs < ActiveRecord::Migration
-  def change
-    create_table :form_configs do |t|
-      t.string :type
-      t.text :email_receivers
+  def up
+    Cms.create_form_configs_table
+  end
 
-      t.timestamps null: false
-    end
+  def down
+    Cms.drop_form_configs_table
   end
 end

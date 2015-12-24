@@ -147,7 +147,7 @@ module Cms
   end
 
   def self.create_html_blocks_table
-    ActiveRecord::Base.connection.create_table :html_blocks do |t|
+    connection.create_table :html_blocks do |t|
       t.text :content
 
       t.integer :attachable_id
@@ -159,15 +159,96 @@ module Cms
   end
 
   def self.drop_html_blocks_table
-    ActiveRecord::Base.connection.drop_table :html_blocks
+    connection.drop_table :html_blocks
   end
 
-  def self.create_tables
-    create_html_blocks_table
+  def self.create_seo_tags_table
+    connection.create_table :seo_tags do |t|
+      t.string :page_type
+      t.integer :page_id
+      t.string :title
+      t.text :keywords
+      t.text :description
+    end
   end
 
-  def self.drop_tables
-    drop_html_blocks_table
+  def self.drop_seo_tags_table
+    drop_table :seo_tags
+  end
+
+  def self.create_pages_table
+    connection.create_table :pages do |t|
+      t.string :type
+      t.string :name
+      t.text :content
+      t.string :url
+
+      t.timestamps null: false
+    end
+  end
+
+  def self.drop_pages_table
+    connection.drop_table :pages
+  end
+
+
+  def self.create_form_configs_table
+    connection.create_table :form_configs do |t|
+      t.string :type
+      t.text :email_receivers
+
+      t.timestamps null: false
+    end
+  end
+
+  def self.drop_form_configs_table
+    connection.drop_table :form_configs
+  end
+
+
+  def self.connection
+    ActiveRecord::Base.connection
+  end
+
+
+  def self.normalize_tables(options = {})
+    default_tables = [:form_configs, :pages, :seo_tags, :html_blocks ]
+    tables = []
+    if options[:only]
+      if !options.is_a?(Array)
+        options[:only] = [options[:only]]
+      end
+      tables = options[:only].select{|t| t.to_s.in?(default_tables.map(&:to_s)) }
+    elsif options[:except]
+      if !options.is_a?(Array)
+        options[:except] = [options[:except]]
+      end
+      tables = default_tables.select{|t| !t.to_s.in?(options[:except].map(&:to_s)) }
+    else
+      tables = default_tables
+    end
+
+    tables
+  end
+
+  def self.create_tables(options = {})
+    tables = normalize_tables(options)
+
+    if tables.any?
+      tables.each do |t|
+        send("create_#{t}_table")
+      end
+    end
+  end
+
+  def self.drop_tables(options = {})
+    tables = normalize_tables(options)
+
+    if tables.any?
+      tables.each do |t|
+        send("drop_#{t}_table")
+      end
+    end
   end
 end
 

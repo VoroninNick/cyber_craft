@@ -1,12 +1,9 @@
 class CreatePages < ActiveRecord::Migration
-  def change
-    create_table :pages do |t|
-      t.string :type
-      t.string :name
-      t.text :content
-      t.string :url
+  def up
+    Cms.create_pages_table
+  end
 
-      t.timestamps null: false
-    end
+  def down
+    Cms.drop_pages_table
   end
 end
