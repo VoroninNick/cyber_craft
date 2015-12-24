@@ -10,6 +10,7 @@ end
 
 PRODUCTION_CONFIG[:enable_compression] ||= true
 PRODUCTION_CONFIG[:caching] ||= true
+PRODUCTION_CONFIG[:compile] ||= true
 PRODUCTION_CONFIG[:precompile] ||= true
 PRODUCTION_CONFIG[:gzip] ||= true
 PRODUCTION_CONFIG[:deflate] ||= true
@@ -33,7 +34,7 @@ Rails.application.configure do
   # uglifier = Uglifier.new output: { comments: :all }
   # uglifier = Uglifier.new output: { comments: :copyright }
 
-  config.assets.compile = true
+  config.assets.compile = PRODUCTION_CONFIG[:compile]
   config.assets.debug = false
 
   if PRODUCTION_CONFIG[:js_compress]
