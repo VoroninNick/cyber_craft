@@ -42,6 +42,14 @@
   position: relative;
   text-align: center;
 }
+
+.st_img{
+  &.without-line{
+    &:after{
+      display: none !important;
+    }
+  }
+}
 .st_img:after{
   content: '';
   position: absolute;

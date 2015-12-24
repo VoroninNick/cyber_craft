@@ -1,0 +1,15 @@
+.step_content
+  .step_d_bg
+    .col-md-12
+      h3.step_h3
+        span STEP #{number}.
+        = item.name
+  .step_inf_blok
+    .col-md-12.cont_st_step
+      .row
+        .col-md-2.col-sm-2.col-xs-2
+          .st_img.without-line
+            img alt="alt" src=item.icon.url
+        .col-md-10.col-sm-10.col-xs-10
+          .st_cont
+            = raw item.description
