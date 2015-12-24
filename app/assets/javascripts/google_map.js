@@ -63,7 +63,7 @@ initializeGMaps = function(selector, info_window_parent_selector) {
         '</div>'+
         //'<h1 id="firstHeading" class="firstHeading" style="text-align: center;">CyberCraft</h1>'+
         '<div id="bodyContent" style="text-align: center;">'+
-        '<img src="/assets/logo.png" style="width: 100px">'+
+        '<img src="'+images.logo_png+'" style="width: 100px">'+
         '<p>' +
         '7 Slipoho Str. <br />'+
         'Lviv, Ukraine, 79017 <br />'+
