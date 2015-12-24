@@ -506,6 +506,7 @@ RailsAdmin.config do |config|
       field :published
       field :name
       field :icon
+      field :large_icon
       field :short_description do
         help "showed on home page"
       end

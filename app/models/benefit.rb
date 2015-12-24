@@ -9,4 +9,8 @@ class Benefit < ActiveRecord::Base
   attr_accessible :icon
 
 
+  has_attached_file :large_icon
+  do_not_validate_attachment_file_type :large_icon
+  attr_accessible :large_icon
+
 end

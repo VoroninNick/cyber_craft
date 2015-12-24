@@ -1,5 +1,10 @@
 class PagesController < ApplicationController
   before_action :set_page_instance, except: [:under_construction, :index, :process_page]
+  before_action :add_home_breadcrumb, except: [:under_construction, :index, :career]
+  before_action except: [:under_construction, :index, :process_page] do
+    add_breadcrumb(action_name)
+  end
+
   caches_page :index, :about_us, :contacts, :process_page, :terms_of_use, :privacy_policy, :career, :sitemap
 
   def under_construction
@@ -22,21 +27,17 @@ class PagesController < ApplicationController
   end
 
   def contacts
-    set_page_metadata("contacts")
-
-    add_home_breadcrumb
-    add_breadcrumb("contacts")
   end
 
   def process_page
     set_page_metadata("process")
+
+    add_breadcrumb("process")
   end
 
 
 
   def terms_of_use
-    add_home_breadcrumb
-    add_breadcrumb("terms_of_use")
 
     @read_also_entries = %w(privacy_policy)
 
@@ -44,8 +45,6 @@ class PagesController < ApplicationController
   end
 
   def privacy_policy
-    add_home_breadcrumb
-    add_breadcrumb("privacy_policy")
 
     @read_also_entries = %w(terms_of_use)
 
@@ -62,8 +61,7 @@ class PagesController < ApplicationController
   end
 
   def sitemap
-    add_home_breadcrumb
-    add_breadcrumb("sitemap")
+
   end
 
 
