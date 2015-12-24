@@ -4,7 +4,7 @@ if File.exists?(f)
   require f
 end
 
-if defined?(PRODUCTION_CONFIG)
+if !defined?(PRODUCTION_CONFIG)
   PRODUCTION_CONFIG = {}
 end
 
