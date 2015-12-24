@@ -32,6 +32,7 @@ module CyberCraft
 
     #Rails.application.config do |config|
       #config.assets.paths << "/"
+      config.assets.paths << Rails.root.join("public")
     #end
 
 
