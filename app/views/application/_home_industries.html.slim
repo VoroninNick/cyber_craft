@@ -10,7 +10,7 @@ section#wehelp.industries.content-part data-title=("Industries we help")
               img.full-height alt="alt" src=item.index_logo.url(:home_logo)
               h3.section_h3.ins_h3
 
-                a class="with_orange_arrows" href=(SHOW_ALL ? industries_path : "#" )
+                a class="with_orange_arrows" href=industries_path
                   | Industries
                   |&nbsp;
                   span.chos_sbg
@@ -22,7 +22,7 @@ section#wehelp.industries.content-part data-title=("Industries we help")
               p
                 = item.short_description
 
-              a.uz.home-industries-learn-more href=(SHOW_ALL ? industry_path(item) : "#")
+              a.uz.home-industries-learn-more href=industry_path(item)
                 | Learn more
 
 

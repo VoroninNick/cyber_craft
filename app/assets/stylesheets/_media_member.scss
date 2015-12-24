@@ -1,48 +1,48 @@
 /*==========  Desktop First Method  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px) {
+@media only screen and (max-width : rem(1200)) {
 
 
 }
-@media only screen and (max-width : 1100px) {
+@media only screen and (max-width : rem(1100)) {
 
 }
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px) {
+@media only screen and (max-width : rem(992)) {
 
 }
-@media only screen and (max-width : 850px) {
+@media only screen and (max-width : rem(850)) {
 }
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
-  .style_namb {text-align: center;margin-bottom: 35px;}
+@media only screen and (max-width : rem(768)) {
+  .style_namb {text-align: center;margin-bottom: rem(35);}
   .style_namb.manb3 {text-align: center;}
   .team>div {width: 80%;float: none;margin: 0 auto;}
-  .loc_namber {font-size: 50px;padding: 24px 37px;background-size: 100%;}
-  .loc_nam_2 span {bottom: -20px;font-size: 20px;width: 130px;left: 67px;}
-  .loc_namber.loc_nam_3 {margin-right: 0px;}
-  .loc_nam_3 span {bottom: -20px;left: 70px;font-size: 20px; width: 127px;}
-  .loc_nam_1 span {bottom: -20px;left: 67px;font-size: 20px;}
-  .loc_namber.loc_nam_1 {line-height: 35px;}
+  .loc_namber {font-size: rem(50);padding: rem(24) rem(37);background-size: 100%;}
+  .loc_nam_2 span {bottom: rem(-20);font-size: rem(20);width: rem(130);left: rem(67);}
+  .loc_namber.loc_nam_3 {margin-right: 0;}
+  .loc_nam_3 span {bottom: rem(-20);left: rem(70);font-size: rem(20); width: rem(127);}
+  .loc_nam_1 span {bottom: rem(-20);left: rem(67);font-size: rem(20);}
+  .loc_namber.loc_nam_1 {line-height: rem(35);}
   .loc_namber.loc_nam_1 span {line-height: 1.1;}
 }
-@media only screen and (max-width : 650px) {
+@media only screen and (max-width : rem(650)) {
 
 }
-@media only screen and (max-width : 600px) {
+@media only screen and (max-width : rem(600)) {
   .team>div {width: 90%;}
 }
-@media only screen and (max-width : 550px) {
+@media only screen and (max-width : rem(550)) {
 
 }
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px) {
+@media only screen and (max-width : rem(480)) {
 
 }
 
 /* Custom, iPhone Retina */
-@media only screen and (max-width : 320px) {
+@media only screen and (max-width : rem(320)) {
 
 }
 
@@ -50,30 +50,30 @@
 /*==========  Mobile First Method  ==========*/
 
 /* Custom, iPhone Retina */
-@media only screen and (min-width : 320px) {
+@media only screen and (min-width : rem(320)) {
 
 }
 
 /* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px) {
+@media only screen and (min-width : rem(480)) {
 
 }
 
 /* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
+@media only screen and (min-width : rem(768)) {
 
 }
 
 /* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
+@media only screen and (min-width : rem(992)) {
 
 }
 
 /* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
+@media only screen and (min-width : rem(1200)) {
 
 }
 /* Large Devices, Wide Screens */
-@media only screen and (min-width : 1400px) {
-  .loc_namber.loc_nam_3 {margin-right: 0px;}
+@media only screen and (min-width : rem(1400)) {
+  .loc_namber.loc_nam_3 {margin-right: 0;}
 }

@@ -1,21 +1,19 @@
-require Rails.root.join("app/helpers/meta_data_helper.rb").to_s
+
 
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   #protect_from_forgery with: :exception
 
-  before_action do
-    ::SHOW_ALL = !request.host.scan(/cybercraft/).any?
-  end
-
 
   include ActionView::Helpers::OutputSafetyHelper
   include ActionView::Helpers::AssetUrlHelper
-  include PagesHelper
-  #include SeoTagsHelper
-  include MetaDataHelper
-  include NavigationHelper
+  include ActionView::Helpers::TagHelper
+  include Cms::Helpers::PagesHelper
+  include Cms::Helpers::MetaDataHelper
+  include Cms::Helpers::NavigationHelper
+
+
 
   before_action do
     @_response.headers['Access-Control-Allow-Origin'] = '*'

@@ -4,7 +4,7 @@
   - items.each_with_index do |item, index|
     .wow.zoomIn class=icon_class
 
-      a href=(SHOW_ALL ? url_for(item) : "#")
+      a href=url_for(item)
         .team_con
           .team1.team_bg style=("background-image: url(#{item.avatar.url}), url(#{asset_path('yellow_12.png')})" if true)
             /= inline_svg(item.avatar.url)

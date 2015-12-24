@@ -14,29 +14,29 @@ Rails.application.routes.draw do
 
 
 
-  if SHOW_ALL
-    controller :pages do
-      get "about-us", action: "about_us"
-      get "contacts"
-      get "process", action: "process_page", defaults: { route_name: :process }
-      get "terms-of-use", action: "terms_of_use"
-      get "privacy-policy", action: "privacy_policy"
-      get "career"
-      get "sitemap"
-    end
 
-    resources "teams", only: [:index, :show]
-    resources "services", only: [:index, :show]
-    resources "industries", only: [:index, :show]
-    resources "benefits", only: [:index, :show]
-
-    scope "blog", controller: "blog" do
-      get "", action: "index", as: :blog
-      get ":id", action: "show", as: "blog_article"
-      get "/tags/:tags", action: "index", as: :article_tags
-    end
-
+  controller :pages do
+    get "about-us", action: "about_us"
+    get "contacts"
+    get "process", action: "process_page", defaults: { route_name: :process }
+    get "terms-of-use", action: "terms_of_use"
+    get "privacy-policy", action: "privacy_policy"
+    get "career"
+    get "sitemap"
   end
+
+  resources "teams", only: [:index, :show]
+  resources "services", only: [:index, :show]
+  resources "industries", only: [:index, :show]
+  resources "benefits", only: [:index, :show]
+
+  scope "blog", controller: "blog" do
+    get "", action: "index", as: :blog
+    get ":id", action: "show", as: "blog_article"
+    get "/tags/:tags", action: "index", as: :article_tags
+  end
+
+
 
   post "career", to: "vacancies#create", as: :vacancy_request
 

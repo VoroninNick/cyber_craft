@@ -14,32 +14,32 @@
 }
 .loc_bg {
   background: image_url("aboutusdotted.png") repeat, image_url("aboutuscop.png") no-repeat top right;
-  padding: 30px 0 95px 0;
+  padding: rem(30) 0 rem(95) 0;
 }
 .loc_namber {
   @include orbitron-medium;
   text-align: center;
   display: inline-block;
   background: image_url("bgaboutus.png") no-repeat top center;
-  font-size: 65px;
+  font-size: rem(65);
   color: #ff9800;
 
-  padding: 24px 56px;
+  padding: rem(24) rem(56);
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: rem(40);
 }
 .loc_nam_1 span{
   position: absolute;
-  bottom: -37px;
-  left: 100px;
-  font-size: 30px;
+  bottom: rem(-37);
+  left: rem(100);
+  font-size: rem(30);
   text-align: left;
   text-transform: uppercase;
 }
 .location p {
   font-size: $body-font-size;
-  line-height: 20px;
-  margin-bottom: 24px;
+  line-height: rem(20);
+  margin-bottom: rem(24);
 }
 
 
@@ -51,29 +51,29 @@
    Meet the team
 ---------------------------------------------------------*/
 .a_careers {
-  margin-bottom: 40px;
+  margin-bottom: rem(40);
 }
 .meet {
-  margin-bottom: 115px;
+  margin-bottom: rem(115);
 }
 .style_namb.manb2 {
   text-align: center;
-  margin-top: -45px;
+  margin-top: rem(-45);
 }
 .loc_nam_2 span{
   position: absolute;
-  bottom: -37px;
-  left: 100px;
-  font-size: 30px;
+  bottom: rem(-37);
+  left: rem(100);
+  font-size: rem(30);
   text-align: left;
-  width: 200px;
+  width: rem(200);
   text-transform: uppercase;
 }
 .team_boot {
-  margin-bottom: 46px;
+  margin-bottom: rem(46);
 }
 .team>div {
-  padding: 0px;
+  padding: 0;
 }
 .team_img {
   overflow: hidden;
@@ -88,10 +88,10 @@
 .member-hover {
   display: none;
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   width: 100%;
 
-  padding: 7px 0;
+  padding: rem(7) 0;
   z-index: 2;
 }
 
@@ -101,7 +101,7 @@
 .member-hover p{
   color: #fff;
   text-align: center;
-  margin: 0px;
+  margin: 0;
 }
 .a_careers:hover .fildr_bgimg{
   display: none;
@@ -123,7 +123,7 @@
   position: relative;
   background: #fff;
   text-align: center;
-  padding: 10px 0;
+  padding: rem(10) 0;
 }
 .tem_name {
   @include orbitron-regular;
@@ -134,7 +134,7 @@
 .team_work {
   @include ubuntu-italic;
   color: #78909c;
-  font-size: 14px;
+  font-size: rem(14);
 }
 .member-social-links {
   display: none;
@@ -142,12 +142,12 @@
   height: 100%;
   width: 100%;
   background:#ff9800;
-  top: 0px;
-  padding: 17px 0px;
+  top: rem(0);
+  padding: rem(17) 0;
   text-align: center;
 }
 .team_initials_hover a{
-  padding: 0 5px;
+  padding: 0 rem(5);
 }
 .team_initials_hover a:hover{
   opacity: 0.8;
@@ -166,30 +166,30 @@
 /* ---------------------------------------------------------
    OUR LOCATION
 ---------------------------------------------------------*/
-.ourlocation{background: #fff image_url("aboutusmap.png") no-repeat top center;    padding-bottom: 41px;}
+.ourlocation{background: #fff image_url("aboutusmap.png") no-repeat top center;    padding-bottom: rem(41);}
 .style_namb.manb3 {
   text-align: right;
-  margin-top: -45px;
+  margin-top: rem(-45);
 }
 .loc_nam_3 span{
   position: absolute;
-  bottom: -37px;
-  left: 100px;
-  font-size: 30px;
+  bottom: rem(-37);
+  left: rem(100);
+  font-size: rem(30);
   text-align: left;
-  width: 189px;
+  width: rem(189);
   text-transform: uppercase;
 }
 .our_loc {
-  margin-top: 285px;
+  margin-top: rem(285);
 }
 .ourlocation p {
   font-size: $body-font-size;
-  line-height: 20px;
-  margin-bottom: 24px;
+  line-height: rem(20);
+  margin-bottom: rem(24);
 }
 
-.loc_namber.loc_nam_3 {margin-right: 113px;}
+.loc_namber.loc_nam_3 {margin-right: rem(113);}
 
 @media (max-width: 640px), (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 960px), (min-resolution: 144dpi) and (max-width: 960px) {
   .style_namb.manb3, .style_namb.manb2{
