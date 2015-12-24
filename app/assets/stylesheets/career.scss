@@ -18,7 +18,7 @@
   @include transform(translateY(-50%))
 }
 .career_header {
-  background: #32393F url(career_bg_dotted.png) repeat;
+  background: #32393F image_url("career_bg_dotted.png") repeat;
 }
 .sect_clogan.choos_bgp_carer {
   color: #B2BDC3;
@@ -167,14 +167,14 @@ ul#countdown li p.timeRefDays, ul#countdown li p.timeRefHours, ul#countdown li p
   padding-top: 104px;
   margin-bottom: 30px;
 }
-.cib_1{background: url(careersvacancies.png) no-repeat top center;}
-.cib_2{background: url(careersbeneﬁts.png) no-repeat top center;}
-.cib_3{background: url(careerscybercraft.png) no-repeat top center;}
+.cib_1{background: image_url("careersvacancies.png") no-repeat top center;}
+.cib_2{background: image_url("careersbenefits.png") no-repeat top center;}
+.cib_3{background: image_url("careerscybercraft.png") no-repeat top center;}
 /* ---------------------------------------------------------
    Footer form
 ---------------------------------------------------------*/
 .career_footer_form {
-  background: #32393F url(career_bg_dotted.png) repeat;
+  background: #32393F image_url("career_bg_dotted.png") repeat;
   border-bottom: 1px solid #29343A;
   padding: 30px 0 125px 0;
 }

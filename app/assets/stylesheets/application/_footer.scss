@@ -32,16 +32,16 @@
 
 
 .cont_inf_services .cont_tel {
-  background: url(icon_10.png) no-repeat top left;
+  background: image_url("icon_10.png") no-repeat top left;
 }
 .cont_inf_services .cont_map {
-  background: url(icon_07.png) no-repeat top left;
+  background: image_url("icon_07.png") no-repeat top left;
 }
 .cont_inf_services .cont_mail {
-  background: url(icon_17.png) no-repeat top left;
+  background: image_url("icon_17.png") no-repeat top left;
 }
 .cont_inf_services .cont_skype {
-  background: url(icon_10.png) no-repeat top left;
+  background: image_url("icon_10.png") no-repeat top left;
 }
 .footer-menu {
   margin: 0 0 20px -2px;
@@ -131,22 +131,22 @@
   }
 
   .cont_mail{
-    background-image: url(icon_17.png);
+    background-image: image_url("icon_17.png");
   }
 
   .cont_map {
-    background-image: url(icon_07.png);
+    background-image: image_url("icon_07.png");
     span {
       display: block;
     }
   }
 
   .cont_skype{
-    background-image: url(icon_15.png);
+    background-image: image_url("icon_15.png");
   }
 
   .cont_tel {
-    background-image: url(icon_10.png);
+    background-image: image_url("icon_10.png");
     a {
 
     }

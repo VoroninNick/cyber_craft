@@ -50,7 +50,7 @@
   bottom: -102px;
   left: 55px;
   background: #000;
-  background: url(step_arrow.png) no-repeat center bottom;
+  background: image_url("step_arrow.png") no-repeat center bottom;
 }
 .st_img_4:after{display: none;}
 .st_cont h3 {
@@ -85,11 +85,11 @@
   margin-bottom: 23px;
   padding-bottom: 20px;
 }
-.bloc_iconbor1{background: url(iconprocess.png) no-repeat top left;}
-.bloc_iconbor2{background: url(iconprocess_02.png) no-repeat top left;}
-.bloc_iconbor3{background: url(iconprocess_03.png) no-repeat top left;}
-.bloc_iconbor4{background: url(iconprocess_04.png) no-repeat top left;}
-.bloc_iconbor5{background: url(iconprocess_05.png) no-repeat top left;}
+.bloc_iconbor1{background: image_url("iconprocess.png") no-repeat top left;}
+.bloc_iconbor2{background: image_url("iconprocess_02.png") no-repeat top left;}
+.bloc_iconbor3{background: image_url("iconprocess_03.png") no-repeat top left;}
+.bloc_iconbor4{background: image_url("iconprocess_04.png") no-repeat top left;}
+.bloc_iconbor5{background: image_url("iconprocess_05.png") no-repeat top left;}
 .step_blokinfic li p{
   font-size: $body-font-size;
 }

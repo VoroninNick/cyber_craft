@@ -13,14 +13,14 @@
 
 }
 .loc_bg {
-  background: url(aboutusdotted.png) repeat, url(aboutuscop.png) no-repeat top right;
+  background: image_url("aboutusdotted.png") repeat, image_url("aboutuscop.png") no-repeat top right;
   padding: 30px 0 95px 0;
 }
 .loc_namber {
   @include orbitron-medium;
   text-align: center;
   display: inline-block;
-  background: url(bgaboutus.png) no-repeat top center;
+  background: image_url("bgaboutus.png") no-repeat top center;
   font-size: 65px;
   color: #ff9800;
 
@@ -166,7 +166,7 @@
 /* ---------------------------------------------------------
    OUR LOCATION
 ---------------------------------------------------------*/
-.ourlocation{background: #fff url(aboutusmap.png) no-repeat top center;    padding-bottom: 41px;}
+.ourlocation{background: #fff image_url("aboutusmap.png") no-repeat top center;    padding-bottom: 41px;}
 .style_namb.manb3 {
   text-align: right;
   margin-top: -45px;

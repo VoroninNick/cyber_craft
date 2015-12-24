@@ -408,12 +408,12 @@ Main page Logo
   text-align: center;
 }
 .learnmore a{
-  background: url(learnmore.png) no-repeat top center;
+  background: image_url("learnmore.png") no-repeat top center;
   padding-top: 40px;
   color:#fff;
 }
 .learnmore a:hover{
-  background: url(learnmore.png) no-repeat top center;
+  background: image_url("learnmore.png") no-repeat top center;
   padding-top: 38px;
   text-decoration: none;
 }
@@ -511,7 +511,7 @@ Main page Logo
   position: absolute;
   top: 0px;
   display: none;
-  background:#fff url(/assets/teamshower.png) no-repeat center center;
+  background:#fff image_url("teamshower.png") no-repeat center center;
   background-size: 100%;
   z-index: 999;
   width: 130px;
@@ -684,18 +684,18 @@ ul.industrieswehelp{
   z-index: 9999;
 }
 .industries .bx-wrapper .bx-prev:hover{
-  background: url(slideserviselefthover.png) no-repeat 0 0px;
+  background: image_url("slideserviselefthover.png") no-repeat 0 0px;
 }
 .industries .bx-wrapper .bx-next:hover{
-  background: url(slideserviserighthover.png) no-repeat 0 0px;
+  background: image_url("slideserviserighthover.png") no-repeat 0 0px;
 }
 .industries .bx-wrapper .bx-prev {
   left: 10px;
-  background: url(slideserviseleft.png) no-repeat 0 0px;
+  background: image_url("slideserviseleft.png") no-repeat 0 0px;
 }
 .industries .bx-wrapper .bx-next {
   right: 10px;
-  background: url(slideserviseright.png) no-repeat 0px 0px;
+  background: image_url("slideserviseright.png") no-repeat 0px 0px;
 }
 
 .home-industries-banner-image-div{
@@ -776,7 +776,7 @@ ul.industrieswehelp{
   right: 20px;
   width: 26px;
   height: 26px;
-  background: url(iconprovide.png) no-repeat top center;
+  background: image_url("iconprovide.png") no-repeat top center;
   padding-top: 3px;
   text-align: center;
   font-size: 14px;
@@ -790,7 +790,7 @@ ul.industrieswehelp{
   right: 20px;
   width: 26px;
   height: 26px;
-  background: url(iconprovide.png) no-repeat top center;
+  background: image_url("iconprovide.png") no-repeat top center;
   padding-top: 3px;
   text-align: center;
   font-size: 14px;
@@ -804,7 +804,7 @@ ul.industrieswehelp{
   right: 20px;
   width: 26px;
   height: 26px;
-  background: url(iconprovide.png) no-repeat top center;
+  background: image_url("iconprovide.png") no-repeat top center;
   padding-top: 3px;
   text-align: center;
   font-size: 14px;
@@ -818,7 +818,7 @@ ul.industrieswehelp{
   right: 20px;
   width: 26px;
   height: 26px;
-  background: url(iconprovide.png) no-repeat top center;
+  background: image_url("iconprovide.png") no-repeat top center;
   padding-top: 3px;
   text-align: center;
   font-size: 14px;
@@ -835,7 +835,7 @@ ul.industrieswehelp{
   right: 65%;
   width: 35%;
   height: 26px;
-  background: url(icon_29.png) no-repeat top center;
+  background: image_url("icon_29.png") no-repeat top center;
   background-size: 79%;
   padding-top: 3px;
   text-align: center;
@@ -852,7 +852,7 @@ ul.industrieswehelp{
   right: -32%;
   width: 60%;
   height: 26px;
-  background: url(arrow1.png) no-repeat top center;
+  background: image_url("arrow1.png") no-repeat top center;
   background-size: 100%;
   padding-top: 3px;
   text-align: center;
@@ -867,7 +867,7 @@ ul.industrieswehelp{
   right: -32%;
   width: 60%;
   height: 26px;
-  background: url(arrow1.png) no-repeat top center;
+  background: image_url("arrow1.png") no-repeat top center;
   background-size: 100%;
   padding-top: 3px;
   text-align: center;
@@ -882,7 +882,7 @@ ul.industrieswehelp{
   right: -32%;
   width: 60%;
   height: 26px;
-  background: url(arrow1.png) no-repeat top center;
+  background: image_url("arrow1.png") no-repeat top center;
   background-size: 100%;
   padding-top: 3px;
   text-align: center;
@@ -897,17 +897,17 @@ ul.industrieswehelp{
   right: -5%;
   width: 35%;
   height: 26px;
-  background: url(icon_29.png) no-repeat top center;
+  background: image_url("icon_29.png") no-repeat top center;
   background-size: 79%;
   padding-top: 3px;
   text-align: center;
   font-size: 14px;
   color: $orange-color;
 }
-.wi_1{    background: url(requirements.png) no-repeat top center;}
-.wi_2{    background: url(candidates.png) no-repeat top center;}
-.wi_3{    background: url(developers.png) no-repeat top center;}
-.wi_4{    background: url(working.png) no-repeat top center;}
+.wi_1{    background: image_url("requirements.png") no-repeat top center;}
+.wi_2{    background: image_url("candidates.png") no-repeat top center;}
+.wi_3{    background: image_url("developers.png") no-repeat top center;}
+.wi_4{    background: image_url("working.png") no-repeat top center;}
 .work_icon h3 {
   @include orbitron-medium;
   font-size: 14px;
@@ -946,16 +946,16 @@ ul.industrieswehelp{
 .choos_content {
   padding-left: 50px;
 }
-.ch_1 {    background: url(lackofneeded.png) no-repeat left top;}
-.ch_2 {    background: url(costsaving.png) no-repeat left top;}
-.ch_3 {    background: url(quicklaunch.png) no-repeat left top;}
-.ch_4 {    background: url(minimumefforts.png) no-repeat left top;}
-.ch_5 {    background: url(fullintegration.png) no-repeat left top;}
-.ch_6 {    background: url(nofinancialrisks.png) no-repeat left top;}
-.ch_7 {    background: url(highestuality.png) no-repeat left top;}
-.ch_8 {    background: url(highestlevel.png) no-repeat left top;}
-.ch_9 {    background: url(projectmanagement.png) no-repeat left top;}
-.ch_10 {    background: url(geographicalproximity.png) no-repeat left top;}
+.ch_1 {    background: image_url("lackofneeded.png") no-repeat left top;}
+.ch_2 {    background: image_url("costsaving.png") no-repeat left top;}
+.ch_3 {    background: image_url("quicklaunch.png") no-repeat left top;}
+.ch_4 {    background: image_url("minimumefforts.png") no-repeat left top;}
+.ch_5 {    background: image_url("fullintegration.png") no-repeat left top;}
+.ch_6 {    background: image_url("nofinancialrisks.png") no-repeat left top;}
+.ch_7 {    background: image_url("highestuality.png") no-repeat left top;}
+.ch_8 {    background: image_url("highestlevel.png") no-repeat left top;}
+.ch_9 {    background: image_url("projectmanagement.png") no-repeat left top;}
+.ch_10 {    background: image_url("geographicalproximity.png") no-repeat left top;}
 
 
 
@@ -968,7 +968,7 @@ ul.industrieswehelp{
 .slogan_people {
   width: 26px;
   height: 26px;
-  background: url(peoplesays.png) no-repeat top center;
+  background: image_url("peoplesays.png") no-repeat top center;
   margin-bottom: -9px;
   margin-left: 7px;
   display: inline-block;
@@ -979,7 +979,7 @@ ul.industrieswehelp{
 }
 .y_posit {
   float: right;
-  background: url(punktuation.png) no-repeat 15px top;
+  background: image_url("punktuation.png") no-repeat 15px top;
   padding-top: 34px;
 }
 .owl_people {
@@ -1009,12 +1009,12 @@ ul.industrieswehelp{
 .people_say .owl-theme .owl-controls .owl-buttons .owl-prev {
   position: absolute;
   left: -40px;
-  background:#ECEFF1 url(sliderightpeoplesays.png) no-repeat top center;
+  background:#ECEFF1 image_url("sliderightpeoplesays.png") no-repeat top center;
 }
 .people_say .owl-theme .owl-controls .owl-buttons .owl-next {
   position: absolute;
   right: -40px;
-  background:#ECEFF1 url(slideleftpeoplesays.png) no-repeat top center;
+  background:#ECEFF1 image_url("slideleftpeoplesays.png") no-repeat top center;
 }
 .people_say .owl-theme .owl-controls .owl-buttons div{
   width: 38px;
@@ -1108,12 +1108,12 @@ ul.industrieswehelp{
 .teg_new {
   width: 47px;
   height: 41px;
-  background: url(newarticle.png) no-repeat left top;
+  background: image_url("newarticle.png") no-repeat left top;
 }
 .teg_new {
   width: 47px;
   height: 41px;
-  background: url(newarticle.png) no-repeat left top;
+  background: image_url("newarticle.png") no-repeat left top;
   position: absolute;
   top: 10px;
   left: 10px;
@@ -1130,7 +1130,7 @@ ul.industrieswehelp{
   opacity: 0.8;
 }
 .fildr_bgimg {
-  background: url(philteer.png)repeat top center;
+  background: image_url("philteer.png")repeat top center;
   opacity: 0.5;
   position: absolute;
   top: 0px;
@@ -1234,10 +1234,10 @@ ul.industrieswehelp{
   }
 }
 
-.cont_tel { background: url(phone.png) no-repeat top left;}
-.cont_mail { background: url(email.png) no-repeat top left;     margin-bottom: 35px;}
-.cont_map { background: url(map.png) no-repeat top left;}
-.cont_skype { background: url(skype.png) no-repeat top left;}
+.cont_tel { background: image_url("phone.png") no-repeat top left;}
+.cont_mail { background: image_url("email.png") no-repeat top left;     margin-bottom: 35px;}
+.cont_map { background: image_url("map.png") no-repeat top left;}
+.cont_skype { background: image_url("skype.png") no-repeat top left;}
 
 .cont_inf li a sup {
   color: #fff;
@@ -1444,7 +1444,7 @@ footer a:hover{
   //margin-top: 5px;
 }
 .f_compani {
-  background: url(VoroninDesignStudio.png) no-repeat left center;
+  background: image_url("VoroninDesignStudio.png") no-repeat left center;
   padding: 15px 0 11px 50px;
 }
 .f_icon:hover{
@@ -1452,10 +1452,10 @@ footer a:hover{
 }
 
 .fi_f{
-  background: url(footerfacebook.png) no-repeat top center;
+  background: image_url("footerfacebook.png") no-repeat top center;
 }
 .fi_i{
-  background: url(footerin.png) no-repeat top center;
+  background: image_url("footerin.png") no-repeat top center;
 }
 
 .test {}
