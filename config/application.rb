@@ -32,7 +32,9 @@ module CyberCraft
 
     #Rails.application.config do |config|
       #config.assets.paths << "/"
+    if !ENV['SKIP_PUBLIC_ASSETS'] && !ENV['SPA']
       config.assets.paths << Rails.root.join("public")
+    end
     #end
 
 
