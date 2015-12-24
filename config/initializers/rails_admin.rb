@@ -102,7 +102,7 @@ RailsAdmin.config do |config|
 
 
 
-  config.included_models += [FormConfig, FormConfigs::Message, FormConfigs::VacancyRequest, VacancyRequest, Message, User]
+  config.included_models += [Cms::FormConfig, FormConfigs::Message, FormConfigs::VacancyRequest, VacancyRequest, Message, User]
 
   config.included_models += page_model_names
 
@@ -445,7 +445,7 @@ RailsAdmin.config do |config|
 
   end
 
-  config.model FormConfig do
+  config.model Cms::FormConfig do
     visible false
   end
 
