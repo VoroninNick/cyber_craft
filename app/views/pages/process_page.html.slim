@@ -6,4 +6,4 @@ section.step
           p.step_slogan Set up your remote Dedicated Development Team in four simple steps
       - if @process_steps.try(&:any?)
         - @process_steps.each_with_index do |b, i|
-          = render "benefit_item", item: b, number: i + 1
+          = render "benefit_item", item: b, number: i + 1, without_line: (i + 1) == @process_steps.length
