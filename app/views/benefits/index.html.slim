@@ -28,11 +28,11 @@ section.step
             |Top&nbsp;
             span class="chos_sbg"
               |10 reasons
-        p class="sect_clogan choos_bgp"
-          |Top 10 reasons to build your remote Dedicated Development Team with CyberCraft
+        p class="sect_clogan choos_bgp benefits-subtitle"
+          |to build your remote Dedicated Development Team with CyberCraft
 
 
 
       - if @benefits.try(&:any?)
         - @benefits.each_with_index do |b, i|
-            = render "benefit_item", item: b, number: i + 1
+            = render "benefit_item", item: b, number: i + 1, icon_attachment_name: :large_icon, prefix: ""

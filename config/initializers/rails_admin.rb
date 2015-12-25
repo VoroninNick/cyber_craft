@@ -95,7 +95,7 @@ RailsAdmin.config do |config|
     # history_show
 
     nestable do
-      only [Industry, Team, Member, Benefit, UserFeedback, EmployeeFeedback]
+      only [Industry, Team, Member, Benefit, UserFeedback, EmployeeFeedback, ProcessStep]
     end
   end
 
@@ -112,7 +112,7 @@ RailsAdmin.config do |config|
 
   config.included_models += [FileEditor]
 
-  config.included_models += [Member, Benefit]
+  config.included_models += [Member, Benefit, ProcessStep]
 
 
 
@@ -312,6 +312,8 @@ RailsAdmin.config do |config|
       field :views do
         read_only true
       end
+
+      field :seo_tags
     end
 
     list do
@@ -523,6 +525,17 @@ RailsAdmin.config do |config|
       field :short_description do
         help "showed on home page"
       end
+      field :description
+    end
+  end
+
+  config.model ProcessStep do
+    nestable_list position_field: :position
+
+    edit do
+      field :published
+      field :name
+      field :icon
       field :description
     end
   end

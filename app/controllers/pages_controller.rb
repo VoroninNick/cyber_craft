@@ -33,6 +33,8 @@ class PagesController < ApplicationController
     set_page_metadata("process")
 
     add_breadcrumb("process")
+
+    @process_steps = ProcessStep.published.sort_by_sorting_position
   end
 
 
