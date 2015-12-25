@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   before_action :set_page_instance, except: [:under_construction, :index, :process_page]
   before_action :add_home_breadcrumb, except: [:under_construction, :index, :career]
-  before_action except: [:under_construction, :index, :process_page] do
+  before_action except: [:under_construction, :index, :process_page, :career] do
     add_breadcrumb(action_name)
   end
 

@@ -8,13 +8,13 @@ header.header_style_career
   .title_page.title_page_career.disable-scroll
     .container
       .row
-        h1
+        h1.page-name
           span Career
         p.sect_clogan.choos_bgp_carer We’re coming soon
         /! TIMER
         .timer-area
           .timer_until_opening
-            ul#countdown
+            /ul#countdown
               li
                 span.days 00
                 p.timeRefDays days
@@ -27,6 +27,10 @@ header.header_style_career
               li
                 span.seconds.seconds_bg 00
                 p.timeRefSeconds seconds
+            #career-countdown
+              /time datetime="2015-10-24T16:47:00+0000"
+              /time datetime="2015-12-31T16:47:00+0000"
+              time datetime=@page_instance.try{|p| p.career_site_date_time.try(&:to_s) }
             p.career_until_opening ...until opening
         /! end timer-area
         a.career_send_message href="#career_footer_scrol1"  Send Us A Message

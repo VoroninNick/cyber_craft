@@ -18,8 +18,9 @@ module ApplicationHelper
     output.html_safe
   end
 
-  def sharing_popup
-    render "sharing_popup"
+  def sharing_popup(title = nil)
+    title ||= @page_instance.try(&:name)
+    render "sharing_popup", title: title
   end
 
   def sharing_panel(date = nil)

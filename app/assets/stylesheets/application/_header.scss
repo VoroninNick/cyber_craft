@@ -38,7 +38,7 @@
   top: 42%;
   text-align: center;
 }
-.title_page h1 {
+.title_page .page-name {
   @include orbitron-regular;
   font-weight: 500;
   font-style: normal;
@@ -54,7 +54,7 @@
   text-transform: uppercase;
 }
 .title_page {
-  span {
+  .page-name span {
     padding: 0 20px;
 
     &:first-child:before, &:last-child:after{
@@ -71,7 +71,7 @@
   }
 
   &:not(.constant-breaks) {
-    span {
+    .page-name span {
       @media (max-width: rem(992)) {
         & {
           display: block;

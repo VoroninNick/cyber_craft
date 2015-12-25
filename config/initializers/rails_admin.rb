@@ -164,9 +164,19 @@ RailsAdmin.config do |config|
     pages_navigation_label
 
     edit do
-      field :banner
-      field :bottom_banner
-      field :bottom_banner_description
+      #field :banner
+      #field :bottom_banner
+      #field :bottom_banner_description
+      field :career_site_date, :datetime do
+        def value
+          val = bindings[:object].send(:career_site_date)
+          if val.present?
+            return DateTime.parse(val)
+          end
+
+          return nil
+        end
+      end
       field :seo_tags
     end
   end

@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
 
   controller :pages do
+    get "under_construction"
     get "about-us", action: "about_us"
     get "contacts"
     get "process", action: "process_page", defaults: { route_name: :process }

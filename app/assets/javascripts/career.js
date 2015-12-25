@@ -6,16 +6,18 @@ if($("html[data-controller=pages][data-action=career]").length) {
     });
 
 
-    $(document).ready(function () {
-        $("#countdown").countdown({
-                date: "21 december 2015 11:51:00",
-                format: "on"
-            },
+    //$(document).ready(function () {
+    //    $("#countdown").countdown({
+    //            date: "21 december 2015 11:51:00",
+    //            format: "on"
+    //        },
+    //
+    //        function () {
+    //            // callback function
+    //        });
+    //});
 
-            function () {
-                // callback function
-            });
-    });
+    $("#career-countdown time").countDown()
 
 
 // Scrol career block2

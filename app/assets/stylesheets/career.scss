@@ -15,15 +15,18 @@
   z-index: 3;
   //top: 15%;
   top: 50%;
-  @include transform(translateY(-50%))
+  @include transform(translateY(-50%));
+
 }
 .career_header {
   background: #32393F image_url("career_bg_dotted.png") repeat;
+  height: 100vh !important;
+  min-height: 600px;
 }
 .sect_clogan.choos_bgp_carer {
   color: #B2BDC3;
 }
-.title_page.title_page_career h1 {line-height: 52px; background: transparent;}
+.title_page.title_page_career .page-name {line-height: 52px; background: transparent; span{padding: 0 !important;background: transparent !important;} }
 
 .career_send_message {
   text-transform: uppercase;
@@ -110,11 +113,12 @@ ul#countdown li p.timeRefDays, ul#countdown li p.timeRefHours, ul#countdown li p
 }
 .timer_until_opening {
   display: inline-block;
+  width: 960px;
+  max-width: 100%;
 }
 /* ---------------------------------------------------------
    End Header Beautiful jQuery Countdown Timer
 ---------------------------------------------------------*/
-
 
 
 
@@ -318,5 +322,84 @@ footer .intro_career_foot p,  .success-message p{
     .submit-buttons-row{
       margin-top: rem(30);
     }
+  }
+}
+
+
+#career-countdown{
+  time {
+    width: 100%;
+    @include flexbox;
+    @include justify-content(space-around);
+  }
+
+  .item{
+    display: inline-block;
+    background: #FFF;
+    text-align: center;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    height: 170px;
+    width: 170px;
+    padding-top: 14px;
+    //margin-right: 75px;
+
+
+  }
+
+  .number{
+    font-size: 72px;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 500;
+    color: #374047;
+    line-height: 108px;
+    position: relative;
+    letter-spacing: 4px;
+    padding-top: 27px;
+    top: 15px;
+  }
+
+  .label{
+    display: block;
+    color: #909091;
+    font-size: 21px;
+    font-weight: 200;
+    font-style: italic;
+    line-height: 7px;
+  }
+
+  span{
+    padding: 0;
+    &:before, &:after{
+      display: none !important;
+    }
+  }
+
+
+
+  @media only screen and (max-width : 992px) {
+    .item {height: 140px;width: 140px;margin-right: 35px;}
+    .number {font-size: 50px;line-height: 80px;}
+    .label{
+      font-size: 19px;}
+  }
+
+  @media only screen and (max-width : 768px) {
+    .item {height: 110px;width: 110px;margin-right: 20px;}
+    .number {font-size: 35px;line-height: 55px;display: inline-block;padding: 0; padding-top: 7px;top: 7px;}
+  }
+
+  @media only screen and (max-width : 600px) {
+    .career_tagline {width: 95%;}
+    .item {height: 80px;width: 80px;margin-right: 20px;}
+    .number {font-size: 25px;line-height: 46px;padding: 0;padding-top: 0px;}
+    .label { font-size: 13px;}
+  }
+
+  @media only screen and (max-width : 480px) {
+    .item {height: 65px;width: 65px;margin-right: 5px;    padding-top: 12px;}
+    .numbert {font-size: 25px;line-height: 31px;}
+
   }
 }

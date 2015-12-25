@@ -22,7 +22,8 @@
       .subtitle.italic
         |We are working on our new website and will launch it soon
       .countdown
-        time datetime="2015-10-24T16:47:00+0000"
+        /time datetime=@page.try{|p| p.career_site_date_time.try(&:to_s) }
+        time datetime="2015-12-31T16:47:00+0000"
       .right.right-indent.italic
         |...until opening
 

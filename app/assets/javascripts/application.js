@@ -39,7 +39,7 @@
 
 
 // for career
-//= require countdown
+//= require jquery.countdown
 
 // for blog index
 // require select2/dist/js/select2.min

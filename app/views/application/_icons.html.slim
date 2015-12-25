@@ -1,13 +1,14 @@
 - icon_class ||= "col-md-2 col-sm-4 col-xs-4 industry-icon"
 - wrapper_class ||= ""
-.row.teams_stul class=wrapper_class
-  - items.each_with_index do |item, index|
-    .wow.zoomIn class=icon_class
+.teams_stul class=wrapper_class
+  .row
+    - items.each_with_index do |item, index|
+      .wow.zoomIn class=icon_class
 
-      a href=url_for(item)
-        .team_con
-          .team1.team_bg style=("background-image: url(#{item.avatar.url}), url(#{asset_path('yellow_12.png')})" if true)
-            /= inline_svg(item.avatar.url)
-          .team_cont
-            p
-              = item.name
+        a href=url_for(item)
+          .team_con
+            .team1.team_bg style=("background-image: url(#{item.avatar.url}), url(#{asset_path('yellow_12.png')})" if true)
+              /= inline_svg(item.avatar.url)
+            .team_cont
+              p
+                = item.name
