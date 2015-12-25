@@ -36,6 +36,14 @@ def ck_editor_field(name, &block)
   end
 end
 
+def content_field(name, type = :ck_editor)
+  field name, type do
+    def value
+      bindings[:object].send(name)
+    end
+  end
+end
+
 def slim_editor_field(name)
   field name, :text do
     def value
@@ -189,6 +197,7 @@ RailsAdmin.config do |config|
       field :bottom_banner
       field :bottom_banner_description
       #field :intro, :ck_editor
+      content_field(:intro, :text)
       field :seo_tags
     end
   end
@@ -234,10 +243,12 @@ RailsAdmin.config do |config|
 
     edit do
       field :banner
+      content_field :intro, :text
       field :bottom_banner
       field :bottom_banner_description
       #field :intro, :ck_editor
       #slim_editor_field(:content)
+
       field :seo_tags
     end
   end

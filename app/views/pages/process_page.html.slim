@@ -2,7 +2,8 @@ section.step
   .container
     .row
       .col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2
-        p.step_slogan Set up your remote Dedicated Development Team in four simple steps
+        = html_block_with_fallback(:intro, true)
+          p.step_slogan Set up your remote Dedicated Development Team in four simple steps
       - if @process_steps.try(&:any?)
         - @process_steps.each_with_index do |b, i|
           = render "benefit_item", item: b, number: i + 1

@@ -8,15 +8,16 @@ nav.pushy.pushy-left
       - else
         a.logo_menua href=root_path
           img alt="" src=asset_path("cc-large-logo.svg") width="250"
-    ul.pushymenu
-      - menu.each do |k, v|
-        li
-          a class=("active" if v[:active]) href=v[:url]
-            span
-              |<
-            = v[:name]
-            span
-              |>
+    .pushymenu-wrap
+      ul.pushymenu
+        - menu.each do |k, v|
+          li
+            a class=("active" if v[:active]) href=v[:url]
+              span
+                |<
+              = v[:name]
+              span
+                |>
 
   .cont_micon
     .push_icon
