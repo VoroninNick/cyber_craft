@@ -34,6 +34,6 @@ section.step
 
 
 
-        - if @benefits.try(&:any?)
-          - @benefits.each_with_index do |b, i|
-            = render "benefit_item", item: b, number: i + 1, icon_attachment_name: :large_icon, prefix: "", without_line: true
+      - if @benefits.try(&:any?)
+        - @benefits.each_with_index do |b, i|
+          = render "benefit_item", item: b, number: i + 1, icon_attachment_name: :large_icon, prefix: "", without_line: true
