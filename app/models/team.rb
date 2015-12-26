@@ -3,6 +3,10 @@ class Team < ActiveRecord::Base
 
   include BaseIndustry::InstanceMethods
 
+  before_validation do
+    self.name_tag = :h1 if self.name_tag.blank?
+  end
+
   %w(section_3a_background section_3b_background).each do |c|
     enumerize c.to_sym, in: [:none, :gray_pattern], default: :none
   end
