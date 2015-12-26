@@ -1,6 +1,8 @@
 jquery_functions = {}
 jquery_functions.val = $.fn.val
 
+
+
 $.fn.val = ()->
   if $(this).filter(".input").length
     $input_wrap = $(this)
@@ -165,7 +167,8 @@ initialize_inputs_when_autocomplete = ()->
     #handle_keyup.apply(this)
 
 $(document).on "ready", ()->
-  setTimeout(initialize_inputs_when_autocomplete, 400)
-  setTimeout(initialize_inputs_when_autocomplete, 600)
-  setTimeout(initialize_inputs_when_autocomplete, 1000)
-  setTimeout(initialize_inputs_when_autocomplete, 2000)
+  if $(".input").length
+    setTimeout(initialize_inputs_when_autocomplete, 400)
+    setTimeout(initialize_inputs_when_autocomplete, 600)
+    setTimeout(initialize_inputs_when_autocomplete, 1000)
+    setTimeout(initialize_inputs_when_autocomplete, 2000)
