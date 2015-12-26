@@ -52,6 +52,12 @@ def slim_editor_field(name)
   end
 end
 
+def field_name_tag
+  field :name_tag do
+    help "tag for banner title. Default: h1. Type any valid html5 tag, e.g. h1, h2, h3, h4, h5, h6, div"
+  end
+end
+
 
 
 RailsAdmin.config do |config|
@@ -341,6 +347,7 @@ RailsAdmin.config do |config|
     group :main do
       field :published
       field :name
+      field_name_tag
       field :url_fragment
       field :short_description
       #field :content, :ck_editor
@@ -403,9 +410,7 @@ RailsAdmin.config do |config|
     group :main do
       field :published
       field :name
-      field :name_tag do
-        help "tag for banner title. Default: h1. Type any valid html5 tag, e.g. h1, h2, h3, h4, h5, h6, div"
-      end
+      field_name_tag
       field :url_fragment
       field :avatar
       field :banner

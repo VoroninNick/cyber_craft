@@ -3,7 +3,8 @@ class Team < ActiveRecord::Base
 
   include BaseIndustry::InstanceMethods
 
-  before_validation do
+  before_validation :initialize_name_tag
+  def initialize_name_tag
     self.name_tag = :h1 if self.name_tag.blank?
   end
 

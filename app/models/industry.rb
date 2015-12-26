@@ -57,4 +57,9 @@ class Industry < ActiveRecord::Base
       :h2
     end
   end
+
+  before_validation :initialize_name_tag
+  def initialize_name_tag
+    self.name_tag = :h1 if self.name_tag.blank?
+  end
 end
