@@ -27,7 +27,8 @@ class ApplicationController < ActionController::Base
   before_action :initialize_breadcrumbs
 
   def render_not_found
-    render template: "errors/not_found", layout: "empty_layout"
+    render template: "errors/not_found.html.slim", layout: "empty_layout", status: 404
+    #render file: Rails.root.join("app/views/errors/not_found.html.slim")
   end
 
 
