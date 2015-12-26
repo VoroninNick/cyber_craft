@@ -13,7 +13,7 @@
     .title_page
       .container
         .row
-          h1.page-name
+          = content_tag @page_banner_title_tag, class: "page-name"
             span
               = @page_banner_title
     /! End title_page

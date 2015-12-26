@@ -79,8 +79,8 @@ module Cms
           break nil
 
         end || page_class.try{|c| c.name.demodulize.underscore}
-
-        set_page_banner_title(banner_title)
+        banner_title_tag = @page_instance.try {|p| break p.name_tag if p.respond_to?(:name_tag); break nil  }
+        set_page_banner_title(banner_title, banner_title_tag)
 
 
         # if (!@page_instance || !@page_instance.respond_to?(:banner) || !@page_instance.banner.exists? )&& @page_class
@@ -164,9 +164,11 @@ module Cms
       end
 
 
-      def set_page_banner_title title
+      def set_page_banner_title title, tag_name = nil
         return if title.blank?
         @page_banner_title = (I18n.t("page_titles.#{title}", raise: true) rescue title.humanize)
+        tag_name = :h1 if tag_name.blank?
+        @page_banner_title_tag = tag_name
       end
 
       def set_page_bottom_banner image = nil, description = nil
