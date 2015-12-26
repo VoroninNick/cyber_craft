@@ -1412,6 +1412,12 @@ form{
       font-size: 13px;
     }
   }
+
+  &.autofilled{
+    label {
+      top: -20px;
+    }
+  }
 }
 .yellowformcontacts {
   position: relative;
