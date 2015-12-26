@@ -148,21 +148,24 @@ $("body").on "submit", "form.ajax-submit", (event)->
       success: success_handler
     })
 
-$(document).on "ready", ()->
-  setTimeout(
-    ()->
-      #console.log "hi"
 
-      $("body .input").each ()->
-        $input_wrap = $(this)
-        $input = $input_wrap.find("input")
-        val = $input.val()
-        if val && val.length
-          #alert("hi: #{val}")
-          $input_wrap.addClass("not-empty").removeClass("empty")
-        else
-          $input_wrap.addClass("empty").removeClass("not-empty")
-        #console.log "#{val}", $input.get(0)
-        #handle_keyup.apply(this)
-    400
-  )
+initialize_inputs_when_autocomplete = ()->
+  #console.log "hi"
+  $("body .input:not(.autofilled)").each ()->
+    $input_wrap = $(this)
+    $input = $input_wrap.find("input")
+    val = $input.val()
+    if val && val.length && !$input.attr("value")
+      #alert("hi: #{val}")
+      $input_wrap.addClass("not-empty").removeClass("empty")
+      $input_wrap.addClass("autofilled")
+    else
+      $input_wrap.addClass("empty").removeClass("not-empty")
+    #console.log "#{val}", $input.get(0)
+    #handle_keyup.apply(this)
+
+$(document).on "ready", ()->
+  setTimeout(initialize_inputs_when_autocomplete, 400)
+  setTimeout(initialize_inputs_when_autocomplete, 600)
+  setTimeout(initialize_inputs_when_autocomplete, 1000)
+  setTimeout(initialize_inputs_when_autocomplete, 2000)
