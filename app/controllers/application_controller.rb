@@ -27,7 +27,7 @@ class ApplicationController < ActionController::Base
   before_action :initialize_breadcrumbs
 
   def render_not_found
-    render template: "errors/not_found"
+    render template: "errors/not_found", layout: "empty_layout"
   end
 
 

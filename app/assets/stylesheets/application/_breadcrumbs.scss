@@ -63,4 +63,17 @@ html{
       }
     }
   }
+
+  @each $k in ('teams', 'industries') {
+    &[data-controller=#{$k}][data-action=show] {
+      .breadcrumbs{
+        
+        @media (max-width: rem(767)) {
+          margin-bottom: rem(10);
+        }
+
+      }
+    }
+  }
 }
+

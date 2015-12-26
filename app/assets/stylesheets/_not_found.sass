@@ -1,0 +1,47 @@
+.not-found
+	position: fixed
+	height: 100%
+	width: 100%
+	background: $light-black-color
+
+
+.not-found-block
+	position: relative
+	height: 100%
+	display: table
+
+	> .row
+		position: relative
+		vertical-align: middle
+		display: table-cell
+
+.not-found-block-content
+	width: rem(600)
+	max-width: 100%
+	.h1
+		+orbitron-medium
+		font-size: rem(60)
+		color: white
+		.highlighted
+			color: $orange-text-color
+
+
+
+
+	p
+		+ubuntu
+		+light
+		color: $light-gray-text-color
+		font-size: rem(14)
+		width: rem(380)
+		max-width: 100%
+	a
+		color: $orange-text-color
+
+
+	@media (max-width: rem(550))
+		.h1
+			font-size: rem(40)
+
+
+

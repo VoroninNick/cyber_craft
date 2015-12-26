@@ -83,6 +83,7 @@ body {
   @include orbitron-medium;
   letter-spacing: 3px;
   padding: 9.5px 0;
+  outline: none;
 }
 .pushymenu li .active {
   pointer-events: none;

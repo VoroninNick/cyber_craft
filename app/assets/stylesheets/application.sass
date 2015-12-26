@@ -85,6 +85,8 @@ $local-only: false
 
 @import "application/read_also_nav"
 
+@import "not_found"
+
 html
 	font-size: 16px
 body
@@ -114,3 +116,15 @@ html.highlight-tags
 	h6, h6 *
 		color: violet !important
 
+
+a
+	&:focus
+		outline: none
+
+
+.text-center
+	text-align: center
+
+@media (max-width: rem(767))
+	.sm-down-text-center
+		text-align: center
