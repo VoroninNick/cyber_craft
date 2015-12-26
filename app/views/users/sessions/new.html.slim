@@ -1,0 +1,45 @@
+/h2
+  | Log in
+/= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+  .field
+    = f.label :email
+    br
+    = f.email_field :email, autofocus: true
+  .field
+    = f.label :password
+    br
+    = f.password_field :password, autocomplete: "off"
+  - if devise_mapping.rememberable?
+    .field
+      = f.check_box :remember_me
+      = f.label :remember_me
+  .actions
+    = f.submit "Log in"
+/= render "users/shared/links"
+
+
+.contacts-page-contact-data-and-form style="margin-top: 80px;"
+  .container
+    .row
+      .col-xs-12.col-sm-4.col-sm-push-4.footr_form
+        .form-header.foot_title
+          span Highlighted
+          span.orange &thinsp; Some description here.
+        .foot_f.send_message
+          /form action="/message" method="post" show-preloader=""
+          = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+            .content
+              .input.string.css required=""
+                input#emailanimate name="user[email]" type="text"
+                label.input-label for="emailanimate"  Email*
+              .input.string.css required=""
+                input#emailanimate name="user[password]" type="password"
+                label.input-label for="emailanimate"  Password*
+              input type="submit" value="Login"
+              .clearfix
+
+            .success-message
+              .title
+                span.with_white_arrows You have successfully sent your message
+              p
+                | Our manager will contact you as soon as possible

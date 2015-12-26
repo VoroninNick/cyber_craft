@@ -27,7 +27,8 @@ $("body").on "focusout", ".input", (event)->
   #$form = $input_wrap.closest("form")
   #$form.validate()
 
-$("body").on "keyup", ".input", (event)->
+
+handle_keyup = ()->
   $input_wrap = $(this)
   #$form = $input_wrap.closest("form")
 
@@ -42,6 +43,9 @@ $("body").on "keyup", ".input", (event)->
     $input_wrap.addClass("empty").removeClass("not-empty")
 
   $input_wrap.validate()
+
+$("body").on "keyup", ".input", handle_keyup
+
 
 
 $.fn.validate = ()->
@@ -144,3 +148,21 @@ $("body").on "submit", "form.ajax-submit", (event)->
       success: success_handler
     })
 
+$(document).on "ready", ()->
+  setTimeout(
+    ()->
+      #console.log "hi"
+
+      $("body .input").each ()->
+        $input_wrap = $(this)
+        $input = $input_wrap.find("input")
+        val = $input.val()
+        if val && val.length
+          #alert("hi: #{val}")
+          $input_wrap.addClass("not-empty").removeClass("empty")
+        else
+          $input_wrap.addClass("empty").removeClass("not-empty")
+        #console.log "#{val}", $input.get(0)
+        #handle_keyup.apply(this)
+    400
+  )

@@ -1405,9 +1405,13 @@ form{
 .css.messagetext {
   height: 155px;
 }
-.css.active label {
-  top: -12px;
-  font-size: 13px;
+.css {
+  &.active, &.not-empty {
+    label {
+      top: -12px;
+      font-size: 13px;
+    }
+  }
 }
 .yellowformcontacts {
   position: relative;
