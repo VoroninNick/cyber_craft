@@ -97,6 +97,9 @@ body.open-popup
 	span
 		display: block
 
+	.via
+		display: inline
+
 
 	span, .icon-svg-bg, .icon-svg-symbol
 		+transition(0.5s all)
@@ -124,3 +127,12 @@ body.open-popup
 
 		span
 			color: $orange-text-color
+
+
+
+@media (max-width: 767px)
+	.popup-content
+		.share-link
+			padding: 0 rem(16)
+			.via
+				display: none
