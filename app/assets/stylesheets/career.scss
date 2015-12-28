@@ -181,6 +181,16 @@ ul#countdown li p.timeRefDays, ul#countdown li p.timeRefHours, ul#countdown li p
   background: #32393F image_url("career_bg_dotted.png") repeat;
   border-bottom: 1px solid #29343A;
   padding: 30px 0 125px 0;
+  
+  @media (max-width: rem(767)) {
+    padding-bottom: rem(35);
+  }
+}
+
+.career-form-outer{
+  @media (max-width: rem(767)) {
+    padding: 0 15px;
+  }
 }
 .section_h3.sect_career_foot {
   color: #fff;
@@ -399,7 +409,7 @@ footer .intro_career_foot p,  .success-message p{
 
   @media only screen and (max-width : 480px) {
     .item {height: 65px;width: 65px;margin-right: 5px;    padding-top: 12px;}
-    .number {font-size: 25px;line-height: 31px;}
+    .number {font-size: 25px;line-height: 30px;top: 3px;}
 
   }
 }
