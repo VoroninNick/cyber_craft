@@ -63,7 +63,7 @@ $(window).on "wheel", (e)->
   deltaY = e.originalEvent.deltaY
 
 
-  condition = !$body.data("scroll_in_progress") && (current_scroll_top >= min_stroll_top || deltaY < 0)
+  condition = !body.hasClass('open-popup') && !$body.data("scroll_in_progress") && (current_scroll_top >= min_stroll_top || deltaY < 0)
   #console.log "condition: ", condition
 
   if condition

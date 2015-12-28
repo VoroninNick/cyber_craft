@@ -1,3 +1,8 @@
+body.open-popup
+	overflow: hidden
+
+
+
 .sharing-popup
 	position: fixed
 	width: 100vw
@@ -21,6 +26,7 @@
 	cursor: pointer
 	width: rem(34)
 	height: rem(30)
+	z-index: 1
 	&:before, &:after
 		content: ""
 		position: absolute
@@ -41,20 +47,26 @@
 
 
 .popup-content-wrap
-	display: table
 	height: 100%
 	width: 100%
+
+	+flexbox
+	+flex-dir(column)
+	+justify-content(center)
 
 
 
 .popup-content
-	display: table-cell
+	//display: table-cell
 
 	//position: absolute
 	//top: 50%
 	//+transform(translateY(-50%))
 	vertical-align: middle
 	text-align: center
+
+	+align-self(center)
+	max-width: 100%
 
 	.share-link
 		color: white
@@ -91,7 +103,7 @@
 
 	svg
 		width: 90px
-		height: 90px
+		max-width: 100%
 
 
 		.icon-svg-bg
