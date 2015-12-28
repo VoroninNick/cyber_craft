@@ -51,14 +51,14 @@
   }
 }
 .st_img:after{
-  content: '';
+  //content: '';
   position: absolute;
   width: 10px;
   height: 100px;
   bottom: -102px;
   left: 55px;
   background: #000;
-  background: image_url("step_arrow.png") no-repeat center bottom;
+  //background: image_url("step_arrow.png") no-repeat center bottom;
 }
 .st_img_4:after{display: none;}
 .st_cont h3 {
@@ -113,3 +113,16 @@
   }
 }
 
+
+.line-with-arrow{
+  height: 100px;
+  overflow: hidden;
+
+  .border{
+    height: 100%;
+  }
+
+  .line-svg{
+    height: 100%;
+  }
+}

@@ -28,6 +28,11 @@ ruby:
         .col-md-2.col-sm-2.col-xs-2
           .st_img.item-icon class=("without-line" if without_line)
             img alt="alt" src=icon_url
+          - if !without_line
+            .line-with-arrow
+              /.border
+              = inline_svg "cc-line.svg", class: "line-svg"
+              = inline_svg "cc-arrow.svg", class: "arrow-svg"
         .col-md-10.col-sm-10.col-xs-10
           .st_cont
             = raw item.description

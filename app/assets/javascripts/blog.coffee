@@ -18,18 +18,20 @@ if $html.filter("[data-controller=blog][data-action=index]").length
 
   load_in_progress = false
 
+
   if !disable_isotope
-    $grid.isotope({
-      itemSelector: ".article-item"
-      getSortData: {
-        date: (item)->
-          parseInt($(item).attr("data-date"))
-        popularity: (item)->
-          parseInt($(item).attr('data-views'))
-        name: (item)->
-          parseInt($(item).attr('data-name'))
-      }
-    })
+    $(document).on "ready", ()->
+      $grid.isotope({
+        itemSelector: ".article-item"
+        getSortData: {
+          date: (item)->
+            parseInt($(item).attr("data-date"))
+          popularity: (item)->
+            parseInt($(item).attr('data-views'))
+          name: (item)->
+            parseInt($(item).attr('data-name'))
+        }
+      })
 
 
 
@@ -219,4 +221,5 @@ if $html.filter("[data-controller=blog][data-action=index]").length
       load_next_pages()
 
 
-  load_all_pages()
+  $(document).on "ready", ()->
+    load_all_pages()

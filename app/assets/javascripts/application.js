@@ -71,3 +71,5 @@
 //= require dev_tools
 
 //= require blog
+
+//= require process
