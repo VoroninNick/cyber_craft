@@ -8,6 +8,7 @@ class Industry < ActiveRecord::Base
 
   def self.home_logo_height
     550
+    450
   end
 
   [:index_logo].each do |attachment_name|
