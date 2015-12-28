@@ -28,6 +28,8 @@
         background: transparent;
       }
     }
+
+
   }
 }
 
@@ -37,6 +39,14 @@
   width: 100%;
   top: 42%;
   text-align: center;
+
+  &:not(.title_page_career){
+    top: 50%;
+
+    > .container{
+      @include transform(translateY(-50%));
+    }
+  }
 }
 .title_page .page-name {
   @include orbitron-regular;
