@@ -25,7 +25,7 @@ class Pages::Career < Cms::Page
     time_diff_components = Time.diff(start_date_time, end_date_time)
     day_diff = time_diff_components[:day]
     if day_diff < reset_when_less_than
-      p.career_site_date = DateTime.parse(end_date_time + (reset_to - day_diff))
+      p.career_site_date = (end_date_time + (reset_to - day_diff))
     end
   end
 end
