@@ -72,4 +72,7 @@
 
 //= require blog
 
+//= require imagesloaded/imagesloaded.pkgd.min
+
 //= require process
+

@@ -30,9 +30,10 @@ ruby:
             img alt="alt" src=icon_url
           - if !without_line
             .line-with-arrow
-              /.border
-              = inline_svg "cc-line.svg", class: "line-svg"
-              = inline_svg "cc-arrow.svg", class: "arrow-svg"
+              .reset
+                /.border
+                = inline_svg "cc-line.svg", class: "line-svg"
+                = inline_svg "cc-arrow.svg", class: "arrow-svg"
         .col-md-10.col-sm-10.col-xs-10
           .st_cont
             = raw item.description

@@ -115,8 +115,13 @@
 
 
 .line-with-arrow{
-  height: 100px;
+  //height: 100px;
   overflow: hidden;
+  position: absolute;
+  top: auto;
+  display: block;
+  width: 100%;
+  left: 0;
 
   .border{
     height: 100%;
@@ -124,5 +129,23 @@
 
   .line-svg{
     height: 100%;
+
+    position: absolute;
+    @include transform(translateX(-50%));
+    left: 50%;
+  }
+
+  .arrow-svg{
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 50%;
+    @include transform(translateX(-50%));
+  }
+
+  .reset{
+    height: 100%;
+    position: relative;
   }
 }
