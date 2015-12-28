@@ -49,13 +49,26 @@
 		line-height: 30px
 		cursor: pointer
 
+
+		svg
+			width: rem(12)
+
+		polygon
+			fill: $light-black-color
+
 		&.checked
 			background: $light-black-color
 			color: $orange-text-color
 			cursor: default
 
+			polygon
+				fill: $orange-color
+
 		&:hover
 			color: $orange-text-color
+
+			polygon
+				fill: $orange-color
 
 
 .articles

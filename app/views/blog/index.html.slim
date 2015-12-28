@@ -34,9 +34,9 @@
           = select_tag(:sorting_property, raw(BlogArticle.sorting_properties.map{|prop| content_tag(:option, prop.to_s.humanize, value: prop.to_s) }.join))
         .sorting-directions
           .asc.checked
-            |&#65516;
+            = inline_svg "cc-bottom-arrow.svg"
           .desc
-            |&#65514;
+            = inline_svg "cc-top-arrow.svg"
 
 
   - if @total_articles > 0
