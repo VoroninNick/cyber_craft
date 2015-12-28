@@ -59,7 +59,7 @@ class PagesController < ApplicationController
     @feedbacks = EmployeeFeedback.all.order("id desc")
     @page_banner = false
 
-
+    Pages::Career.normalize_site_date
   end
 
   def sitemap
