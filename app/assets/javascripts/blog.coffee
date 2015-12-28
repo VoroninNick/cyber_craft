@@ -36,7 +36,7 @@ if $html.filter("[data-controller=blog][data-action=index]").length
       setTimeout(
         ()->
           $grid.isotope()
-        500
+        200
       )
 
 
