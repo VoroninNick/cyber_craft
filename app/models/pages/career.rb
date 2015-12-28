@@ -2,7 +2,7 @@ class Pages::Career < Cms::Page
   has_html_block :career_site_date
 
   after_save do
-    normalize_site_date
+    self.class.normalize_site_date
   end
 
   def career_site_date_time
