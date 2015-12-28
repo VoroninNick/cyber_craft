@@ -12,3 +12,4 @@ $(".share_button, .share-popup-link").on "click", (e)->
 
 $(".close-popup").on "click", (e)->
   $(this).close_popup()
+

@@ -2,8 +2,13 @@
 <!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Tiny//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd">
 <svg version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-	 x="0px" y="0px" viewBox="0 0 41.2 31.3" xml:space="preserve">
-<polygon display="none" fill="#384046" points="20.3,-5.7 5.2,9.3 16.6,9.3 16.6,35.8 24.1,35.8 24.1,9.3 35.4,9.3 "/>
-<polygon display="none" fill="#384046" points="20.3,35.8 35.4,20.7 24.1,20.7 24.1,-5.7 16.6,-5.7 16.6,20.7 5.2,20.7 "/>
-<text transform="matrix(1 0 0 1 -6.892 94.7327)" fill="#FF9800" font-family="'Ubuntu'" font-size="123.3535">“</text>
+	 x="0px" y="0px" viewBox="0 25.3 200 151.3" xml:space="preserve">
+<polygon display="none" fill="#384046" points="98.5,-3.6 25.2,69.2 80.6,69.2 80.6,197.8 117,197.8 117,69.2 171.8,69.2 "/>
+<polygon display="none" fill="#384046" points="98.5,197.8 171.8,124.5 117,124.5 117,-3.6 80.6,-3.6 80.6,124.5 25.2,124.5 "/>
+<g>
+	<path fill="#FF9800" d="M2.5,173c0-4.4,0-8.7,0-12.9s0.2-8.3,0.6-12.3c1.6-20.8,6.2-41.3,13.8-61.7c7.6-20.4,16.8-39.3,27.5-56.9
+		l43.1,13.8c-8.4,17.6-14.7,35.3-18.9,53.3c-4.2,18-6.3,34.7-6.3,50.3c0,4,0.1,8.3,0.3,12.9c0.2,4.6,0.5,9.1,0.9,13.5H2.5z
+		 M111.5,173c0-4.4,0-8.7,0-12.9s0.2-8.3,0.6-12.3c1.6-20.8,6.2-41.3,13.8-61.7c7.6-20.4,16.8-39.3,27.5-56.9l43.1,13.8
+		c-8.4,17.6-14.7,35.3-18.9,53.3c-4.2,18-6.3,34.7-6.3,50.3c0,4,0.1,8.3,0.3,12.9c0.2,4.6,0.5,9.1,0.9,13.5H111.5z"/>
+</g>
 </svg>
