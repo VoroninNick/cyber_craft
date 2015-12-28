@@ -2,14 +2,23 @@
 .article-section class="#{'with_dotted_bg' if opts[:gray_pattern].present?} #{'decorate-first-letter' if opts[:decorate_first_letter]}"
   .container
     .row
+      - if opts[:image_after_text_in_html]
+        .col-md-9
+          - if opts[:header].present?
+            h1.industry-article-h1
+              = opts[:header]
+
+          = raw opts[:description]
       .col-md-3.industry-large-icon class="image-align-#{opts[:image_alignment]}"
         - if opts[:svg]
           = inline_svg opts[:image]
         - else
           = image_tag opts[:image]
-      .col-md-9
-        - if opts[:header].present?
-          h1.industry-article-h1
-            = opts[:header]
 
-        = raw opts[:description]
+      - if !opts[:image_after_text_in_html]
+        .col-md-9
+          - if opts[:header].present?
+            h1.industry-article-h1
+              = opts[:header]
+
+          = raw opts[:description]

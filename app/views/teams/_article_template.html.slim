@@ -10,7 +10,7 @@
 
 
 - if a.section_3a?
-  = description_with_image(a.section_3a_image.url, a.section_3a_description, image_alignment: :right, gray_pattern: a.section_3a_background_gray_pattern?, decorate_first_letter: true)
+  = description_with_image(a.section_3a_image.url, a.section_3a_description, image_alignment: :right, gray_pattern: a.section_3a_background_gray_pattern?, decorate_first_letter: true, image_after_text_in_html: true)
 - if a.section_3b?
   = description_with_image(a.section_3b_image.url, a.section_3b_description, gray_pattern: a.section_3b_background_gray_pattern?, decorate_first_letter: true)
 
