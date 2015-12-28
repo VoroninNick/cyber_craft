@@ -84,3 +84,5 @@ gem 'kaminari'
 gem "htmlcompressor"
 gem 'rack-page_caching'
 #gem 'paperclip-optimizer'
+
+gem 'time_diff'
