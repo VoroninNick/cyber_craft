@@ -62,5 +62,9 @@ module ApplicationHelper
     "return !window.open(this.href, '#{window_title}', 'width=640,height=300')"
   end
 
+  def linkedin_api_key
+    '777k5im778t3wl'
+  end
+
 
 end
