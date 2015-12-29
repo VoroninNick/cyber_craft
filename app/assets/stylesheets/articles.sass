@@ -67,7 +67,7 @@
 		color: $orange-text-color
 
 
-	.quote
+	.quote, blockquote
 		width: rem(600)
 		max-width: 100%
 		margin: rem(40) auto rem(50) auto
@@ -75,22 +75,24 @@
 		background-size: rem(48) rem(30)
 		padding-top: 34px
 
-		.quote-author
-			text-align: right
-			font-size: rem(12)
-			color: $blue-color
-
-		&.quote-orange
-			background-image: image_url("cc-quote-orange.svg")
-			background-position-x: -3px
-
-			.quote-text
-				color: $orange-text-color
-
-				a
-					text-decoration: underline
 
 
+
+	.quote.quote-orange, blockquote
+		background-image: image_url("cc-quote-orange.svg")
+		background-position-x: -3px
+		color: $orange-text-color
+
+		.quote-text
+			color: $orange-text-color
+
+			a
+				text-decoration: underline
+
+	.quote-author
+		text-align: right
+		font-size: rem(12)
+		color: $blue-color
 
 .read-also-section
 	background: $light-gray-bg-color
