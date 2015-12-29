@@ -63,7 +63,8 @@ module ApplicationHelper
   end
 
   def linkedin_api_key
-    '777k5im778t3wl'
+    #'777k5im778t3wl'
+    '775wsx8agvaj8a'
   end
 
   def linkedin_secret_key
