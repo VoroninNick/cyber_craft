@@ -1,7 +1,8 @@
-<script type="text/javascript" src="//platform.linkedin.com/in.js">
+
+
+<% content_for :head_javascript do %>
+<script type="text/javascript" src="http://platform.linkedin.com/in.js">
     api_key: <%= linkedin_api_key %>
-    authorize: true
-    onLoad: onLinkedInLoad
 </script>
 
 <script type="text/javascript">
@@ -28,3 +29,6 @@
     }
 
 </script>
+
+
+<% end %>
