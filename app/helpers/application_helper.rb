@@ -66,5 +66,8 @@ module ApplicationHelper
     '777k5im778t3wl'
   end
 
+  def linkedin_secret_key
+  end
+
 
 end
