@@ -8,10 +8,10 @@
     /= render "article1", article: @industry
     = render "article_template", article: resource
 
-    - if controller_name.to_s == 'teams'
-      .container
-        .row
-          = sharing_panel()
+    /- if controller_name.to_s == 'teams'
+    .container
+      .row
+        = sharing_panel()
 
   - nav_articles = {prev: @prev_article, next: @next_article}.keep_if{|k, v| !v.nil? }
   - if nav_articles.any?
@@ -27,5 +27,5 @@
                 .name
                   = a[:name]
 
-- if controller_name.to_s == 'teams'
-  = sharing_popup
+/- if controller_name.to_s == 'teams'
+= sharing_popup
