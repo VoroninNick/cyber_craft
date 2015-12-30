@@ -40,6 +40,22 @@ html{
     }
   }
 
+  @each $k in ('industries', 'teams', 'blog') {
+    &[data-controller=#{$k}][data-action=show] {
+      .breadcrumbs {
+        margin-bottom: rem(40);
+      }
+    }
+  }
+
+  @each $k in ('blog') {
+    &[data-controller=#{$k}][data-action=index] {
+      .breadcrumbs {
+        margin-bottom: rem(30);
+      }
+    }
+  }
+
   @each $k in ('contacts', "terms_of_use", "privacy_policy", "career", "sitemap") {
     &[data-action=#{$k}] {
       body {
@@ -48,7 +64,7 @@ html{
     }
   }
 
-  @each $k in ('process_page') {
+  @each $k in ('process_page', 'about_us') {
     &[data-action=#{$k}] {
       .breadcrumbs{
         margin-bottom: 0;
