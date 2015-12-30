@@ -52,6 +52,9 @@ handle_scroll(0)
 $(window).on "scrolldelta", (e)->
 
 $(window).on "wheel", (e)->
+
+  if e.ctrlKey
+    return true
   $body = $('body')
   $html_body = $('body, html')
   min_stroll_top = $("#pagi1, .career_header").height() || 0
