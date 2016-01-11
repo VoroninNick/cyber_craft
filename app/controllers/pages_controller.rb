@@ -5,15 +5,16 @@ class PagesController < ApplicationController
     add_breadcrumb(action_name)
   end
 
-  #caches_page :index, :about_us, :contacts, :process_page, :terms_of_use, :privacy_policy, :career, :sitemap
+  caches_page :index, :about_us, :contacts, :process_page, :terms_of_use, :privacy_policy, :career, :sitemap
 
-  cache_page_instance
+  #cache_page_instance
 
   def under_construction
     render layout: "under_construction"
   end
 
   def index
+    #return render inline: request.path.inspect
     set_page_metadata("home")
     @footer = false
     @blog_articles = BlogArticle.published.home_articles
@@ -21,6 +22,8 @@ class PagesController < ApplicationController
     @feedbacks = UserFeedback.all.order("id desc")
     @teams = Team.published
     @benefits = Benefit.published.sort_by_sorting_position
+
+
   end
 
   def about_us
