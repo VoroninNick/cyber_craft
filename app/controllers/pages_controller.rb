@@ -5,7 +5,9 @@ class PagesController < ApplicationController
     add_breadcrumb(action_name)
   end
 
-  caches_page :index, :about_us, :contacts, :process_page, :terms_of_use, :privacy_policy, :career, :sitemap
+  #caches_page :index, :about_us, :contacts, :process_page, :terms_of_use, :privacy_policy, :career, :sitemap
+
+  cache_page_instance
 
   def under_construction
     render layout: "under_construction"

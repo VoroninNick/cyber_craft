@@ -86,3 +86,13 @@ gem 'rack-page_caching'
 #gem 'paperclip-optimizer'
 
 gem 'time_diff'
+
+
+local = ENV["LOCAL"]
+
+if local
+  gem 'cms', path: "/media/data/pasha/gems/cms"
+else
+  gem 'cms', github: "pkorenev/cms"
+end
+
