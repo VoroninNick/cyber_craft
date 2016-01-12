@@ -96,3 +96,4 @@ else
   gem 'cms', github: "pkorenev/cms"
 end
 
+gem 'pry-rails'

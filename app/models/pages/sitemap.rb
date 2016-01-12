@@ -1,3 +1,3 @@
 class Pages::Sitemap < Cms::Page
-  cacheable
+  has_cache
 end

@@ -1,3 +1,3 @@
 class Pages::Services < Cms::Page
-  cacheable
+  has_cache
 end

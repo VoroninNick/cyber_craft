@@ -1,3 +1,3 @@
 class Pages::Contacts < Cms::Page
-  cacheable
+  has_cache
 end

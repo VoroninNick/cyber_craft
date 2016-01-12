@@ -91,4 +91,5 @@ class BlogArticle < ActiveRecord::Base
 
     authors.pluck(:name)
   end
+
 end

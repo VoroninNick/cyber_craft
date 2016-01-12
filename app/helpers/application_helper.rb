@@ -70,5 +70,9 @@ module ApplicationHelper
   def linkedin_secret_key
   end
 
+  def video_url
+    "https://vimeo.com/151523392"
+  end
+
 
 end

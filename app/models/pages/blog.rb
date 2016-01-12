@@ -1,3 +1,3 @@
 class Pages::Blog < Cms::Page
-  cacheable
+  has_cache
 end

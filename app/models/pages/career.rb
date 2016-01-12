@@ -1,6 +1,6 @@
 class Pages::Career < Cms::Page
   has_html_block :career_site_date
-  cacheable
+  has_cache
 
   after_save do
     self.class.normalize_site_date
