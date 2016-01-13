@@ -23,8 +23,7 @@
     .row
       .col-xs-12.col-sm-4.col-sm-push-4.footr_form
         .form-header.foot_title
-          span Highlighted
-          span.orange &thinsp; Some description here.
+          span Please enter username and password
         .foot_f.send_message
           /form action="/message" method="post" show-preloader=""
           = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|

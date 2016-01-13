@@ -3,6 +3,8 @@
 <% content_for :head_javascript do %>
 <script type="text/javascript" src="http://platform.linkedin.com/in.js">
     api_key: <%= linkedin_api_key %>
+    authorize: true
+    onLoad: onLinkedInLoad
 </script>
 
 <script type="text/javascript">
@@ -15,6 +17,7 @@
     // Handle the successful return from the API call
     function onSuccess(data) {
         console.log(data);
+
     }
 
     // Handle an error response from the API call
