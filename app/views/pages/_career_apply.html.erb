@@ -17,7 +17,9 @@
     // Handle the successful return from the API call
     function onSuccess(data) {
         console.log("linkedin success: ", data);
-
+        if(data.firstName && data.firstName.length){
+            $("[name='vacancy_request[name]']").val(data.firstName)
+        }
 
     }
 
