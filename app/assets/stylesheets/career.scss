@@ -255,14 +255,25 @@ footer .intro_career_foot p,  .success-message p{
   height: 36px;
   line-height: 40px !important;
   cursor: pointer;
+  position: relative;
 
 
   *{
-    opacity: 0 !important;
+    //opacity: 0 !important;
   }
 
   &:before{
     content: "Apply with linkedin";
+  }
+
+  > span{
+    width: 100%;
+    position: absolute !important;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
   }
 }
 .career_form_a, .IN-widget{
