@@ -252,6 +252,11 @@ footer .intro_career_foot p,  .success-message p{
 }
 
 .IN-widget{
+  height: 36px;
+  line-height: 40px !important;
+  cursor: pointer;
+
+
   *{
     opacity: 0 !important;
   }
@@ -260,10 +265,12 @@ footer .intro_career_foot p,  .success-message p{
     content: "Apply with linkedin";
   }
 }
-.career_form_a:hover{
-  background: #fff;
-  border:1px solid #fff;
-  color: #374047;
+.career_form_a, .IN-widget{
+  &:hover {
+    background: #fff;
+    border: 1px solid #fff;
+    color: #374047;
+  }
 }
 .foot_title_career {
   background: #fff;
