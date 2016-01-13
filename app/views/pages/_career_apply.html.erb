@@ -18,6 +18,7 @@
     function onSuccess(data) {
         console.log("linkedin success: ", data);
 
+
     }
 
     // Handle an error response from the API call
@@ -27,7 +28,7 @@
 
     // Use the API call wrapper to request the member's profile data
     function getProfileData() {
-        IN.API.Raw("/people/~:(id,firstName,skills,educations,languages,twitterAccounts)")
+        IN.API.Raw("/people/~:(id,firstName,skills,educations,languages,twitterAccounts,emailAddress,summary)")
                 .result(onSuccess).error(onError);
     }
 
