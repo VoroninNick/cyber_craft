@@ -11,4 +11,6 @@ class Feedback < ActiveRecord::Base
 
     allow_delete_attachment attachment_name
   end
+
+  has_cache
 end

@@ -3,6 +3,11 @@ class Industry < ActiveRecord::Base
 
   include BaseIndustry::InstanceMethods
 
+  has_cache
+  def cache_instances
+    [Pages.home, Pages.industries, self.class.all]
+  end
+
 
   scope :sort_by_position, -> { order("position asc") }
 

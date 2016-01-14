@@ -1,6 +1,18 @@
 class BlogArticle < ActiveRecord::Base
   acts_as_article(tags: true, initialize_all_attachments: false, author: false)
 
+  has_cache
+  def cache_instances
+    public_fields = [:tags, :authors, :name, :url_fragment, :avatar]
+    excepted_fields = [:views]
+    any_public_field_changed = public_fields.map{|f| method = "#{f}_changed?"; self.respond_to?(method) && send(method) }.select(&:present?).any?
+    if any_public_field_changed
+      [Pages.home, Pages.blog, self.class.all]
+    else
+      [self]
+    end
+  end
+
   has_and_belongs_to_many :authors, class_name: User, join_table: :author_articles, foreign_key: :article_id, association_foreign_key: :author_id
   attr_accessible :authors, :author_ids
 

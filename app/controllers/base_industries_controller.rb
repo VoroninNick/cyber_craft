@@ -16,31 +16,8 @@ class BaseIndustriesController < ApplicationController
   end
 
   def init_articles_navigation
-    articles = resource_class.published.sort_by_position.pluck_to_hash(:id, :url_fragment, :name)
-    current_index = nil
-    articles.each_with_index do |a, i|
-      if a[:id] == resource.id
-        current_index = i
-        break
-      end
-    end
-
-    articles.map{|a|
-      a[:url] = send("#{route_resource_name}_path", a[:url_fragment])
-    }
-
-    min_index = 0
-    max_index = articles.count - 1
-
-    if current_index
-      if current_index > min_index
-        @prev_article = articles[current_index - 1]
-      end
-
-      if current_index < max_index
-        @next_article = articles[current_index + 1]
-      end
-    end
+    @prev_article = resource.prev_article
+    @next_article = resource.next_article
   end
 
   def resource_class

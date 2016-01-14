@@ -41,4 +41,13 @@ class User < ActiveRecord::Base
 
     a
   end
+
+  def valid_author?
+    self.name.present?
+  end
+
+  has_cache
+  def cache_instances
+    [Pages.blog, self.articles]
+  end
 end

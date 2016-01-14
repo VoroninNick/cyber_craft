@@ -3,6 +3,9 @@ class Team < ActiveRecord::Base
 
   include BaseIndustry::InstanceMethods
 
+  has_navigation
+
+
   before_validation :initialize_name_tag
   def initialize_name_tag
     self.name_tag = :h1 if self.name_tag.blank?
@@ -15,7 +18,30 @@ class Team < ActiveRecord::Base
 
   acts_as_article
 
+  has_cache
+  def cache_instances
+    [Pages.home, Pages.teams, self.class.all]
+  end
+
+
+
   scope :sort_by_position, -> { order("position asc") }
+
+
+
+  def cache_dependencies
+    [Pages.home, Pages.teams]
+  end
+
+  def other(target = nil)
+    target ||= self
+    if !target.is_a?(Array)
+      target = [target]
+    end
+
+    self.class.where.not(id: target.map(&:id))
+  end
+
 
   has_attached_file :banner
   do_not_validate_attachment_file_type :banner

@@ -14,5 +14,12 @@ class Member < ActiveRecord::Base
     allow_delete_attachment(k)
   end
 
+  has_cache
+  def cache_instances
+    [Pages.about_us]
+  end
+
+
+
 
 end

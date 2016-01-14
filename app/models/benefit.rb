@@ -13,11 +13,9 @@ class Benefit < ActiveRecord::Base
   do_not_validate_attachment_file_type :large_icon
   attr_accessible :large_icon
 
-  #has_cache
-
-  def expire
-    super
-    Pages.home.expire
+  has_cache
+  def cache_instances
+    [Pages.home, Pages.benefits]
   end
 
 
