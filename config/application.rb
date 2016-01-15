@@ -30,6 +30,8 @@ module CyberCraft
     paths = Dir[Rails.root.join("app/assets/images/**/*")]
     config.assets.precompile += paths
 
+    config.assets.precompile += %w(ckeditor/lang/*.js)
+
     #Rails.application.config do |config|
       #config.assets.paths << "/"
     if !ENV['SKIP_PUBLIC_ASSETS'] && !ENV['SPA']
