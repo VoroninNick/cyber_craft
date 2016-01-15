@@ -30,7 +30,15 @@ module CyberCraft
     paths = Dir[Rails.root.join("app/assets/images/**/*")]
     config.assets.precompile += paths
 
+    config.assets.precompile += %w(ckeditor)
+    config.assets.precompile += %w(rails_admin/rails_admin.css rails_admin/rails_admin.css)
     config.assets.precompile += %w(ckeditor/lang/*.js)
+
+    config.assets.precompile += %w(rails_admin/colorpicker/*.gif rails_admin/colorpicker/*.png rails_admin/bootstrap/*.png rails_admin/aristo/images/* rails_admin/multiselect/*.png rails_admin/*.png)
+
+
+    config.assets.precompile += %w(ckeditor/config.js)
+    config.assets.precompile += %w(ckeditor/plugins/codemirror/plugin.js ckeditor/plugins/codemirror/lang/* ckeditor/plugins/codemirror/css/* ckeditor/plugins/codemirror/js/*.js ckeditor/plugins/codemirror/icons/* ckeditor/plugins/codemirror/theme/*)
 
     #Rails.application.config do |config|
       #config.assets.paths << "/"
