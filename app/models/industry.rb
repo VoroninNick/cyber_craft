@@ -7,7 +7,8 @@ class Industry < ActiveRecord::Base
   def cache_instances
     [Pages.home, Pages.industries, self.class.all]
   end
-
+ 
+  has_navigation
 
   scope :sort_by_position, -> { order("position asc") }
 
