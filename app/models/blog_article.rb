@@ -3,7 +3,7 @@ class BlogArticle < ActiveRecord::Base
 
   has_cache
   def cache_instances
-    public_fields = [:tags, :authors, :name, :url_fragment, :avatar]
+    public_fields = [:tags, :authors, :name, :url_fragment, :avatar, :released_at]
     excepted_fields = [:views]
     any_public_field_changed = public_fields.map{|f| method = "#{f}_changed?"; self.respond_to?(method) && send(method) }.select(&:present?).any?
     if any_public_field_changed
@@ -49,7 +49,7 @@ class BlogArticle < ActiveRecord::Base
   end
 
   def article_date
-    d = updated_at
+    d = released_at
 
     "#{d.day} #{Date::MONTHNAMES[d.month].downcase} #{d.year}"
 
