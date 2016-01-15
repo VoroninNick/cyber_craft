@@ -48,6 +48,12 @@ class User < ActiveRecord::Base
 
   has_cache
   def cache_instances
-    [Pages.blog, self.articles]
+    public_fields = [:name, :avatar]
+    any_public_field_changed = public_fields.map{|f| method = "#{f}_changed?"; self.respond_to?(method) && send(method) }.select(&:present?).any?
+    if any_public_field_changed
+      [Pages.home, Pages.blog, self.class.all]
+    else
+      nil
+    end
   end
 end

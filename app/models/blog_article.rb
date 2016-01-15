@@ -52,6 +52,7 @@ class BlogArticle < ActiveRecord::Base
     d = updated_at
 
     "#{d.day} #{Date::MONTHNAMES[d.month].downcase} #{d.year}"
+
   end
 
   def self.sorting_properties

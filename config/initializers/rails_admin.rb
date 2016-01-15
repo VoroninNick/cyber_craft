@@ -156,6 +156,9 @@ RailsAdmin.config do |config|
       field :banner
       field :bottom_banner
       field :bottom_banner_description
+      field :we_are, :ck_editor
+      field :team_header, :ck_editor
+      field :our_location, :ck_editor
       field :seo_tags
     end
   end

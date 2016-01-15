@@ -3,43 +3,46 @@ section.location
   .loc_bg
     .container
       .row
-        .col-md-3.col-sm-3.col-xs-12
-          .style_namb
-            h3.loc_namber.loc_nam_1
-              | 1
-              span We are...
-        .col-md-9.col-sm-9.col-xs-12
-          p CyberCraft is an innovative and dynamic software development, outsourcing and consulting company. We have proven success and experience in building Dedicated Development Teams of different sizes for our international customers. Our main mission at CyberCraft is to create productive nearshore and offshore IT teams adjusted to the client’s needs.
-          p The founders of CyberCraft have over 30 years of combined experience with information technology, project management, and human resources staffing. We are a stable and reliable company with a well-established reputation and a number of successfully implemented projects for our customers in various industry verticals like financial services, information services and data technology.
-          p CyberCraft is your trusted partner that will bring your business to another level by taking care of all your IT staffing needs, while you stay focused on your strategic goals.
-          p Expand your business in a simple, quick and cost-effective way with CyberCraft!
+        = html_block_with_fallback(:we_are, true)
+          .col-md-3.col-sm-3.col-xs-12
+            .style_namb
+              h3.loc_namber.loc_nam_1
+                | 1
+                span We are...
+          .col-md-9.col-sm-9.col-xs-12
+            p CyberCraft is an innovative and dynamic software development, outsourcing and consulting company. We have proven success and experience in building Dedicated Development Teams of different sizes for our international customers. Our main mission at CyberCraft is to create productive nearshore and offshore IT teams adjusted to the client’s needs.
+            p The founders of CyberCraft have over 30 years of combined experience with information technology, project management, and human resources staffing. We are a stable and reliable company with a well-established reputation and a number of successfully implemented projects for our customers in various industry verticals like financial services, information services and data technology.
+            p CyberCraft is your trusted partner that will bring your business to another level by taking care of all your IT staffing needs, while you stay focused on your strategic goals.
+            p Expand your business in a simple, quick and cost-effective way with CyberCraft!
 /! Meet the team
 section.meet
   .container
     .row
-      .col-md-12.team_boot
-        .style_namb.manb2
-          h3.loc_namber.loc_nam_2
-            | 2
-            span
-              | Meet
-              br
-              | the team
+      = html_block_with_fallback(:team_header, true)
+        .col-md-12.team_boot
+          .style_namb.manb2
+            h3.loc_namber.loc_nam_2
+              | 2
+              span
+                | Meet
+                br
+                | the team
       = render "members", members: @members
 
 /! OUR LOCATION
 section.ourlocation
   .container
     .row
-      .col-md-12.team_boot
-        .style_namb.manb3
-          h3.loc_namber.loc_nam_3
-            | 3
-            span
-              | OUR
-              br
-              |LOCATION
-      .col-md-8.col-sm-9.col-xs-12.col-md-offset-2.our_loc
-        p Lviv is a cultural, scientific, tourist, business and industrial center of Ukraine.  With its population of about 1 million people, the city is among the largest outsourcing centers in Ukraine. Lviv has repeatedly been recognized as one of the top IT outsourcing  locations due to its network of technical universities, highly qualified workforce, cultural and geographical proximity with Western Europe and many other factors. KPMG recognized Lviv as one of the best IT-BPO destinations along with 30 other cities in the world and number 2 among 11 cities in the EMEA region.
-        p It is the leading educational center in Ukraine and one of the largest in Central and Eastern Europe,  having almost 40 higher education institutions. The percentage of English speakers in the IT community is consistently measured at over 75%.
-        p Since Lviv is located just a few miles from the EU border, the time-zone advantage and convenient airline connections also make our city a very attractive nearshoring destination.
+      = html_block_with_fallback(:our_location, true)
+        .col-md-12.team_boot
+          .style_namb.manb3
+            h3.loc_namber.loc_nam_3
+              | 3
+              span
+                | OUR
+                br
+                |LOCATION
+        .col-md-8.col-sm-9.col-xs-12.col-md-offset-2.our_loc
+          p Lviv is a cultural, scientific, tourist, business and industrial center of Ukraine.  With its population of about 1 million people, the city is among the largest outsourcing centers in Ukraine. Lviv has repeatedly been recognized as one of the top IT outsourcing  locations due to its network of technical universities, highly qualified workforce, cultural and geographical proximity with Western Europe and many other factors. KPMG recognized Lviv as one of the best IT-BPO destinations along with 30 other cities in the world and number 2 among 11 cities in the EMEA region.
+          p It is the leading educational center in Ukraine and one of the largest in Central and Eastern Europe,  having almost 40 higher education institutions. The percentage of English speakers in the IT community is consistently measured at over 75%.
+          p Since Lviv is located just a few miles from the EU border, the time-zone advantage and convenient airline connections also make our city a very attractive nearshoring destination.
