@@ -18,7 +18,9 @@
     function onSuccess(data) {
         console.log("linkedin success: ", data);
         if(data.firstName && data.firstName.length){
-            $("[name='vacancy_request[name]']").val(data.firstName)
+            $name = $("[name='vacancy_request[name]']")
+            $name.val(data.firstName)
+            $name.trigger("change")
         }
 
         $(".IN-widget").hide()
