@@ -50,9 +50,9 @@ class BlogArticle < ActiveRecord::Base
 
   def article_date
     d = released_at
-
-    "#{d.day} #{Date::MONTHNAMES[d.month].downcase} #{d.year}"
-
+    d.try {
+      "#{d.day} #{Date::MONTHNAMES[d.month].downcase} #{d.year}"
+    }
   end
 
   def self.sorting_properties

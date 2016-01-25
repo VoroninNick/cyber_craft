@@ -36,7 +36,7 @@ def ck_editor_field(name, &block)
   end
 end
 
-def content_field(name, type = :ck_editor)
+def content_field(name = :content, type = :ck_editor)
   field name, type do
     def value
       bindings[:object].send(name)
@@ -229,6 +229,7 @@ RailsAdmin.config do |config|
       field :banner
       field :bottom_banner
       field :bottom_banner_description
+      content_field :phones, :text
       field :seo_tags
     end
   end
@@ -313,7 +314,6 @@ RailsAdmin.config do |config|
       field :avatar
       field :banner
       field :tag_list do
-      #  partial 'tag_list_with_suggestions'
         def value
           bindings[:object].send(name).to_s
         end

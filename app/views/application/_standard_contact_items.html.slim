@@ -1,12 +1,13 @@
 li
   span.cont_tel.svg-icon
     = inline_svg("tel.svg")
-    a href="tel:+18886797138"
-      | +1 888 67 97 138
-      sup Us
-    a href="tel:+380639911633"
-      | +380 63 99 11 633
-      sup Eu
+    = html_block_with_fallback(:phones, Pages.contacts)
+      a href="tel:+18886797138"
+        | +1 888 67 97 138
+        sup Us
+      a href="tel:+380639911633"
+        | +380 63 99 11 633
+        sup Eu
 li
   a.cont_mail.svg-icon href="mailto:info@cybercraftinc.com"
     = inline_svg("mail.svg")
