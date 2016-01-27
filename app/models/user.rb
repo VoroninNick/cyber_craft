@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, #:registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  attr_accessible *attribute_names
+  attr_accessible *attribute_names, :password, :password_confirmation
 
   scope :valid_authors, proc { where("users.name is not null and users.name<>'' ") }
 
