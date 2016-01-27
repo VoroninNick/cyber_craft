@@ -27,7 +27,8 @@ if $html.filter("[data-controller=blog][data-action=index]").length
           date: (item)->
             parseInt($(item).attr("data-date"))
           popularity: (item)->
-            parseInt($(item).attr('data-views'))
+            #parseInt($(item).attr('data-views'))
+            parseInt($(item).attr('data-popularity-position'))
           name: (item)->
             parseInt($(item).attr('data-name'))
         }

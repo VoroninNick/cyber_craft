@@ -109,7 +109,7 @@ RailsAdmin.config do |config|
     # history_show
 
     nestable do
-      only [Industry, Team, Member, Benefit, UserFeedback, EmployeeFeedback, ProcessStep]
+      only [Industry, Team, Member, Benefit, UserFeedback, EmployeeFeedback, ProcessStep, BlogArticle, HomeBlogArticle]
     end
   end
 
@@ -122,7 +122,7 @@ RailsAdmin.config do |config|
 
   config.included_models += [Cms::MetaTags]
 
-  config.included_models += [BlogArticle, Service, Team, Industry, Feedback, UserFeedback, EmployeeFeedback]
+  config.included_models += [BlogArticle, HomeBlogArticle, Service, Team, Industry, Feedback, UserFeedback, EmployeeFeedback]
 
   config.included_models += [FileEditor]
 
@@ -134,6 +134,7 @@ RailsAdmin.config do |config|
   config.model Pages::Home do
     pages_navigation_label
 
+    field :articles
     field :seo_tags
   end
 
@@ -301,45 +302,58 @@ RailsAdmin.config do |config|
   end
 
 
-
-  config.model BlogArticle do
-    edit do
-      field :published
-      field :featured do
-        label "New?"
-      end
-      field :name
-      field :url_fragment
-      field :content, :ck_editor
-      field :avatar
-      field :banner
-      field :tag_list do
-        def value
-          bindings[:object].send(name).to_s
+  [BlogArticle, HomeBlogArticle].each do |m|
+    config.model m do
+      edit do
+        field :published
+        field :featured do
+          label "New?"
         end
-      end
-      #field :author_name
-      field :authors do
-        associated_collection_scope do
-          proc do |scope|
-            scope.valid_authors
+        field :name
+        field :url_fragment
+        field :content, :ck_editor
+        field :avatar
+        field :banner
+        field :tag_list do
+          def value
+            bindings[:object].send(name).to_s
           end
         end
+        #field :author_name
+        field :authors do
+          associated_collection_scope do
+            proc do |scope|
+              scope.valid_authors
+            end
+          end
+        end
+
+        field :released_at
+
+        field :views do
+          read_only true
+        end
+
+        field :related_articles
+
+        field :seo_tags
       end
 
-      field :released_at
-
-      field :views do
-        read_only true
+      if m == BlogArticle
+        list do
+          field :published
+          field :name
+          field :avatar
+        end
       end
 
-      field :seo_tags
-    end
+      if m == BlogArticle
+        nestable_list position_field: :popularity_position
+      end
 
-    list do
-      field :published
-      field :name
-      field :avatar
+      if m == HomeBlogArticle
+        nestable_list position_field: :home_position
+      end
     end
   end
 

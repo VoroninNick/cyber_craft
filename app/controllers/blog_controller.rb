@@ -50,7 +50,7 @@ class BlogController < ApplicationController
       add_breadcrumb("blog")
       add_breadcrumb(@article.name, false)
 
-      @related_articles = BlogArticle.published.limit(3)
+      @related_articles = @article.related_articles
 
       #init_articles_navigation
     else

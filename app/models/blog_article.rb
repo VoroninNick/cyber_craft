@@ -1,5 +1,19 @@
 class BlogArticle < ActiveRecord::Base
+
   acts_as_article(tags: true, initialize_all_attachments: false, author: false)
+
+  has_one :home_article_link, foreign_key: "article_id"
+  has_one :page, through: :home_article_link, class_name: Pages::Home, foreign_key: "page_id"
+
+  has_and_belongs_to_many :related_articles,
+    class_name: "BlogArticle",
+    join_table: :related_blog_articles,
+    foreign_key: :article_id,
+    association_foreign_key: :related_article_id
+
+  attr_accessible :related_articles, :related_article_ids
+
+  attr_accessible :page
 
   has_cache
   def cache_instances
@@ -28,10 +42,12 @@ class BlogArticle < ActiveRecord::Base
     allow_delete_attachment attachment_name
   end
 
-  scope :home_articles, -> { last(3) }
+  #scope :home_articles, -> { last(3) }
 
-  scope :sort_by_popularity_asc, proc { order "views asc" }
-  scope :sort_by_popularity_desc, proc { order "views desc" }
+  scope :featured, -> { where(featured: 't') }
+
+  scope :sort_by_popularity_asc, proc { order "popularity_position, views asc" }
+  scope :sort_by_popularity_desc, proc { order "popularity_position, views desc" }
 
   scope :sort_by_date_asc, proc { order "released_at asc" }
   scope :sort_by_date_desc, proc { order "released_at desc" }
@@ -39,7 +55,14 @@ class BlogArticle < ActiveRecord::Base
   scope :sort_by_name_asc, proc { order "name asc" }
   scope :sort_by_name_desc, proc { order "name desc" }
 
+
+
   #scope :sort_by_author, proc {|direction = :asc| joins(:authors).order("authors.name #{direction}").uniq }
+
+  def self.home_articles
+    Pages.home.articles.published.order("home_position asc").limit(3)
+  end
+
 
 
 
