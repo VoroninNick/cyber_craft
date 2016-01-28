@@ -28,11 +28,18 @@ module ApplicationHelper
   end
 
   def facebook_url
-    "https://www.facebook.com/CyberCraft.Lviv/"
+    res = Pages.contacts.facebook_profile_url
+    res = "https://www.facebook.com/CyberCraft.Lviv/" if res.blank?
+
+    res
   end
 
   def linkedin_url
-    "https://www.linkedin.com/company/cybercraft-inc-"
+    res = Pages.contacts.linkedin_profile_url
+    res = "https://www.linkedin.com/company/cybercraft-inc-" if res.blank?
+
+    res
+
   end
 
   def facebook_share_href

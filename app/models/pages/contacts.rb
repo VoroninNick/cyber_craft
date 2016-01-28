@@ -3,6 +3,8 @@ class Pages::Contacts < Cms::Page
   has_html_block :email
   has_html_block :skype
   has_html_block :address
+  has_html_block :facebook_profile_url
+  has_html_block :linkedin_profile_url
   has_cache
 
   # def email
