@@ -12,6 +12,7 @@
         display: block;
         color: #384146;
         font-size: 12px;
+        text-align: left;
     }
 </style>
 
@@ -76,6 +77,16 @@
         var url = $input.attr("data-url")
         if(url && url.length > 0){
             $input.attr(url)
+        }
+        var $widget = $(".IN-widget")
+        var $show_profile_url = $("#show-profile-url")
+        if($widget.hasClass("applied")){
+            $widget.removeClass("applied")
+            $show_profile_url.text("")
+        }
+        else{
+            $widget.addClass("applied")
+            $show_profile_url.text(url)
         }
     })
 
