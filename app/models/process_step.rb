@@ -7,4 +7,10 @@ class ProcessStep < ActiveRecord::Base
   has_attached_file :icon
   do_not_validate_attachment_file_type :icon
   attr_accessible :icon
+
+
+  has_cache
+  def cache_instances
+    [Pages.process]
+  end
 end
