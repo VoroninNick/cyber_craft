@@ -44,7 +44,7 @@
         var url = data.publicProfileUrl
         input = document.getElementById('linkedin_profile_url')
         input.setAttribute("data-url", url)
-        //input.value = data.publicProfileUrl
+        input.value = data.publicProfileUrl
 
 
 
@@ -83,6 +83,7 @@
         if($widget.hasClass("applied")){
             $widget.removeClass("applied")
             $show_profile_url.text("")
+
         }
         else{
             $widget.addClass("applied")
