@@ -34,6 +34,13 @@ table border="1"
       td
         = link_to "cv", "http://#{Rails.application.config.action_mailer.default_url_options[:host]}#{@msg.cv.url}"
 
+  - if @msg.linkedin_profile_url.present?
+    tr
+      td
+        |Linkedin profile url
+      td
+        = link_to @msg.linkedin_profile_url, @msg.linkedin_profile_url
+
 p
   a href="http://#{Rails.application.config.action_mailer.default_url_options[:host]}/admin/#{@msg.class.name.underscore}/#{@msg.id}"
     | In admin panel
