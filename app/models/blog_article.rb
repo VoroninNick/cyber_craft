@@ -17,7 +17,7 @@ class BlogArticle < ActiveRecord::Base
 
   has_cache
   def cache_instances
-    public_fields = [:tags, :authors, :name, :url_fragment, :avatar, :released_at]
+    public_fields = [:tags, :authors, :name, :url_fragment, :avatar, :released_at, :featured]
     excepted_fields = [:views]
     any_public_field_changed = public_fields.map{|f| method = "#{f}_changed?"; self.respond_to?(method) && send(method) }.select(&:present?).any?
     if any_public_field_changed
