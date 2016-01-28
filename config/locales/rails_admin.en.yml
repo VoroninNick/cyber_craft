@@ -1,0 +1,5 @@
+en:
+  admin:
+    actions:
+      clear_cache:
+        menu: "Clear cache"

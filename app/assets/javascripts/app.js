@@ -48,6 +48,14 @@ $(document).ready(function () {
         scrollIncrement: false
     });
 
+    $("body").on("navigation_move_start", function() {
+        $("body").addClass("navigation_move")
+    })
+
+    $("body").on("navigation_move_end", function() {
+        $("body").removeClass("navigation_move")
+    })
+
     $('.setOff').click(function () {
         console.log('off');
         $('.scroll-container').onePageScrollDestroy({

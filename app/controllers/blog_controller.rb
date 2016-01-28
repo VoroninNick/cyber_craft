@@ -46,6 +46,8 @@ class BlogController < ApplicationController
 
       set_page_metadata(@article)
 
+      @og_image = @article.avatar.url
+
       add_home_breadcrumb
       add_breadcrumb("blog")
       add_breadcrumb(@article.name, false)

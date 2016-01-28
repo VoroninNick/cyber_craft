@@ -81,5 +81,8 @@ module ApplicationHelper
     "https://vimeo.com/151523392"
   end
 
+  def og_image
+
+  end
 
 end

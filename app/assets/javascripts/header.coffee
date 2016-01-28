@@ -16,7 +16,7 @@ handle_scroll = (e)->
 
   #console.log "menu.delta: ", delta
 
-  if scroll_top > banner_height && delta < 0
+  if scroll_top > banner_height && delta < 0 && !$("body").hasClass("navigation_move")
     $top_nav.addClass(scrolled_class)
 
   else

@@ -115,6 +115,10 @@ RailsAdmin.config do |config|
         "nestable_with_title"
       end
     end
+
+    clear_cache do
+
+    end
   end
 
 

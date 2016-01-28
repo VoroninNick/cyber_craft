@@ -4,6 +4,7 @@ class TeamsController < BaseIndustriesController
   def index
     set_page_metadata("teams")
 
+
     @teams = Team.published.sort_by_position
 
     add_home_breadcrumb
@@ -16,6 +17,7 @@ class TeamsController < BaseIndustriesController
     @team = Team.published.where(url_fragment: params[:id]).first
     if @team
       set_page_metadata(@team)
+      @og_image = @team.avatar.url
 
       add_home_breadcrumb
       add_breadcrumb("teams")

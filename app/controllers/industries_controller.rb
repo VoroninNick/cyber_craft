@@ -16,6 +16,9 @@ class IndustriesController < BaseIndustriesController
     if @industry
       set_page_metadata(@industry)
 
+      @og_image = @industry.avatar.url
+
+
       add_home_breadcrumb
       add_breadcrumb("industries")
       add_breadcrumb(@industry.name, false)

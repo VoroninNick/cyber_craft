@@ -163,13 +163,17 @@
 
                 //Animation Up Down
                 var animation = function (element) {
+                    $("body").trigger("navigation_move_start")
+
                     var top_to_scroll = element.offset().top
                     if(opt.scrollIncrement === true){
                         top_to_scroll -= scrollTopMarker
                     }
                     $('html,body').delay(opt.animationDelay).animate({
                         scrollTop: top_to_scroll
-                    }, opt.animationDuration, opt.ease);
+                    }, opt.animationDuration, opt.ease, function(){
+                        $("body").trigger("navigation_move_end")
+                    });
                 };
 
                 if (opt.tooltip === true) {
@@ -188,6 +192,7 @@
                     var $element = $(this).data('scroll-to');
                     animation($('#' + $element));
                     $(this).prev().fadeOut(50);
+
                     return false;
                 });
 
