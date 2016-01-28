@@ -30,7 +30,7 @@ if $html.filter("[data-controller=blog][data-action=index]").length
             #parseInt($(item).attr('data-views'))
             parseInt($(item).attr('data-popularity-position'))
           name: (item)->
-            parseInt($(item).attr('data-name'))
+            $(item).attr('data-name')
         }
       })
 

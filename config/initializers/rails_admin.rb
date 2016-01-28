@@ -110,6 +110,10 @@ RailsAdmin.config do |config|
 
     nestable do
       only [Industry, Team, Member, Benefit, UserFeedback, EmployeeFeedback, ProcessStep, BlogArticle, HomeBlogArticle]
+
+      template_name do
+        "nestable_with_title"
+      end
     end
   end
 
@@ -357,11 +361,11 @@ RailsAdmin.config do |config|
       end
 
       if m == BlogArticle
-        nestable_list position_field: :popularity_position
+        nestable_list position_field: :popularity_position, title: "Sorting by popularity by asceding"
       end
 
       if m == HomeBlogArticle
-        nestable_list position_field: :home_position
+        nestable_list position_field: :home_position, title: "Sorting home articles by asceding"
       end
     end
   end
