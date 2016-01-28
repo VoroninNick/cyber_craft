@@ -15,9 +15,10 @@ handle_scroll = (e)->
     delta = e
 
   #console.log "menu.delta: ", delta
-
+  $("body").attr("header_timeout")
   if scroll_top > banner_height && delta < 0 && !$("body").hasClass("navigation_move")
     $top_nav.addClass(scrolled_class)
+
 
   else
     $top_nav.removeClass(scrolled_class)
