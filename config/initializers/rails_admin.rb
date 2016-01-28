@@ -238,6 +238,8 @@ RailsAdmin.config do |config|
       content_field :email, :text
       content_field :skype, :text
       content_field :address, :text
+      content_field :facebook_profile_url, :text
+      content_field :linkedin_profile_url, :text
       field :seo_tags
     end
   end
