@@ -16,7 +16,7 @@ class Member < ActiveRecord::Base
 
   has_cache
   def cache_instances
-    [Pages.about_us]
+    [Pages.about_us, Pages.career]
   end
 
 
