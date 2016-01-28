@@ -1,5 +1,8 @@
 class Pages::Career < Cms::Page
   has_html_block :career_site_date
+  has_html_block :phone
+  has_html_block :email
+  has_html_block :address
   has_cache
 
   after_save do

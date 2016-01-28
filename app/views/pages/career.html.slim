@@ -84,20 +84,20 @@ footer#standard-footer
             .col-md-12.col-sm-12.col-xs-12.foot_title_career
               .row
                 .col-md-4.col-sm-4.col-xs-12
-                  a href="tel:+380322755757"
+                  a href="tel:#{Pages.career.phone.gsub(/\s/, "")}"
                     span
                       img alt="" src=asset_path("phone.png")
-                    | +38 032 275 57 57
+                    = Pages.career.phone
                 .col-md-4.col-sm-4.col-xs-12
-                  a href="mailto:hr@cybercraft.com.ua"
+                  a href="mailto:#{Pages.career.email}"
                     span
                       img alt="" src=asset_path("email.png")
-                    | hr@cybercraft.com.ua
+                    = Pages.career.email
                 .col-md-4.col-sm-4.col-xs-12
                   p
                     span
                       img alt="" src=asset_path("map.png")
-                    | 7 Slipoho Str. Lviv, Ukraine, 79017
+                    = Pages.career.address
           .yellowformcontacts style=("visibility: visible;")
             .col-md-12.col-sm-12.col-xs-12.send_message
 

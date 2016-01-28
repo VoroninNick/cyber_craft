@@ -78,7 +78,7 @@ $(window).on "wheel", (e)->
     #future_scroll_top = current_scroll_top + deltaY * 2.5
     scroll_direction_up = deltaY < 0
 
-    increment = 250
+    increment = 100
 
     if scroll_direction_up
       increment = increment * -1

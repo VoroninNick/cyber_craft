@@ -195,6 +195,10 @@ RailsAdmin.config do |config|
           return nil
         end
       end
+
+      content_field :phone, :text
+      content_field :email, :text
+      content_field :address, :text
       field :seo_tags
     end
   end
@@ -231,6 +235,9 @@ RailsAdmin.config do |config|
       field :bottom_banner
       field :bottom_banner_description
       content_field :phones, :text
+      content_field :email, :text
+      content_field :skype, :text
+      content_field :address, :text
       field :seo_tags
     end
   end

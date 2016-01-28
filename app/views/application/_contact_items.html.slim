@@ -17,15 +17,14 @@
           | +380 63 99 11 633
           sup Eu
 
-    a.cont_mail.svg-icon href="mailto:info@cybercraftinc.com"
+    a.cont_mail.svg-icon href="mailto:#{Pages.contacts.try(:email)}"
       = inline_svg("mail.svg")
-      |info@cybercraftinc.com
+      = Pages.contacts.try(:email)
   .col-xs-8.col-xs-push-0.col-from-480-6.col-from-480-push-0
     a.cont_map.svg-icon href="#"
       = inline_svg("loc.svg")
-      span 7 Slipoho Str.
-      span Lviv, Ukraine, 79017
+      = raw Pages.contacts.try(:address)
 
-    a.cont_skype.svg-icon href="skype:ask.CyberCraft"
+    a.cont_skype.svg-icon href="skype:#{Pages.contacts.try(:skype)}"
       = inline_svg("skype.svg")
-      |ask.CyberCraft
+      = Pages.contacts.try(:skype)
