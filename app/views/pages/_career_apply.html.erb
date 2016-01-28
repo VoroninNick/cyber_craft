@@ -72,7 +72,7 @@
     })
 
     $("body").on("click", ".IN-widget", function(){
-        $input = $("#linkedin_profile_url")
+        var $input = $("#linkedin_profile_url")
         var attach = $input.hasAttribute("data-url")
         var url = $input.attr("data-url")
         if(url && url.length > 0){
@@ -83,11 +83,12 @@
         if($widget.hasClass("applied")){
             $widget.removeClass("applied")
             $show_profile_url.text("")
-
+            $input.val("")
         }
         else{
             $widget.addClass("applied")
             $show_profile_url.text(url)
+            $input.val(url)
         }
     })
 
