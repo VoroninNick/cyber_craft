@@ -17,11 +17,13 @@
     // Handle the successful return from the API call
     function onSuccess(data) {
         console.log("linkedin success: ", data);
-        if(data.firstName && data.firstName.length){
-            $name = $("[name='vacancy_request[name]']")
-            $name.val(data.firstName)
-            $name.trigger("keyup")
-        }
+//        if(data.firstName && data.firstName.length){
+//            $name = $("[name='vacancy_request[name]']")
+//            $name.val(data.firstName)
+//            $name.trigger("keyup")
+//        }
+
+        document.getElementById('linkedin_profile_url').value = data.publicProfileUrl;
 
         $(".IN-widget").hide()
 

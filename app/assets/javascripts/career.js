@@ -5,27 +5,7 @@ if($("html[data-controller=pages][data-action=career]").length) {
         animation: 'fade'
     });
 
-
-    //$(document).ready(function () {
-    //    $("#countdown").countdown({
-    //            date: "21 december 2015 11:51:00",
-    //            format: "on"
-    //        },
-    //
-    //        function () {
-    //            // callback function
-    //        });
-    //});
-
     $("#career-countdown time").countDown()
-
-
-// Scrol career block2
-//$("body").on("click", ".scroll-down-arrow_career", function(){
-//    var top = $("#career_axperts_2").offset().top
-//    $("body").animate({scrollTop: top})
-//})
-
 
 // Scrol career Footer form
     $("body").on("click", ".career_send_message", function () {

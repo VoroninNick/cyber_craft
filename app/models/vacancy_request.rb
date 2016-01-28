@@ -5,4 +5,6 @@ class VacancyRequest < ActiveRecord::Base
   do_not_validate_attachment_file_type :cv
   attr_accessible :cv
 
+
+
 end

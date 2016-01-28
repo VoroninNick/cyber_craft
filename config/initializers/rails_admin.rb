@@ -510,6 +510,16 @@ RailsAdmin.config do |config|
     visible false
   end
 
+  config.model VacancyRequest do
+    show do
+      field :name
+      field :email
+      field :message
+      field :cv
+      field :linkedin_profile_url
+    end
+  end
+
   [FormConfigs::Message, FormConfigs::VacancyRequest].each do |m|
     config.model m do
       settings_navigation_label
