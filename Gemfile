@@ -97,3 +97,5 @@ else
 end
 
 gem 'pry-rails'
+
+gem 'bigdecimal'
