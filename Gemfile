@@ -99,3 +99,5 @@ end
 gem 'pry-rails'
 
 gem 'bigdecimal'
+
+gem 'therubyracer'
