@@ -407,8 +407,9 @@ Main page Logo
   width: 100%;
   z-index: 30;
   text-align: center;
+  cursor: pointer;
 }
-.learnmore a{
+.learnmore a, .learnmore-inner{
   background: image_url("learnmore.png") no-repeat top center;
   padding-top: 40px;
   color:#fff;

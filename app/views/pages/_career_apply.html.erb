@@ -42,15 +42,15 @@
 //            $name.trigger("keyup")
 //        }
         var url = data.publicProfileUrl
-        input = document.getElementById('linkedin_profile_url')
-        input.setAttribute("data-url", url)
-        input.value = data.publicProfileUrl
+        if(url && url.length > 0) {
+            input = document.getElementById('linkedin_profile_url')
+            input.setAttribute("data-url", url)
+            input.value = data.publicProfileUrl
 
 
-
-
-        $(".IN-widget").addClass("applied")
-        $("#show-profile-url").text(url)
+            $(".IN-widget").addClass("applied")
+            $("#show-profile-url").text(url)
+        }
     }
 
     // Handle an error response from the API call
@@ -86,9 +86,11 @@
             $input.val("")
         }
         else{
-            $widget.addClass("applied")
-            $show_profile_url.text(url)
-            $input.val(url)
+            if(url && url.length > 0) {
+                $widget.addClass("applied")
+                $show_profile_url.text(url)
+                $input.val(url)
+            }
         }
     })
 

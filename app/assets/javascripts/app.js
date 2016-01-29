@@ -48,8 +48,11 @@ $(document).ready(function () {
         scrollIncrement: false
     });
 
-    $("body").on("navigation_move_start", function() {
-        $("body").addClass("navigation_move")
+    $("body").on("navigation_move_start", function(e, args) {
+        $body = $("body")
+        $body.addClass("navigation_move")
+        //console.log("args", arguments)
+        $body.data("scroll_top", args.top_to_scroll)
     })
 
     $("body").on("navigation_move_end", function() {

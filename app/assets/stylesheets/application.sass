@@ -139,3 +139,29 @@ a
 		margin-top: -100px
 	.controls-wrapper
 		display: none !important
+
+
+
+body.custom-scrollbar
+	overflow: hidden
+	&.has-scrollbar
+		padding-right: 8px
+
+.scrollbar
+	position: fixed
+	height: 100%
+	width: 8px
+	background-color: mix($blue-color, white,  50%)
+	right: 0
+	top: 0
+	z-index: 1000
+.scrollbar-thumb
+	width: 8px
+	background-color: $blue-color
+	position: relative
+	@include transition(0.4s background-color)
+
+
+html.scrollstart
+	.scrollbar-thumb
+		background-color: $orange-color
