@@ -101,3 +101,8 @@ gem 'pry-rails'
 gem 'bigdecimal'
 
 gem 'therubyracer'
+
+gem 'paperclip-optimizer'
+
+gem 'image_optim'
+gem 'image_optim_pack'
