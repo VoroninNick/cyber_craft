@@ -23,14 +23,17 @@ Paperclip::PaperclipOptimizer.default_options = {
 
   },
   optipng: {
-      level: 5, # Optimization level preset: 0 is least, 7 is best (defaults to 6)
+      level: 7, # Optimization level preset: 0 is least, 7 is best (defaults to 6)
       #interlace: false
   },
   pngcrush: {
       brute: true
   },
   pngout: false,
-  pngquant: false,
+  pngquant: {
+      quality: 0..100,  # min..max - don't save below min, use less colors below max (both in range 0..100; in yaml - !ruby/range 0..100) (defaults to 100..100)
+      speed: 1
+  },
   svgo: false
 }
 
