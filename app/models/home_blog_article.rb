@@ -5,7 +5,7 @@ class HomeBlogArticle < BlogArticle
 
   def cache_instances
     instances = super
-    if home_position_changed?
+    if home_position_changed? || !self.persisted?
       instances += [Pages.home]
     end
 

@@ -20,7 +20,7 @@ class BlogArticle < ActiveRecord::Base
     public_fields = [:tags, :authors, :name, :url_fragment, :avatar, :released_at, :featured]
     excepted_fields = [:views]
     any_public_field_changed = public_fields.map{|f| method = "#{f}_changed?"; self.respond_to?(method) && send(method) }.select(&:present?).any?
-    if any_public_field_changed
+    if any_public_field_changed || !self.persisted?
       [Pages.home, Pages.blog, self.class.all]
     else
       [self]
