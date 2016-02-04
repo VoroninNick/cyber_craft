@@ -4,7 +4,7 @@ module Opt
   end
   def self.reprocess_images
 
-    models.each do |model|
+    (models + Pages.all).each do |model|
       names = model.try(:attachment_definitions)
       if names.try(:any?)
         names.each do |name|
