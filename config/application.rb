@@ -65,12 +65,14 @@ module CyberCraft
 
       relative_path += "**/*"
       config.assets.precompile.delete_if{true}
-      config.assets.precompile = Dir.glob(Rails.root.join(relative_path))
+      config.assets.precompile = (Dir.glob(Rails.root.join(relative_path)) + %w(application.css application.js))
+
+      config.assets.precompile += %w(under_construction.css under_construction.js ie.js)
 
 
 
 
-      config.assets.precompile += %w(app/assets/stylesheets/application.sass app/assets/stylesheets/application.js)
+
 
 
     end
