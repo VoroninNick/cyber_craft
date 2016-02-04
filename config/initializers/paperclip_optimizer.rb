@@ -8,13 +8,14 @@
 # things won't suddenly break.
 
 Paperclip::PaperclipOptimizer.default_options = {
+  allow_lossy: true,
   skip_missing_workers: true,
   advpng: false,
   gifsicle: false,
   jhead: false,
   jpegoptim: {
       strip: :all,
-      max_quality: 60
+      max_quality: 100
   },
   jpegrecompress: {
       quality: 3
