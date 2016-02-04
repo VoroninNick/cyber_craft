@@ -24,11 +24,12 @@ module Opt
   end
 
   def self.optimize_static_images
+    optimized_images_relative_path = "app/assets/optimized_images"
     original_assets_path = Rails.root.join("app/assets/images")
-    optimized_assets_path = Rails.root.join("app/assets/optimized_images")
+    optimized_assets_path = Rails.root.join(optimized_images_relative_path)
     FileUtils.rm_rf(optimized_assets_path)
     FileUtils.copy_entry(original_assets_path, optimized_assets_path)
-    AssetImageOpt.WORKING_DIR = "app/assets/optimized_images"
+    AssetImageOpt::WORKING_DIR = optimized_images_relative_path
     opt = AssetImageOpt.new
     opt.optimize
   end
