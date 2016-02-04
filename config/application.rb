@@ -65,7 +65,8 @@ module CyberCraft
 
       relative_path += "**/*"
 
-      config.assets.precompile += [Rails.root.join(relative_path)]
+      config.assets.precompile += Dir.glob(Rails.root.join(relative_path))
+
     end
   end
 end
