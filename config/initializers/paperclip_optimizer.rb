@@ -22,14 +22,14 @@ Paperclip::PaperclipOptimizer.default_options = {
   jpegtran: {
 
   },
-  optipng: {
-      level: 7, # Optimization level preset: 0 is least, 7 is best (defaults to 6)
-      #interlace: false
-  },
+  #optipng: {
+  #    level: 7, # Optimization level preset: 0 is least, 7 is best (defaults to 6)
+  #    #interlace: false
+  #},
   pngcrush: {
       brute: true
   },
-  pngout: true,
+  pngout: false,
   pngquant: {
       quality: 0..80,  # min..max - don't save below min, use less colors below max (both in range 0..100; in yaml - !ruby/range 0..100) (defaults to 100..100)
       speed: 1
