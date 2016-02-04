@@ -26,7 +26,7 @@
                 h3.author
                   = item.name
                 - if item.company_image.exists?
-                  img.company_logo alt="alt" src=item.company_image.url()
+                  img.company_logo alt="alt" src=item.company_image.url(:home)
                 - elsif item.position.present?
                   span.user-position
                     = item.position
