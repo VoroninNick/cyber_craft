@@ -30,8 +30,9 @@ module Opt
     FileUtils.rm_rf(optimized_assets_path)
     FileUtils.copy_entry(original_assets_path, optimized_assets_path)
     #AssetImageOpt::WORKING_DIR = optimized_images_relative_path
+    AssetImageOpt::WORKING_DIR.send(:replace, optimized_images_relative_path)
     opt = AssetImageOpt.new
-    opt
+
     opt.optimize
   end
 end
