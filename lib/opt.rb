@@ -26,6 +26,8 @@ module Opt
         end
       end
     end
+
+    return true
   end
 
   def self.optimize_static_images

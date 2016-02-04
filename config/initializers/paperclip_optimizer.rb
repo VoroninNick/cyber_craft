@@ -26,7 +26,9 @@ Paperclip::PaperclipOptimizer.default_options = {
       level: 5, # Optimization level preset: 0 is least, 7 is best (defaults to 6)
       #interlace: false
   },
-  pngcrush: false,
+  pngcrush: {
+      brute: true
+  },
   pngout: false,
   pngquant: false,
   svgo: false
