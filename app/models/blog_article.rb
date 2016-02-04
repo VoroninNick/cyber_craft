@@ -30,7 +30,11 @@ class BlogArticle < ActiveRecord::Base
   has_and_belongs_to_many :authors, class_name: User, join_table: :author_articles, foreign_key: :article_id, association_foreign_key: :author_id
   attr_accessible :authors, :author_ids
 
-  has_attached_file :avatar, styles: { home: "720x450#" }
+  has_attached_file :avatar,
+                    styles: {
+                        home: "420x262#" # '720x450#'
+                    }
+
   has_attached_file :banner
 
 
