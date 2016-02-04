@@ -25,7 +25,7 @@ if $html.filter("[data-controller=blog][data-action=index]").length
         itemSelector: ".article-item"
         getSortData: {
           date: (item)->
-            parseInt($(item).attr("data-date"))
+            Date.parse($(item).attr("data-date"))
           popularity: (item)->
             #parseInt($(item).attr('data-views'))
             parseInt($(item).attr('data-popularity-position'))
