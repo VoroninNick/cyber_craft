@@ -23,37 +23,39 @@ module CyberCraft
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
-    config.assets.precompile += %w(under_construction.css under_construction.js ie.js)
-    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif *.svg)
-    assets_root = Rails.root.join("app/assets/images")
-    #paths = Dir[assets_root.join("/*.[gif|jpg|jpeg|png]")]
-    paths = Dir[Rails.root.join("app/assets/images/**/*")]
-    config.assets.precompile += paths
-
-    config.assets.precompile += %w(ckeditor)
-    config.assets.precompile += %w(rails_admin/rails_admin.css rails_admin/rails_admin.css)
-    config.assets.precompile += %w(ckeditor/lang/*.js)
-
-    config.assets.precompile += %w(rails_admin/colorpicker/*.gif rails_admin/colorpicker/*.png rails_admin/bootstrap/*.png rails_admin/aristo/images/* rails_admin/multiselect/*.png rails_admin/*.png)
-
-
-    config.assets.precompile += %w(ckeditor/config.js)
-    config.assets.precompile += %w(ckeditor/plugins/codemirror/plugin.js ckeditor/plugins/codemirror/lang/* ckeditor/plugins/codemirror/css/* ckeditor/plugins/codemirror/js/*.js ckeditor/plugins/codemirror/icons/* ckeditor/plugins/codemirror/theme/*)
-
-    #Rails.application.config do |config|
-      #config.assets.paths << "/"
-    if !ENV['SKIP_PUBLIC_ASSETS'] && !ENV['SPA']
-      config.assets.paths << Rails.root.join("public")
-    end
-    #end
-
-    #if Rails.env.production?
-    #  config.assets.paths << Rails.root.join("app/assets/optimized_images")
-    #end
-
-
     only_assets_folder = ENV['ONLY_ASSETS_FOLDER'] || ENV['OAF']
-    if only_assets_folder.present?
+
+    if only_assets_folder.blank?
+
+      config.assets.precompile += %w(under_construction.css under_construction.js ie.js)
+      config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif *.svg)
+      assets_root = Rails.root.join("app/assets/images")
+      #paths = Dir[assets_root.join("/*.[gif|jpg|jpeg|png]")]
+      paths = Dir[Rails.root.join("app/assets/images/**/*")]
+      config.assets.precompile += paths
+
+      config.assets.precompile += %w(ckeditor)
+      config.assets.precompile += %w(rails_admin/rails_admin.css rails_admin/rails_admin.css)
+      config.assets.precompile += %w(ckeditor/lang/*.js)
+
+      config.assets.precompile += %w(rails_admin/colorpicker/*.gif rails_admin/colorpicker/*.png rails_admin/bootstrap/*.png rails_admin/aristo/images/* rails_admin/multiselect/*.png rails_admin/*.png)
+
+
+      config.assets.precompile += %w(ckeditor/config.js)
+      config.assets.precompile += %w(ckeditor/plugins/codemirror/plugin.js ckeditor/plugins/codemirror/lang/* ckeditor/plugins/codemirror/css/* ckeditor/plugins/codemirror/js/*.js ckeditor/plugins/codemirror/icons/* ckeditor/plugins/codemirror/theme/*)
+
+      #Rails.application.config do |config|
+        #config.assets.paths << "/"
+      if !ENV['SKIP_PUBLIC_ASSETS'] && !ENV['SPA']
+        config.assets.paths << Rails.root.join("public")
+      end
+      #end
+
+      #if Rails.env.production?
+      #  config.assets.paths << Rails.root.join("app/assets/optimized_images")
+      #end
+
+    else
       relative_path = only_assets_folder
       if relative_path !=~ /\/\Z/
 
@@ -65,6 +67,5 @@ module CyberCraft
 
       config.assets.precompile = [Rails.root.join(relative_path)]
     end
-
   end
 end
