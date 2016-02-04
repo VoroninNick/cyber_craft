@@ -68,7 +68,9 @@ module CyberCraft
       config.assets.precompile = Dir.glob(Rails.root.join(relative_path))
 
 
-      config.assets.precompile += %w(app/assets/stylesheets/application.css app/assets/stylesheets/application.js)
+
+
+      config.assets.precompile += %w(app/assets/stylesheets/application.sass app/assets/stylesheets/application.js)
 
 
     end
