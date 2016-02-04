@@ -47,7 +47,24 @@ module CyberCraft
     end
     #end
 
+    #if Rails.env.production?
+    #  config.assets.paths << Rails.root.join("app/assets/optimized_images")
+    #end
 
+
+    only_assets_folder = ENV['ONLY_ASSETS_FOLDER'] || ENV['OAF']
+    if only_assets_folder.present?
+      relative_path = only_assets_folder
+      if relative_path !=~ /\/\Z/
+
+        relative_path += "/"
+
+      end
+
+      relative_path += "**/*"
+
+      config.assets.precompile = [Rails.root.join(relative_path)]
+    end
 
   end
 end

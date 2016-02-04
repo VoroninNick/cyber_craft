@@ -107,3 +107,5 @@ gem 'paperclip-optimizer'
 gem 'image_optim'
 gem 'image_optim_pack'
 gem 'asset-image-opt'
+
+gem 'sprockets-image_compressor'
