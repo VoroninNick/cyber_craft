@@ -53,14 +53,19 @@ gem 'bower-rails'
 
 gem "protected_attributes"
 
-gem 'rails_admin'
-gem 'rails_admin_nestable'
+skip_gems_with_assets = !!ENV['OAF']
+
+if !skip_gems_with_assets
+  gem 'rails_admin'
+  gem 'rails_admin_nestable'
+  gem 'ckeditor'
+end
 
 gem 'devise'
 
 gem 'enumerize'
 
-gem 'ckeditor'
+
 
 gem 'paperclip'
 

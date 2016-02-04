@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-  mount Ckeditor::Engine => '/ckeditor'
+  if defined?(Ckeditor)
+    mount Ckeditor::Engine => '/ckeditor'
+  end
   devise_for :users, controllers: { sessions: "users/sessions" }
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-
+  if defined?(RailsAdmin)
+    mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  end
   show_stub = false
 
   if show_stub
