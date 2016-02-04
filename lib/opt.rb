@@ -7,7 +7,7 @@ module Opt
     (models + Pages.all).each do |model|
       names = model.try(:attachment_definitions)
       if names.try(:any?)
-        names.each do |name|
+        names.each do |name, attachment_definition|
           model.all.each do |item|
             attachment = item.send(name)
             if attachment.exists?
