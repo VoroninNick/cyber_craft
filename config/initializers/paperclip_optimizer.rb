@@ -14,9 +14,11 @@ Paperclip::PaperclipOptimizer.default_options = {
   jhead: false,
   jpegoptim: {
       strip: :all,
-      max_quality: 100
+      max_quality: 60
   },
-  jpegrecompress: false,
+  jpegrecompress: {
+      quality: 3
+  },
   jpegtran: false,
   optipng: false,
   pngcrush: false,
