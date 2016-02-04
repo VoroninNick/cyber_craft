@@ -2,8 +2,11 @@ module Opt
   def self.models
     models = Dir[Rails.root.join("app/models/*.rb")].map {|f| name = f.split("/").last.gsub(/\.rb\Z/, "").camelize.constantize }.select{|a| a.instance_of?(Class) && a.superclass == ActiveRecord::Base }
   end
-  def self.reprocess_images
+  def self.reprocess_images(extensions = [:jpg, :jpeg, :png])
     Paperclip.options[:log] = false
+    if !extensions.is_a?(Array)
+      extensions = [extensions]
+    end
     (models + Pages.all).each do |model|
       puts "model: #{model.name}"
       model.logger = nil
@@ -14,7 +17,9 @@ module Opt
             attachment = item.send(name)
             if attachment.exists?
               attachment.styles.each do |style_name, style_definition|
-                attachment.reprocess!(style_name)
+                if extensions.include?(File.extname(attachment.path(style_name)).gsub(/\A\./, "").to_sym)
+                  attachment.reprocess!(style_name)
+                end
               end
             end
           end
