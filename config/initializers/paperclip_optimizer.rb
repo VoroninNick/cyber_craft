@@ -29,7 +29,7 @@ Paperclip::PaperclipOptimizer.default_options = {
   pngcrush: {
       brute: true
   },
-  pngout: false,
+  pngout: true,
   pngquant: {
       quality: 0..100,  # min..max - don't save below min, use less colors below max (both in range 0..100; in yaml - !ruby/range 0..100) (defaults to 100..100)
       speed: 1
