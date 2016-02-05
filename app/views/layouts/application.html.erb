@@ -27,6 +27,8 @@
     <% if content_for?(:head_javascript) %>
         <%= content_for :head_javascript %>
     <% end %>
+
+    <%= stylesheet_link_tag    "application" %>
   </head>
 
   <body>
@@ -61,8 +63,6 @@
     <% else %>
         <%= render "footer" %>
     <% end %>
-
-    <%= stylesheet_link_tag    "application" %>
 
     <%= javascript_include_tag "vendor/modernizr" %>
 
