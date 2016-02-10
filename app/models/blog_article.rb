@@ -50,8 +50,8 @@ class BlogArticle < ActiveRecord::Base
 
   scope :featured, -> { where(featured: 't') }
 
-  scope :sort_by_popularity_asc, proc { order "popularity_position, views asc" }
-  scope :sort_by_popularity_desc, proc { order "popularity_position, views desc" }
+  scope :sort_by_popularity_asc, proc { order "popularity_position desc" }
+  scope :sort_by_popularity_desc, proc { order "popularity_position asc" }
 
   scope :sort_by_date_asc, proc { order "released_at asc" }
   scope :sort_by_date_desc, proc { order "released_at desc" }

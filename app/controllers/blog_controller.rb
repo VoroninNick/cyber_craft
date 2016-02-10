@@ -13,7 +13,7 @@ class BlogController < ApplicationController
     per_page = 18
     page = params[:page].try(&:to_i) || 1
 
-    all_articles = BlogArticle.published.sort_by_popularity_asc
+    all_articles = BlogArticle.published.sort_by_popularity_desc
     pages_count = params[:pages_count].try(&:to_i) || 1
 
     if pages_count == 1

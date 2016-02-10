@@ -112,6 +112,14 @@ if $html.filter("[data-controller=blog][data-action=index]").length
       direction = $(".sorting-directions .checked").hasClass("asc") ? 'asc' : 'desc'
       options.asc = direction == 'asc'
 
+
+
+    if options.prop == 'popularity'
+      options.asc = !options.asc
+
+    #alert("asc: #{options.asc}; prop: #{options.prop}")
+
+
     $grid.isotope({
       sortBy: options.prop
       sortAscending: options.asc
@@ -188,7 +196,7 @@ if $html.filter("[data-controller=blog][data-action=index]").length
     filter_grid()
 
 
-  $("body").on "click", ".sorting-directions :not(.checked)", ()->
+  $("body").on "click", ".sorting-directions > div:not(.checked)", ()->
     $this = $(this)
     $parent = $this.parent()
     asc = $this.hasClass("asc")
@@ -201,11 +209,13 @@ if $html.filter("[data-controller=blog][data-action=index]").length
 
 
     sort_grid({asc: asc})
+    #sort_grid()
 
   $("body").on "change", "select#sorting_property", ()->
 
     prop = $(this).val()
     sort_grid({prop: prop})
+    #sort_grid()
 
 
 
