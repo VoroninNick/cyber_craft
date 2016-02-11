@@ -33,9 +33,9 @@
         .sorting-properties.author-names
           = select_tag(:sorting_property, raw(BlogArticle.sorting_properties.map{|prop| content_tag(:option, prop.to_s.humanize, value: prop.to_s) }.join))
         .sorting-directions
-          .asc.checked
+          .desc.checked
             = inline_svg "cc-bottom-arrow.svg"
-          .desc
+          .asc
             = inline_svg "cc-top-arrow.svg"
 
 
