@@ -114,7 +114,7 @@ if $html.filter("[data-controller=blog][data-action=index]").length
 
 
 
-    if options.prop == 'popularity'
+    if options.prop == 'popularity' || options.prop == 'name'
       options.asc = !options.asc
 
     #alert("asc: #{options.asc}; prop: #{options.prop}")
