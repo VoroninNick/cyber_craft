@@ -109,12 +109,12 @@ if $html.filter("[data-controller=blog][data-action=index]").length
     if options.prop == undefined
       options.prop = $("select#sorting_property").val()
     if options.asc == undefined
-      direction = $(".sorting-directions .checked").hasClass("asc") ? 'asc' : 'desc'
+      direction = if $(".sorting-directions .checked").hasClass("asc") then 'asc' else 'desc'
       options.asc = direction == 'asc'
 
 
 
-    if options.prop == 'popularity'
+    if options.prop == 'popularity' || options.prop == 'name'
       options.asc = !options.asc
 
     #alert("asc: #{options.asc}; prop: #{options.prop}")
