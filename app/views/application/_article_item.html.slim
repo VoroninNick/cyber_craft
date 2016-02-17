@@ -2,7 +2,7 @@
   .test_bc.wow class=((index % 2 == 0 ? "fadeInDownBig" : "fadeInUpBig") if defined?(animation) && animation.present? )
     .tes_1
       a href=url_for(item)
-        img alt="alt" src=( item.avatar.exists? ? item.avatar.url(:home) : placeholdit_url("720x450") )
+        img alt="alt" src=( item.avatar.exists? ? item.avatar.url(:home) : asset_path("article_420x262.png") )
       - if defined?(css_filter) && css_filter.present?
         .fildr_bgimg class=""
       - if item.tag_list.any?
@@ -14,7 +14,7 @@
         a.teg_new href="#"  New
     h3.test_i1.article-name
       a href=url_for(item)
-        = item.name
+        = item.name + " ; popularity: #{item.popularity_position}"
     .title_teg
       p
 
