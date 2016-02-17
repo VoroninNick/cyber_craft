@@ -88,7 +88,7 @@ gem 'kaminari'
 
 gem "htmlcompressor"
 gem 'rack-page_caching'
-#gem 'paperclip-optimizer'
+gem 'paperclip-optimizer'
 
 gem 'time_diff'
 
@@ -106,8 +106,6 @@ gem 'pry-rails'
 gem 'bigdecimal'
 
 gem 'therubyracer'
-
-gem 'paperclip-optimizer'
 
 gem 'image_optim'
 gem 'image_optim_pack'

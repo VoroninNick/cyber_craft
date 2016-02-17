@@ -1,178 +1,47 @@
-window.classes = {
-  scrolled: "scrolled"
-}
-setClosingTimeout = ()->
-  visibility_duration = 2000
-  window.top_nav_timeout =  setTimeout(
-    ()->
-      window.top_nav_timeout = false
-      if !window.top_nav_locked
-        $top_nav = $(".top-nav")
-        $top_nav.removeClass(classes.scrolled)
-
-    visibility_duration
-  )
-
-handle_scroll = (e)->
-
-  # top nav
-  $banner = $(".header_style, #pagi1")
-  banner_height = $banner.height()
-
-  scroll_top = $(window).scrollTop()
-  $top_nav = $(".top-nav")
-  scrolled_class = classes.scrolled
-  visible_class = "visible"
-
-  if e && e.scrollTopDelta
-    delta = e.scrollTopDelta
-  else
-    delta = e
-
-  #console.log "menu.delta: ", delta
-  $("body").attr("header_timeout")
-  if scroll_top > banner_height && delta < 0 && !$("body").hasClass("navigation_move")
-    $top_nav.addClass(scrolled_class)
-    if window.top_nav_timeout
-      clearTimeout(window.top_nav_timeout)
-
-    setClosingTimeout()
-  else
-    $top_nav.removeClass(scrolled_class)
-
-  if scroll_top <= banner_height
-    $top_nav.addClass(visible_class)
-  else
-    $top_nav.removeClass(visible_class)
-
-
-
-
-
-  # top banner
-
-  $banner_title = $(".title_page:not(.disable-scroll)")
-  if $banner_title.length
-    ratio = 0.6
-    current_translate = $banner_title.data("translateY") || 0
-    future_translate = current_translate + delta * ratio
-
-    $banner_title.data("translateY", future_translate)
-    $banner_title.css("transform", "translateY(#{future_translate}px)")
-
-$("body").on "mouseover", "div.top-nav.scrolled, div.top-nav.scrolled *", ()->
-  window.top_nav_locked = true
-
-$("body").on "mouseout", "div.top-nav.scrolled", (e)->
-  $target = $(e.relatedTarget)
-  if $target.closest(".navigationleft").length == 0 && $target.closest(".header-logo").length == 0
-    window.top_nav_locked = false
-    setClosingTimeout()
-
-
-
-$(window).on "scrolldelta", handle_scroll
-
-handle_scroll(0)
-
-
-
-
-$(window).on "scrolldelta", (e)->
-
-$(window).on "wheel", (e)->
-  console.log "wheel"
-  if e.ctrlKey
-    return true
-  $body = $('body')
-  $html_body = $('body, html')
-  min_stroll_top = $("#pagi1, .career_header").height() || 0
-  max_scroll_top = $("body").height() - $(window).height()
-  $window = $(window)
-
-  current_scroll_top = $body.data("scroll_top") || $window.scrollTop()
-
-  deltaY = e.originalEvent.deltaY
-
-
-  condition = !$body.hasClass('open-popup') && !$body.data("scroll_in_progress") && (current_scroll_top >= min_stroll_top || deltaY < 0)
-  #console.log "condition: ", condition
-
-  if condition
-
-
-    #console.log "wheel: ", e
-    e.preventDefault()
-
-    #future_scroll_top = current_scroll_top + deltaY * 2.5
-    scroll_direction_up = deltaY < 0
-
-    increment = 100
-
-    if scroll_direction_up
-      increment = increment * -1
-
-
-
-
-    future_scroll_top = current_scroll_top + increment
-    if future_scroll_top > max_scroll_top
-      future_scroll_top = max_scroll_top
-    if future_scroll_top < 0
-      future_scroll_top = 0
-
-    if current_scroll_top != future_scroll_top
-      $body.data("scroll_top", future_scroll_top)
-
-      #console.log "future_scroll_top: ", future_scroll_top
-
-      $html_body.stop()
-      $html_body.animate({scrollTop: future_scroll_top}, {
-        duration: 600,
-        easing: "easeOutExpo"
-        #easing: "easeOutBack"
-      })
-
-showScrollbar = ()->
-  $body = $("body")
-  if $body.find(".scrollbar").length == 0
-    $scrollbar = $("<div class='scrollbar'><div class='scrollbar-thumb'></div></div>")
-    $scrollbar.prependTo($body)
-
-  $body.addClass("has-scrollbar")
-
-hideScrollbar = ()->
-  $body = $("body")
-  $body.removeClass("has-scrollbar")
-
-check_scroll_need = ()->
-  $body = $("body")
-  body_height = $body.height()
-  window_height = window.innerHeight
-  thumb_height_percent = window_height / body_height
-  return (thumb_height_percent < 1)
-
-setScrollbarPosition = (include_height = false)->
-  $body = $("body")
-
-  scroll_top = $(window).scrollTop()
-  body_height = $body.height()
-
-  top_percent = (scroll_top / body_height)
-
-  props = {}
-  props.top = "#{top_percent * 100}%"
-  if include_height
-    window_height = window.innerHeight
-    thumb_height_percent = window_height / body_height
-    props.height = "#{thumb_height_percent * 100}%"
-
-  $(".scrollbar-thumb").css(props)
 
 
 use_custom_scrollbar = false
 
 if use_custom_scrollbar && !Modernizr.touch
+
+  showScrollbar = ()->
+    $body = $("body")
+    if $body.find(".scrollbar").length == 0
+      $scrollbar = $("<div class='scrollbar'><div class='scrollbar-thumb'></div></div>")
+      $scrollbar.prependTo($body)
+
+    $body.addClass("has-scrollbar")
+
+  hideScrollbar = ()->
+    $body = $("body")
+    $body.removeClass("has-scrollbar")
+
+  check_scroll_need = ()->
+    $body = $("body")
+    body_height = $body.height()
+    window_height = window.innerHeight
+    thumb_height_percent = window_height / body_height
+    return (thumb_height_percent < 1)
+
+  setScrollbarPosition = (include_height = false)->
+    $body = $("body")
+
+    scroll_top = $(window).scrollTop()
+    body_height = $body.height()
+
+    top_percent = (scroll_top / body_height)
+
+    props = {}
+    props.top = "#{top_percent * 100}%"
+    if include_height
+      window_height = window.innerHeight
+      thumb_height_percent = window_height / body_height
+      props.height = "#{thumb_height_percent * 100}%"
+
+    $(".scrollbar-thumb").css(props)
+
+
+
   $("body").addClass("custom-scrollbar")
   $(window).on "load", ()->
     if check_scroll_need()

@@ -13,7 +13,7 @@ class ApplicationMailer < ActionMailer::Base
     mail(
         template_name: "message",
         to: receivers("message"),
-        from: "CyberCraft",
+        from: "CyberCraft <#{ActionMailer::Base.smtp_settings[:user_name]}>",
         subject: "New message"
     )
   end
@@ -24,7 +24,7 @@ class ApplicationMailer < ActionMailer::Base
     mail(
         template_name: "vacancy_request",
         to: receivers("vacancy_request"),
-        from: "CyberCraft",
+        from: "CyberCraft <#{ActionMailer::Base.smtp_settings[:user_name]}>",
         subject: "New Vacancy Request"
     )
   end

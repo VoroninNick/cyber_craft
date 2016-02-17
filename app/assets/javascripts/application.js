@@ -66,6 +66,7 @@
 
 //= require career
 
+//= require fixed_header
 //= require header
 
 //= require dev_tools
