@@ -28,7 +28,7 @@ class ApplicationController < ActionController::Base
   before_action :initialize_breadcrumbs
 
   def render_not_found
-    @title = "Page not found"
+    @head_title = "Page not found"
     render template: "errors/not_found.html.slim", layout: "empty_layout", status: 404
   end
 
