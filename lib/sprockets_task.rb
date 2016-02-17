@@ -1,12 +1,14 @@
+require "sprockets/rails/task"
+
 module Sprockets
   module Rails
-    class Task < Rake::SprocketsTask
+    class Task
       def output
-        if app
-          File.join(Rails.public_path, app.config.assets.prefix)
-        else
-          super
-        end
+        #if app
+        File.join(::Rails.public_path, ::Rails.application.config.assets.prefix)
+        #else
+        #  super
+        #end
       end
     end
   end
