@@ -2,7 +2,7 @@ class Feedback < ActiveRecord::Base
   attr_accessible *attribute_names
 
   has_attached_file :user_image, styles: { home: "80x80#" }
-  has_attached_file :company_image, styles: { home: "80x40#" }
+  has_attached_file :company_image, styles: { home: "80x40>" }
 
   [:company_image, :user_image].each do |attachment_name|
 
