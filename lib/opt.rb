@@ -2,12 +2,14 @@ module Opt
   def self.models
     models = Dir[Rails.root.join("app/models/*.rb")].map {|f| name = f.split("/").last.gsub(/\.rb\Z/, "").camelize.constantize }.select{|a| a.instance_of?(Class) && a.superclass == ActiveRecord::Base }
   end
-  def self.reprocess_images(extensions = [:jpg, :jpeg, :png])
+  def self.reprocess_images(models = nil, extensions = [:jpg, :jpeg, :png])
     Paperclip.options[:log] = false
     if !extensions.is_a?(Array)
       extensions = [extensions]
     end
-    (models + Pages.all).each do |model|
+    models ||= self.models + Pages.all
+
+    models.each do |model|
       puts "model: #{model.name}"
       model.logger = nil
       names = model.try(:attachment_definitions)
