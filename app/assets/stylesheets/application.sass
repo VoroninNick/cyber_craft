@@ -165,3 +165,19 @@ body.custom-scrollbar
 html.scrollstart
 	.scrollbar-thumb
 		background-color: $orange-color
+
+
+.bx-pager-link
+	position: relative
+	overflow: visible
+	box-shadow: none !important
+	-webkit-box-shadow: none !important
+
+	&:after
+		content: ""
+		background: rgba(0, 0, 0, 0.5)
+		height: 1px
+		width: 26px
+		position: absolute
+		top: 24px
+		left: 0
