@@ -1,0 +1,27 @@
+#container style="margin-top: 2000px"
+button#btn-window
+  |1
+button#btn-body
+  |2
+button#btn-body-or-window
+  |3
+button#btn-window-or-body
+  |4
+
+script src="/assets/jquery/dist/jquery.min.js"
+coffee:
+  $("#btn-window").on "click", ()->
+    scroll_top = $(window).scrollTop()
+    alert("1: #{scroll_top}")
+
+  $("#btn-body").on "click", ()->
+    scroll_top = $("body").scrollTop()
+    alert("2: #{scroll_top}")
+
+  $("#btn-body-or-window").on "click", ()->
+    scroll_top = $("body").scrollTop() || $(window).scrollTop()
+    alert("3: #{scroll_top}")
+
+  $("#btn-window-or-body").on "click", ()->
+    scroll_top = $(window).scrollTop() || $("body").scrollTop()
+    alert("4: #{scroll_top}")
