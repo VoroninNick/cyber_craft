@@ -23,7 +23,7 @@ handle_scroll = (e)->
   $banner = $(".header_style, #pagi1")
   banner_height = $banner.height()
 
-  scroll_top = $(window).scrollTop()
+  scroll_top = $("body").scrollTop() || $(window).scrollTop()
   $top_nav = $(".top-nav")
   top_nav_height = $top_nav.height()
 

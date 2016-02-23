@@ -67,7 +67,7 @@
 //= require career
 
 //= require fixed_header
-//= require header
+//= require custom_scroll
 
 //= require dev_tools
 
