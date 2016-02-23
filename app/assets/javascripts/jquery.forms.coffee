@@ -166,9 +166,9 @@ initialize_inputs_when_autocomplete = ()->
     #console.log "#{val}", $input.get(0)
     #handle_keyup.apply(this)
 
-$(document).on "ready", ()->
-  if $(".input").length
-    setTimeout(initialize_inputs_when_autocomplete, 400)
-    setTimeout(initialize_inputs_when_autocomplete, 600)
-    setTimeout(initialize_inputs_when_autocomplete, 1000)
-    setTimeout(initialize_inputs_when_autocomplete, 2000)
+#$(document).on "ready", ()->
+#  if $(".input").length
+#    setTimeout(initialize_inputs_when_autocomplete, 400)
+#    setTimeout(initialize_inputs_when_autocomplete, 600)
+#    setTimeout(initialize_inputs_when_autocomplete, 1000)
+#    setTimeout(initialize_inputs_when_autocomplete, 2000)

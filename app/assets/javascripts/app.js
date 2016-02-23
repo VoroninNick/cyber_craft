@@ -156,7 +156,9 @@ scroll_home_banner = function(top) {
         top = 0
     }
 
-    if($body.scrollTop() != top && !$body.data("scroll_in_progress")) {
+    var scroll_top = $("body").scrollTop() || $(window).scrollTop()
+
+    if(scroll_top != top && !$body.data("scroll_in_progress")) {
         $html_body.stop()
         $body.data("scroll_in_progress", true)
 
@@ -187,7 +189,7 @@ if($("html").filter("[data-controller='pages'][data-action='index'], [data-contr
         //console.log("e: ", e)
         var slider_height = $("#pagi1, .header_style_career").first().height()
 
-        var scroll_top = $(window).scrollTop()
+        var scroll_top = $("body").scrollTop() || $(window).scrollTop()
         if(scroll_top < slider_height && e.originalEvent.deltaY > 0){
             e.preventDefault()
 

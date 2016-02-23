@@ -19,7 +19,7 @@ setClosingTimeout = ()->
 
 handle_scroll = (e)->
 
-# top nav
+  # top nav
   $banner = $(".header_style, #pagi1")
   banner_height = $banner.height()
 
@@ -40,7 +40,6 @@ handle_scroll = (e)->
   else
     delta = e
 
-  #console.log "menu.delta: ", delta
   $("body").attr("header_timeout")
   if scroll_top > banner_height && delta < 0 && !$("body").hasClass("navigation_move")
     $top_nav.addClass(scrolled_class)
