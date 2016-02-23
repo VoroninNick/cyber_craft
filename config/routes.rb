@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  get "test", to: "test#test"
+  if Rails.env.development?
+    get "test", to: "test#test"
+  end
 
   if defined?(Ckeditor)
     mount Ckeditor::Engine => '/ckeditor'
