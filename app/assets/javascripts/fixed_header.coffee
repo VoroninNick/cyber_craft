@@ -18,7 +18,8 @@ setClosingTimeout = ()->
   )
 
 handle_scroll = (e)->
-
+  if e && e.ctrlKey
+    alert("ctrl")
   # top nav
   $banner = $(".header_style, #pagi1")
   banner_height = $banner.height()

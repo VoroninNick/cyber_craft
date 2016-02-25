@@ -186,6 +186,10 @@ $("body").on("click", ".scroll-down-arrow, .scroll-down-arrow_career", function(
 })
 if($("html").filter("[data-controller='pages'][data-action='index'], [data-controller='pages'][data-action='career']").length){
     $("body").on("wheel", function(e){
+
+        if(e && e.ctrlKey) {
+            return true
+        }
         //console.log("e: ", e)
         var slider_height = $("#pagi1, .header_style_career").first().height()
 
