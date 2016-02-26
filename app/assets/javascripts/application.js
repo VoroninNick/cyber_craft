@@ -52,6 +52,7 @@
 
 // General js
 //= require app.js
+//= require banner_scroll
 
 //= require share_popup
 
