@@ -191,10 +191,16 @@ if($("html").filter("[data-controller='pages'][data-action='index'], [data-contr
             return true
         }
         //console.log("e: ", e)
-        var slider_height = $("#pagi1, .header_style_career").first().height()
+        var $slider = $("#pagi1, .header_style_career")
+        var slider_height = $slider.first().height()
+
+        var $next_section = $slider.next()
+        var next_section_top = $next_section.offset().top
 
         var scroll_top = $("body").scrollTop() || $(window).scrollTop()
-        if(scroll_top < slider_height && e.originalEvent.deltaY > 0){
+        scroll_top = Math.ceil(scroll_top)
+        if(scroll_top < next_section_top && e.originalEvent.deltaY > 0){
+            console.log("scroll_home_banner")
             e.preventDefault()
 
             scroll_home_banner(slider_height)
