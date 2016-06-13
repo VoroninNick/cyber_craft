@@ -1,3 +1,12 @@
 .top-nav
+
 = render "navigation_menu_button"
 = render "logo", url: !home_page, logo_class: "header-logo"
+
+/.top-nav-row-fixed
+.top-nav-row
+  .inner
+    .text
+      |Your own remote development team
+    a.btn.btn-orange open-popup="send-message"
+      |Get started

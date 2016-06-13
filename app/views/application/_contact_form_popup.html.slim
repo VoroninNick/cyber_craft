@@ -1,0 +1,34 @@
+.popup.contact-form-popup popup-name="send-message" data-title="We would love to help you!"
+  .content
+    form.ajax-submit action=message_path method="post" show-preloader=""
+      .content
+        - if defined?(title) && title.present?
+          h3.section_h3.h3_messag
+            span.with_white_arrows
+              = title
+        .row
+          .col-md-12.col-sm-12.col-xs-12
+            .input.string.css required=""
+              input#popup-first-name name="message[name]" type="text"
+              label.input-label for="popup-first-name"  First and last name*
+            .input.string.css
+              input#popup-phone name="message[phone]" type="text"
+              label.input-label for="popup-phone"
+                |Phone number
+                | &nbsp;
+                sup
+                  |(optional)
+            .input.string.css required=""
+              input#popup-email name="message[email]" type="text"
+              label.input-label for="popup-email"  Email*
+          .col-md-12.col-sm-12.col-xs-12
+            .input.text.css.messagetext required=""
+              textarea#popup-message-text name="message[message_text]"
+              label.input-label for="popup-message-text"  Your message*
+            input type="submit" value="Send"
+      .success-message
+        .title
+          span.with_white_arrows
+            |You have successfully sent your message
+        p
+          |Our manager will contact you as soon as possible

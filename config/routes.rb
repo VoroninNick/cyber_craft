@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     root to: "pages#under_construction", as: :stub
   else
     root to: "pages#index"
+    get "stub", to: "pages#under_construction", as: :stub
   end
 
 
@@ -32,6 +33,8 @@ Rails.application.routes.draw do
     get "career"
     get "sitemap"
   end
+
+  get "services2", to: "services#new_index"
 
   resources "teams", only: [:index, :show]
   resources "services", only: [:index, :show]

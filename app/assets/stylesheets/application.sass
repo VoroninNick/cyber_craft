@@ -2,6 +2,8 @@
 @import "css3_mixins"
 @import "sass-flex-mixin/flexbox"
 
+$small-only: "(max-width: 640px)"
+
 
 @import "application_config"
 // Bootstrap css
@@ -32,6 +34,10 @@ $local-only: false
 
 // General css
 @import "main"
+@import "components/home_banner"
+@import "components/button"
+@import "components/still_have_questions_block"
+@import "components/form"
 
 
 
@@ -56,6 +62,7 @@ $local-only: false
 @import "media_member"
 
 @import "services"
+@import "services2"
 
 @import "process"
 
@@ -83,9 +90,14 @@ $local-only: false
 
 @import "application/sharing_popup"
 
+
+
 @import "application/read_also_nav"
 
 @import "not_found"
+
+
+@import "popup"
 
 html
 	font-size: 16px

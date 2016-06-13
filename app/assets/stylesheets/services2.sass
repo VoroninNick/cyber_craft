@@ -1,0 +1,62 @@
+.services2
+	.services-images
+		+flexbox
+		+align-items(center)
+
+		.image-wrap
+			+flex-grow(1)
+			+flex-shrink(1)
+
+		img
+			max-width: 100%
+
+		//.symbol
+			width: 50px
+
+			&.minus
+				height: 10px
+
+				&:before
+					width: 100%
+					height: 10px
+
+
+		@media (max-width: 767px)
+			display: block
+
+			.image-wrap
+				text-align: center
+				display: block
+
+
+			img
+				margin: 15px
+
+	.services-list
+		.section_h3
+			margin-top: 40px
+			margin-bottom: 30px
+
+		.btn-wrap
+			margin-bottom: 65px
+	.service
+		text-align: center
+		margin-bottom: 40px
+
+		.title
+			font-weight: 500
+			margin-top: 10px
+
+		ul
+			list-style: none
+			margin: 0
+			padding: 0
+
+		li
+			font-size: 13px
+			line-height: 15px
+			color: #546E7B
+			padding: 3px 0
+
+
+

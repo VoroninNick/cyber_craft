@@ -1,0 +1,57 @@
+.services2
+  .container
+    .row
+      .col-lg-12
+        .services-images
+          .image-wrap
+            img src=stub_image_link(320, 320)
+          .image-wrap
+            img src=stub_image_link(50, 50, "-", color: "FFA500", bg: "ffffff")
+          .image-wrap
+            img src=stub_image_link(250, 320)
+          .image-wrap
+            img src=stub_image_link(50, 50, "=", color: "FFA500", bg: "ffffff")
+          .image-wrap
+            img src=stub_image_link(350, 320)
+
+    .row
+      .col-lg-12
+        .services-text
+          .content_offer
+            h3
+              |Own development team model
+            p
+              = raw "We hire and build your own remote Dedicated Development Teams tailored to your specific needs. You get your professional fulltime developers that work exclusively for you as part of your company. We handle all practical things related to hiring and housing your team at our premises in Ukraine, thus saving you half a cost and a <b>lot of efforts of in-house expansion</b>"
+            .btn-wrap
+              a.btn.btn-orange href=services_path
+                |Request salaries and rates
+
+  .white-bg.services-list
+    .container
+      .row
+        .col-lg-12
+          h3.section_h3
+            span.with_black_arrows
+              |Services included into cybercraft fee:
+
+        - @services_collection.each do |item|
+          .col-xs-6.col-sm-6.col-md-3.col-lg-3.service
+            img src=stub_image_link(120, 120)
+            .title
+              = item[:title]
+            .description
+              ul
+                - item[:description_lines].each do |line|
+                  li
+                    = line
+
+
+
+
+
+
+
+        .col-lg-12
+          .btn-wrap
+            a.btn.btn-orange href=services_path
+              |Get started

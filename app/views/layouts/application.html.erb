@@ -76,9 +76,12 @@
     <% end %>
 
 
+
     <%= javascript_include_tag "application" %>
     <% if content_for?(:javascript) %>
         <%= content_for :javascript %>
     <% end %>
+
+    <%= render "contact_form_popup" %>
   </body>
 </html>

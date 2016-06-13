@@ -54,6 +54,8 @@
 //= require app.js
 //= require banner_scroll
 
+//= require jquery.popup
+
 //= require share_popup
 
 //= require google_map

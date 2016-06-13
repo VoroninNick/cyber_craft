@@ -2,63 +2,50 @@
 header#pagi1.top_header.content-part data-title="Home"
   /= render "logo"
   /! Slider
-  .slider_top
-    #slides
-      ul.slides-container
-        /! One Slide
-        li
-          img alt="" src=asset_path("home_banners/banner-1-M.jpg")
-          .slid_filtr
-          .container
-            .heading_slide.wow.fadeInRight
-              h1
-                a.slide-name href="#"
-                  span
-                    |Connecting the best
-                  br
-                  span
-                    |IT minds with international
-                  br
-                  span
-                    |businesses
+  .home-banner
+    .home-banner-image style="background-image: url('#{asset_path("home_banners/banner-1-M.jpg")}')"
 
-        /! End One Slide
-        /! One Slide
-        li
-          img alt="" src=asset_path("home_banners/banner-3.jpg")
-          .slid_filtr
-          .container
-            .heading_slide.wow.fadeInRight
-              h1
-                a.slide-name href="#"
-                  span
-                    |Your remote Dedicated
-                  br
-                  span
-                    |Development Team with an
-                  br
-                  span
-                    |in-house look and feel
-        /! End One Slide
-        /! One Slide
-        li
-          img alt="" src=asset_path("home_banners/banner-2-M.jpg")
-          .slid_filtr
-          .container
-            .heading_slide.wow.fadeInRight
-              h1
-                a.slide-name href="#"
-                  span
-                    |Developing teams,
-                  br
-                  span
-                    |delivering success
+    .home-banner-content
+
+      .dark-transparent-bg.home-banner-content-panel
+        h3 class="section_h3 ins_h3"
+          span class="with_orange_arrows"
+            |We are &nbsp;
+            span class="chos_sbg"
+              |Cybercraft
+            |&nbsp;&mdash; your next trusted software development partner from eastern europe
 
 
-  /! End One Slide
-  /! End Slider
-  /! learn more
+      .dark-transparent-bg.home-banner-content-panel
+        .header-text
+          |We build your own remote development teams in ukraine:
+
+        .banner-content-image
+          img src=asset_path('home-banner-content-image.png')
+        ul
+          li
+            |Top notch engineers
+          li
+            |In-house look and feel
+          li
+            |60% cost-savings
+          li
+            |Transparent pricing model
+          li
+            |No risks
+          li
+            |No recruitment hassle
+          li
+            |No upfront payments
+        .btn-wrap
+          .btn.btn-orange
+            |Get started
+
+    .clearfix
+
+
+
+
+
   .learnmore.scroll-down-arrow
     a href="#"  learn more
-/! learn more
-/! and header of the page

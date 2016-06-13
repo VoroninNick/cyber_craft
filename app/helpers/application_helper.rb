@@ -2,8 +2,21 @@ module ApplicationHelper
 
 
   def stub_image_link(width = 420, height = 350, text = 'item 1', options = {})
+    color_str = ""
+    colors = []
 
-    image_url = "http://placehold.it/#{width}x#{height}&text=#{text}&#{options.map{|k, v| "#{k}=#{v}" }.join("&")}"
+    if options[:bg]
+      colors << options.delete(:bg)
+    end
+
+    if options[:color]
+      colors << options.delete(:color)
+    end
+
+
+
+    color_str = colors.join("/")
+    image_url = "http://placehold.it/#{width}x#{height}/#{color_str}?text=#{text}&#{options.map{|k, v| "#{k}=#{v}" }.join("&")}"
     image_url
   end
 

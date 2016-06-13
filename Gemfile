@@ -96,9 +96,9 @@ gem 'time_diff'
 local = ENV["LOCAL"]
 
 if local
-  gem 'cms', path: "/media/data/pasha/gems/cms"
+  #gem 'cms', path: "/media/data/pasha/gems/cms"
 else
-  gem 'cms', github: "pkorenev/cms"
+  gem 'cms', github: "pkorenev/cms", branch: :master, ref: "46a5a743ae0350d16b3aa35f74c0893964bff480"
 end
 
 gem 'pry-rails'

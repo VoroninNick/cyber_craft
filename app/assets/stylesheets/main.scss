@@ -321,7 +321,45 @@ Main page Logo
   position: absolute;
   top: 30px;
   right: 32px;
-  z-index: 30;
+  z-index: 2200;
+}
+
+.top-nav-row{
+  line-height: 100px;
+  position: fixed;
+  top: 0;
+  left: 100px;
+  right: 100px;
+  z-index: 2100;
+
+  .inner{
+    max-width: 1170px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .text{
+    float: left;
+    display: inline-block;
+    @include orbitron-regular;
+    color: #fff;
+    //background: rgba(56, 64, 70, 0.8);
+
+  }
+
+  .btn{
+    margin-top: 30px;
+    float: right;
+  }
+
+}
+
+.top-nav-row-fixed{
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 22;
 }
 /* ---------------------------------------------------------
     Main page Header Slider .slider_top
@@ -425,6 +463,7 @@ Main page Logo
 .we_offer {
   padding: 30px 0 100px 0;
   overflow: hidden;
+  background: white;
 }
 .mdno_pading {
   padding-right: 0px;
@@ -462,10 +501,10 @@ Main page Logo
   border: 0px solid #fff;
   max-height: 500px;
 }
-.content_offer a {
+.learn-more {
   @include orbitron-medium;
   color: $orange-color;
-  margin-left: 16px;
+  //margin-left: 16px;
   font-size: 15px;
   text-transform: uppercase;
   margin-bottom: 60px;
@@ -474,12 +513,23 @@ Main page Logo
   background: #EBEFF2;
   padding: 11px 18px;
   text-align: center;
+
+  &.bg-white{
+    background: white;
+  }
+
+  &.bg-orange{
+    background: $orange-color;
+    color: white;
+  }
+
+  &:hover{
+    background: $orange-color;
+    color: #fff;
+    text-decoration: none;
+  }
 }
-.content_offer a:hover{
-  background: $orange-color;
-  color: #fff;
-  text-decoration: none;
-}
+
 
 .frame-holder {
   height: 0;
@@ -500,6 +550,7 @@ Main page Logo
 .we_offer {
   .learn-more {
     margin-bottom: 30px;
+    margin-left: 33px;
   }
 }
 
@@ -1365,48 +1416,6 @@ form{
   }
 }
 
-.foot_f input  {
-  color: #384146;
-  font-size: 14px;
-  line-height: 22px;
-  background-color: transparent;
-  border: none;
-  border-bottom: 2px solid #384146;
-  transition: all 0.3s;
-  padding: 5px;
-  margin-bottom: 26px;
-  width: 100%;
-  box-sizing: border-box;
-  outline: 0;
-
-}
-
-.foot_f input:focus, .foot_f textarea:focus { border-bottom:2px solid #fff; }
-.foot_f input::-webkit-input-placeholder, .foot_f textarea::-webkit-input-placeholder {color:    #384146;}
-.foot_f input, .foot_f textarea:-moz-placeholder {    color:   #384146;}
-.foot_f input, .foot_f textarea::-moz-placeholder {    color:  #384146;}
-.foot_f input, .foot_f textarea:-ms-input-placeholder {color:    #384146;}
-.foot_f textarea {
-  height: 147px;
-  resize: vertical;
-  width: 100%;
-  color: #384146;
-  font-size: 14px;
-  line-height: 22px;
-  background-color: transparent;
-  border: none;
-  border-bottom: 2px solid #384146;
-}
-.foot_f  textarea:focus,.foot_f input:focus{outline: none;}
-
-.foot_f textarea:focus {
-  border-bottom: 2px solid #fff;
-}
-
-.foot_f [type="submit"] {
-  @include button;
-}
-.foot_f [type="submit"]:hover { @include button-hover; }
 
 .map_boxshadow {
   overflow: hidden;
@@ -1510,7 +1519,7 @@ footer a:hover{
 
 #pagi1{
   background: $light-black-color;// $light-blue-gray-text-color;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 

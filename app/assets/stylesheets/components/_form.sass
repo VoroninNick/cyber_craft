@@ -1,0 +1,69 @@
+.input input  
+  color: #384146
+  font-size: 14px
+  line-height: 22px
+  background-color: transparent
+  border: none
+  border-bottom: 2px solid #384146
+  transition: all 0.3s
+  padding: 5px
+  margin-bottom: 26px
+  width: 100%
+  box-sizing: border-box
+  outline: 0
+
+
+
+.input input:focus, .input textarea:focus  
+  border-bottom: 2px solid #fff
+
+.input input::-webkit-input-placeholder, .input textarea::-webkit-input-placeholder 
+  color:    #384146
+
+.input input, .input textarea:-moz-placeholder     
+  color:   #384146
+
+.input input, .input textarea::-moz-placeholder    
+  color:  #384146
+
+.input input, .input textarea:-ms-input-placeholder 
+  color:    #384146
+
+.input textarea 
+  height: 147px
+  resize: vertical
+  width: 100%
+  color: #384146
+  font-size: 14px
+  line-height: 22px
+  background-color: transparent
+  border: none
+  border-bottom: 2px solid #384146
+
+.input  textarea:focus,.input input:focus
+  outline: none
+
+
+.input textarea:focus 
+  border-bottom: 2px solid #fff
+
+
+input[type="submit"]
+  @include button
+
+input[type="submit"]:hover
+  @include button-hover 
+
+
+
+// Small Devices, Tablets
+@media only screen and (max-width : 768px)
+  .input [type="submit"]
+    width: 100%
+
+
+// Large Devices, Wide Screens
+@media only screen and (min-width : 1200px)
+  .input [type="submit"]
+    margin-top: 59px
+

@@ -10,7 +10,12 @@
   = render "home_benefits", items: @benefits
   = render "home_good_people_say", items: @feedbacks, header: "Good people say", subheader: ""
   = render "home_blog_articles"
-  = render "home_map_and_form"
+  /= render "home_map_and_form"
+  .still-have-questions-block
+    img src=asset_path("developers.png")
+    .btn-wrap
+      a.learn-more href=services_path
+        |Still have questions? We'll call you back
   footer
     = render "footer_links"
           /! And Sidebar Navigation  Main page

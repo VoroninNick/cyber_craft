@@ -1,0 +1,101 @@
+.home-banner-image
+	height: 100vh
+	width: 100%
+	background-size: cover
+	background-repeat: no-repeat
+	position: absolute
+
+.home-banner-content
+	+flexbox
+	+flex-direction(column)
+	+justify-content(center)
+	min-height: 100vh
+
+.home-banner-content-panel
+
+	position: relative
+	margin: 5px auto
+	width: 1200px
+	max-width: 100%
+	padding: 30px 15px
+
+
+	.section_h3.ins_h3
+		position: relative
+		margin: 0
+		top: 0
+		right: auto
+
+	.header-text
+		@include orbitron-regular
+		color: $orange-color
+		font-size: 28px
+		text-align: center
+
+		letter-spacing: 2.6px
+		margin: 5px 0
+		text-transform: uppercase
+	.banner-content-image
+		width: 50%
+		display: inline-block
+		//height: 0
+		//padding-top: 33%
+
+		text-align: center
+
+		img
+			max-width: 100%
+
+
+
+
+	ul
+		width: 50%
+		display: inline-block
+		float: right
+
+		@include orbitron-regular
+		line-height: 30px
+		color: #fff
+		font-size: 20px
+		letter-spacing: 2.6px
+		margin: 5px 0
+		text-transform: uppercase
+		list-style: none
+
+		li
+			position: relative
+			margin: 8px 0 0 0
+			padding-left: 15px
+			&:before
+				content: ""
+				width: 10px
+				height: 10px
+				background: $orange-color
+				position: absolute
+				left: 0
+				top: 10px
+
+
+@media (max-width: 768px)
+	.home-banner-content
+		padding-top: 90px
+
+		.home-banner-content-panel
+			.section_h3.ins_h3
+				font-size: 20px
+
+			.header-text
+				font-size: 18px
+
+			.banner-content-image
+				width: 100%
+				margin: 15px 0
+			ul
+				width: 100%
+				font-size: 16px
+
+
+	#pagi1
+		.learnmore
+			display: none
