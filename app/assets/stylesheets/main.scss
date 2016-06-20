@@ -352,6 +352,21 @@ Main page Logo
     float: right;
   }
 
+  @media (max-width: 860px)  {
+    .text{
+      display: none;
+    }
+
+    .btn{
+      margin-left: auto;
+      margin-right: auto;
+      float: none;
+      display: block;
+      max-width: 400px;
+      width: 100%;
+    }
+  }
+
 }
 
 .top-nav-row-fixed{

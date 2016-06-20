@@ -20,16 +20,16 @@ class ServicesController < ApplicationController
 
     @services_collection = [
         {
-            title: "Staff", description_lines: ["Recruitment", "Retention", "Evaluation and development"]
+            title: "Staff", description_lines: ["Recruitment", "Retention", "Evaluation and development"], icon: "services/service1.svg"
         },
         {
-            title: "Staff", description_lines: ["Recruitment", "Retention", "Evaluation and development"]
+            title: "Staff", description_lines: ["Recruitment", "Retention", "Evaluation and development"], icon: "services/service2.svg"
         },
         {
-            title: "Staff", description_lines: ["Recruitment", "Retention", "Evaluation and development"]
+            title: "Staff", description_lines: ["Recruitment", "Retention", "Evaluation and development"], icon: "services/service3.svg"
         },
         {
-            title: "Staff", description_lines: ["Recruitment", "Retention", "Full consulting support at every stage of cooperation"]
+            title: "Staff", description_lines: ["Recruitment", "Retention", "Full consulting support at every stage of cooperation"], icon: "services/service4.svg"
         }
     ]
   end
